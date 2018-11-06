@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows
+
+https://sparxsystems.com/resources/uml2_tutorial/uml2_classdiagram.html
+
+https://cw.fel.cvut.cz/wiki/courses/b6b36omo/labs/lab042017
