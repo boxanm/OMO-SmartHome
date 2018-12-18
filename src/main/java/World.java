@@ -16,7 +16,6 @@ public class World {
 	public House m_House;
 
 	public World(){
-
 	}
 
 	public void finalize() throws Throwable {
