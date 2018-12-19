@@ -12,4 +12,5 @@ public interface InfoGenerator {
 
 	public Info newInfo();
 
+	public EventReporter eventReporter = null;
 }

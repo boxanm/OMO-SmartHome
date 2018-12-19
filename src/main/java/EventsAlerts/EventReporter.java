@@ -2,6 +2,7 @@ package EventsAlerts;
 
 import Senzors.Meter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,8 +18,8 @@ import java.util.List;
  */
 public class EventReporter {
 
-	private List AllEvents;
-	private int numberOflap;
+	private ArrayList<Event> allEvents = new ArrayList<Event>();
+	private int lapNumber;
 	public Event m_Event;
 	public ObserverEverything m_ObserverEverything;
 	public ControlUnit m_ControlUnit;
@@ -37,29 +38,26 @@ public class EventReporter {
 	}
 
 	/**
-	 * 
-	 * @param eventID
+	 *
 	 * @param target
 	 */
-	public void updateFromControlUnit(int eventID, AlertHandler target){
+	public void updateFromControlUnit(AlertHandler target){
 
 	}
 
 	/**
-	 * 
-	 * @param eventID
+	 *
 	 * @param meter
 	 */
-	public void updateFromMeter(int eventID, Meter meter){
+	public void updateFromMeter(Meter meter){
 
 	}
 
 	/**
-	 * 
-	 * @param eventID
+	 *
 	 * @param source
 	 */
-	public void updateFromObserver(int eventID, Observed source){
+	public void updateFromObserver(Observed source){
 
 	}
 

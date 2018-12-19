@@ -8,13 +8,10 @@ package EventsAlerts;
  * @created 16-pro-2018 9:01:36
  */
 public class ObserverEverything implements Observer {
+	private EventReporter eventReporter;
 
-	public ObserverEverything(){
-
-	}
-
-	public void finalize() throws Throwable {
-
+	public ObserverEverything(EventReporter eventReporter){
+		this.eventReporter = eventReporter;
 	}
 
 	public void update(){
