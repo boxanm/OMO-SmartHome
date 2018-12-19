@@ -1,6 +1,8 @@
 package SportsEquipment;
 
 
+import House.NonHabitableRoom;
+
 /**
  * Návrhový vzor factory method
  * @author Michal
@@ -9,16 +11,9 @@ package SportsEquipment;
  */
 public class SportEquipmentCreatorBicykle extends Bicykle {
 
-	private class SportEquimpnetCreatorBicykle extends CreatorSportEquipments{
-
+	public SportEquipmentCreatorBicykle(String brand, NonHabitableRoom location){
+		new Bicykle(brand, location);
 	}
 
-	public SportEquipmentCreatorBicykle(){
-
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 
 }

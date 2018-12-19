@@ -9,14 +9,14 @@ import Organism.Persons.Adults;
  */
 public class Car {
 
+	private String brand;
+	private NonHabitableRoom location;
 	private boolean isBusy;
 
-	public Car(){
+	public Car(String brand, NonHabitableRoom location){
 
-	}
-
-	public void finalize() throws Throwable {
-
+		this.brand = brand;
+		this.location = location;
 	}
 
 	/**

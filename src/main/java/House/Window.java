@@ -10,14 +10,14 @@ public class Window {
 
 	private Blind blind;
 	public Blind m_Blind;
-	public Room m_Room;
+	public Room room;
 
-	public Window(){
-
-	}
-
-	public void finalize() throws Throwable {
+	public Window(Room room, Blind blind){
+		this.room = room;
+		this.blind = blind;
 
 	}
+
+
 
 }

@@ -12,14 +12,7 @@ import House.NonHabitableRoom;
  */
 public abstract class SportEquipment {
 
-	private boolean isBusy;
-	public NonHabitableRoom m_NonHabitableRoom;
-
 	public SportEquipment(){
-
-	}
-
-	public void finalize() throws Throwable {
 
 	}
 
@@ -27,8 +20,6 @@ public abstract class SportEquipment {
 	 * 
 	 * @param person
 	 */
-	public void useEquipment(Adults person){
-
-	}
+	abstract void useEquipment(Adults person);
 
 }

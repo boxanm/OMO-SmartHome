@@ -1,5 +1,6 @@
 package SportsEquipment;
 
+import House.NonHabitableRoom;
 import SportsEquipment.CreatorSportEquipments;
 import SportsEquipment.Ski;
 
@@ -11,16 +12,7 @@ import SportsEquipment.Ski;
  */
 public class SportEquipmentCreatorSki extends Ski {
 
-	private class SportEquimpnetCreatorBicykle extends CreatorSportEquipments{
-
+	public SportEquipmentCreatorSki(String brand, NonHabitableRoom location) {
+		new Ski(brand, location);
 	}
-
-	public SportEquipmentCreatorSki(){
-
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
 }

@@ -1,6 +1,9 @@
 package SportsEquipment;
 
 
+import House.NonHabitableRoom;
+import Organism.Persons.Adults;
+
 /**
  * @author Michal
  * @version 1.0
@@ -8,12 +11,21 @@ package SportsEquipment;
  */
 public class Bicykle extends SportEquipment {
 
-	public Bicykle(){
+	String brand;
+
+	private boolean isBusy = false;
+	public NonHabitableRoom location;
+
+	public Bicykle() {
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	public Bicykle(String brand, NonHabitableRoom location) {
+		this.brand = brand;
+		this.location = location;
 	}
 
+	void useEquipment(Adults person) {
+
+	}
 }

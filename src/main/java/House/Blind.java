@@ -17,13 +17,15 @@ public class Blind implements AlertHandler {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 	public void pull(){
-
+		if(isPulled == true){
+			isPulled = false;
+		} else{
+			isPulled = true;
+		}
 	}
+
+
 
 	/**
 	 * 

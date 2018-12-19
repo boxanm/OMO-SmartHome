@@ -1,6 +1,9 @@
 package SportsEquipment;
 
 
+import House.NonHabitableRoom;
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Návrhový vzor factory method
  * @author Michal
@@ -9,12 +12,17 @@ package SportsEquipment;
  */
 public abstract class CreatorSportEquipments {
 
-	public CreatorSportEquipments(){
+	public CreatorSportEquipments() {
 
 	}
 
-	public void finalize() throws Throwable {
+	public static SportEquipment SportEquipmentCreatorSki(String criteria, String brand, NonHabitableRoom location) {
+		if (criteria.equals("ski")) {
+			return new SportEquipmentCreatorSki(brand, location);
+		} else if (criteria.equals("bicykle")) {
+			return new SportEquipmentCreatorBicykle(brand, location);
+		}
+		return null;
 
 	}
-
 }

@@ -27,18 +27,12 @@ public abstract class Room {
 
 	public Room(String name, House house, Floor floor, int number_of_windows){
 		this.name = name;
+		this.house = house;
 		this.floor = floor;
 		this.number_of_windows = number_of_windows;
 		this.isFire = false;
 		floor.addRoom(this);
 
 	}
-
-	public void finalize() throws Throwable {
-
-	}
-
-
-
 
 }
