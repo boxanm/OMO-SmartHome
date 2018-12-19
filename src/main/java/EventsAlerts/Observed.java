@@ -17,7 +17,7 @@ package EventsAlerts;
  */
 public interface Observed extends InfoGenerator, Target {
 
-	public Observer observersList = null;
+	Observer observersList = null;
 
 	/**
 	 * 

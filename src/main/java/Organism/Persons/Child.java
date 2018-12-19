@@ -1,9 +1,13 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
+import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
+
+import java.util.ArrayList;
 
 /**
  * @author Michal
@@ -11,15 +15,21 @@ import SportsEquipment.*;
  * @created 16-pro-2018 9:02:03
  */
 public class Child implements Person {
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
+	private Room actualRoom = null;
+	private boolean isBusy = false;
+	private House m_House = null;
+	private String name = null;
 
-	private String name;
-	private Room location;
+	private int applianceUsageNumber = 0;
+	private int sportequipmentUsage = 0;
+
 	private boolean isSad;
 
-	public Child(String name, Room location){
+	public Child(String name, Room room){
 		this.name = name;
-		this.location = location;
+		this.actualRoom = room;
 		isSad = false;
 	}
 
@@ -27,10 +37,10 @@ public class Child implements Person {
 
 	}
 
-	/**
-	 * 
-	 * @param room
-	 */
+	public void moveToHouse(House house){
+		m_House = house;
+	}
+
 	public void callFireman(Room room){
 
 	}
@@ -79,27 +89,22 @@ public class Child implements Person {
 
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
-
+		for(Observer observer: observersList)
+			observer.update();
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
+		return null;
 
 	}
 

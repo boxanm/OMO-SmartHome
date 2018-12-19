@@ -15,7 +15,6 @@ import EventsAlerts.AlertHandler;
 public interface Person extends Organism, AlertHandler {
 
 	public String name = null;
-	public Room location = null;
 
 	public int applianceUsageNumber = 0;
 	public int sportequipmentUsage = 0;

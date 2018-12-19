@@ -1,8 +1,13 @@
 package Animals;
 
 import EventsAlerts.Event;
+import EventsAlerts.Info;
+import House.Floor;
+import House.House;
 import House.Room;
 import EventsAlerts.Observer;
+
+import java.util.ArrayList;
 
 
 /**
@@ -11,9 +16,16 @@ import EventsAlerts.Observer;
  * @created 16-pro-2018 9:02:08
  */
 public class Cat implements Animal {
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
-	public Cat(){
+	private Floor actualFloor = null;
+	private Room actualRoom = null;
+	private boolean isBusy = false;
+	private House m_House = null;
 
+	public Cat(Room room, Floor floor){
+		actualFloor = floor;
+		actualRoom = room;
 	}
 
 	public void finalize() throws Throwable {
@@ -27,9 +39,14 @@ public class Cat implements Animal {
 	 * @param room
 	 */
 	public void changeRoom(Room room){
+		actualFloor = m_House.getFloorOfRoom(room);
+		this.actualRoom = room;
 
 	}
 
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 	public void setOnFire(){
 
 	}
@@ -39,22 +56,21 @@ public class Cat implements Animal {
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
-
+		for(Observer observer: observersList)
+			observer.update();
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
+		return null;
 
 	}
 
