@@ -20,7 +20,6 @@ public class NonHabitableRoom extends Room {
 	private Car car;
 	private SportEquipmentCreatorBicykle sportEquipmentCreator;
 	private List<SportEquipment> sportEquipmentList;
-	public Car m_Car;
 
 	public NonHabitableRoom(String name, House house, Floor floor, int number_of_windows){
 		super(name, house, floor, number_of_windows);
@@ -31,6 +30,7 @@ public class NonHabitableRoom extends Room {
 	}
 
 	public void addSportEquipment(SportEquipment sportEquipment){
+
 		sportEquipmentList.add(sportEquipment);
 	}
 	public void deleteSportEquipment(SportEquipment sportEquipment){
@@ -43,4 +43,11 @@ public class NonHabitableRoom extends Room {
 		this.car = null;
 	}
 
+	public Car getCar() {
+		return car;
+	}
+
+	public List<SportEquipment> getSportEquipmentList() {
+		return sportEquipmentList;
+	}
 }

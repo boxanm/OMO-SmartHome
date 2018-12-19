@@ -2,6 +2,7 @@ package Appliances;
 
 import EventsAlerts.AlertType;
 import EventsAlerts.Observer;
+import House.HabitableRoom;
 
 /**
  * @author Michal
@@ -10,11 +11,20 @@ import EventsAlerts.Observer;
  */
 public class Freezer implements FreezingAppliance, Appliance {
 
+	String name;
+	HabitableRoom location;
+
 	public Freezer(){
 
 	}
 
-	public void finalize() throws Throwable {
+    public Freezer(String name, HabitableRoom location) {
+
+		this.name = name;
+		this.location = location;
+    }
+
+    public void finalize() throws Throwable {
 
 	}
 

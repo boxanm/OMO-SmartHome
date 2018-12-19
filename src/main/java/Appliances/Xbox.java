@@ -2,6 +2,7 @@ package Appliances;
 
 import EventsAlerts.AlertType;
 import EventsAlerts.Observer;
+import House.HabitableRoom;
 
 /**
  * @author Michal
@@ -10,11 +11,19 @@ import EventsAlerts.Observer;
  */
 public class Xbox implements CDplayer, Appliance {
 
+	String name;
+	HabitableRoom location;
+
 	public Xbox(){
 
 	}
 
-	public void finalize() throws Throwable {
+    public Xbox(String name, HabitableRoom location) {
+		this.name = name;
+		this.location = location;
+    }
+
+    public void finalize() throws Throwable {
 
 	}
 

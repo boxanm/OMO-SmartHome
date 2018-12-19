@@ -27,6 +27,7 @@ public class Floor {
 		house.addFloor(this);
 	}
 
+
 	public String getName() {
 		return name;
 	}

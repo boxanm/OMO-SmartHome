@@ -2,6 +2,7 @@ package Appliances;
 
 import EventsAlerts.AlertType;
 import EventsAlerts.Observer;
+import House.HabitableRoom;
 
 /**
  * Použivá návrhový vzor State machine
@@ -11,13 +12,21 @@ import EventsAlerts.Observer;
  */
 public class WashingMachine implements Appliance {
 
+	String name;
+	HabitableRoom location;
+
 	public State m_State;
 
 	public WashingMachine(){
 
 	}
 
-	public void finalize() throws Throwable {
+    public WashingMachine(String name, HabitableRoom location) {
+		this.name = name;
+		this.location = location;
+    }
+
+    public void finalize() throws Throwable {
 
 	}
 

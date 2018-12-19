@@ -2,6 +2,7 @@ package Appliances;
 
 import EventsAlerts.AlertType;
 import EventsAlerts.Observer;
+import House.HabitableRoom;
 
 /**
  * @author Michal
@@ -10,13 +11,17 @@ import EventsAlerts.Observer;
  */
 public class TV implements Appliance {
 
+	String name;
+	HabitableRoom location;
+
 	public TV(){
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
+    public TV(String name, HabitableRoom location) {
+		this.name = name;
+		this.location = location;
+    }
 
 	/**
 	 * 
