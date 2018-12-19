@@ -31,8 +31,6 @@ public class House {
 		personList = new ArrayList<Person>();
 		animalList = new ArrayList<Animal>();
 		floorList = new ArrayList<Floor>();
-
-
 	}
 
 	public void finalize() throws Throwable {
@@ -59,6 +57,10 @@ public class House {
 	}
 	public List<Animal> getAnimalList(){
 		return getAnimalList();
+	}
+
+	public Floor getFloorOfRoom(Room room){
+		return null; // vrati podlazi, ve kterem se nachazi zadana room
 	}
 
 

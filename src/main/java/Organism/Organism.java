@@ -13,10 +13,10 @@ import House.House;
  */
 public interface Organism extends Observed {
 
-	public Floor actualFloor = null;
-	public Room actualRoom = null;
-	public boolean isBusy = false;
-	public House m_House = null;
+	Floor actualFloor = null;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
 
 	/**
 	 * 
@@ -27,5 +27,6 @@ public interface Organism extends Observed {
 	public void setOnFire();
 
 
+	public void moveToHouse(House house);
 
 }

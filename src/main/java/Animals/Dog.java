@@ -1,6 +1,9 @@
 package Animals;
 
 import EventsAlerts.Event;
+import EventsAlerts.Info;
+import House.Floor;
+import House.House;
 import House.Room;
 import EventsAlerts.Observer;
 
@@ -11,8 +14,14 @@ import EventsAlerts.Observer;
  */
 public class Dog implements Animal {
 
-	public Dog(){
+	Floor actualFloor = null;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
 
+	public Dog(Room room, Floor floor){
+		actualFloor = floor;
+		actualRoom = room;
 	}
 	public Event makeSound() {
 		return null;
@@ -21,11 +30,16 @@ public class Dog implements Animal {
 
 	}
 
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 	/**
 	 * 
 	 * @param room
 	 */
 	public void changeRoom(Room room){
+		actualFloor = m_House.getFloorOfRoom(room);
+		actualRoom = room;
 
 	}
 
@@ -53,7 +67,8 @@ public class Dog implements Animal {
 
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
+		return null;
 
 	}
 

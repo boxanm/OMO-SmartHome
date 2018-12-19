@@ -1,6 +1,8 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
+import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -13,13 +15,19 @@ import SportsEquipment.*;
 public class Child implements Person {
 
 
-	private String name;
-	private Room location;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
+	public String name = null;
+
+	public int applianceUsageNumber = 0;
+	public int sportequipmentUsage = 0;
+
 	private boolean isSad;
 
-	public Child(String name, Room location){
+	public Child(String name, Room room){
 		this.name = name;
-		this.location = location;
+		this.actualRoom = room;
 		isSad = false;
 	}
 
@@ -27,10 +35,10 @@ public class Child implements Person {
 
 	}
 
-	/**
-	 * 
-	 * @param room
-	 */
+	public void moveToHouse(House house){
+		m_House = house;
+	}
+
 	public void callFireman(Room room){
 
 	}
@@ -99,7 +107,8 @@ public class Child implements Person {
 
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
+		return null;
 
 	}
 

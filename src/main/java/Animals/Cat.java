@@ -1,6 +1,9 @@
 package Animals;
 
 import EventsAlerts.Event;
+import EventsAlerts.Info;
+import House.Floor;
+import House.House;
 import House.Room;
 import EventsAlerts.Observer;
 
@@ -12,8 +15,15 @@ import EventsAlerts.Observer;
  */
 public class Cat implements Animal {
 
-	public Cat(){
 
+	Floor actualFloor = null;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
+
+	public Cat(Room room, Floor floor){
+		actualFloor = floor;
+		actualRoom = room;
 	}
 
 	public void finalize() throws Throwable {
@@ -27,9 +37,14 @@ public class Cat implements Animal {
 	 * @param room
 	 */
 	public void changeRoom(Room room){
+		actualFloor = m_House.getFloorOfRoom(room);
+		this.actualRoom = room;
 
 	}
 
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 	public void setOnFire(){
 
 	}
@@ -54,7 +69,8 @@ public class Cat implements Animal {
 
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
+		return null;
 
 	}
 

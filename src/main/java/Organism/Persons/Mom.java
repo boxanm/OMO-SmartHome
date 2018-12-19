@@ -1,7 +1,9 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.Car;
+import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -13,10 +15,24 @@ import SportsEquipment.*;
  */
 public class Mom implements Adults, Person {
 
-	public Mom(){
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
+	public String name = null;
 
+	public int applianceUsageNumber = 0;
+	public int sportequipmentUsage = 0;
+
+	public Child childList = null;
+
+	public Mom(String name, Room room){
+		this.name = name;
+		this.actualRoom = room;
 	}
 
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 	public void finalize() throws Throwable {
 
 	}
@@ -118,8 +134,8 @@ public class Mom implements Adults, Person {
 
 	}
 
-	public void newInfo(){
-
+	public Info newInfo(){
+		return null;
 	}
 
 }

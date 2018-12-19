@@ -1,6 +1,9 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
+import House.Floor;
+import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -13,12 +16,23 @@ import House.Car;
  */
 public class Dad implements Person, Adults {
 
-	private String name;
-	private Room location;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
+	public String name = null;
 
-	public Dad(String name, Room location){
+	public int applianceUsageNumber = 0;
+	public int sportequipmentUsage = 0;
+
+	public Child childList = null;
+
+	public Dad(String name, Room room){
 		this.name = name;
-		this.location = location;
+		this.actualRoom = room;
+	}
+
+	public void moveToHouse(House house){
+		m_House = house;
 	}
 
 	public String getName() {
@@ -33,10 +47,6 @@ public class Dad implements Person, Adults {
 
 	}
 
-	/**
-	 * 
-	 * @param room
-	 */
 	public void callFireman(Room room){
 
 	}
@@ -105,8 +115,8 @@ public class Dad implements Person, Adults {
 
 	}
 
-	public void newInfo(){
-
+	public Info newInfo(){
+		return null;
 	}
 
 	/**

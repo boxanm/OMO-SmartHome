@@ -1,7 +1,10 @@
 package Animals;
 
 import EventsAlerts.Event;
+import EventsAlerts.Info;
+import House.House;
 import House.Room;
+import House.Floor;
 import EventsAlerts.Observer;
 
 /**
@@ -11,10 +14,20 @@ import EventsAlerts.Observer;
  */
 public class Ferret implements Animal {
 
-	public Ferret(){
+	Floor actualFloor = null;
+	Room actualRoom = null;
+	boolean isBusy = false;
+	House m_House = null;
 
+	public Ferret(Room room, Floor floor){
+		actualFloor = floor;
+		actualRoom = room;
 	}
 
+
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 	public Event makeSound() {
 		return null;
 	}
@@ -28,6 +41,8 @@ public class Ferret implements Animal {
 	 * @param room
 	 */
 	public void changeRoom(Room room){
+		actualFloor = m_House.getFloorOfRoom(room);
+		this.actualRoom = room;
 
 	}
 
@@ -56,8 +71,8 @@ public class Ferret implements Animal {
 	}
 
 
-	public void newInfo(){
-
+	public Info newInfo(){
+		return null;
 	}
 
 }
