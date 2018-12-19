@@ -4,5 +4,6 @@ public enum InfoType {
     animalSound,
     applianceUsage,
     sportEquipmentUsage,
-    extinguishingFire
+    extinguishingFire,
+    callingFireman
 }

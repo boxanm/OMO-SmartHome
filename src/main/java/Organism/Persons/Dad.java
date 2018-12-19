@@ -12,6 +12,7 @@ import House.Car;
 import Organism.Organism;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * @author Michal
@@ -45,10 +46,21 @@ public class Dad extends Organism implements Person, Adults  {
 	}
 
 	public void callFireman(Room room){
-
+		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
 	}
 
 	public void nextAction(){
+		if(! isBusy){
+			if(applianceUsageNumber < sportequipmentUsage){
+				ArrayList<Appliance> appliances = m_House.getAppliances();
+				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+			}
+			else{
+				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
+				useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
+			}
+			isBusy = true;
+		}
 
 	}
 

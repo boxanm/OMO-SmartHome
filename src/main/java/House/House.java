@@ -1,9 +1,11 @@
 package House;
 
+import Appliances.Appliance;
 import EventsAlerts.EventReporter;
 import Reports.HouseReportLayout;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
+import SportsEquipment.SportEquipment;
 
 
 import java.util.ArrayList;
@@ -20,6 +22,8 @@ public class House {
 	private List<Person> personList;
 	private List<Animal> animalList;
 	private List<Floor> floorList;
+	private ArrayList<Appliance> applianceList;;
+	private ArrayList<SportEquipment> sportEquipmentList;
 	private EventReporter eventReporter;
 	private static House instance;
 	public Floor m_Floor;
@@ -62,6 +66,10 @@ public class House {
 	public Floor getFloorOfRoom(Room room){
 		return null; // vrati podlazi, ve kterem se nachazi zadana room
 	}
-
-
+	public ArrayList<Appliance> getAppliances(){
+		return applianceList;
+	}
+	public ArrayList<SportEquipment> getSportEquipment(){
+		return sportEquipmentList;
+	}
 }

@@ -11,6 +11,7 @@ import SportsEquipment.*;
 import Organism.Organism;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * @author Michal
@@ -63,11 +64,21 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param room
 	 */
 	public void callFireman(Room room){
-
+		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
 	}
 
 	public void nextAction(){
-
+		if(! isBusy){
+			if(applianceUsageNumber < sportequipmentUsage){
+				ArrayList<Appliance> appliances = m_House.getAppliances();
+				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+			}
+			else{
+				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
+				useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
+			}
+			isBusy = true;
+		}
 	}
 
 	/**

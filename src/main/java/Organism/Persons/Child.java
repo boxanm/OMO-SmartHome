@@ -36,6 +36,7 @@ public class Child extends Organism implements Person {
 
 
 	public void callFireman(Room room){
+		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
 
 	}
 
@@ -46,8 +47,19 @@ public class Child extends Organism implements Person {
 	public void nextAction(){
 		if(cry()){} // child is crying
 
-		else{//do something else
-
+		else{
+			if(! isBusy){
+				if(applianceUsageNumber < sportequipmentUsage){
+					
+					ArrayList<Appliance> appliances = m_House.getAppliances(); %// TODO: 12/19/18 vybrat jen nejake spotrebice
+					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+				}
+				else{
+					ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
+					useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
+				}
+				isBusy = true;
+			}
 		}
 
 	}
