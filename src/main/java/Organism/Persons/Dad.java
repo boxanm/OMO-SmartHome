@@ -9,22 +9,25 @@ import Appliances.*;
 import SportsEquipment.*;
 import House.Car;
 
+import java.util.ArrayList;
+
 /**
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
 public class Dad implements Person, Adults {
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
-	Room actualRoom = null;
-	boolean isBusy = false;
-	House m_House = null;
-	public String name = null;
+	private Room actualRoom = null;
+	private boolean isBusy = false;
+	private House m_House = null;
+	private String name = null;
 
-	public int applianceUsageNumber = 0;
-	public int sportequipmentUsage = 0;
+	private int applianceUsageNumber = 0;
+	private int sportequipmentUsage = 0;
 
-	public Child childList = null;
+	private Child childList = null;
 
 	public Dad(String name, Room room){
 		this.name = name;
@@ -94,25 +97,18 @@ public class Dad implements Person, Adults {
 	public void handleAlert(AlertType alert){
 
 	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
-
+		for(Observer observer: observersList)
+			observer.update();
 	}
 
 	public Info newInfo(){
