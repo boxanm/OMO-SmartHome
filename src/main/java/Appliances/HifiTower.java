@@ -1,6 +1,8 @@
 package Appliances;
 
 import EventsAlerts.AlertType;
+import EventsAlerts.Consumption;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
 
@@ -65,10 +67,15 @@ public class HifiTower implements Appliance, CDplayer {
 
 	}
 
-	public void newConsuption(){
+	public Consumption newConsuption(){
 
+		return null;
 	}
 
+	public Info newInfo(){
+
+		return null;
+	}
 	/**
 	 * 
 	 * @param observer
@@ -86,10 +93,6 @@ public class HifiTower implements Appliance, CDplayer {
 	}
 
 	public void announce(){
-
-	}
-
-	public void newInfo(){
 
 	}
 

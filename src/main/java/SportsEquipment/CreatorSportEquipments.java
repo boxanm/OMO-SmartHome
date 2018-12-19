@@ -12,11 +12,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public abstract class CreatorSportEquipments {
 
-	public CreatorSportEquipments() {
-
-	}
-
-	public static SportEquipment SportEquipmentCreatorSki(String criteria, String brand, NonHabitableRoom location) {
+	public static SportEquipment createEquipment(String criteria, String brand, NonHabitableRoom location) {
 		if (criteria.equals("ski")) {
 			return new SportEquipmentCreatorSki(brand, location);
 		} else if (criteria.equals("bicykle")) {

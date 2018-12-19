@@ -1,6 +1,7 @@
-package Appliances;
+package Appliances.Creators;
 
 
+import Appliances.HifiTower;
 import House.HabitableRoom;
 
 /**
