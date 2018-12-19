@@ -11,7 +11,9 @@ import SportsEquipment.*;
 import Organism.Organism;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * @author Michal
@@ -40,7 +42,8 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param child
 	 */
 	public void cheerUp(Child child){
-
+		newInfo(new Info(InfoType.cheeringUpChild, this, getFloor(), actualRoom, child));
+		child.stopCrying(90);
 	}
 
 	/**
@@ -48,7 +51,12 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param room
 	 */
 	public void extinguish(Room room){
-
+		if(actualRoom == room){
+			newInfo(new Info(InfoType.extinguishingFire, this, getFloor(), actualRoom, room));
+			room.extinguishFire();
+		}
+		else
+			changeRoom(room);
 	}
 
 	/**
@@ -70,8 +78,14 @@ public class Mom extends Organism implements Adults, Person {
 	public void nextAction(){
 		if(! isBusy){
 			if(applianceUsageNumber < sportequipmentUsage){
-				ArrayList<Appliance> appliances = m_House.getAppliances();
-				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+				List<Appliance> kitchenAppliances = m_House
+						.getAppliances()
+						.stream()
+						.filter(Appliance->Appliance.getType().equals(ApplianceType.kitchen))
+						.collect(Collectors.toList());
+
+
+				useAppliance(kitchenAppliances.get(new Random().nextInt(kitchenAppliances.size())));
 			}
 			else{
 				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();

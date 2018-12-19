@@ -1,6 +1,8 @@
 package EventsAlerts;
 
 
+import java.util.ArrayList;
+
 /**
  * Obsluhuje všechny alerty a rozhoduje, který z AlertHandlerù je má vyøešit.
  * @author Michal
@@ -9,7 +11,7 @@ package EventsAlerts;
  */
 public class ControlUnit {
 
-	private AlertHandler listOfAlertHandlers;
+	private ArrayList<AlertHandler> listOfAlertHandlers;
 	public AlertHandler m_AlertHandler;
 
 	public ControlUnit(){
@@ -25,6 +27,10 @@ public class ControlUnit {
 	 * @param alert
 	 */
 	public void handleAlert(Alert alert){
+		for (AlertHandler alertHandler: listOfAlertHandlers) {
+			alertHandler.handleAlert(alert);
+
+		}
 
 	}
 

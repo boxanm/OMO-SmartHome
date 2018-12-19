@@ -95,6 +95,12 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param alert
 	 */
 	public void handleAlert(AlertType alert){
+		switch (alert){
+			case fire:
+			case broken:
+			case babyCrying:
+				//TODO kde zjisti, na jakem objektu alert probiha?
+		}
 
 	}
 
@@ -103,7 +109,8 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param child
 	 */
 	public void cheerUp(Child child){
-
+		newInfo(new Info(InfoType.cheeringUpChild, this, getFloor(), actualRoom, child));
+		child.stopCrying(50);
 	}
 
 	/**

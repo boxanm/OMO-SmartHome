@@ -21,6 +21,8 @@ public interface Appliance extends AlertHandler, ConsuptionGenerator, Observed {
 	public int consuptionON = 0;
 	public ApplianceState applianceState = null;
 
+	public ApplianceType type = null;
+
 	public Floor actualFloor = null;
 	public Room actualRoom = null;
 	public ConsuptionType consumptionType = null;
@@ -43,5 +45,7 @@ public interface Appliance extends AlertHandler, ConsuptionGenerator, Observed {
 	public void turnOFF();
 
 	public void turnON();
+
+	public ApplianceType getType();
 
 }

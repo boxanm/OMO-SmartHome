@@ -9,7 +9,9 @@ import SportsEquipment.*;
 import Organism.Organism;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * @author Michal
@@ -41,18 +43,35 @@ public class Child extends Organism implements Person {
 	}
 
 	public boolean cry(){
-		return new Random().nextInt(10) >= 7;
+		return new Random().nextInt(100) <= 30;
 	}
 
+	public boolean stopCrying(int chance){
+		if(isSad){
+			if(new Random().nextInt(100) <= chance){
+				isSad = false;
+				return true;
+			}
+		}
+		else{
+			cry();
+		}
+		return false;
+	}
 	public void nextAction(){
 		if(cry()){} // child is crying
 
 		else{
 			if(! isBusy){
 				if(applianceUsageNumber < sportequipmentUsage){
-					
-					ArrayList<Appliance> appliances = m_House.getAppliances(); %// TODO: 12/19/18 vybrat jen nejake spotrebice
-					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+					List<Appliance> entertainments = m_House
+							.getAppliances()
+							.stream()
+							.filter(Appliance->Appliance.getType().equals(ApplianceType.entertainment))
+							.collect(Collectors.toList());
+
+
+					useAppliance(entertainments.get(new Random().nextInt(entertainments.size())));
 				}
 				else{
 					ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
