@@ -1,5 +1,6 @@
 package House;
 
+import EventsAlerts.Info;
 import EventsAlerts.Observed;
 import EventsAlerts.Observer;
 
@@ -41,8 +42,9 @@ public class Outside implements Observed {
 
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
 
+		return null;
 	}
 
 }

@@ -4,6 +4,8 @@ import Appliances.Appliance;
 import Appliances.ApplianceState.State;
 import Appliances.ConsuptionType;;
 import EventsAlerts.AlertType;
+import EventsAlerts.Consumption;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
 
@@ -123,11 +125,15 @@ public class WashingMachine implements Appliance {
 	public void handleAlert(AlertType alert){
 
 	}
+	public Consumption newConsuption(){
 
-	public void newConsuption(){
-
+		return null;
 	}
 
+	public Info newInfo(){
+
+		return null;
+	}
 	/**
 	 * 
 	 * @param observer
@@ -147,9 +153,4 @@ public class WashingMachine implements Appliance {
 	public void announce(){
 
 	}
-
-	public void newInfo(){
-
-	}
-
 }

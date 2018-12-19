@@ -1,6 +1,8 @@
 package Appliances;
 
 import EventsAlerts.AlertType;
+import EventsAlerts.Consumption;
+import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
 
@@ -80,8 +82,9 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
-	public void newConsuption(){
+	public Consumption newConsuption(){
 
+		return null;
 	}
 
 	/**
@@ -104,8 +107,9 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
-	public void newInfo(){
+	public Info newInfo(){
 
+		return null;
 	}
 
 }
