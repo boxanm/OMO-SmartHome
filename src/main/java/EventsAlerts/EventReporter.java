@@ -60,5 +60,12 @@ public class EventReporter {
 	public void updateFromObserver(Observed source){
 
 	}
+	/**
+	 *
+	 * @param event
+	 */
+	public void updateFromOrganism(Event event){
+
+	}
 
 }

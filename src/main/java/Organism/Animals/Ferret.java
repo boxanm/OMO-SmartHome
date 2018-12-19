@@ -1,8 +1,7 @@
-package Animals;
+package Organism.Animals;
 
-import EventsAlerts.Event;
 import EventsAlerts.Info;
-import House.House;
+import EventsAlerts.InfoType;
 import House.Room;
 import House.Floor;
 import EventsAlerts.Observer;
@@ -22,17 +21,14 @@ public class Ferret extends Organism implements Animal {
 		actualRoom = room;
 	}
 
-	public Event makeSound() {
-		return null;
+	public void makeSound() {
+		Floor floor = m_House.getFloorOfRoom(actualRoom);
+		newInfo(new Info(InfoType.animalSound, this, floor, actualRoom, this));
 	}
 
 	public void finalize() throws Throwable {
 
 	}
 
-
-	public Info newInfo(){
-		return null;
-	}
 
 }

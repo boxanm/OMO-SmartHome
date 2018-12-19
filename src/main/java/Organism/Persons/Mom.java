@@ -1,6 +1,7 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
 import EventsAlerts.Info;
+import EventsAlerts.InfoType;
 import EventsAlerts.Observer;
 import House.Car;
 import House.House;
@@ -74,7 +75,8 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
-
+		applianceUsageNumber++;
+		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
 	}
 
 	/**
@@ -82,6 +84,8 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
+		sportequipmentUsage++;
+		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 

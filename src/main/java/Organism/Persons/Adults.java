@@ -1,5 +1,6 @@
 package Organism.Persons;
 
+import EventsAlerts.AlertHandler;
 import House.Room;
 import House.Car;
 
@@ -9,9 +10,8 @@ import House.Car;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public interface Adults {
+public interface Adults extends AlertHandler {
 
-	public Child childList = null;
 
 	/**
 	 * 

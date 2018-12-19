@@ -8,9 +8,7 @@ package EventsAlerts;
  */
 public interface InfoGenerator {
 
-	public Info m_Info = null;
+	void newInfo(Info info);
 
-	public Info newInfo();
-
-	public EventReporter eventReporter = null;
+	EventReporter eventReporter = null;
 }

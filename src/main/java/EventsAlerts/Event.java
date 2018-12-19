@@ -1,9 +1,7 @@
 package EventsAlerts;
 
-import EventsAlerts.Observed;
 import House.Floor;
 import House.Room;
-import EventsAlerts.Target;
 
 /**
  * Vygenerovaný EventGenerátorem (zdroj generování mùže být outside, spotøebiè,
@@ -25,12 +23,11 @@ import EventsAlerts.Target;
 public abstract class Event {
 
     private static int eventID;
-    private int numberOfLap;
-    private Observed source;
-    private Floor sourceFloor;
-    private Room sourceRoom;
-    private Target target;
-    private EventType type;
+    protected int lapNumber;
+    protected EventSource source;
+    protected Floor sourceFloor;
+    protected Room sourceRoom;
+    protected EventTarget target;
 
     public Event(){
 
@@ -40,4 +37,8 @@ public abstract class Event {
 
     }
 
+    public static int getEventID() {
+        eventID++;
+        return eventID;
+    }
 }

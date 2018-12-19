@@ -1,7 +1,4 @@
-package Animals;
-
-import EventsAlerts.Event;
-import Organism.Organism;
+package Organism.Animals;
 
 /**
  * Rozhraní definující spoleèné vlastnosti a metody zvíøat.
@@ -11,6 +8,6 @@ import Organism.Organism;
  */
 public interface Animal{
 
-	public Event makeSound();
+	void makeSound();
 
 }

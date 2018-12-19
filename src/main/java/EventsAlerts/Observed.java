@@ -15,7 +15,7 @@ package EventsAlerts;
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
-public interface Observed extends InfoGenerator, Target {
+public interface Observed extends InfoGenerator, EventTarget {
 
 	Observer observersList = null;
 

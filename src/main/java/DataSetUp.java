@@ -1,11 +1,4 @@
-import Animals.*;
-import Appliances.*;
-import EventsAlerts.*;
 import House.*;
-import Organism.*;
-import Reports.*;
-import Senzors.*;
-import SportsEquipment.*;
 
 public class DataSetUp {
 

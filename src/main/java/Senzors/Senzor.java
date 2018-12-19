@@ -2,8 +2,7 @@ package Senzors;
 
 import House.Room;
 import EventsAlerts.Observer;
-import EventsAlerts.Target;
-import EventsAlerts.Observed;
+import EventsAlerts.EventTarget;
 
 /**
  * Rozhraní definující spoleèné vlastnosti a metody senzorù.
@@ -11,7 +10,7 @@ import EventsAlerts.Observed;
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */
-public interface Senzor extends Observer, Target {
+public interface Senzor extends Observer, EventTarget {
 
 	public Room m_Room = null;
 

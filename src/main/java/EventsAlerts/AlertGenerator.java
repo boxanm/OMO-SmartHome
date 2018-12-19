@@ -13,6 +13,6 @@ public interface AlertGenerator {
 	public Alert m_Alert = null;
 	public ControlUnit m_ControlUnit = null;
 
-	public Event newEvent();
+	public void newAlert();
 
 }

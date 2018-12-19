@@ -1,6 +1,7 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
 import EventsAlerts.Info;
+import EventsAlerts.InfoType;
 import EventsAlerts.Observer;
 import House.Floor;
 import House.House;
@@ -23,7 +24,7 @@ public class Dad extends Organism implements Person, Adults  {
 	private int applianceUsageNumber = 0;
 	private int sportequipmentUsage = 0;
 
-	private Child childList = null;
+	private ArrayList<Child> childList = new ArrayList<Child>();
 
 	public Dad(String name, Room room){
 		this.name = name;
@@ -56,6 +57,8 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
+		applianceUsageNumber++;
+		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
 
 	}
 
@@ -64,6 +67,8 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
+		sportequipmentUsage++;
+		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 
@@ -81,10 +86,6 @@ public class Dad extends Organism implements Person, Adults  {
 
 	}
 
-	public Info newInfo(){
-		return null;
-	}
-
 	/**
 	 * 
 	 * @param child
@@ -98,7 +99,12 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param room
 	 */
 	public void extinguish(Room room){
-
+		if(actualRoom == room){
+			newInfo(new Info(InfoType.extinguishingFire, this, getFloor(), actualRoom, room));
+			room.extinguishFire();
+		}
+		else
+			changeRoom(room);
 	}
 
 	/**

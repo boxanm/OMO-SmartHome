@@ -2,7 +2,7 @@ package House;
 
 import EventsAlerts.EventReporter;
 import Reports.HouseReportLayout;
-import Animals.Animal;
+import Organism.Animals.Animal;
 import Organism.Persons.Person;
 
 

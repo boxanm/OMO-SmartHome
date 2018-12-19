@@ -1,12 +1,8 @@
 package House;
 
 
-import Animals.Animal;
-import Appliances.Appliance;
-import Organism.Persons.Person;
-import Senzors.Senzor;
+import EventsAlerts.EventTarget;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +11,7 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public abstract class Room {
+public abstract class Room implements EventTarget {
 
 	private String name;
 	private House house;

@@ -1,6 +1,9 @@
 package EventsAlerts;
 
 
+import House.Floor;
+import House.Room;
+
 /**
  * @author Michal
  * @version 1.0
@@ -8,8 +11,14 @@ package EventsAlerts;
  */
 public class Info extends Event {
 
-	public Info(){
+	private InfoType type;
 
+	public Info(InfoType infoType, EventSource source, Floor floor, Room room, EventTarget target){
+		type = infoType;
+		this.source = source;
+		this.sourceFloor = floor;
+		this.sourceRoom = room;
+		this.target = target;
 	}
 
 	public void finalize() throws Throwable {

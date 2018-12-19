@@ -1,8 +1,8 @@
 package Organism;
 
-import EventsAlerts.EventReporter;
-import EventsAlerts.InfoGenerator;
+import EventsAlerts.*;
 import House.Room;
+import House.Floor;
 import House.House;
 
 /**
@@ -11,8 +11,8 @@ import House.House;
  * @version 1.0
  * @created 16-pro-2018 9:01:57
  */
-public abstract class Organism implements InfoGenerator {
-	EventReporter eventReporter;
+public abstract class Organism implements InfoGenerator, EventSource, EventTarget {
+	protected EventReporter eventReporter;
 
 
 	protected String name = null;
@@ -41,6 +41,15 @@ public abstract class Organism implements InfoGenerator {
 
 	public void moveToHouse(House house){
 		m_House = house;
+	}
+
+
+	public void newInfo(Info info){
+		eventReporter.updateFromOrganism(info);
+	}
+
+	public Floor getFloor(){
+		return m_House.getFloorOfRoom(actualRoom);
 	}
 
 }

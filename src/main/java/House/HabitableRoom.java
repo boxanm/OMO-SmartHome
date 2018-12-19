@@ -1,7 +1,7 @@
 package House;
 
 
-import Animals.Animal;
+import Organism.Animals.Animal;
 import Appliances.Appliance;
 import Organism.Persons.Person;
 import Senzors.Senzor;

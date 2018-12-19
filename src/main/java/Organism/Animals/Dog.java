@@ -1,9 +1,8 @@
-package Animals;
+package Organism.Animals;
 
-import EventsAlerts.Event;
 import EventsAlerts.Info;
+import EventsAlerts.InfoType;
 import House.Floor;
-import House.House;
 import House.Room;
 import EventsAlerts.Observer;
 import Organism.Organism;
@@ -21,17 +20,11 @@ public class Dog extends Organism implements Animal {
 	public Dog(Room room){
 		actualRoom = room;
 	}
-	public Event makeSound() {
-		return null;
+	public void makeSound() {
+		Floor floor = m_House.getFloorOfRoom(actualRoom);
+		newInfo(new Info(InfoType.animalSound, this, floor, actualRoom, this));
 	}
 	public void finalize() throws Throwable {
-
-	}
-
-
-
-	public Info newInfo(){
-		return null;
 
 	}
 

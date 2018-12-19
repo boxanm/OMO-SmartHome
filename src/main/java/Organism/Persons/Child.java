@@ -1,14 +1,15 @@
 package Organism.Persons;
 import EventsAlerts.AlertType;
 import EventsAlerts.Info;
+import EventsAlerts.InfoType;
 import EventsAlerts.Observer;
-import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
 import Organism.Organism;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * @author Michal
@@ -38,7 +39,16 @@ public class Child extends Organism implements Person {
 
 	}
 
+	public boolean cry(){
+		return new Random().nextInt(10) >= 7;
+	}
+
 	public void nextAction(){
+		if(cry()){} // child is crying
+
+		else{//do something else
+
+		}
 
 	}
 
@@ -47,6 +57,8 @@ public class Child extends Organism implements Person {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
+		applianceUsageNumber++;
+		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
 
 	}
 
@@ -55,6 +67,8 @@ public class Child extends Organism implements Person {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
+		sportequipmentUsage++;
+		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 
@@ -62,18 +76,13 @@ public class Child extends Organism implements Person {
 
 	}
 
-
 	/**
-	 * 
+	 *
 	 * @param alert
 	 */
 	public void handleAlert(AlertType alert){
 
 	}
 
-	public Info newInfo(){
-		return null;
-
-	}
 
 }
