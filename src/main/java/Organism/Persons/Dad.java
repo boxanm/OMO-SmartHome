@@ -8,6 +8,7 @@ import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
 import House.Car;
+import Organism.Organism;
 
 import java.util.ArrayList;
 
@@ -16,13 +17,8 @@ import java.util.ArrayList;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public class Dad implements Person, Adults {
+public class Dad extends Organism implements Person, Adults  {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
-
-	private Room actualRoom = null;
-	private boolean isBusy = false;
-	private House m_House = null;
-	private String name = null;
 
 	private int applianceUsageNumber = 0;
 	private int sportequipmentUsage = 0;
@@ -34,9 +30,6 @@ public class Dad implements Person, Adults {
 		this.actualRoom = room;
 	}
 
-	public void moveToHouse(House house){
-		m_House = house;
-	}
 
 	public String getName() {
 		return name;
@@ -78,17 +71,7 @@ public class Dad implements Person, Adults {
 
 	}
 
-	/**
-	 * 
-	 * @param room
-	 */
-	public void changeRoom(Room room){
 
-	}
-
-	public void setOnFire(){
-
-	}
 
 	/**
 	 * 
@@ -96,19 +79,6 @@ public class Dad implements Person, Adults {
 	 */
 	public void handleAlert(AlertType alert){
 
-	}
-	public void attach(Observer observer){
-		if(!observersList.contains(observer))
-			observersList.add(observer);
-	}
-
-	public void detach(Observer observer){
-		observersList.remove(observer);
-	}
-
-	public void announce(){
-		for(Observer observer: observersList)
-			observer.update();
 	}
 
 	public Info newInfo(){

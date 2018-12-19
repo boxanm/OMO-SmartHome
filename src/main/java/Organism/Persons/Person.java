@@ -12,9 +12,8 @@ import EventsAlerts.AlertHandler;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public interface Person extends Organism, AlertHandler {
+public interface Person extends AlertHandler {
 
-	public String name = null;
 
 	public int applianceUsageNumber = 0;
 	public int sportequipmentUsage = 0;

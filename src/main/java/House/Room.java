@@ -32,7 +32,14 @@ public abstract class Room {
 		this.number_of_windows = number_of_windows;
 		this.isFire = false;
 		floor.addRoom(this);
+	}
 
+	public void setOnFire(){
+		this.isFire = true;
+	}
+
+	public void extinguishFire(){
+		this.isFire = false;
 	}
 
 }

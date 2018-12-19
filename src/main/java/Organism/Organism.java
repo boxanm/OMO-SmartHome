@@ -1,8 +1,8 @@
 package Organism;
 
-import House.Floor;
+import EventsAlerts.EventReporter;
+import EventsAlerts.InfoGenerator;
 import House.Room;
-import EventsAlerts.Observed;
 import House.House;
 
 /**
@@ -11,22 +11,36 @@ import House.House;
  * @version 1.0
  * @created 16-pro-2018 9:01:57
  */
-public interface Organism extends Observed {
+public abstract class Organism implements InfoGenerator {
+	EventReporter eventReporter;
 
-	Floor actualFloor = null;
-	Room actualRoom = null;
-	boolean isBusy = false;
-	House m_House = null;
+
+	protected String name = null;
+	protected Room actualRoom = null;
+	protected boolean isBusy = false;
+	protected House m_House = null;
+
 
 	/**
 	 * 
 	 * @param room
 	 */
-	public void changeRoom(Room room);
+	public void changeRoom(Room room){
+		this.actualRoom = room;
 
-	public void setOnFire();
+	}
+
+	public void setOnFire(){
+		actualRoom.setOnFire();
+	}
+
+	public void setEventReporter(EventReporter eventReporter){
+		this.eventReporter = eventReporter;
+	}
 
 
-	public void moveToHouse(House house);
+	public void moveToHouse(House house){
+		m_House = house;
+	}
 
 }
