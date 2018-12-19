@@ -1,4 +1,4 @@
-package Appliances;
+package Appliances.WashingMachine;
 
 
 /**
@@ -9,11 +9,11 @@ package Appliances;
  */
 public interface IWashingMachineState {
 
-    public void cycleFinish();
+    public void fillWithLaundry();
 
     public void cycleStart();
 
-    public void fillWithLaundry();
+    public void cycleFinish();
 
     public void takeOutLaundry();
 

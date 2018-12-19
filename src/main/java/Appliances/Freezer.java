@@ -24,10 +24,6 @@ public class Freezer implements FreezingAppliance, Appliance {
 		this.location = location;
     }
 
-    public void finalize() throws Throwable {
-
-	}
-
 	public void changeEmpty(){
 
 	}

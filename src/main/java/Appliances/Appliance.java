@@ -1,5 +1,6 @@
 package Appliances;
 
+import Appliances.ApplianceState.ApplianceState;
 import House.Floor;
 import House.Room;
 import EventsAlerts.AlertHandler;

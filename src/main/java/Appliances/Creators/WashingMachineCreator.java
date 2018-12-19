@@ -1,6 +1,7 @@
-package Appliances;
+package Appliances.Creators;
 
 
+import Appliances.WashingMachine.WashingMachine;
 import House.HabitableRoom;
 
 /**
