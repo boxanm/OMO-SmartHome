@@ -2,6 +2,12 @@ package House;
 
 import EventsAlerts.EventReporter;
 import Reports.HouseReportLayout;
+import Animals.Animal;
+import Organism.Persons.Person;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Základní entita. V rámci domu se mohou pohybovat zvíøata i lidé.
@@ -11,8 +17,10 @@ import Reports.HouseReportLayout;
  */
 public class House {
 
+	private List<Person> personList;
+	private List<Animal> animalList;
+	private List<Floor> floorList;
 	private EventReporter eventReporter;
-	private static Floor floorsArray;
 	private static House instance;
 	public Floor m_Floor;
 	public HouseReportLayout m_HouseReportLayout;
@@ -20,10 +28,38 @@ public class House {
 
 	public House(){
 
+		personList = new ArrayList<Person>();
+		animalList = new ArrayList<Animal>();
+		floorList = new ArrayList<Floor>();
+
+
 	}
 
 	public void finalize() throws Throwable {
 
 	}
+
+	public static House getInstance(){
+		if(instance == null){
+			instance = new House();
+			return instance;
+		}
+		else return instance;
+	}
+
+	public void addFloor(Floor floor){
+		floorList.add(floor);
+	}
+
+	public List<Floor> getFloRoomList(){
+		return floorList;
+	}
+	public List<Person> getPersonList(){
+		return personList;
+	}
+	public List<Animal> getAnimalList(){
+		return getAnimalList();
+	}
+
 
 }

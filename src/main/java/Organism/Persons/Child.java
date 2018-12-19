@@ -12,10 +12,15 @@ import SportsEquipment.*;
  */
 public class Child implements Person {
 
+
+	private String name;
+	private Room location;
 	private boolean isSad;
 
-	public Child(){
-
+	public Child(String name, Room location){
+		this.name = name;
+		this.location = location;
+		isSad = false;
 	}
 
 	public void finalize() throws Throwable {

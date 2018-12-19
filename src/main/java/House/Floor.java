@@ -1,6 +1,11 @@
 package House;
 
 
+import Organism.Persons.Person;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Základní entita
  * @author Michal
@@ -9,16 +14,36 @@ package House;
  */
 public class Floor {
 
-	private int number_of_rooms;
-	private Room roomsArray;
+	private String name;
+	private House house;
+    private int number_of_rooms;
+	private List<Room> roomList;
 	public Room m_Room;
 
-	public Floor(){
+	public Floor(String name, House house){
+		this.name = name;
+		this.house = house;
+		this.roomList = new ArrayList<Room>();
+		house.addFloor(this);
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public void finalize() throws Throwable {
 
+	}
+
+	public void addRoom(Room room) {
+		roomList.add(room);
+	}
+	public void deleteRoom(Room room){
+		roomList.remove(room);
 	}
 
 }

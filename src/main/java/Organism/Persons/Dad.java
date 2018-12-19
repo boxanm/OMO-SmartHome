@@ -13,8 +13,20 @@ import House.Car;
  */
 public class Dad implements Person, Adults {
 
-	public Dad(){
+	private String name;
+	private Room location;
 
+	public Dad(String name, Room location){
+		this.name = name;
+		this.location = location;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public void finalize() throws Throwable {

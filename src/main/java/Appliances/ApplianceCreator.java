@@ -22,7 +22,9 @@ public class ApplianceCreator {
 	 * @param type
 	 */
 	public Appliance createAppliance(String type){
-		if(type = )
+		return null;
+
+		//if(type = )
 	}
 
 }

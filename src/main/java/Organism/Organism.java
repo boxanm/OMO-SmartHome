@@ -26,4 +26,6 @@ public interface Organism extends Observed {
 
 	public void setOnFire();
 
+
+
 }
