@@ -10,6 +10,6 @@ public interface InfoGenerator {
 
 	public Info m_Info = null;
 
-	public void newInfo();
+	public Info newInfo();
 
 }
