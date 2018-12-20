@@ -26,7 +26,9 @@ public class Mom extends Organism implements Adults, Person {
 	private int applianceUsageNumber = 0;
 	private int sportequipmentUsage = 0;
 
-	private Child childList = null;
+	private int cheerUpChildProbability = 90;
+
+	private ArrayList<Child> childList = new ArrayList<Child>();
 
 	public Mom(String name, Room room){
 		this.name = name;
@@ -43,7 +45,7 @@ public class Mom extends Organism implements Adults, Person {
 	 */
 	public void cheerUp(Child child){
 		newInfo(new Info(InfoType.cheeringUpChild, this, getFloor(), actualRoom, child));
-		child.stopCrying(90);
+		child.stopCrying(cheerUpChildProbability);
 	}
 
 	/**
@@ -64,7 +66,8 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param car
 	 */
 	public void useCar(Car car){
-
+		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));//TODO menit pokoj vzdy pred akci?
+		car.goShopping(this);
 	}
 
 	/**
@@ -78,14 +81,14 @@ public class Mom extends Organism implements Adults, Person {
 	public void nextAction(){
 		if(! isBusy){
 			if(applianceUsageNumber < sportequipmentUsage){
-				List<Appliance> kitchenAppliances = m_House
+				List<Appliance> appliances = m_House
 						.getAppliances()
 						.stream()
-						.filter(Appliance->Appliance.getType().equals(ApplianceType.kitchen))
+						.filter(Appliance-> !Appliance.isBroken())
 						.collect(Collectors.toList());
 
 
-				useAppliance(kitchenAppliances.get(new Random().nextInt(kitchenAppliances.size())));
+				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
 			}
 			else{
 				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
@@ -99,9 +102,32 @@ public class Mom extends Organism implements Adults, Person {
 	 * 
 	 * @param appliance
 	 */
+
+	/**
+	 *
+	 * @param appliance
+	 */
 	public void useAppliance(Appliance appliance){
 		applianceUsageNumber++;
 		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
+		switch (appliance.getType()){
+			case freezing:
+				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
+				if(! freezingAppliance.isEmpty())
+					freezingAppliance.eat(foodConsumption);
+				else{
+					Car car = m_House
+							.getCars()
+							.stream()
+							.filter(Car::isPresent)
+							.findAny()
+							.get();
+					useCar(car);
+					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
+				}
+				break;
+			case entertainment:
+		}
 	}
 
 	/**
@@ -114,22 +140,40 @@ public class Mom extends Organism implements Adults, Person {
 
 	}
 
-	public void hangOn() {
-
-	}
+	public void hangOn() {	}
 
 
 
 	/**
 	 * 
-	 * @param alert
+	 * @param alertType
 	 */
-	public void handleAlert(AlertType alert){
+	public void handleAlert(AlertType alertType){ //TODO mozna prebirat rovnou alert?
+		if(! isBusy){
+			isBusy = true;
+			switch (alertType){
+				case fire:{
+					Room room = m_House
+							.getRoomList()
+							.stream()
+							.filter(Room::isOnFire)
+							.findFirst()
+							.get();
+					callFireman(room);
+					break;
+				}
+				case babyCrying:{
+					Child child = childList
+							.stream()
+							.filter(Child::isSad)
+							.findFirst()
+							.get();
+					cheerUp(child);
+					break;
+				}
+			}
+		}
 
-	}
-
-	public Info newInfo(){
-		return null;
 	}
 
 }

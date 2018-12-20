@@ -14,16 +14,18 @@ public interface FreezingAppliance {
 
 	/**
 	 * 
-	 * @param food
+	 * @param food - amount of food from 1 to 10 eaten from the fridge
 	 */
 	public void eat(int food);
 
 	/**
 	 * 
-	 * @param food
+	 * @param food - amount of food from 1 to 10 added to the fridge
 	 */
 	public void fill(int food);
 
 	public void changeEmpty();
+
+	public boolean isEmpty();
 
 }

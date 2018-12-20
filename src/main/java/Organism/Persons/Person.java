@@ -17,6 +17,7 @@ public interface Person {
 
 	public int applianceUsageNumber = 0;
 	public int sportequipmentUsage = 0;
+	int foodConsumption = 0;
 
 	/**
 	 * 

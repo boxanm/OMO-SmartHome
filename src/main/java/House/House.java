@@ -22,8 +22,10 @@ public class House {
 	private List<Person> personList;
 	private List<Animal> animalList;
 	private List<Floor> floorList;
+	private List<Room> roomList;
 	private ArrayList<Appliance> applianceList;;
 	private ArrayList<SportEquipment> sportEquipmentList;
+	private ArrayList<Car> cars;
 	private EventReporter eventReporter;
 	private static House instance;
 	public Floor m_Floor;
@@ -53,8 +55,11 @@ public class House {
 		floorList.add(floor);
 	}
 
-	public List<Floor> getFloRoomList(){
+	public List<Floor> getFloorList(){
 		return floorList;
+	}
+	public List<Room> getRoomList(){
+		return roomList;
 	}
 	public List<Person> getPersonList(){
 		return personList;
@@ -71,5 +76,9 @@ public class House {
 	}
 	public ArrayList<SportEquipment> getSportEquipment(){
 		return sportEquipmentList;
+	}
+
+	public ArrayList<Car> getCars() {
+		return cars;
 	}
 }

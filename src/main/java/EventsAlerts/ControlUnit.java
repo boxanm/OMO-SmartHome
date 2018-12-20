@@ -28,7 +28,7 @@ public class ControlUnit {
 	 */
 	public void handleAlert(Alert alert){
 		for (AlertHandler alertHandler: listOfAlertHandlers) {
-			alertHandler.handleAlert(alert);
+			alertHandler.handleAlert(alert.getAlertType());
 
 		}
 

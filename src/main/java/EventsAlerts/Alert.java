@@ -1,6 +1,9 @@
 package EventsAlerts;
 
 
+import House.Floor;
+import House.Room;
+
 /**
  * @author Michal
  * @version 1.0
@@ -10,7 +13,13 @@ public class Alert extends Event {
 
 	private AlertType alertType;
 
-	public Alert(){
+	public Alert(AlertType alertType, EventSource source,
+				 Floor floor, Room room, EventTarget target){
+		this.alertType = alertType;
+		this.source = source;
+		this.sourceFloor = floor;
+		this.sourceRoom = room;
+		this.target = target;
 
 	}
 
@@ -18,4 +27,7 @@ public class Alert extends Event {
 		super.finalize();
 	}
 
+	public AlertType getAlertType() {
+		return alertType;
+	}
 }

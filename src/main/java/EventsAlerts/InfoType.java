@@ -7,5 +7,7 @@ public enum InfoType {
     extinguishingFire,
     callingFireman,
     cheeringUpChild,
+    drivingCar,
+    repairingAppliance,
 
 }

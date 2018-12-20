@@ -48,4 +48,6 @@ public interface Appliance extends AlertHandler, ConsuptionGenerator, Observed {
 
 	public ApplianceType getType();
 
+	public boolean isBroken();
+
 }

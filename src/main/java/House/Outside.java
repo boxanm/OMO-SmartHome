@@ -47,4 +47,8 @@ public class Outside implements Observed {
 		return null;
 	}
 
+	@Override
+	public void newInfo(Info info) {
+
+	}
 }

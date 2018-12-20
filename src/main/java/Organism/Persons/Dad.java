@@ -2,9 +2,6 @@ package Organism.Persons;
 import EventsAlerts.AlertType;
 import EventsAlerts.Info;
 import EventsAlerts.InfoType;
-import EventsAlerts.Observer;
-import House.Floor;
-import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -13,6 +10,7 @@ import Organism.Organism;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * @author Michal
@@ -20,10 +18,11 @@ import java.util.Random;
  * @created 16-pro-2018 9:02:03
  */
 public class Dad extends Organism implements Person, Adults  {
-	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 	private int applianceUsageNumber = 0;
-	private int sportequipmentUsage = 0;
+	private int sportEquipmentUsageNumber = 0;
+	private int foodConsumption = 7;
+	private int cheerUpChildProbability = 30;
 
 	private ArrayList<Child> childList = new ArrayList<Child>();
 
@@ -71,7 +70,22 @@ public class Dad extends Organism implements Person, Adults  {
 	public void useAppliance(Appliance appliance){
 		applianceUsageNumber++;
 		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
-
+		switch (appliance.getType()){
+			case freezing:
+				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
+				if(! freezingAppliance.isEmpty())
+					freezingAppliance.eat(foodConsumption);
+				else{
+					Car car = m_House
+						.getCars()
+						.stream()
+						.filter(Car::isPresent)
+						.findAny()
+						.get();
+					useCar(car);
+					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
+				}
+		}
 	}
 
 	/**
@@ -79,14 +93,12 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
-		sportequipmentUsage++;
+		sportEquipmentUsageNumber++;
 		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 
-	public void hangOn() {
-
-	}
+	public void hangOn() {}
 
 
 
@@ -95,12 +107,41 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param alert
 	 */
 	public void handleAlert(AlertType alert){
-		switch (alert){
-			case fire:
-			case broken:
-			case babyCrying:
-				//TODO kde zjisti, na jakem objektu alert probiha?
+		if(! isBusy){
+			isBusy = true;
+			switch (alert){
+				case fire:{
+					Room room = m_House
+							.getRoomList()
+							.stream()
+							.filter(Room::isOnFire)
+							.findFirst()
+							.get();
+					extinguish(room);
+					break;
+				}
+				case broken:{
+					Appliance appliance = m_House
+							.getAppliances()
+							.stream()
+							.filter(Appliance::isBroken)
+							.findFirst()
+							.get();
+					repair(appliance);
+					break;
+				}
+				case babyCrying:{
+					Child child = childList
+							.stream()
+							.filter(Child::isSad)
+							.findFirst()
+							.get();
+					cheerUp(child);
+					break;
+				}
+			}
 		}
+
 
 	}
 
@@ -110,9 +151,17 @@ public class Dad extends Organism implements Person, Adults  {
 	 */
 	public void cheerUp(Child child){
 		newInfo(new Info(InfoType.cheeringUpChild, this, getFloor(), actualRoom, child));
-		child.stopCrying(50);
+		child.stopCrying(cheerUpChildProbability);
 	}
 
+	/**
+	 *
+	 * @param appliance
+	 */
+	public void repair(Appliance appliance){
+		newInfo(new Info(InfoType.repairingAppliance, this, getFloor(), actualRoom, appliance));
+//		appliance.(); //TODO stahnout manual a opravit
+	}
 	/**
 	 * 
 	 * @param room
@@ -131,7 +180,8 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param car
 	 */
 	public void useCar(Car car){
-
+		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
+		car.goShopping(this);
 	}
 
 }

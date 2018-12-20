@@ -55,9 +55,9 @@ public class EventReporter {
 
 	/**
 	 *
-	 * @param source
+	 * @param event
 	 */
-	public void updateFromObserver(Observed source){
+	public void updateFromObserver(Event event){
 
 	}
 	/**

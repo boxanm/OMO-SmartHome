@@ -1,7 +1,6 @@
 package Senzors;
 
-import EventsAlerts.AlertGenerator;
-import EventsAlerts.Event;
+import EventsAlerts.*;
 
 /**
  * @author Michal
@@ -9,6 +8,7 @@ import EventsAlerts.Event;
  * @created 16-pro-2018 9:02:17
  */
 public class BabySitter implements Senzor, AlertGenerator {
+	EventReporter eventReporter;
 
 	public BabySitter(){
 
@@ -20,10 +20,16 @@ public class BabySitter implements Senzor, AlertGenerator {
 
 	public void update(){
 
+
 	}
 
 	public Event newEvent(){
 		return null;
 	}
 
+	@Override
+	public void newAlert() {
+//		eventReporter.updateFromObserver(new Alert(AlertType.babyCrying,this,));
+
+	}
 }

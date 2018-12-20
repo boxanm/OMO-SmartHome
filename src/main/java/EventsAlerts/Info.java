@@ -13,7 +13,8 @@ public class Info extends Event {
 
 	private InfoType type;
 
-	public Info(InfoType infoType, EventSource source, Floor floor, Room room, EventTarget target){
+	public Info(InfoType infoType, EventSource source,
+				Floor floor, Room room, EventTarget target){
 		type = infoType;
 		this.source = source;
 		this.sourceFloor = floor;

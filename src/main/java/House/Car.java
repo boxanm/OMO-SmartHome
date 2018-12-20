@@ -1,5 +1,6 @@
 package House;
 
+import EventsAlerts.EventTarget;
 import Organism.Persons.Adults;
 
 /**
@@ -7,7 +8,7 @@ import Organism.Persons.Adults;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class Car {
+public class Car implements EventTarget {
 
 	private String brand;
 	private NonHabitableRoom location;
@@ -21,10 +22,14 @@ public class Car {
 
 	/**
 	 * 
-	 * @param dospelí
+	 * @param adults
 	 */
-	public void goShopping(Adults dospelí){
+	public void goShopping(Adults adults){
 
+	}
+
+	public boolean isPresent(){
+		return !isBusy;
 	}
 
 }

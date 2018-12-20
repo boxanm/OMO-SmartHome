@@ -17,7 +17,7 @@ public abstract class Room implements EventTarget {
 	private House house;
 	private Floor floor;
 
-	private boolean isFire;
+	private boolean isOnFire = false;
 	private int number_of_windows;
 	private List<Window> windowsList;
 
@@ -26,16 +26,19 @@ public abstract class Room implements EventTarget {
 		this.house = house;
 		this.floor = floor;
 		this.number_of_windows = number_of_windows;
-		this.isFire = false;
 		floor.addRoom(this);
 	}
 
 	public void setOnFire(){
-		this.isFire = true;
+		this.isOnFire = true;
 	}
 
 	public void extinguishFire(){
-		this.isFire = false;
+		this.isOnFire = false;
+	}
+
+	public boolean isOnFire(){
+		return isOnFire;
 	}
 
 }

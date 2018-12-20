@@ -12,6 +12,7 @@ import House.Car;
  */
 public interface Adults extends AlertHandler {
 
+	int cheerUpChildProbability = 0;
 
 	/**
 	 * 

@@ -1,8 +1,5 @@
 package Organism.Persons;
-import EventsAlerts.AlertType;
-import EventsAlerts.Info;
-import EventsAlerts.InfoType;
-import EventsAlerts.Observer;
+import EventsAlerts.*;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -18,12 +15,13 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public class Child extends Organism implements Person {
+public class Child extends Organism implements Person, Observed {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 	private int applianceUsageNumber = 0;
 	private int sportequipmentUsage = 0;
 
+	private int cryProbability = 30;
 	private boolean isSad;
 
 	public Child(String name, Room room){
@@ -43,7 +41,8 @@ public class Child extends Organism implements Person {
 	}
 
 	public boolean cry(){
-		return new Random().nextInt(100) <= 30;
+		announce();
+		return new Random().nextInt(100) <= cryProbability;
 	}
 
 	public boolean stopCrying(int chance){
@@ -59,19 +58,15 @@ public class Child extends Organism implements Person {
 		return false;
 	}
 	public void nextAction(){
-		if(cry()){} // child is crying
-
-		else{
+		if(! cry()){
 			if(! isBusy){
 				if(applianceUsageNumber < sportequipmentUsage){
-					List<Appliance> entertainments = m_House
+					List<Appliance> appliances = m_House
 							.getAppliances()
 							.stream()
 							.filter(Appliance->Appliance.getType().equals(ApplianceType.entertainment))
 							.collect(Collectors.toList());
-
-
-					useAppliance(entertainments.get(new Random().nextInt(entertainments.size())));
+					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
 				}
 				else{
 					ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
@@ -80,7 +75,12 @@ public class Child extends Organism implements Person {
 				isBusy = true;
 			}
 		}
+		else{} // child is crying
 
+	}
+
+	public boolean isSad() {
+		return isSad;
 	}
 
 	/**
@@ -107,13 +107,24 @@ public class Child extends Organism implements Person {
 
 	}
 
-	/**
-	 *
-	 * @param alert
-	 */
-	public void handleAlert(AlertType alert){
+	@Override
+	public void attach(Observer observer) {
+		if(! observersList.contains(observer))
+			observersList.add(observer);
+	}
+
+	@Override
+	public void detach(Observer observer) {
+		observersList.remove(observer);
 
 	}
 
+	@Override
+	public void announce() {
+		for (Observer observer:observersList) {
+			observer.update();
 
+		}
+
+	}
 }
