@@ -69,7 +69,7 @@ public class TV implements Appliance {
 
 	}
 
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}

@@ -7,7 +7,6 @@ import Appliances.*;
 import SportsEquipment.*;
 import House.Car;
 import Organism.Organism;
-
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -70,9 +69,11 @@ public class Dad extends Organism implements Person, Adults  {
 	public void useAppliance(Appliance appliance){
 		applianceUsageNumber++;
 		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
+		if(appliance instanceof FreezingAppliance) //TODO
 		switch (appliance.getType()){
 			case freezing:
 				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
+//				((FreezingAppliance) appliance).eat(10);
 				if(! freezingAppliance.isEmpty())
 					freezingAppliance.eat(foodConsumption);
 				else{

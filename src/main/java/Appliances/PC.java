@@ -89,7 +89,7 @@ public class PC implements CDplayer, Appliance {
 
 	}
 
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}

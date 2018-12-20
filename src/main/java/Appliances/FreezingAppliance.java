@@ -1,6 +1,4 @@
 package Appliances;
-
-
 /**
  * Rozhraní definující spoleèné vlastnosti a metody lednice a mrazáku
  * @author Michal
@@ -9,8 +7,8 @@ package Appliances;
  */
 public interface FreezingAppliance {
 
-	public int food = 0;
-	public boolean isEmpty = false;
+	int food = 0;
+	boolean isEmpty = false;
 
 	/**
 	 * 

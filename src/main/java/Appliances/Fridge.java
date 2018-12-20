@@ -34,6 +34,11 @@ public class Fridge implements FreezingAppliance, Appliance {
 
 	}
 
+	@Override
+	public boolean isEmpty() {
+		return false;
+	}
+
 	/**
 	 * 
 	 * @param food
@@ -86,7 +91,7 @@ public class Fridge implements FreezingAppliance, Appliance {
 
 	}
 
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}

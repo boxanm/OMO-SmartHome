@@ -10,6 +10,6 @@ public interface ConsuptionGenerator {
 
 	public Consumption m_Consumption = null;
 
-	public void newConsuption();
+	public void newConsumption();
 
 }

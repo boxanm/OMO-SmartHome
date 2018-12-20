@@ -30,6 +30,11 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
+	@Override
+	public boolean isEmpty() {
+		return false;
+	}
+
 	/**
 	 * 
 	 * @param food
@@ -74,7 +79,17 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
-	/**
+    @Override
+    public ApplianceType getType() {
+        return null;
+    }
+
+    @Override
+    public boolean isBroken() {
+        return false;
+    }
+
+    /**
 	 * 
 	 * @param alert
 	 */
@@ -82,9 +97,8 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
-	public Consumption newConsuption(){
+	public void newConsumption(){
 
-		return null;
 	}
 
 	/**
@@ -112,4 +126,8 @@ public class Freezer implements FreezingAppliance, Appliance {
 		return null;
 	}
 
+    @Override
+    public void newInfo(Info info) {
+
+    }
 }

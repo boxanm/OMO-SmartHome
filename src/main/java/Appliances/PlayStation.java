@@ -81,7 +81,7 @@ public class PlayStation implements CDplayer, Appliance {
 
 	}
 
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}

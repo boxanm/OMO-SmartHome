@@ -67,7 +67,7 @@ public class HifiTower implements Appliance, CDplayer {
 
 	}
 
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}

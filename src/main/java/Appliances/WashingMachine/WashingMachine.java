@@ -125,7 +125,7 @@ public class WashingMachine implements Appliance {
 	public void handleAlert(AlertType alert){
 
 	}
-	public Consumption newConsuption(){
+	public Consumption newConsumption(){
 
 		return null;
 	}
