@@ -2,6 +2,7 @@ package House;
 
 import Appliances.Appliance;
 import EventsAlerts.EventReporter;
+import Organism.Organism;
 import Reports.HouseReportLayout;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
@@ -28,15 +29,19 @@ public class House {
 	private ArrayList<Car> cars;
 	private EventReporter eventReporter;
 	private static House instance;
-	public Floor m_Floor;
-	public HouseReportLayout m_HouseReportLayout;
-	public EventReporter m_EventReporter;
+	private Floor m_Floor;
+	private HouseReportLayout m_HouseReportLayout;
+	private EventReporter m_EventReporter;
 
 	public House(){
 
 		personList = new ArrayList<Person>();
 		animalList = new ArrayList<Animal>();
 		floorList = new ArrayList<Floor>();
+		roomList = new ArrayList<Room>();
+		applianceList = new ArrayList<>();
+		sportEquipmentList = new ArrayList<>();
+		cars = new ArrayList<Car>();
 	}
 
 	public void finalize() throws Throwable {
@@ -52,33 +57,92 @@ public class House {
 	}
 
 	public void addFloor(Floor floor){
-		floorList.add(floor);
+		if(! floorList.contains(floor))
+	        floorList.add(floor);
 	}
 
 	public List<Floor> getFloorList(){
 		return floorList;
 	}
+
 	public List<Room> getRoomList(){
-		return roomList;
+        ArrayList<Room> rooms = new ArrayList<>();
+        for (Floor floor: floorList) {
+            rooms.addAll(floor.getRoomList());
+        }
+        return rooms;
 	}
+
 	public List<Person> getPersonList(){
-		return personList;
+	    ArrayList<Person> persons = new ArrayList<>();
+        for (Room room:getRoomList()) {
+            for (Organism organism: room.getOrganismList()) {
+                if(organism instanceof Person)
+                    persons.add((Person) organism);
+            }
+        }
+		return persons;
 	}
 	public List<Animal> getAnimalList(){
-		return getAnimalList();
+
+        ArrayList<Animal> animals = new ArrayList<>();
+        for (Room room:getRoomList()) {
+            for (Organism organism: room.getOrganismList()) {
+                if(organism instanceof Animal)
+                    animals.add((Animal) organism);
+            }
+        }
+        return animals;
+
 	}
 
 	public Floor getFloorOfRoom(Room room){
 		return null; // vrati podlazi, ve kterem se nachazi zadana room
 	}
+
 	public ArrayList<Appliance> getAppliances(){
-		return applianceList;
+		ArrayList<Appliance> appliances = new ArrayList<>();
+		for (Floor floor: floorList) {
+			ArrayList<Room> rooms = floor.getRoomList();
+			for (Room room:rooms) {
+				if(room instanceof HabitableRoom){
+					appliances.addAll(((HabitableRoom) room).getApplianceList());
+				}
+			}
+
+		}
+		return appliances;
 	}
 	public ArrayList<SportEquipment> getSportEquipment(){
-		return sportEquipmentList;
+		ArrayList<SportEquipment> sportEquipment = new ArrayList<>();
+		for (Floor floor: floorList) {
+			ArrayList<Room> rooms = floor.getRoomList();
+			for (Room room:rooms) {
+				if(room instanceof NonHabitableRoom){
+					sportEquipment.addAll(((NonHabitableRoom) room).getSportEquipmentList());
+				}
+			}
+
+		}
+		return sportEquipment;
 	}
 
 	public ArrayList<Car> getCars() {
-		return cars;
+
+        ArrayList<Car> cars = new ArrayList<>();
+        for(Room room:getRoomList()){
+            if(room instanceof NonHabitableRoom)
+                cars.add(((NonHabitableRoom) room).getCar());
+        }
+        return cars;
+
+	}
+
+	public EventReporter getEventReporter() {
+		return eventReporter;
+	}
+
+	public void setEventReporter(EventReporter eventReporter){
+		this.m_EventReporter = eventReporter;
 	}
 }

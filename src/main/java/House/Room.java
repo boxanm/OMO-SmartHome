@@ -2,7 +2,10 @@ package House;
 
 
 import EventsAlerts.EventTarget;
+import Organism.Organism;
+import Organism.Persons.Person;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,6 +16,7 @@ import java.util.List;
  */
 public abstract class Room implements EventTarget {
 
+	private ArrayList<Organism> organismList;
 	private String name;
 	private House house;
 	private Floor floor;
@@ -27,6 +31,7 @@ public abstract class Room implements EventTarget {
 		this.floor = floor;
 		this.number_of_windows = number_of_windows;
 		floor.addRoom(this);
+		organismList = new ArrayList<>();
 	}
 
 	public void setOnFire(){
@@ -41,4 +46,20 @@ public abstract class Room implements EventTarget {
 		return isOnFire;
 	}
 
+	public Floor getFloor() {
+		return floor;
+	}
+
+
+	public void addOrganism(Organism organism){
+		if(! organismList.contains(organism))
+			organismList.add(organism);
+	}
+	public  void removeOrganism(Organism organism){
+		organismList.remove(organism);
+	}
+
+	public ArrayList<Organism> getOrganismList(){
+		return organismList;
+	}
 }

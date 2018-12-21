@@ -12,7 +12,7 @@ public class Car implements EventTarget {
 
 	private String brand;
 	private NonHabitableRoom location;
-	private boolean isBusy;
+	private boolean isPresent = true;
 
 	public Car(String brand, NonHabitableRoom location){
 
@@ -24,12 +24,12 @@ public class Car implements EventTarget {
 	 * 
 	 * @param adults
 	 */
-	public void goShopping(Adults adults){
-
+	public void goShopping(Adults adults){//todo kde kontrolovat, jestli je auto dostupne?
+		isPresent = false;
 	}
 
 	public boolean isPresent(){
-		return !isBusy;
+		return isPresent;
 	}
 
 }

@@ -32,4 +32,8 @@ public class CircuitBreakers implements Senzor, AlertGenerator {
 		return null;
 	}
 
+	@Override
+	public void newAlert() {
+
+	}
 }

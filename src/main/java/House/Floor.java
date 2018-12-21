@@ -17,7 +17,7 @@ public class Floor {
 	private String name;
 	private House house;
     private int number_of_rooms;
-	private List<Room> roomList;
+	private ArrayList<Room> roomList;
 	public Room m_Room;
 
 	public Floor(String name, House house){
@@ -41,10 +41,14 @@ public class Floor {
 	}
 
 	public void addRoom(Room room) {
-		roomList.add(room);
+		if(! roomList.contains(room))
+			roomList.add(room);
 	}
 	public void deleteRoom(Room room){
 		roomList.remove(room);
 	}
 
+	public ArrayList<Room> getRoomList() {
+		return roomList;
+	}
 }

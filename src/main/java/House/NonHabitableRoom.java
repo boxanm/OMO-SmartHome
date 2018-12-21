@@ -3,6 +3,7 @@ package House;
 import SportsEquipment.SportEquipmentCreatorBicykle;
 import SportsEquipment.SportEquipment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,10 +20,11 @@ public class NonHabitableRoom extends Room {
 
 	private Car car;
 	private SportEquipmentCreatorBicykle sportEquipmentCreator;
-	private List<SportEquipment> sportEquipmentList;
+	private ArrayList<SportEquipment> sportEquipmentList;
 
 	public NonHabitableRoom(String name, House house, Floor floor, int number_of_windows){
 		super(name, house, floor, number_of_windows);
+		sportEquipmentList = new ArrayList<>();
 	}
 
 	public void finalize() throws Throwable {
@@ -30,15 +32,15 @@ public class NonHabitableRoom extends Room {
 	}
 
 	public void addSportEquipment(SportEquipment sportEquipment){
-
-		sportEquipmentList.add(sportEquipment);
+		if(! sportEquipmentList.contains(sportEquipment))
+			sportEquipmentList.add(sportEquipment);
 	}
 	public void deleteSportEquipment(SportEquipment sportEquipment){
 		sportEquipmentList.remove(sportEquipment);
 	}
 	public void addCar(Car car){
 		this.car = car;
-	}
+	}//todo vice aut v jedne garazi?
 	public void deleteCar(Car car){
 		this.car = null;
 	}
@@ -47,7 +49,7 @@ public class NonHabitableRoom extends Room {
 		return car;
 	}
 
-	public List<SportEquipment> getSportEquipmentList() {
+	public ArrayList<SportEquipment> getSportEquipmentList() {
 		return sportEquipmentList;
 	}
 }

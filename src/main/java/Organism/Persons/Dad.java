@@ -30,7 +30,6 @@ public class Dad extends Organism implements Person, Adults  {
 		this.actualRoom = room;
 	}
 
-
 	public String getName() {
 		return name;
 	}
@@ -39,25 +38,23 @@ public class Dad extends Organism implements Person, Adults  {
 		this.name = name;
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 	public void callFireman(Room room){
-		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
+		room.extinguishFire();
+//		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
 	}
 
 	public void nextAction(){
 		if(! isBusy){
 			if(applianceUsageNumber < sportequipmentUsage){
 				ArrayList<Appliance> appliances = m_House.getAppliances();
-				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+				if(!appliances.isEmpty())
+					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
 			}
 			else{
 				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
-				useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
+				if(! sportEquipments.isEmpty())
+					useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
 			}
-			isBusy = true;
 		}
 
 	}
@@ -67,26 +64,28 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
-		applianceUsageNumber++;
-		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
-		if(appliance instanceof FreezingAppliance) //TODO
-		switch (appliance.getType()){
-			case freezing:
-				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
-//				((FreezingAppliance) appliance).eat(10);
-				if(! freezingAppliance.isEmpty())
-					freezingAppliance.eat(foodConsumption);
-				else{
-					Car car = m_House
-						.getCars()
-						.stream()
-						.filter(Car::isPresent)
-						.findAny()
-						.get();
-					useCar(car);
-					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
-				}
+		if(appliance != null){
+			applianceUsageNumber++;
+			appliance.use(this);
+			isBusy = true;
 		}
+//		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
+//		switch (appliance.getType()){
+//			case freezing:
+//				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
+//				if(! freezingAppliance.isEmpty())
+//					freezingAppliance.eat(foodConsumption);
+//				else{
+//					Car car = m_House
+//						.getCars()
+//						.stream()
+//						.filter(Car::isPresent)
+//						.findAny()
+//						.get();
+//					useCar(car);
+//					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
+//				}
+//		}
 	}
 
 	/**
@@ -94,12 +93,18 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
-		sportEquipmentUsageNumber++;
-		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
+		if(equipment != null){
+			sportEquipmentUsageNumber++;
+			equipment.use(this);
+			isBusy = true;
+		}
+//		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 
-	public void hangOn() {}
+	public void hangOn() {
+		isBusy = true;
+	}
 
 
 
@@ -181,7 +186,8 @@ public class Dad extends Organism implements Person, Adults  {
 	 * @param car
 	 */
 	public void useCar(Car car){
-		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
+		isBusy = true;
+//		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
 		car.goShopping(this);
 	}
 

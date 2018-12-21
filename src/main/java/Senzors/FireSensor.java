@@ -28,4 +28,8 @@ public class FireSensor implements AlertGenerator, Senzor {
 
 	}
 
+	@Override
+	public void newAlert() {
+
+	}
 }

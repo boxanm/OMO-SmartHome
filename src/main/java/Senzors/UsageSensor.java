@@ -36,4 +36,8 @@ public class UsageSensor implements Senzor, AlertGenerator, Meter {
 
 	}
 
+	@Override
+	public void newAlert() {
+
+	}
 }

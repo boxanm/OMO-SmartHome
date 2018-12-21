@@ -3,6 +3,7 @@ package SportsEquipment;
 import EventsAlerts.EventTarget;
 import Organism.Persons.Adults;
 import House.NonHabitableRoom;
+import Organism.Persons.Person;
 
 /**
  * Abstraktní tøída, jednotlivá spotovní vybavení se vyváøí pomocí návrhového
@@ -21,6 +22,6 @@ public abstract class SportEquipment implements EventTarget {
 	 * 
 	 * @param person
 	 */
-	abstract void useEquipment(Adults person);
+	public abstract void use(Person person);
 
 }

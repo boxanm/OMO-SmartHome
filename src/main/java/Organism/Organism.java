@@ -26,8 +26,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	 * @param room
 	 */
 	public void changeRoom(Room room){
-		this.actualRoom = room;
-
+		actualRoom.removeOrganism(this);
+		actualRoom = room;
+		actualRoom.addOrganism(this);
 	}
 
 	public void setOnFire(){
@@ -41,6 +42,7 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 
 	public void moveToHouse(House house){
 		m_House = house;
+		setEventReporter(house.getEventReporter());
 	}
 
 
@@ -49,7 +51,11 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	}
 
 	public Floor getFloor(){
-		return m_House.getFloorOfRoom(actualRoom);
+		return actualRoom.getFloor();
+	}
+
+	public boolean isBusy(){
+		return isBusy;
 	}
 
 }

@@ -32,4 +32,8 @@ public class WindSensor implements AlertGenerator, Senzor {
 
 	}
 
+	@Override
+	public void newAlert() {
+
+	}
 }

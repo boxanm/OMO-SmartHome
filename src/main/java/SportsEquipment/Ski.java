@@ -3,6 +3,7 @@ package SportsEquipment;
 
 import House.NonHabitableRoom;
 import Organism.Persons.Adults;
+import Organism.Persons.Person;
 
 /**
  * @author Michal
@@ -19,14 +20,16 @@ public class Ski extends SportEquipment {
 
 	}
 
+	@Override
+	public void use(Person person) {
+
+	}
+
 	public Ski(String brand, NonHabitableRoom location) {
 		this.brand = brand;
 		this.location = location;
 	}
 
-	void useEquipment(Adults person) {
-
-	}
 
 	public NonHabitableRoom getLocation() {
 		return location;
