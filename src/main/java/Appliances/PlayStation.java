@@ -5,24 +5,16 @@ import EventsAlerts.Consumption;
 import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
+import Organism.Persons.Person;
 
 /**
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class PlayStation implements CDplayer, Appliance {
-
-	String name;
-	HabitableRoom location;
-
-	public PlayStation() {
-
-	}
-
+public class PlayStation extends Appliance implements CDplayer{
 	public PlayStation(String name, HabitableRoom location){
-		this.name = name;
-		this.location = location;
+		super(name,location);
 	}
 
 	public void finalize() throws Throwable {
@@ -45,33 +37,13 @@ public class PlayStation implements CDplayer, Appliance {
 
 	}
 
-	public void breakeDown(){
+
+	@Override
+	public void use(Person person) {
 
 	}
 
-	/**
-	 * 
-	 * @param typSpotreba
-	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){
-		return 0;
-	}
 
-	public void setOnFire(){
-
-	}
-
-	public void turnIddle(){
-
-	}
-
-	public void turnOFF(){
-
-	}
-
-	public void turnON(){
-
-	}
 
 	/**
 	 * 
@@ -81,9 +53,8 @@ public class PlayStation implements CDplayer, Appliance {
 
 	}
 
-	public Consumption newConsumption(){
+	public void newConsumption(){
 
-		return null;
 	}
 
 	public Info newInfo(){
@@ -111,4 +82,8 @@ public class PlayStation implements CDplayer, Appliance {
 	}
 
 
+	@Override
+	public void newInfo(Info info) {
+
+	}
 }

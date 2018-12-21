@@ -7,6 +7,7 @@ import EventsAlerts.AlertHandler;
 import EventsAlerts.ConsuptionGenerator;
 import EventsAlerts.Observed;
 import House.HabitableRoom;
+import Organism.Persons.Person;
 
 /**
  * Rozhraní definicí spoleèné vlastnosti a metody všech spotøebièù.
@@ -14,7 +15,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public interface Appliance extends AlertHandler, ConsuptionGenerator, Observed {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observed {
 
 	public int consuptionIddle = 0;
 	public int consuptionOFF = 0;
@@ -28,26 +29,41 @@ public interface Appliance extends AlertHandler, ConsuptionGenerator, Observed {
 	public ConsuptionType consumptionType = null;
 	public boolean isBroken = false;
 	public boolean isBusy = false;
-	public HabitableRoom m_HabitableRoom = null;
 
-	public void breakeDown();
+	String name;
 
+	public Appliance(String name, HabitableRoom location){
+		this.name = name;
+		this.actualRoom = location;
+	}
+
+	public void breakDown(){
+		isBroken = true;
+	}
+
+	public abstract void use(Person person);
 	/**
 	 * 
 	 * @param typSpotreba
 	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba);
+	public int getAktualniSpotreba(ConsuptionType typSpotreba){//todo
+		return 0;
+	}
 
-	public void setOnFire();
+	public void setOnFire(){
+		actualRoom.setOnFire();
+	}
 
-	public void turnIddle();
+	public void turnIddle(){}//todo podle ApplianceState
+	public void turnOFF(){}
+	public void turnON(){}
 
-	public void turnOFF();
+	public ApplianceType getType(){
+		return type;
+	}
 
-	public void turnON();
-
-	public ApplianceType getType();
-
-	public boolean isBroken();
+	public boolean isBroken(){
+		return isBroken;
+	}
 
 }

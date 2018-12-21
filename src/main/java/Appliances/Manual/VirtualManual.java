@@ -1,4 +1,4 @@
-package Appliances;
+package Appliances.Manual;
 
 
 /**

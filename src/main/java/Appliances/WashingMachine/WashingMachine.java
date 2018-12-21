@@ -2,12 +2,14 @@ package Appliances.WashingMachine;
 
 import Appliances.Appliance;
 import Appliances.ApplianceState.State;
+import Appliances.ApplianceType;
 import Appliances.ConsuptionType;;
 import EventsAlerts.AlertType;
 import EventsAlerts.Consumption;
 import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
+import Organism.Persons.Person;
 
 /**
  * Použivá návrhový vzor State machine
@@ -15,7 +17,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class WashingMachine implements Appliance {
+public class WashingMachine extends Appliance {
 
 	String name;
 	HabitableRoom location;
@@ -29,13 +31,9 @@ public class WashingMachine implements Appliance {
 
 	public State m_State;
 
-	public WashingMachine(){
-
-	}
 
     public WashingMachine(String name, HabitableRoom location) {
-		this.name = name;
-		this.location = location;
+        super(name,location);
 
 		fillWithLaundry = new FillWithLaudry(this);
 		cycleStart = new CykleStart(this);
@@ -94,29 +92,11 @@ public class WashingMachine implements Appliance {
 
 	}
 
-	/**
-	 * 
-	 * @param typSpotreba
-	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){
-		return 0;
-	}
-
-	public void setOnFire(){
+	@Override
+	public void use(Person person) {
 
 	}
 
-	public void turnIddle(){
-
-	}
-
-	public void turnOFF(){
-
-	}
-
-	public void turnON(){
-
-	}
 
 	/**
 	 * 
@@ -125,9 +105,8 @@ public class WashingMachine implements Appliance {
 	public void handleAlert(AlertType alert){
 
 	}
-	public Consumption newConsumption(){
+	public void newConsumption(){
 
-		return null;
 	}
 
 	public Info newInfo(){
@@ -151,6 +130,11 @@ public class WashingMachine implements Appliance {
 	}
 
 	public void announce(){
+
+	}
+
+	@Override
+	public void newInfo(Info info) {
 
 	}
 }

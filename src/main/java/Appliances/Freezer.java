@@ -5,25 +5,17 @@ import EventsAlerts.Consumption;
 import EventsAlerts.Info;
 import EventsAlerts.Observer;
 import House.HabitableRoom;
+import Organism.Persons.Person;
 
 /**
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public class Freezer implements FreezingAppliance, Appliance {
-
-	String name;
-	HabitableRoom location;
-
-	public Freezer(){
-
-	}
+public class Freezer extends Appliance implements FreezingAppliance {
 
     public Freezer(String name, HabitableRoom location) {
-
-		this.name = name;
-		this.location = location;
+		super(name,location);
     }
 
 	public void changeEmpty(){
@@ -51,43 +43,12 @@ public class Freezer implements FreezingAppliance, Appliance {
 
 	}
 
-	public void breakeDown(){
+
+	@Override
+	public void use(Person person) {
 
 	}
 
-	/**
-	 * 
-	 * @param typSpotreba
-	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){
-		return 0;
-	}
-
-	public void setOnFire(){
-
-	}
-
-	public void turnIddle(){
-
-	}
-
-	public void turnOFF(){
-
-	}
-
-	public void turnON(){
-
-	}
-
-    @Override
-    public ApplianceType getType() {
-        return null;
-    }
-
-    @Override
-    public boolean isBroken() {
-        return false;
-    }
 
     /**
 	 * 
