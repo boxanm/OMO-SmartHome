@@ -9,7 +9,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class PlayStationCreator extends PlayStation {
+public class PlayStationCreator extends ApplianceCreator {
 
 	public PlayStation m_PlayStation;
 

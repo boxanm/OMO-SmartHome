@@ -14,8 +14,4 @@ public abstract class HouseReport extends HouseReportLayout {
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
 }

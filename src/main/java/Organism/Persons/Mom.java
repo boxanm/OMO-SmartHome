@@ -30,10 +30,9 @@ public class Mom extends Organism implements Adults, Person {
 
 	private ArrayList<Child> childList = new ArrayList<Child>();
 
-	public Mom(String name, Room room){
-		this.name = name;
-		this.actualRoom = room;
-	}
+	public Mom(String name){
+        super(name);
+    }
 
 	public void finalize() throws Throwable {
 
@@ -108,26 +107,32 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
-		applianceUsageNumber++;
-		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
-		switch (appliance.getType()){
-			case freezing:
-				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
-				if(! freezingAppliance.isEmpty())
-					freezingAppliance.eat(foodConsumption);
-				else{
-					Car car = m_House
-							.getCars()
-							.stream()
-							.filter(Car::isPresent)
-							.findAny()
-							.get();
-					useCar(car);
-					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
-				}
-				break;
-			case entertainment:
+
+		if(appliance != null) {
+			applianceUsageNumber++;
+			appliance.use(this);
+			isBusy = true;
 		}
+//		applianceUsageNumber++;
+//		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
+//		switch (appliance.getType()){
+//			case freezing:
+//				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
+//				if(! freezingAppliance.isEmpty())
+//					freezingAppliance.eat(foodConsumption);
+//				else{
+//					Car car = m_House
+//							.getCars()
+//							.stream()
+//							.filter(Car::isPresent)
+//							.findAny()
+//							.get();
+//					useCar(car);
+//					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
+//				}
+//				break;
+//			case entertainment:
+//		}
 	}
 
 	/**
@@ -176,4 +181,8 @@ public class Mom extends Organism implements Adults, Person {
 
 	}
 
+    @Override
+    public String toString() {
+        return "Mum " + name;
+    }
 }

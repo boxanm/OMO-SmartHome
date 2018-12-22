@@ -1,5 +1,9 @@
 import Reports.HouseReportLayout;
 import House.House;
+import sun.security.jca.GetInstance;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Pouit návrhovı vzor singleton. Tøída zajišující jednotlivé tahy a vykonání
@@ -10,23 +14,39 @@ import House.House;
  */
 public class World {
 
-	private House house;
-	private HouseReportLayout report;
+	private List<House> houseList;
 	private int time;
-	public House m_House;
 
-	public World(){
+	private static World instance;
+
+	private World(){
+		houseList = new ArrayList<House>();
+		time = 0;
 	}
 
-	public void finalize() throws Throwable {
+
+	public static World getInstance(){
+		if(instance == null)
+			instance = new World();
+		return instance;
 
 	}
 
-	public World getInstance(){
-		return null;
+	public void addHouse(House house){
+		if(! houseList.contains(house))
+			houseList.add(house);
+	}
+
+	public void removeHouse(House house){
+		houseList.remove(house);
 	}
 
 	public void newLap(){
+		for (House house:houseList
+			 ) {
+			//TODO
+
+		}
 
 	}
 

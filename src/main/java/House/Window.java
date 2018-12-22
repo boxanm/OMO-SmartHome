@@ -9,8 +9,7 @@ package House;
 public class Window {
 
 	private Blind blind;
-	public Blind m_Blind;
-	public Room room;
+	private Room room;
 
 	public Window(Room room, Blind blind){
 		this.room = room;
@@ -18,6 +17,12 @@ public class Window {
 
 	}
 
+	public Blind getBlind() {
+		return blind;
+	}
 
-
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 }

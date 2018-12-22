@@ -11,11 +11,11 @@ import House.Room;
  */
 public class Alert extends Event {
 
-	private AlertType alertType;
+	private AlertType type;
 
 	public Alert(AlertType alertType, EventSource source,
 				 Floor floor, Room room, EventTarget target){
-		this.alertType = alertType;
+		this.type = alertType;
 		this.source = source;
 		this.sourceFloor = floor;
 		this.sourceRoom = room;
@@ -28,6 +28,12 @@ public class Alert extends Event {
 	}
 
 	public AlertType getAlertType() {
-		return alertType;
+		return type;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Alert: " + type.toString() + " | " + source.toString() + " => " + target.toString();
 	}
 }

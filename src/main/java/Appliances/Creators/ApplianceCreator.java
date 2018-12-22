@@ -25,23 +25,23 @@ public class ApplianceCreator {
 	 * @param type
 	 */
 	public static Appliance createAppliance(String type, String name, HabitableRoom location){
-		if(type.equals("waching machine")){
-		    return new WashingMachineCreator(name, location);
-        } else if(type.equals("tv")){
-		    return new TVCreator(name, location);
-        } else if(type.equals("xbox")){
-		    return new XboxCreator(name, location);
-        } else if(type.equals("playstation")){
-		    return new PlayStationCreator(name, location);
-        } else if (type.equals("hifi")){
-		    return new HiFiTowerCreator(name, location);
-        } else if (type.equals("pc")){
-		    return new PCCretator(name, location);
-        } else if (type.equals("freezer")){
-		    return new FreezerCreator(name, location);
-        } else if (type.equals("fridge")){
-		    return new FridgeCreator(name, location);
-        }
+//		if(type.equals("waching machine")){
+//		    return new WashingMachineCreator(name, location);
+//        } else if(type.equals("tv")){
+//		    return new TVCreator(name, location);
+//        } else if(type.equals("xbox")){
+//		    return new XboxCreator(name, location);
+//        } else if(type.equals("playstation")){
+//		    return new PlayStationCreator(name, location);
+//        } else if (type.equals("hifi")){
+//		    return new HiFiTowerCreator(name, location);
+//        } else if (type.equals("pc")){
+//		    return new PCCretator(name, location);
+//        } else if (type.equals("freezer")){
+//		    return new FreezerCreator(name, location);
+//        } else if (type.equals("fridge")){
+//		    return new FridgeCreator(name, location);
+//        }
 
         return null;
 	}

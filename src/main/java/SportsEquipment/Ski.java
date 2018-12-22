@@ -12,12 +12,10 @@ import Organism.Persons.Person;
  */
 public class Ski extends SportEquipment {
 
-	private boolean isBusy = false;
-	private NonHabitableRoom location;
-	private String brand;
 
-	public Ski() {
 
+	public Ski(String brand, NonHabitableRoom location) {
+		super(brand,location);
 	}
 
 	@Override
@@ -25,25 +23,10 @@ public class Ski extends SportEquipment {
 
 	}
 
-	public Ski(String brand, NonHabitableRoom location) {
-		this.brand = brand;
-		this.location = location;
+	@Override
+	public String toString() {
+		return "Ski of brand " + brand;
 	}
 
 
-	public NonHabitableRoom getLocation() {
-		return location;
-	}
-
-	public void setLocation(NonHabitableRoom location) {
-		this.location = location;
-	}
-
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
 }

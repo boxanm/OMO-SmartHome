@@ -30,6 +30,10 @@ public abstract class Room implements EventTarget {
 		this.house = house;
 		this.floor = floor;
 		this.number_of_windows = number_of_windows;
+		windowsList = new ArrayList<Window>();
+		for (int i = 0; i < number_of_windows; i++){
+			windowsList.add(new Window(this,new Blind()));
+		}
 		floor.addRoom(this);
 		organismList = new ArrayList<>();
 	}
@@ -61,5 +65,14 @@ public abstract class Room implements EventTarget {
 
 	public ArrayList<Organism> getOrganismList(){
 		return organismList;
+	}
+
+    public List<Window> getWindowsList() {
+        return windowsList;
+    }
+
+    @Override
+	public String toString() {
+		return name;
 	}
 }

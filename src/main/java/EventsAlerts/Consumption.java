@@ -28,4 +28,10 @@ public class Consumption extends Event {
 		return 0;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Consumption: " + consuption + " | " + source.toString() + " => " + target.toString();
+	}
+
 }

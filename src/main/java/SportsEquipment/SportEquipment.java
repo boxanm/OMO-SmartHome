@@ -14,8 +14,13 @@ import Organism.Persons.Person;
  */
 public abstract class SportEquipment implements EventTarget {
 
-	public SportEquipment(){
+	protected boolean isBusy = false;
+	protected NonHabitableRoom location;
+	protected String brand;
 
+	public SportEquipment(String brand, NonHabitableRoom location) {
+		this.brand = brand;
+		this.location = location;
 	}
 
 	/**
@@ -24,4 +29,24 @@ public abstract class SportEquipment implements EventTarget {
 	 */
 	public abstract void use(Person person);
 
+
+
+	public NonHabitableRoom getLocation() {
+		return location;
+	}
+
+	public void setLocation(NonHabitableRoom location) {
+		this.location = location;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	@Override
+	public abstract String toString();
 }

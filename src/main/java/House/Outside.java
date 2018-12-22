@@ -18,10 +18,6 @@ public class Outside implements Observed {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 	/**
 	 * 
 	 * @param observer

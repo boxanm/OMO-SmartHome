@@ -20,6 +20,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	protected boolean isBusy = false;
 	protected House m_House = null;
 
+	public Organism(String name){
+		this.name = name;
+	}
 
 	/**
 	 * 
@@ -42,6 +45,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 
 	public void moveToHouse(House house){
 		m_House = house;
+//		changeRoom(house.getRoomList().get(0));
+		actualRoom = house.getRoomList().get(0);
+		actualRoom.addOrganism(this);
 		setEventReporter(house.getEventReporter());
 	}
 
@@ -58,4 +64,8 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 		return isBusy;
 	}
 
+	@Override
+	public String toString() {
+		return name;
+	}
 }

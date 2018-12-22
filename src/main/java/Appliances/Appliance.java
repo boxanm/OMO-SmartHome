@@ -66,4 +66,8 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		return isBroken;
 	}
 
+	@Override
+	public String toString() {
+		return name + " of " + type;
+	}
 }

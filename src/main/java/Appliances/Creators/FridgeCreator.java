@@ -9,7 +9,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public class FridgeCreator extends Fridge {
+public class FridgeCreator extends ApplianceCreator {
 
 	public Fridge m_Fridge;
 

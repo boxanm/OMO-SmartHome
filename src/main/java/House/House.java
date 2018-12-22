@@ -26,14 +26,15 @@ public class House {
 	private List<Room> roomList;
 	private ArrayList<Appliance> applianceList;;
 	private ArrayList<SportEquipment> sportEquipmentList;
-	private ArrayList<Car> cars;
-	private EventReporter eventReporter;
-	private static House instance;
-	private Floor m_Floor;
-	private HouseReportLayout m_HouseReportLayout;
-	private EventReporter m_EventReporter;
+	private ArrayList<Car> carList;
+	private List<HouseReportLayout> houseReportLayoutList;
 
-	public House(){
+	private EventReporter eventReporter;
+
+	private String name;
+
+	public House(String name){
+		this.name = name;
 
 		personList = new ArrayList<Person>();
 		animalList = new ArrayList<Animal>();
@@ -41,19 +42,12 @@ public class House {
 		roomList = new ArrayList<Room>();
 		applianceList = new ArrayList<>();
 		sportEquipmentList = new ArrayList<>();
-		cars = new ArrayList<Car>();
+		carList = new ArrayList<Car>();
+		houseReportLayoutList = new ArrayList<>();
 	}
 
 	public void finalize() throws Throwable {
 
-	}
-
-	public static House getInstance(){
-		if(instance == null){
-			instance = new House();
-			return instance;
-		}
-		else return instance;
 	}
 
 	public void addFloor(Floor floor){
@@ -96,10 +90,6 @@ public class House {
 
 	}
 
-	public Floor getFloorOfRoom(Room room){
-		return null; // vrati podlazi, ve kterem se nachazi zadana room
-	}
-
 	public ArrayList<Appliance> getAppliances(){
 		ArrayList<Appliance> appliances = new ArrayList<>();
 		for (Floor floor: floorList) {
@@ -128,7 +118,6 @@ public class House {
 	}
 
 	public ArrayList<Car> getCars() {
-
         ArrayList<Car> cars = new ArrayList<>();
         for(Room room:getRoomList()){
             if(room instanceof NonHabitableRoom)
@@ -143,6 +132,16 @@ public class House {
 	}
 
 	public void setEventReporter(EventReporter eventReporter){
-		this.m_EventReporter = eventReporter;
+		this.eventReporter = eventReporter;
+	}
+
+	public void addHouseReport(HouseReportLayout houseReportLayout){
+		if(! houseReportLayoutList.contains(houseReportLayout))
+			houseReportLayoutList.add(houseReportLayout);
+	}
+
+	@Override
+	public String toString() {
+		return name;
 	}
 }

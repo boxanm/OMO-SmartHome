@@ -35,4 +35,11 @@ public class Blind implements AlertHandler {
 
 	}
 
+	@Override
+	public String toString() {
+		if(isPulled)
+			return "Blind is pulled";
+		else
+			return "Blind is not pulled";
+	}
 }

@@ -22,8 +22,8 @@ public class Info extends Event {
 		this.target = target;
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	@Override
+	public String toString() {
+		return "Info: " + type.toString() + " | " + source.toString() + " => " + target.toString();
 	}
-
 }

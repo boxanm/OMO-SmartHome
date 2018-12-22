@@ -17,15 +17,17 @@ import java.util.ArrayList;
 public class Dog extends Organism implements Animal {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
-	public Dog(Room room){
-		actualRoom = room;
+	public Dog(String name){
+		super(name);
 	}
 	public void makeSound() {
-		Floor floor = m_House.getFloorOfRoom(actualRoom);
-		newInfo(new Info(InfoType.animalSound, this, floor, actualRoom, this));
+		newInfo(new Info(InfoType.animalSound, this, getFloor(), actualRoom, this));
 	}
-	public void finalize() throws Throwable {
 
+
+	@Override
+	public String toString() {
+		return "Dog";
 	}
 
 }

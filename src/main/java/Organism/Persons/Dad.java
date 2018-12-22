@@ -8,6 +8,7 @@ import SportsEquipment.*;
 import House.Car;
 import Organism.Organism;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -25,9 +26,8 @@ public class Dad extends Organism implements Person, Adults  {
 
 	private ArrayList<Child> childList = new ArrayList<Child>();
 
-	public Dad(String name, Room room){
-		this.name = name;
-		this.actualRoom = room;
+	public Dad(String name){
+		super(name);
 	}
 
 	public String getName() {
@@ -39,16 +39,19 @@ public class Dad extends Organism implements Person, Adults  {
 	}
 
 	public void callFireman(Room room){
+        newInfo(new Info(InfoType.callingFireman, this, actualRoom.getFloor(),actualRoom, room));
 		room.extinguishFire();
-//		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
 	}
 
 	public void nextAction(){
 		if(! isBusy){
 			if(applianceUsageNumber < sportequipmentUsage){
-				ArrayList<Appliance> appliances = m_House.getAppliances();
-				if(!appliances.isEmpty())
-					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
+				List<Appliance> appliances = m_House
+						.getAppliances()
+						.stream()
+						.filter(Appliance-> !Appliance.isBroken())
+						.collect(Collectors.toList());
+				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
 			}
 			else{
 				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
@@ -190,5 +193,11 @@ public class Dad extends Organism implements Person, Adults  {
 //		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
 		car.goShopping(this);
 	}
+
+
+    @Override
+    public String toString() {
+        return "Dad " + name;
+    }
 
 }

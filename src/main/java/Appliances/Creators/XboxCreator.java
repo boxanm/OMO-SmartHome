@@ -9,7 +9,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:43
  */
-public class XboxCreator extends Xbox {
+public class XboxCreator extends ApplianceCreator {
 
 	public Xbox m_Xbox;
 

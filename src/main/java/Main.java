@@ -12,14 +12,18 @@ public final class Main {
     private House house;
 
     public static void main(String args[]){
-        House house = House.getInstance();
+        World world = World.getInstance();
+        House house = new House("house1");
+
+        world.addHouse(house);
+
         Floor floor = new Floor("První patro", house);
 
         HabitableRoom koupelna = new HabitableRoom("koupelna", house, floor, 2);
         NonHabitableRoom technicka = new NonHabitableRoom("technicka", house, floor, 0);
 
-        SportEquipment lyze = CreatorSportEquipments.createEquipment("lyze", "Atomic", technicka);
-
+        SportEquipmentCreatorSki skiFactory = new SportEquipmentCreatorSki(technicka);
+        SportEquipment lyze = skiFactory.createAtomic();
 
         Appliance tv = ApplianceCreator.createAppliance("tv", "Samsung", koupelna);
 

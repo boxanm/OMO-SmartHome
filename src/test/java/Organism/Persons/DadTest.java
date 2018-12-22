@@ -24,7 +24,7 @@ class DadTest {
     @BeforeEach
     void setUp() {
         eventReporter = new EventReporter();
-        house = new House();
+        house = new House("house1");
         house.setEventReporter(eventReporter);
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,0);
@@ -32,12 +32,13 @@ class DadTest {
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);
-        dad = new Dad("Pavel",obyvak);
+        dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        appliance = new PC();
-        sportEquipment = new Ski();
+        appliance = new PC("Pocitac",obyvak);
+        sportEquipment = new Ski("atomic",garaz);
         obyvak.addAppliance(appliance);
         garaz.addSportEquipment(sportEquipment);
+        dad.setEventReporter(eventReporter);
 
     }
 

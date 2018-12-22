@@ -51,4 +51,9 @@ public class Floor {
 	public ArrayList<Room> getRoomList() {
 		return roomList;
 	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
 }

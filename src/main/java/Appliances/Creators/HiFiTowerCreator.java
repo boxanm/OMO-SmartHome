@@ -9,7 +9,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class HiFiTowerCreator extends HifiTower {
+public class HiFiTowerCreator extends ApplianceCreator {
 
 	public HifiTower m_HifiTower;
 

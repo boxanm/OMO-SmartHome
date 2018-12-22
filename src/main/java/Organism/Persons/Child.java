@@ -24,15 +24,9 @@ public class Child extends Organism implements Person, Observed {
 	private int cryProbability = 30;
 	private boolean isSad;
 
-	public Child(String name, Room room){
-		this.name = name;
-		this.actualRoom = room;
-		isSad = false;
-	}
-
-	public void finalize() throws Throwable {
-
-	}
+	public Child(String name){
+        super(name);
+    }
 
 
 	public void callFireman(Room room){
@@ -88,9 +82,11 @@ public class Child extends Organism implements Person, Observed {
 	 * @param appliance
 	 */
 	public void useAppliance(Appliance appliance){
-		applianceUsageNumber++;
-		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
-
+		if(appliance != null){
+			applianceUsageNumber++;
+			appliance.use(this);
+			isBusy = true;
+		}
 	}
 
 	/**
@@ -104,6 +100,7 @@ public class Child extends Organism implements Person, Observed {
 	}
 
 	public void hangOn(){
+		isBusy = true;
 
 	}
 
@@ -125,6 +122,11 @@ public class Child extends Organism implements Person, Observed {
 			observer.update();
 
 		}
+	}
 
+
+	@Override
+	public String toString() {
+		return "Child " + name;
 	}
 }

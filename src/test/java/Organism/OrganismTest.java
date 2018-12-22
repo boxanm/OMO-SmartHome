@@ -25,7 +25,7 @@ class OrganismTest {
     @BeforeEach
     void setUp() {
         eventReporter = new EventReporter();
-        house = new House();
+        house = new House("house1");
         house.setEventReporter(eventReporter);
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,0);
@@ -33,7 +33,7 @@ class OrganismTest {
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);
-        organism = new Dad("Pavel",obyvak);
+        organism = new Dad("Pavel");
         organism.moveToHouse(house);
 
     }
@@ -41,7 +41,9 @@ class OrganismTest {
     @Test
     void moveToHouse() {
         assertEquals(organism.m_House,house);
-        House newHouse = new House();
+        House newHouse = new House("house2");
+        newHouse.addFloor(floor);
+
         organism.moveToHouse(newHouse);
         assertEquals(organism.m_House,newHouse);
     }

@@ -13,16 +13,20 @@ import Organism.Organism;
  */
 public class Cat extends Organism implements Animal {
 
-	public Cat(Room room){
-		actualRoom = room;
+	public Cat(String name){
+		super(name);
 	}
 
 	public void finalize() throws Throwable {
 
 	}
 	public void makeSound() {
-		Floor floor = m_House.getFloorOfRoom(actualRoom);
-		newInfo(new Info(InfoType.animalSound, this, floor, actualRoom, this));
+		newInfo(new Info(InfoType.animalSound, this, getFloor(), actualRoom, this));
 	}
 
+
+	@Override
+	public String toString() {
+		return "Cat";
+	}
 }

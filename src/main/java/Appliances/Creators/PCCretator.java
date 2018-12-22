@@ -9,7 +9,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class PCCretator extends PC {
+public class PCCretator extends ApplianceCreator {
 
 	public PC m_PC;
 

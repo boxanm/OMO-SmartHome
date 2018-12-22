@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WashingMachineTest {
 
-    House house = House.getInstance();
+    House house = new House("house1");
     Floor floor = new Floor("První patro", house);
 
     HabitableRoom koupelna = new HabitableRoom("koupelna", house, floor, 2);

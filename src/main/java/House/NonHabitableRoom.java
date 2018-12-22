@@ -1,10 +1,9 @@
 package House;
 
-import SportsEquipment.SportEquipmentCreatorBicykle;
+import SportsEquipment.SportEquipmentCreatorBicycle;
 import SportsEquipment.SportEquipment;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Obsahuje Car a SportEquipment
@@ -19,7 +18,7 @@ public class NonHabitableRoom extends Room {
 	private int number_of_windows;
 
 	private Car car;
-	private SportEquipmentCreatorBicykle sportEquipmentCreator;
+	private SportEquipmentCreatorBicycle sportEquipmentCreator;
 	private ArrayList<SportEquipment> sportEquipmentList;
 
 	public NonHabitableRoom(String name, House house, Floor floor, int number_of_windows){

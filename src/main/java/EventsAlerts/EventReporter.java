@@ -29,10 +29,6 @@ public class EventReporter {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 	public void newLap(){
 
 	}
@@ -58,6 +54,7 @@ public class EventReporter {
 	 * @param event
 	 */
 	public void updateFromObserver(Event event){
+		allEvents.add(event);
 
 	}
 	/**
@@ -65,6 +62,7 @@ public class EventReporter {
 	 * @param event
 	 */
 	public void updateFromOrganism(Event event){
+		allEvents.add(event);
 
 	}
 

@@ -10,9 +10,23 @@ import SportsEquipment.Ski;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class SportEquipmentCreatorSki extends Ski {
+public class SportEquipmentCreatorSki extends CreatorSportEquipments {
 
-	public SportEquipmentCreatorSki(String brand, NonHabitableRoom location) {
-		new Ski(brand, location);
+
+	public SportEquipmentCreatorSki(NonHabitableRoom location){
+		super(location);
+	}
+
+	@Override
+	public Ski createEquipment(String brand) {
+		return new Ski(brand,location);
+	}
+
+	public Ski createAtomic(){
+		return createEquipment("Atomic");
+	}
+
+	public Ski createHead() {
+		return createEquipment("Head");
 	}
 }

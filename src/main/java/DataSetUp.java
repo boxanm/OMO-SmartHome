@@ -4,7 +4,7 @@ public class DataSetUp {
 
     public House firstConfiguration(){
 
-        House house = House.getInstance();
+        House house = new House("house1");
 
         Floor prvni = new Floor("1. patro",house);
         Floor druhe = new Floor("2. patro", house);
