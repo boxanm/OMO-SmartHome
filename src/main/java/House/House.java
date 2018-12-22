@@ -31,10 +31,12 @@ public class House {
 
 	private EventReporter eventReporter;
 
+	private Outside outside;
 	private String name;
 
 	public House(String name){
 		this.name = name;
+		this.outside = new Outside();
 
 		personList = new ArrayList<Person>();
 		animalList = new ArrayList<Animal>();
@@ -138,6 +140,10 @@ public class House {
 	public void addHouseReport(HouseReportLayout houseReportLayout){
 		if(! houseReportLayoutList.contains(houseReportLayout))
 			houseReportLayoutList.add(houseReportLayout);
+	}
+
+	public Outside getOutside() {
+		return outside;
 	}
 
 	@Override

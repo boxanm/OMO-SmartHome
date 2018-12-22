@@ -1,5 +1,6 @@
 package Senzors;
 
+import EventsAlerts.EventSource;
 import House.Room;
 import EventsAlerts.Observer;
 import EventsAlerts.EventTarget;
@@ -10,7 +11,7 @@ import EventsAlerts.EventTarget;
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */
-public interface Senzor extends Observer, EventTarget {
+public interface Senzor extends Observer, EventTarget, EventSource {
 
 	public Room m_Room = null;
 

@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public class Child extends Organism implements Person, Observed {
+public class Child extends Organism implements Person, Observable {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 	private int applianceUsageNumber = 0;

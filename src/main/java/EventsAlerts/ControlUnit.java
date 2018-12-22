@@ -9,29 +9,28 @@ import java.util.ArrayList;
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
-public class ControlUnit {
+public class ControlUnit implements AlertGenerator{
 
 	private ArrayList<AlertHandler> listOfAlertHandlers;
-	public AlertHandler m_AlertHandler;
+	private ArrayList<Alert> alerts;
 
 	public ControlUnit(){
+		listOfAlertHandlers = new ArrayList<>();
+		alerts = new ArrayList<>();
 
 	}
 
-	public void finalize() throws Throwable {
 
-	}
-
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(Alert alert){
+	public void handleAlerts(){
 		for (AlertHandler alertHandler: listOfAlertHandlers) {
-			alertHandler.handleAlert(alert.getAlertType());
+//			alertHandler.handleAlert(alert.getAlertType());
 
 		}
 
 	}
 
+	@Override
+	public void newAlert() {
+
+	}
 }

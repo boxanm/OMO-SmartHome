@@ -5,7 +5,7 @@ import House.Floor;
 import House.Room;
 import EventsAlerts.AlertHandler;
 import EventsAlerts.ConsuptionGenerator;
-import EventsAlerts.Observed;
+import EventsAlerts.Observable;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 
@@ -15,7 +15,7 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observed {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable {
 
 	public int consuptionIddle = 0;
 	public int consuptionOFF = 0;

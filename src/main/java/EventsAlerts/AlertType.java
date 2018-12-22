@@ -10,5 +10,6 @@ public enum AlertType {
 	fire,
 	broken,
 	circuitBreakers,
-	babyCrying
+	babyCrying,
+	wind
 }

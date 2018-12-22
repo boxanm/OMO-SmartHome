@@ -20,9 +20,8 @@ public class EventReporter {
 
 	private ArrayList<Event> allEvents = new ArrayList<Event>();
 	private int lapNumber;
-	public Event m_Event;
 	public ObserverEverything m_ObserverEverything;
-	public ControlUnit m_ControlUnit;
+	private ControlUnit ControlUnit;
 	public Meter m_Meter;
 
 	public EventReporter(){
@@ -33,12 +32,24 @@ public class EventReporter {
 
 	}
 
+
+	public void newEvent(Event event){
+		allEvents.add(event);
+	}
+
+
+	public void updateEvent(Event event){
+		allEvents.set(allEvents.indexOf(event),event);
+	}
 	/**
 	 *
-	 * @param target
+	 * @param alert
 	 */
-	public void updateFromControlUnit(AlertHandler target){
-
+	public void updateFromAlertGenerator(Alert alert){
+		if(! allEvents.contains(alert))
+			newEvent(alert);
+		else
+			updateEvent(alert);
 	}
 
 	/**
@@ -54,7 +65,7 @@ public class EventReporter {
 	 * @param event
 	 */
 	public void updateFromObserver(Event event){
-		allEvents.add(event);
+		newEvent(event);
 
 	}
 	/**
@@ -62,8 +73,7 @@ public class EventReporter {
 	 * @param event
 	 */
 	public void updateFromOrganism(Event event){
-		allEvents.add(event);
-
+		newEvent(event);
 	}
 
 }

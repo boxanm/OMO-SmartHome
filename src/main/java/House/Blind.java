@@ -18,20 +18,15 @@ public class Blind implements AlertHandler {
 	}
 
 	public void pull(){
-		if(isPulled == true){
-			isPulled = false;
-		} else{
-			isPulled = true;
-		}
+		isPulled = !isPulled;
 	}
 
 
 
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(AlertType alert){
+	@Override
+	public void handleAlert(AlertType alertType) {
+		if(alertType == AlertType.wind && !isPulled)
+			pull();
 
 	}
 

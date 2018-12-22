@@ -1,7 +1,8 @@
 package Senzors;
 
-import EventsAlerts.AlertGenerator;
-import EventsAlerts.Event;
+import EventsAlerts.*;
+import House.House;
+import House.Outside;
 
 /**
  * @author Michal
@@ -10,18 +11,14 @@ import EventsAlerts.Event;
  */
 public class WindSensor implements AlertGenerator, Senzor {
 
+	EventReporter eventReporter;
+
+	private Outside outside;
 	private boolean wind;
 
-	public WindSensor(){
-
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-
-	public boolean isWind(){
-		return false;
+	public WindSensor(House house){
+		this.outside = house.getOutside();
+		eventReporter = house.getEventReporter();
 	}
 
 	public Event newEvent(){
@@ -29,11 +26,12 @@ public class WindSensor implements AlertGenerator, Senzor {
 	}
 
 	public void update(){
-
+		if(outside.getIsWind())
+			newAlert();
 	}
 
 	@Override
 	public void newAlert() {
-
+		eventReporter.newEvent(new Alert(AlertType.wind,this,null,null,null));
 	}
 }
