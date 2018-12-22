@@ -20,12 +20,15 @@ public class EventReporter {
 
 	private ArrayList<Event> allEvents = new ArrayList<Event>();
 	private int lapNumber;
-	public ObserverEverything m_ObserverEverything;
 	private ControlUnit controlUnit;
 	public Meter m_Meter;
 
 	public EventReporter(){
+		controlUnit = new ControlUnit();
+	}
 
+	public ControlUnit getControlUnit() {
+		return controlUnit;
 	}
 
 	public void newLap(){

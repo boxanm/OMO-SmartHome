@@ -1,7 +1,8 @@
 package Senzors;
 
-import EventsAlerts.AlertGenerator;
-import EventsAlerts.Event;
+import EventsAlerts.*;
+import House.House;
+import House.Room;
 
 /**
  * @author Michal
@@ -10,26 +11,23 @@ import EventsAlerts.Event;
  */
 public class FireSensor implements AlertGenerator, Senzor {
 
-	private boolean hoøí;
+	EventReporter eventReporter;
 
-	public FireSensor(){
+	private Room room;
 
+	public FireSensor(House house, Room room){
+		eventReporter = house.getEventReporter();
+		this.room = room;
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
-	public Event newEvent(){
-		return null;
-	}
 
 	public void update(){
-
+		if(room.isOnFire())
+			newAlert();
 	}
 
 	@Override
 	public void newAlert() {
-
+		eventReporter.updateFromAlertGenerator(new Alert(AlertType.fire,this,null,null,null));
 	}
 }

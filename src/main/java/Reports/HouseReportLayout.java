@@ -13,11 +13,6 @@ public abstract class HouseReportLayout {
 	public HouseReportLayout(){
 
 	}
-
-	public void finalize() throws Throwable {
-
-	}
-
 	/**
 	 * 
 	 * @param house

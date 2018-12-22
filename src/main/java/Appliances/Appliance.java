@@ -1,6 +1,7 @@
 package Appliances;
 
 import Appliances.ApplianceState.ApplianceState;
+import EventsAlerts.InfoGenerator;
 import House.Floor;
 import House.Room;
 import EventsAlerts.AlertHandler;
@@ -15,7 +16,7 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator {
 
 	public int consuptionIddle = 0;
 	public int consuptionOFF = 0;

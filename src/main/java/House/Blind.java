@@ -12,7 +12,7 @@ import EventsAlerts.AlertType;
  */
 public class Blind implements AlertHandler {
 
-	private boolean isPulled;
+	private boolean isPulled = false;
 
 	public Blind(){
 
@@ -22,7 +22,9 @@ public class Blind implements AlertHandler {
 		isPulled = !isPulled;
 	}
 
-
+	public boolean isPulled(){
+		return isPulled;
+	}
 
 	@Override
 	public void handleAlert(Alert alert) {

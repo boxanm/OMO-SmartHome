@@ -2,6 +2,8 @@ package House;
 
 
 import EventsAlerts.EventTarget;
+import EventsAlerts.Observable;
+import EventsAlerts.Observer;
 import Organism.Organism;
 import Organism.Persons.Person;
 
@@ -14,7 +16,9 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public abstract class Room implements EventTarget {
+public abstract class Room implements EventTarget, Observable {
+
+	private ArrayList<Observer> observers;
 
 	private ArrayList<Organism> organismList;
 	private String name;
@@ -22,24 +26,24 @@ public abstract class Room implements EventTarget {
 	private Floor floor;
 
 	private boolean isOnFire = false;
-	private int number_of_windows;
 	private List<Window> windowsList;
 
 	public Room(String name, House house, Floor floor, int number_of_windows){
 		this.name = name;
 		this.house = house;
 		this.floor = floor;
-		this.number_of_windows = number_of_windows;
 		windowsList = new ArrayList<Window>();
 		for (int i = 0; i < number_of_windows; i++){
 			windowsList.add(new Window(this));
 		}
 		floor.addRoom(this);
 		organismList = new ArrayList<>();
+		observers = new ArrayList<>();
 	}
 
 	public void setOnFire(){
 		this.isOnFire = true;
+		announce();
 	}
 
 	public void extinguishFire(){
@@ -54,11 +58,11 @@ public abstract class Room implements EventTarget {
 		return floor;
 	}
 
-
 	public void addOrganism(Organism organism){
 		if(! organismList.contains(organism))
 			organismList.add(organism);
 	}
+
 	public  void removeOrganism(Organism organism){
 		organismList.remove(organism);
 	}
@@ -71,8 +75,30 @@ public abstract class Room implements EventTarget {
         return windowsList;
     }
 
-    @Override
+	@Override
+	public void attach(Observer observer) {
+		if(! observers.contains(observer))
+			observers.add(observer);
+
+	}
+
+	@Override
+	public void detach(Observer observer) {
+		observers.remove(observer);
+
+	}
+
+	@Override
+	public void announce() {
+		for (Observer observer:observers) {
+			observer.update();
+		}
+	}
+
+
+	@Override
 	public String toString() {
 		return name;
 	}
+
 }

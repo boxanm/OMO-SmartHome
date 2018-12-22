@@ -59,9 +59,4 @@ public class Outside implements Observable {
 
 		return null;
 	}
-
-	@Override
-	public void newInfo(Info info) {
-
-	}
 }

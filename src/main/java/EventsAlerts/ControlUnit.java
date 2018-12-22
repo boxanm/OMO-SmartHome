@@ -20,9 +20,14 @@ public class ControlUnit{
 	}
 
 	public void handleAlert(Alert alert){
-		for (AlertHandler alertHandler: listOfAlertHandlers) {
+		for (AlertHandler alertHandler: listOfAlertHandlers){
 			alertHandler.handleAlert(alert);
 		}
+	}
+
+	public void addAlertHandler(AlertHandler alertHandler){
+		if(! listOfAlertHandlers.contains(alertHandler))
+			listOfAlertHandlers.add(alertHandler);
 	}
 
 
