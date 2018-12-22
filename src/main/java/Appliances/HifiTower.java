@@ -1,9 +1,6 @@
 package Appliances;
 
-import EventsAlerts.AlertType;
-import EventsAlerts.Consumption;
-import EventsAlerts.Info;
-import EventsAlerts.Observer;
+import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 
@@ -28,7 +25,7 @@ public class HifiTower extends Appliance implements CDplayer {
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(AlertType alert){
+	public void handleAlert(Alert alert){
 
 	}
 

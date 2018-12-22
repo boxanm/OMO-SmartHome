@@ -1,4 +1,5 @@
 package Organism.Persons;
+import EventsAlerts.Alert;
 import EventsAlerts.AlertType;
 import EventsAlerts.Info;
 import EventsAlerts.InfoType;
@@ -115,10 +116,10 @@ public class Dad extends Organism implements Person, Adults  {
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(AlertType alert){
+	public void handleAlert(Alert alert){
 		if(! isBusy){
 			isBusy = true;
-			switch (alert){
+			switch (alert.getAlertType()){
 				case fire:{
 					Room room = m_House
 							.getRoomList()

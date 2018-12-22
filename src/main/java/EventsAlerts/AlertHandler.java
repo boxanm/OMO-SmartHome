@@ -13,8 +13,8 @@ public interface AlertHandler {
 
 	/**
 	 * 
-	 * @param alertType
+	 * @param alert
 	 */
-	public void handleAlert(AlertType alertType);
+	public void handleAlert(Alert alert);
 
 }

@@ -1,5 +1,6 @@
 package House;
 
+import EventsAlerts.Alert;
 import EventsAlerts.AlertHandler;
 import EventsAlerts.AlertType;
 
@@ -24,8 +25,8 @@ public class Blind implements AlertHandler {
 
 
 	@Override
-	public void handleAlert(AlertType alertType) {
-		if(alertType == AlertType.wind && !isPulled)
+	public void handleAlert(Alert alert) {
+		if(alert.getAlertType() == AlertType.wind && !isPulled)
 			pull();
 
 	}

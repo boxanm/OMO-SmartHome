@@ -4,10 +4,7 @@ import Appliances.Appliance;
 import Appliances.ApplianceState.State;
 import Appliances.ApplianceType;
 import Appliances.ConsuptionType;;
-import EventsAlerts.AlertType;
-import EventsAlerts.Consumption;
-import EventsAlerts.Info;
-import EventsAlerts.Observer;
+import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 
@@ -102,7 +99,7 @@ public class WashingMachine extends Appliance {
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(AlertType alert){
+	public void handleAlert(Alert alert){
 
 	}
 	public void newConsumption(){

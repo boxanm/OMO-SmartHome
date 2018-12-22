@@ -21,7 +21,7 @@ public class EventReporter {
 	private ArrayList<Event> allEvents = new ArrayList<Event>();
 	private int lapNumber;
 	public ObserverEverything m_ObserverEverything;
-	private ControlUnit ControlUnit;
+	private ControlUnit controlUnit;
 	public Meter m_Meter;
 
 	public EventReporter(){
@@ -46,6 +46,7 @@ public class EventReporter {
 	 * @param alert
 	 */
 	public void updateFromAlertGenerator(Alert alert){
+		controlUnit.handleAlert(alert);
 		if(! allEvents.contains(alert))
 			newEvent(alert);
 		else
@@ -54,9 +55,9 @@ public class EventReporter {
 
 	/**
 	 *
-	 * @param meter
+	 * @param consumption
 	 */
-	public void updateFromMeter(Meter meter){
+	public void updateFromMeter(Consumption consumption){
 
 	}
 

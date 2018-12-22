@@ -1,8 +1,5 @@
 package Organism.Persons;
-import EventsAlerts.AlertType;
-import EventsAlerts.Info;
-import EventsAlerts.InfoType;
-import EventsAlerts.Observer;
+import EventsAlerts.*;
 import House.Car;
 import House.House;
 import House.Room;
@@ -151,12 +148,12 @@ public class Mom extends Organism implements Adults, Person {
 
 	/**
 	 * 
-	 * @param alertType
+	 * @param alert
 	 */
-	public void handleAlert(AlertType alertType){ //TODO mozna prebirat rovnou alert?
+	public void handleAlert(Alert alert){ //TODO mozna prebirat rovnou alert?
 		if(! isBusy){
 			isBusy = true;
-			switch (alertType){
+			switch (alert.getAlertType()){
 				case fire:{
 					Room room = m_House
 							.getRoomList()
