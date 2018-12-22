@@ -26,7 +26,7 @@ public class Window  {
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return "Window";
 	}
 
 }

@@ -30,4 +30,10 @@ public class FireSensor implements AlertGenerator, Senzor {
 	public void newAlert() {
 		eventReporter.updateFromAlertGenerator(new Alert(AlertType.fire,this,null,null,null));
 	}
+
+
+	@Override
+	public String toString() {
+		return "FireSensor in " + room.toString();
+	}
 }

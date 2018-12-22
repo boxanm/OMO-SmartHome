@@ -29,7 +29,7 @@ public class HouseConfigurationReport extends HouseReportLayout {
 				int i = 1;
 				for (Window window:room.getWindowsList()) {
 
-					System.out.print("---Window " + i + ": " + window.toString());
+					System.out.print("---" + window.toString() + " " + i + ": " );
 					if(window.getBlind() != null)
 						System.out.println(" | " + window.getBlind().toString());
 					i++;

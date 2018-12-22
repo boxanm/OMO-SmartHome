@@ -191,7 +191,7 @@ public class Dad extends Organism implements Person, Adults  {
 	 */
 	public void useCar(Car car){
 		isBusy = true;
-//		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
+		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
 		car.goShopping(this);
 	}
 

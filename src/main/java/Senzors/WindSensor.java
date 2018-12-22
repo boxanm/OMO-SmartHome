@@ -29,4 +29,9 @@ public class WindSensor implements AlertGenerator, Senzor {
 	public void newAlert() {
 		eventReporter.updateFromAlertGenerator(new Alert(AlertType.wind,this,null,null,null));
 	}
+
+	@Override
+	public String toString() {
+		return "WindSensor";
+	}
 }

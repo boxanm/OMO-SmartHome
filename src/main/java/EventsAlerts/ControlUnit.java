@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
-public class ControlUnit{
+public class ControlUnit implements EventTarget{
 
 	private ArrayList<AlertHandler> listOfAlertHandlers;
 	private ArrayList<Alert> alerts;
@@ -31,4 +31,8 @@ public class ControlUnit{
 	}
 
 
+	@Override
+	public String toString() {
+		return "ControlUnit";
+	}
 }

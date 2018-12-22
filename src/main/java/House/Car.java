@@ -32,4 +32,8 @@ public class Car implements EventTarget {
 		return isPresent;
 	}
 
+	@Override
+	public String toString() {
+		return "Car " + brand;
+	}
 }

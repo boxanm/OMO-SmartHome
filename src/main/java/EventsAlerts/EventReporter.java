@@ -49,6 +49,7 @@ public class EventReporter {
 	 * @param alert
 	 */
 	public void updateFromAlertGenerator(Alert alert){
+		alert.target=controlUnit;
 		controlUnit.handleAlert(alert);
 		if(! allEvents.contains(alert))
 			newEvent(alert);
@@ -80,4 +81,12 @@ public class EventReporter {
 		newEvent(event);
 	}
 
+	public ArrayList<Event> getAllEvents() {
+		return allEvents;
+	}
+
+	@Override
+	public String toString() {
+		return "ControlUnit";
+	}
 }

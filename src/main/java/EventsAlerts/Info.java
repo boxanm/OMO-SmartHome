@@ -26,4 +26,8 @@ public class Info extends Event {
 	public String toString() {
 		return "Info: " + type.toString() + " | " + source.toString() + " => " + target.toString();
 	}
+
+	public InfoType getType() {
+		return type;
+	}
 }
