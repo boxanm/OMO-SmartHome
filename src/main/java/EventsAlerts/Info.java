@@ -30,4 +30,9 @@ public class Info extends Event {
 	public InfoType getType() {
 		return type;
 	}
+
+	@Override
+	public EventSource getSource() {
+		return super.getSource();
+	}
 }

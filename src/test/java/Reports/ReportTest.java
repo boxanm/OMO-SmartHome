@@ -1,13 +1,20 @@
 package Reports;
 
 import Appliances.Appliance;
+import Appliances.Freezer;
+import Appliances.Fridge;
+import Appliances.PlayStation;
 import EventsAlerts.EventReporter;
 import House.*;
 import Organism.Animals.Dog;
+import Organism.Animals.Ferret;
 import Organism.Organism;
 import Organism.Persons.Dad;
+import Organism.Persons.Mom;
 import Senzors.FireSensor;
 import Senzors.WindSensor;
+import SportsEquipment.Bicycle;
+import SportsEquipment.Ski;
 import SportsEquipment.SportEquipment;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,6 +41,7 @@ class ReportTest {
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,2);
         garaz = new NonHabitableRoom("Garaz",house,floor,0);
+        sportEquipment = new Ski("atomic",garaz);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);
@@ -69,7 +77,39 @@ class ReportTest {
         EventReport eventReport = new EventReport();
 
         eventReport.generateReport(house);
+    }
+
+    @Test
+    void activityAndUsageReport(){
+        Fridge fridge = new Fridge("fridge",obyvak);
+        Freezer freezer = new Freezer("freezer",obyvak);
+        PlayStation playStation = new PlayStation("PS2",obyvak);
+        Mom mom = new Mom("mom");
+        mom.moveToHouse(house);
+
+        System.out.println(house.getAppliances().size() + " " + (house.getPersonList().size()+house.getAnimalList().size()));
+
+        dad.useAppliance(freezer);
+        mom.useAppliance(playStation);
+        dad.useAppliance(fridge);
+        dad.useAppliance(freezer);
+        mom.useAppliance(fridge);
+        mom.useAppliance(playStation);
+
+        dad.useSportEquipment(sportEquipment);
 
 
+        Bicycle bike = new Bicycle("favorit",garaz);
+        mom.useSportEquipment(bike);
+
+        dad.useSportEquipment(bike);
+        dog.makeSound();
+        dog.makeSound();
+
+        Ferret ferret = new Ferret("fretka");
+        ferret.moveToHouse(house);
+        ferret.makeSound();
+        ActivityAndUsageReport activityAndUsageReport = new ActivityAndUsageReport();
+        activityAndUsageReport.generateReport(house);
     }
 }

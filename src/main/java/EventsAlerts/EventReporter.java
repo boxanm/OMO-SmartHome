@@ -1,5 +1,6 @@
 package EventsAlerts;
 
+import LapsTime.LapSubscriber;
 import Senzors.Meter;
 
 import java.util.ArrayList;
@@ -16,12 +17,11 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
-public class EventReporter {
+public class EventReporter implements LapSubscriber {
 
 	private ArrayList<Event> allEvents = new ArrayList<Event>();
 	private int lapNumber;
 	private ControlUnit controlUnit;
-	public Meter m_Meter;
 
 	public EventReporter(){
 		controlUnit = new ControlUnit();
@@ -32,11 +32,13 @@ public class EventReporter {
 	}
 
 	public void newLap(){
+	    lapNumber++;
 
 	}
 
 
 	public void newEvent(Event event){
+	    event.setLapNumber(lapNumber);
 		allEvents.add(event);
 	}
 
@@ -49,7 +51,7 @@ public class EventReporter {
 	 * @param alert
 	 */
 	public void updateFromAlertGenerator(Alert alert){
-		alert.target=controlUnit;
+		alert.setTarget(controlUnit);
 		controlUnit.handleAlert(alert);
 		if(! allEvents.contains(alert))
 			newEvent(alert);
@@ -87,6 +89,6 @@ public class EventReporter {
 
 	@Override
 	public String toString() {
-		return "ControlUnit";
+		return "EventReporter";
 	}
 }

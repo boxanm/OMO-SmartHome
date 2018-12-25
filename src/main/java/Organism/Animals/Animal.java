@@ -1,13 +1,25 @@
 package Organism.Animals;
 
+import Organism.Organism;
+
 /**
  * Rozhraní definující spoleèné vlastnosti a metody zvíøat.
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:02:08
  */
-public interface Animal{
+public abstract class Animal extends Organism {
 
-	void makeSound();
+	public Animal(String name) {
+		super(name);
+	}
+
+	abstract void makeSound();
+
+
+	@Override
+	public void newLap() {
+		makeSound();
+	}
 
 }

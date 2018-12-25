@@ -9,5 +9,6 @@ public enum InfoType {
     cheeringUpChild,
     drivingCar,
     repairingAppliance,
+    hangingOn
 
 }

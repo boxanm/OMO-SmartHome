@@ -3,6 +3,7 @@ package Appliances;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * @author Michal
@@ -17,8 +18,14 @@ public class HifiTower extends Appliance implements CDplayer {
 
 
 	@Override
-	public void use(Person person) {
+	public Usable use(Person person) {
 
+		return null;
+	}
+
+	@Override
+	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
+		return 0;
 	}
 
 	/**
@@ -75,6 +82,11 @@ public class HifiTower extends Appliance implements CDplayer {
 
 	@Override
 	public void newInfo(Info info) {
+
+	}
+
+	@Override
+	public void newLap() {
 
 	}
 }

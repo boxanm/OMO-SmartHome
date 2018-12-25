@@ -18,12 +18,10 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public class Dad extends Organism implements Person, Adults  {
+public class Dad extends Person implements Adults  {
 
-	private int applianceUsageNumber = 0;
-	private int sportEquipmentUsageNumber = 0;
-	private int foodConsumption = 7;
-	private int cheerUpChildProbability = 30;
+	private static final int foodConsumption = 7;
+	private static final int cheerUpChildProbability = 30;
 
 	private ArrayList<Child> childList = new ArrayList<Child>();
 
@@ -31,86 +29,14 @@ public class Dad extends Organism implements Person, Adults  {
 		super(name);
 	}
 
-	public String getName() {
+
+    public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public void callFireman(Room room){
-        newInfo(new Info(InfoType.callingFireman, this, actualRoom.getFloor(),actualRoom, room));
-		room.extinguishFire();
-	}
-
-	public void nextAction(){
-		if(! isBusy){
-			if(applianceUsageNumber < sportequipmentUsage){
-				List<Appliance> appliances = m_House
-						.getAppliances()
-						.stream()
-						.filter(Appliance-> !Appliance.isBroken())
-						.collect(Collectors.toList());
-				useAppliance(appliances.get(new Random().nextInt(appliances.size())));
-			}
-			else{
-				ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
-				if(! sportEquipments.isEmpty())
-					useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
-			}
-		}
-
-	}
-
-	/**
-	 * 
-	 * @param appliance
-	 */
-	public void useAppliance(Appliance appliance){
-		if(appliance != null){
-			applianceUsageNumber++;
-			appliance.use(this);
-			isBusy = true;
-		}
-//		newInfo(new Info(InfoType.applianceUsage, this, getFloor(), actualRoom, appliance));
-//		switch (appliance.getType()){
-//			case freezing:
-//				FreezingAppliance freezingAppliance = (FreezingAppliance) appliance;
-//				if(! freezingAppliance.isEmpty())
-//					freezingAppliance.eat(foodConsumption);
-//				else{
-//					Car car = m_House
-//						.getCars()
-//						.stream()
-//						.filter(Car::isPresent)
-//						.findAny()
-//						.get();
-//					useCar(car);
-//					freezingAppliance.fill(50 + new Random().nextInt(50));//TODO probehne ve stejnem tahu?
-//				}
-//		}
-	}
-
-	/**
-	 * 
-	 * @param equipment
-	 */
-	public void useSportEquipment(SportEquipment equipment){
-		if(equipment != null){
-			sportEquipmentUsageNumber++;
-			equipment.use(this);
-			isBusy = true;
-		}
-//		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
-
-	}
-
-	public void hangOn() {
-		isBusy = true;
-	}
-
-
 
 	/**
 	 * 

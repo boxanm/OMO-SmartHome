@@ -2,13 +2,15 @@ package House;
 
 import EventsAlerts.EventTarget;
 import Organism.Persons.Adults;
+import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class Car implements EventTarget {
+public class Car implements EventTarget, Usable {
 
 	private String brand;
 	private NonHabitableRoom location;
@@ -35,5 +37,10 @@ public class Car implements EventTarget {
 	@Override
 	public String toString() {
 		return "Car " + brand;
+	}
+
+	@Override
+	public Usable use(Person person) {
+		return null;
 	}
 }

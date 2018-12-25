@@ -1,7 +1,8 @@
 package EventsAlerts;
 
 
-import Appliances.ConsuptionType;
+import House.Floor;
+import House.Room;
 
 /**
  * @author Michal
@@ -10,28 +11,31 @@ import Appliances.ConsuptionType;
  */
 public class Consumption extends Event {
 
-	private int consuption;
+	private int consumption;
+	private ConsumptionType type;
 
-	public Consumption(){
+	public Consumption(ConsumptionType consumptionType, int consumption, EventSource source,
+					   Floor floor, Room room, EventTarget target){
+
+		this.type = consumptionType;
+		this.source = source;
+		this.sourceFloor = floor;
+		this.sourceRoom = room;
+		this.target = target;
+		this.consumption = consumption;
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	public int getConsumption() {
+		return consumption;
 	}
-
-	/**
-	 * 
-	 * @param typSpotreba
-	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){
-		return 0;
-	}
-
 
 	@Override
 	public String toString() {
-		return "Consumption: " + consuption + " | " + source.toString() + " => " + target.toString();
+		return "Consumption: " + consumption + " | " + source.toString() + " => " + target.toString();
 	}
 
+	public ConsumptionType getType() {
+		return type;
+	}
 }

@@ -2,11 +2,12 @@ package Appliances.WashingMachine;
 
 import Appliances.Appliance;
 import Appliances.ApplianceState.State;
-import Appliances.ApplianceType;
-import Appliances.ConsuptionType;;
+;
+import Appliances.ConsuptionType;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * Použivá návrhový vzor State machine
@@ -90,8 +91,13 @@ public class WashingMachine extends Appliance {
 	}
 
 	@Override
-	public void use(Person person) {
+	public Usable use(Person person) {
+		return null;
+	}
 
+	@Override
+	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
+		return 0;
 	}
 
 
@@ -132,6 +138,11 @@ public class WashingMachine extends Appliance {
 
 	@Override
 	public void newInfo(Info info) {
+
+	}
+
+	@Override
+	public void newLap() {
 
 	}
 }

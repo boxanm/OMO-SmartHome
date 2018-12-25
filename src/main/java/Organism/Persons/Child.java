@@ -15,13 +15,10 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:03
  */
-public class Child extends Organism implements Person, Observable {
+public class Child extends Person implements Observable {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
-	private int applianceUsageNumber = 0;
-	private int sportequipmentUsage = 0;
-
-	private int cryProbability = 30;
+	private static final int cryProbability = 30;
 	private boolean isSad;
 
 	public Child(String name){
@@ -29,10 +26,6 @@ public class Child extends Organism implements Person, Observable {
     }
 
 
-	public void callFireman(Room room){
-		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
-
-	}
 
 	public boolean cry(){
 		announce();
@@ -52,51 +45,17 @@ public class Child extends Organism implements Person, Observable {
 		return false;
 	}
 	public void nextAction(){
-		if(! cry()){
-			if(! isBusy){
-				if(applianceUsageNumber < sportequipmentUsage){
-					List<Appliance> appliances = m_House
-							.getAppliances()
-							.stream()
-							.filter(Appliance->Appliance.getType().equals(ApplianceType.entertainment))
-							.collect(Collectors.toList());
-					useAppliance(appliances.get(new Random().nextInt(appliances.size())));
-				}
-				else{
-					ArrayList<SportEquipment> sportEquipments = m_House.getSportEquipment();
-					useSportEquipment(sportEquipments.get(new Random().nextInt(sportEquipments.size())));
-				}
-				isBusy = true;
-			}
+		if(!cry()){
+		    super.nextAction();
 		}
-		else{} // child is crying
+		else{
+			announce();
+		}
 
 	}
 
 	public boolean isSad() {
 		return isSad;
-	}
-
-	/**
-	 * 
-	 * @param appliance
-	 */
-	public void useAppliance(Appliance appliance){
-		if(appliance != null){
-			applianceUsageNumber++;
-			appliance.use(this);
-			isBusy = true;
-		}
-	}
-
-	/**
-	 * 
-	 * @param equipment
-	 */
-	public void useSportEquipment(SportEquipment equipment){
-		sportequipmentUsage++;
-		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
-
 	}
 
 	public void hangOn(){

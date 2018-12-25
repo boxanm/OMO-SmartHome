@@ -1,9 +1,13 @@
 package Organism;
 
+
 import EventsAlerts.*;
 import House.Room;
 import House.Floor;
 import House.House;
+import LapsTime.LapSubscriber;
+
+import java.util.Random;
 
 /**
  * Rozhraní definující spoleèné vlastnosti a metody lidí a zvíøat.
@@ -11,14 +15,16 @@ import House.House;
  * @version 1.0
  * @created 16-pro-2018 9:01:57
  */
-public abstract class Organism implements InfoGenerator, EventSource, EventTarget {
+public abstract class Organism implements InfoGenerator, EventSource, EventTarget, LapSubscriber {
 	protected EventReporter eventReporter;
 
 
-	protected String name = null;
+	protected String name;
 	protected Room actualRoom = null;
 	protected boolean isBusy = false;
 	protected House m_House = null;
+
+	protected Usable usingTarget = null;
 
 	public Organism(String name){
 		this.name = name;
@@ -45,8 +51,7 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 
 	public void moveToHouse(House house){
 		m_House = house;
-//		changeRoom(house.getRoomList().get(0));
-		actualRoom = house.getRoomList().get(0);
+		actualRoom = house.getRoomList().get(new Random().nextInt(house.getRoomList().size()));
 		actualRoom.addOrganism(this);
 		setEventReporter(house.getEventReporter());
 	}
@@ -63,6 +68,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	public boolean isBusy(){
 		return isBusy;
 	}
+
+	@Override
+	public abstract void newLap();
 
 	@Override
 	public String toString() {
