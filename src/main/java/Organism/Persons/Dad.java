@@ -99,11 +99,11 @@ public class Dad extends Organism implements Person, Adults  {
 	 */
 	public void useSportEquipment(SportEquipment equipment){
 		if(equipment != null){
+			newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 			sportEquipmentUsageNumber++;
 			equipment.use(this);
 			isBusy = true;
 		}
-//		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 
 	}
 

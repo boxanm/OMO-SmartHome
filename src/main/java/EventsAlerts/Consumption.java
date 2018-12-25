@@ -11,6 +11,7 @@ import Appliances.ConsuptionType;
 public class Consumption extends Event {
 
 	private int consuption;
+	private ConsumptionType type;
 
 	public Consumption(){
 
@@ -20,18 +21,25 @@ public class Consumption extends Event {
 		super.finalize();
 	}
 
-	/**
-	 * 
-	 * @param typSpotreba
-	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){
-		return 0;
-	}
+//	/**
+//	 *
+//	 * @param typSpotreba
+//	 */
+//	public int getAktualniSpotreba(ConsuptionType typSpotreba){
+//		return 0;
+//	}
 
+
+	public int getConsuption() {
+		return consuption;
+	}
 
 	@Override
 	public String toString() {
 		return "Consumption: " + consuption + " | " + source.toString() + " => " + target.toString();
 	}
 
+	public ConsumptionType getType() {
+		return type;
+	}
 }

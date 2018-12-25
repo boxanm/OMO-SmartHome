@@ -45,4 +45,12 @@ public abstract class Event {
     public EventSource getSource() {
         return source;
     }
+
+    public EventTarget getTarget() {
+        return target;
+    }
+
+    public int getLapNumber() {
+        return lapNumber;
+    }
 }

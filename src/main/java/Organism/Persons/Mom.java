@@ -21,7 +21,7 @@ public class Mom extends Organism implements Adults, Person {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 	private int applianceUsageNumber = 0;
-	private int sportequipmentUsage = 0;
+	private int sportEquipmentUsageNumber = 0;
 
 	private int cheerUpChildProbability = 90;
 
@@ -138,9 +138,12 @@ public class Mom extends Organism implements Adults, Person {
 	 * @param equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
-		sportequipmentUsage++;
-		newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
-
+		if(equipment != null){
+			newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
+			sportEquipmentUsageNumber++;
+			equipment.use(this);
+			isBusy = true;
+		}
 	}
 
 	public void hangOn() {	}

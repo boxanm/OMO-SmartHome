@@ -1,12 +1,9 @@
 package Appliances;
 
 import Appliances.ApplianceState.ApplianceState;
-import EventsAlerts.InfoGenerator;
+import EventsAlerts.*;
 import House.Floor;
 import House.Room;
-import EventsAlerts.AlertHandler;
-import EventsAlerts.ConsuptionGenerator;
-import EventsAlerts.Observable;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 
@@ -16,7 +13,7 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator, ArrayIndexable {
 
 	public int consuptionIddle = 0;
 	public int consuptionOFF = 0;
@@ -26,7 +23,7 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	public ApplianceType type = null;
 
 	public Floor actualFloor = null;
-	public Room actualRoom = null;
+	public HabitableRoom actualRoom = null;
 	public ConsuptionType consumptionType = null;
 	public boolean isBroken = false;
 	public boolean isBusy = false;
@@ -34,12 +31,13 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	String name;
 
 	private static int instanceCounter;
-	private int id;
+	private int index;
 
 	public Appliance(String name, HabitableRoom location){
 		this.name = name;
 		this.actualRoom = location;
-		id = instanceCounter;
+		actualRoom.addAppliance(this);
+		index = instanceCounter;
 		instanceCounter++;
 	}
 
@@ -74,10 +72,10 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	@Override
 	public String toString() {
-		return name + " of " + type;
+		return name + " of " + getClass();
 	}
 
-	public int getId() {
-		return id;
+	public int getIndex() {
+		return index;
 	}
 }
