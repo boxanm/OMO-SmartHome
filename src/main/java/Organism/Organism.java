@@ -20,8 +20,13 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	protected boolean isBusy = false;
 	protected House m_House = null;
 
+	static private int instanceCounter;
+	private int id;
+
 	public Organism(String name){
 		this.name = name;
+		id = instanceCounter;
+		instanceCounter++;
 	}
 
 	/**
@@ -67,5 +72,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	@Override
 	public String toString() {
 		return name;
+	}
+
+	public int getId() {
+		return id;
 	}
 }

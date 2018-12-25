@@ -41,4 +41,8 @@ public abstract class Event {
         eventID++;
         return eventID;
     }
+
+    public EventSource getSource() {
+        return source;
+    }
 }

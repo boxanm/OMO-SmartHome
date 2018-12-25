@@ -106,6 +106,7 @@ public class Mom extends Organism implements Adults, Person {
 	public void useAppliance(Appliance appliance){
 
 		if(appliance != null) {
+			newInfo(new Info(InfoType.applianceUsage,this,getFloor(),actualRoom,appliance));
 			applianceUsageNumber++;
 			appliance.use(this);
 			isBusy = true;
@@ -150,7 +151,7 @@ public class Mom extends Organism implements Adults, Person {
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(Alert alert){ //TODO mozna prebirat rovnou alert?
+	public void handleAlert(Alert alert){
 		if(! isBusy){
 			isBusy = true;
 			switch (alert.getAlertType()){

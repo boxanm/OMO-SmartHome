@@ -69,6 +69,7 @@ public class Dad extends Organism implements Person, Adults  {
 	 */
 	public void useAppliance(Appliance appliance){
 		if(appliance != null){
+			newInfo(new Info(InfoType.applianceUsage,this,getFloor(),actualRoom,appliance));
 			applianceUsageNumber++;
 			appliance.use(this);
 			isBusy = true;

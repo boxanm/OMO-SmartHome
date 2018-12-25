@@ -1,11 +1,15 @@
 package Reports;
 
 import Appliances.Appliance;
+import Appliances.Freezer;
+import Appliances.Fridge;
+import Appliances.PlayStation;
 import EventsAlerts.EventReporter;
 import House.*;
 import Organism.Animals.Dog;
 import Organism.Organism;
 import Organism.Persons.Dad;
+import Organism.Persons.Mom;
 import Senzors.FireSensor;
 import Senzors.WindSensor;
 import SportsEquipment.SportEquipment;
@@ -69,7 +73,20 @@ class ReportTest {
         EventReport eventReport = new EventReport();
 
         eventReport.generateReport(house);
+    }
 
+    @Test
+    void activityAndUsageReport(){
+        Fridge fridge = new Fridge("fridge",obyvak);
+        Freezer freezer = new Freezer("freezer",obyvak);
+        PlayStation playStation = new PlayStation("PS2",obyvak);
+        Mom mom = new Mom("mom");
+        mom.moveToHouse(house);
 
+        dad.useAppliance(freezer);
+        mom.useAppliance(playStation);
+        dad.useAppliance(fridge);
+        ActivityAndUsageReport activityAndUsageReport = new ActivityAndUsageReport();
+        activityAndUsageReport.generateReport(house);
     }
 }

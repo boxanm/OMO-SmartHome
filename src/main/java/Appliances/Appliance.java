@@ -33,9 +33,14 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	String name;
 
+	private static int instanceCounter;
+	private int id;
+
 	public Appliance(String name, HabitableRoom location){
 		this.name = name;
 		this.actualRoom = location;
+		id = instanceCounter;
+		instanceCounter++;
 	}
 
 	public void breakDown(){
@@ -70,5 +75,9 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	@Override
 	public String toString() {
 		return name + " of " + type;
+	}
+
+	public int getId() {
+		return id;
 	}
 }
