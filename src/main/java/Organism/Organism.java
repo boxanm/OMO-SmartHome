@@ -11,7 +11,7 @@ import House.House;
  * @version 1.0
  * @created 16-pro-2018 9:01:57
  */
-public abstract class Organism implements InfoGenerator, EventSource, EventTarget, ArrayIndexable {
+public abstract class Organism implements InfoGenerator, EventSource, EventTarget {
 	protected EventReporter eventReporter;
 
 
@@ -20,13 +20,9 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 	protected boolean isBusy = false;
 	protected House m_House = null;
 
-	static private int instanceCounter;
-	private int index;
 
 	public Organism(String name){
 		this.name = name;
-		index = instanceCounter;
-		instanceCounter++;
 	}
 
 	/**
@@ -71,10 +67,6 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 
 	@Override
 	public String toString() {
-		return name + "  " + index;
-	}
-
-	public int getIndex() {
-		return index;
+		return name;
 	}
 }

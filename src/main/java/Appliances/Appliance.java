@@ -13,7 +13,7 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator, ArrayIndexable {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator {
 
 	public int consuptionIddle = 0;
 	public int consuptionOFF = 0;
@@ -30,15 +30,11 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	String name;
 
-	private static int instanceCounter;
-	private int index;
 
 	public Appliance(String name, HabitableRoom location){
 		this.name = name;
 		this.actualRoom = location;
 		actualRoom.addAppliance(this);
-		index = instanceCounter;
-		instanceCounter++;
 	}
 
 	public void breakDown(){
@@ -75,7 +71,4 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		return name + " of " + getClass();
 	}
 
-	public int getIndex() {
-		return index;
-	}
 }
