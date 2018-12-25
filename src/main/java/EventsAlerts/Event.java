@@ -23,17 +23,13 @@ import House.Room;
 public abstract class Event {
 
     private static int eventID;
-    protected int lapNumber;
-    protected EventSource source;
-    protected Floor sourceFloor;
-    protected Room sourceRoom;
-    protected EventTarget target;
+    private int lapNumber;
+    Floor sourceFloor;
+    Room sourceRoom;
+    EventSource source;
+    EventTarget target;
 
     public Event(){
-
-    }
-
-    public void finalize() throws Throwable {
 
     }
 
@@ -52,5 +48,21 @@ public abstract class Event {
 
     public int getLapNumber() {
         return lapNumber;
+    }
+
+    public Floor getSourceFloor() {
+        return sourceFloor;
+    }
+
+    public Room getSourceRoom() {
+        return sourceRoom;
+    }
+
+    public void setTarget(EventTarget target) {
+        this.target = target;
+    }
+
+    public void setLapNumber(int lapNumber) {
+        this.lapNumber = lapNumber;
     }
 }

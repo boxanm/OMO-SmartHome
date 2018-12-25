@@ -5,7 +5,9 @@ import EventsAlerts.*;
 import House.Floor;
 import House.Room;
 import House.HabitableRoom;
+import LapsTime.LapSubscriber;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * Rozhraní definicí spoleèné vlastnosti a metody všech spotøebièù.
@@ -13,22 +15,20 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator {
+public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator, LapSubscriber, Usable {
 
-	public int consuptionIddle = 0;
-	public int consuptionOFF = 0;
-	public int consuptionON = 0;
-	public ApplianceState applianceState = null;
+	private int consuptionIddle = 0;
+	private int consuptionOFF = 0;
+	private int consuptionON = 0;
+	private ApplianceState applianceState = null;
 
-	public ApplianceType type = null;
+	private Floor actualFloor = null;
+	private HabitableRoom actualRoom = null;
+	private ConsuptionType consumptionType = null;
+	private boolean isBroken = false;
+	private boolean isBusy = false;
 
-	public Floor actualFloor = null;
-	public HabitableRoom actualRoom = null;
-	public ConsuptionType consumptionType = null;
-	public boolean isBroken = false;
-	public boolean isBusy = false;
-
-	String name;
+	private String name;
 
 
 	public Appliance(String name, HabitableRoom location){
@@ -41,14 +41,12 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		isBroken = true;
 	}
 
-	public abstract void use(Person person);
+	public abstract Usable use(Person person);
 	/**
 	 * 
 	 * @param typSpotreba
 	 */
-	public int getAktualniSpotreba(ConsuptionType typSpotreba){//todo
-		return 0;
-	}
+	public abstract int getAktualniSpotreba(ConsuptionType typSpotreba);
 
 	public void setOnFire(){
 		actualRoom.setOnFire();
@@ -58,12 +56,12 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	public void turnOFF(){}
 	public void turnON(){}
 
-	public ApplianceType getType(){
-		return type;
-	}
-
 	public boolean isBroken(){
 		return isBroken;
+	}
+
+	public boolean isBusy() {
+		return isBusy;
 	}
 
 	@Override

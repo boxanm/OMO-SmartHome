@@ -4,7 +4,6 @@ package Reports;
 import Appliances.Appliance;
 import EventsAlerts.*;
 import House.House;
-import Organism.Organism;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -59,9 +58,9 @@ public class ConsumptionReport extends HouseReport {
 				if(info.getType() != consumptionType){
 					System.out.println("---Used " + counter + " of" +consumptionType);
 					consumptionType = info.getType();
-					counter = info.getConsuption();
+					counter = info.getConsumption();
 				}
-				else counter+=info.getConsuption();
+				else counter+=info.getConsumption();
 			}
 			System.out.println("---Used " + counter + " of" +consumptionType);
 			System.out.println();

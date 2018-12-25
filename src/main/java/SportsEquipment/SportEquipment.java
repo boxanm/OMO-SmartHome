@@ -4,6 +4,7 @@ import EventsAlerts.EventTarget;
 import Organism.Persons.Adults;
 import House.NonHabitableRoom;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * Abstraktní tøída, jednotlivá spotovní vybavení se vyváøí pomocí návrhového
@@ -12,7 +13,7 @@ import Organism.Persons.Person;
  * @version 1.0
  * @created 16-pro-2018 9:02:22
  */
-public abstract class SportEquipment implements EventTarget {
+public abstract class SportEquipment implements EventTarget, Usable {
 
 	protected boolean isBusy = false;
 	protected NonHabitableRoom location;
@@ -27,7 +28,7 @@ public abstract class SportEquipment implements EventTarget {
 	 * 
 	 * @param person
 	 */
-	public abstract void use(Person person);
+	public abstract Usable use(Person person);
 
 
 
@@ -49,4 +50,8 @@ public abstract class SportEquipment implements EventTarget {
 
 	@Override
 	public abstract String toString();
+
+	public boolean isBusy() {
+		return isBusy;
+	}
 }

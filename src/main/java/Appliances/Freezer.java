@@ -3,6 +3,7 @@ package Appliances;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * @author Michal
@@ -42,12 +43,18 @@ public class Freezer extends Appliance implements FreezingAppliance {
 
 
 	@Override
-	public void use(Person person) {
+	public Usable use(Person person) {
 
+		return null;
+	}
+
+	@Override
+	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
+		return 0;
 	}
 
 
-    /**
+	/**
 	 * 
 	 * @param alert
 	 */
@@ -88,4 +95,9 @@ public class Freezer extends Appliance implements FreezingAppliance {
     public void newInfo(Info info) {
 
     }
+
+	@Override
+	public void newLap() {
+
+	}
 }

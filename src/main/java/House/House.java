@@ -20,13 +20,7 @@ import java.util.List;
  */
 public class House {
 
-	private List<Person> personList;
-	private List<Animal> animalList;
 	private List<Floor> floorList;
-	private List<Room> roomList;
-	private ArrayList<Appliance> applianceList;;
-	private ArrayList<SportEquipment> sportEquipmentList;
-	private ArrayList<Car> carList;
 	private List<HouseReportLayout> houseReportLayoutList;
 
 	private EventReporter eventReporter;
@@ -38,13 +32,7 @@ public class House {
 		this.name = name;
 		this.outside = new Outside();
 
-		personList = new ArrayList<Person>();
-		animalList = new ArrayList<Animal>();
 		floorList = new ArrayList<Floor>();
-		roomList = new ArrayList<Room>();
-		applianceList = new ArrayList<>();
-		sportEquipmentList = new ArrayList<>();
-		carList = new ArrayList<Car>();
 		houseReportLayoutList = new ArrayList<>();
 	}
 

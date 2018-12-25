@@ -4,6 +4,7 @@ package SportsEquipment;
 import House.NonHabitableRoom;
 import Organism.Persons.Adults;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 /**
  * @author Michal
@@ -19,8 +20,9 @@ public class Ski extends SportEquipment {
 	}
 
 	@Override
-	public void use(Person person) {
-
+	public Usable use(Person person) {
+		isBusy = true;
+		return null;
 	}
 
 	@Override
