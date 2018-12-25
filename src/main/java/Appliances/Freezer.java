@@ -4,6 +4,8 @@ import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 
+import java.util.ArrayList;
+
 /**
  * @author Michal
  * @version 1.0
@@ -11,35 +13,67 @@ import Organism.Persons.Person;
  */
 public class Freezer extends Appliance implements FreezingAppliance {
 
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+
+
+	private int food;
+	private boolean isEmpty = false;
+	private final int MAX_CAPACITY = 100;
+
     public Freezer(String name, HabitableRoom location) {
 		super(name,location);
     }
 
-	public void changeEmpty(){
-
+	@Override
+	public void changeEmpty() {
+		if(isEmpty()){
+			isEmpty = false;
+		} else {
+			isEmpty = true;
+		}
 	}
-
 	@Override
 	public boolean isEmpty() {
-		return false;
+		return isEmpty;
 	}
 
 	/**
 	 * 
-	 * @param food
+	 * @param person
 	 */
-	public void eat(int food){
 
-	}
 
 	/**
-	 * 
-	 * @param food
+	 *
+	 * @param quantity
 	 */
-	public void fill(int food){
-
+	@Override
+	public void eat(int quantity) {
+		if (getFood() > quantity && quantity > 0 && quantity < 10){
+			food -= quantity;
+			if(food <= 0){
+				changeEmpty();
+			}
+		}else{
+			System.out.println("Nelze");
+		}
 	}
 
+
+	/**
+	 *
+	 * @param quantity
+	 */
+	@Override
+	public void fill(int quantity) {
+		if(quantity > 0){
+			if(food + quantity < MAX_CAPACITY){
+				food += quantity;
+			} else{
+				System.out.println("Nevejde se");
+		}
+		}
+	}
 
 	@Override
 	public void use(Person person) {
@@ -64,7 +98,8 @@ public class Freezer extends Appliance implements FreezingAppliance {
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
 	/**
@@ -72,6 +107,7 @@ public class Freezer extends Appliance implements FreezingAppliance {
 	 * @param observer
 	 */
 	public void detach(Observer observer){
+		observersList.remove(observer);
 
 	}
 
@@ -88,4 +124,8 @@ public class Freezer extends Appliance implements FreezingAppliance {
     public void newInfo(Info info) {
 
     }
+
+	public int getFood() {
+		return food;
+	}
 }

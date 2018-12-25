@@ -1,56 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27e78ec4-823c-42f0-aace-5d57ad4adca1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/omo-semestral-work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/omo-semestral-work.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliances_Diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HouseAndReports_Diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Organism_Diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SenzorsAndEvents_Diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_report_OMO.pdf" beforeDir="false" />
+    <list default="true" id="27e78ec4-823c-42f0-aace-5d57ad4adca1" name="Default Changelist" comment="add strategy">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Manual/IManual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/ColdStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/FreezingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/HotStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/WarmStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Appliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Appliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Freezer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Freezer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Fridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/PC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/PlayStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/PlayStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/TV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/TV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/VirtualManual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Manual/VirtualManual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Xbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Xbox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/HabitableRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/HabitableRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Organism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Organism.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Senzors/CircuitBreakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Senzors/CircuitBreakers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Senzors/FireSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Senzors/FireSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Senzors/UsageSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Senzors/UsageSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Senzors/WindSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Senzors/WindSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SportsEquipment/Bicykle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SportsEquipment/Bicykle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SportsEquipment/Ski.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SportsEquipment/Ski.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/Appliance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/Appliance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EventsAlerts/ConsuptionGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EventsAlerts/ConsuptionGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Floor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Floor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/HabitableRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/HabitableRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/NonHabitableRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/NonHabitableRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Organism.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Organism.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/Bicykle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/Bicykle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/Ski.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/Ski.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/Outside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Outside.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,16 +75,146 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1985453011">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="71" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="71" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1209" />
+          <entry key="txt" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1209" />
+          <entry key="PLAIN_TEXT" value="13" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/CDplayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ConsuptionType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Freezer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+              <folding>
+                <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#1783#1784#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="738">
+              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/WashingMachineCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Appliance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/FreezerCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -147,30 +243,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/EventType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/AlertGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/Target.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/EventTarget.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Animals/Cat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Animals/Ferret.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Animals/Dog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Animals/Animal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/InfoGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/Event.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/AlertHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/EventReporter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/Info.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Appliances/ApplianceType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/InfoType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Organism/Persons/Adults.java" />
         <option value="$PROJECT_DIR$/src/main/java/Organism/Persons/Mom.java" />
         <option value="$PROJECT_DIR$/src/main/java/Organism/Persons/Child.java" />
         <option value="$PROJECT_DIR$/src/main/java/Senzors/BabySitter.java" />
         <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/Alert.java" />
         <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/ControlUnit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/House/Outside.java" />
         <option value="$PROJECT_DIR$/src/main/java/EventsAlerts/ConsuptionGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java" />
         <option value="$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipment.java" />
         <option value="$PROJECT_DIR$/src/main/java/SportsEquipment/Bicykle.java" />
         <option value="$PROJECT_DIR$/src/main/java/SportsEquipment/Ski.java" />
@@ -189,7 +267,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java" />
         <option value="$PROJECT_DIR$/src/main/java/House/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Appliances/Freezer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/PC.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/Fridge.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java" />
@@ -197,7 +274,26 @@
         <option value="$PROJECT_DIR$/src/main/java/Appliances/TV.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/Xbox.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Food.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/House/Outside.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/DayStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/NightStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/Strategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/WarmStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/ColdStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/FreezeStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/FreezingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/Hot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Strategy/HotStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Manual/IManual.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Manual/VirtualManual.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Freezer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Appliances/Appliance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Appliances/Creators/FreezerCreator.java" />
       </list>
     </option>
   </component>
@@ -257,6 +353,90 @@
               <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
               <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Appliances" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Appliances" type="462c0819:PsiDirectoryNode" />
+              <item name="Creators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Appliances" type="462c0819:PsiDirectoryNode" />
+              <item name="WashingMachine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="EventsAlerts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="House" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Organism" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Organism" type="462c0819:PsiDirectoryNode" />
+              <item name="Animals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Organism" type="462c0819:PsiDirectoryNode" />
+              <item name="Persons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Senzors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,24 +449,27 @@
             <path>
               <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
               <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
-              <item name="UML" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Appliances" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545431075333" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545771796087" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/Organism" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gitlab/labs/lab_8" />
+    <property name="last_opened_file_path" value="$USER_HOME$/gitlab/labs/lab_8" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -300,6 +483,326 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/omo-semestral-work.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Design_patterns.odt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Design_patterns.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Appliance.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/ApplianceType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/FreezerCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/FridgeCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/HiFiTowerCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/PCCretator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/PlayStationCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/TVCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/WashingMachineCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Creators/XboxCreator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Freezer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Fridge.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/PC.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/PlayStation.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/TV.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Xbox.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/DataSetUp.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Alert.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/AlertGenerator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/AlertHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/AlertType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Consumption.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/ConsuptionGenerator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/ControlUnit.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Event.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/EventReporter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/EventType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Info.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/InfoGenerator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/ObserverEverything.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Blind.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Car.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Floor.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/HabitableRoom.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/House.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Outside.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Room.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/House/Window.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Main.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Organism.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Persons/Adults.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Persons/Child.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Persons/Mom.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Reports/HouseConfigurationReport.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Reports/HouseReport.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Reports/HouseReportLayout.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/BabySitter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/CircuitBreakers.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/FireSensor.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/Senzor.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/UsageSensor.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Senzors/WindSensor.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/CreatorSportEquipments.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/Ski.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipment.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipmentCreatorSki.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/World.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/Appliances/WashingMachineTest.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Manual/VirtualManual.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/EventSource.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/EventTarget.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/InfoType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Observable.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Animals/Animal.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Animals/Cat.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Animals/Dog.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Organism/Animals/Ferret.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Reports/EventReport.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/Bicycle.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipmentCreatorBicycle.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/House/HouseAlertTests.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/Reports/ReportTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/SportsEquipment/SportEquipmentCreatorSkiTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Appliance.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/ApplianceState.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/Context.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/State.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/StateIDDLE.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/StateOFF.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceState/StateON.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ApplianceType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/CDplayer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/ConsuptionType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/ApplianceCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/FreezerCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/FridgeCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/HiFiTowerCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/PCCretator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/PlayStationCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/TVCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/WashingMachineCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Creators/XboxCreator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Freezer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/FreezingAppliance.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Fridge.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/HifiTower.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Manual/Manual.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Manual/VirtualManual.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/PC.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/PlayStation.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/TV.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/CycleFinish.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/CykleStart.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/FillWithLaudry.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/IWashingMachineState.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/TakeOutLaudry.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/WashingMachine/WashingMachine.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Appliances/Xbox.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/DataSetUp.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Alert.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/AlertGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/AlertHandler.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/AlertType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Consumption.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/ConsuptionGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/ControlUnit.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Event.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/EventReporter.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/EventSource.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/EventTarget.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Info.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/InfoGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/InfoType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/InforConsuptionGenerator.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Observable.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/Observer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/EventsAlerts/ObserverEverything.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Blind.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Car.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Floor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/HabitableRoom.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/House.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/NonHabitableRoom.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Outside.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Room.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/House/Window.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Main.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Animals/Animal.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Animals/Cat.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Animals/Dog.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Animals/Ferret.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Organism.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Adults.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Child.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Dad$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Dad.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Mom$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Mom.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Organism/Persons/Person.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/ActivityAndUsageReport.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/ConsumptionReport.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/EventReport.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/HouseConfigurationReport.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/HouseReport.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Reports/HouseReportLayout.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/BabySitter.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/CircuitBreakers.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/ElectricitySensor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/FireSensor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/Meter.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/Senzor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/UsageSensor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/WaterSensor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Senzors/WindSensor.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/Bicycle.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/CreatorSportEquipments.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/Ski.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipment.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipmentCreatorBicycle.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipmentCreatorSki.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/World.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/Appliances/WashingMachineTest.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/House/HouseAlertTests.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/Organism/OrganismTest.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/Organism/Persons/DadTest.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/Reports/ReportTest.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/SportsEquipment/SportEquipmentCreatorSkiTest.class</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Appliances_Diagram.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HouseAndReports_Diagram.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Organism_Diagram.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SenzorsAndEvents_Diagram.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/UML/Design_patterns.odt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/UML/Design_patterns.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/diagram.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/model_report_OMO.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Animals/Animal.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Animals/Cat.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Animals/Dog.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Animals/Ferret.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/Manual.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Appliances/VirtualManual.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Observed.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/EventsAlerts/Target.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/Reports/EvenReport.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/Bicykle.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipmentCreatorBicykle.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -466,12 +969,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40768000" />
+    <option name="totallyTimeSpent" value="53833000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1878" height="1081" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15976009" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -481,14 +985,14 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32952183" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32952183" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32952183" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32952183" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -509,289 +1013,356 @@
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
+      <path value="$USER_HOME$" />
     </ignored-roots>
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/Alert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/AlertHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/AlertGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="170">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/AlertType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/Consumption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/ConsuptionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/ControlUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="306">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/Alert.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipmentCreatorSki.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipmentCreatorBicykle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/InfoType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/InfoGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/EventReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SportsEquipment/SportEquipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SportsEquipment/Bicykle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SportsEquipment/Ski.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Senzors/UsageSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Senzors/WindSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/PlayStationCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/TVCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Senzors/FireSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Senzors/CircuitBreakers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/FridgeCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/HiFiTowerCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/PCCretator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/XboxCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/WashingMachineCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Adults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/House/Floor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-          <folding>
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Child.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="71" column="89" selection-start-line="71" selection-start-column="89" selection-end-line="71" selection-end-column="89" />
+        <state relative-caret-position="408">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataSetUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/Random.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="159" column="15" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding>
-            <element signature="method#finalize#0;class#NonHabitableRoom#0" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/House/HabitableRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="method#addSenzor#0;class#HabitableRoom#0" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/House/House.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="138" column="5" lean-forward="true" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+        <state relative-caret-position="625">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
           <folding>
             <element signature="method#getRoomList#0;class#House#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Organism.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/ConsumptionReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/EventReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/FreezingAppliance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/ActivityAndUsageReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/InfoType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Animals/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Child.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1047">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#455#465#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/House/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Mom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="-1887">
+          <caret line="20" column="27" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/StateIDDLE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/StateOFF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2855">
+          <caret line="193" column="31" lean-forward="true" selection-start-line="193" selection-start-column="31" selection-end-line="193" selection-end-column="31" />
           <folding>
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#callFireman#0;class#Dad#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/ApplianceState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+        <state relative-caret-position="170">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/House/Outside.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Strategy/Strategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Strategy/WarmStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Strategy/HotStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Strategy/FreezingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Strategy/ColdStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/House/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Manual/IManual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Manual/VirtualManual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/FridgeCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/TVCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -800,148 +1371,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/CDplayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="153">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Manual/VirtualManual.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/ConsuptionType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Freezer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="190" column="29" lean-forward="true" selection-start-line="190" selection-start-column="29" selection-end-line="190" selection-end-column="29" />
+        <state relative-caret-position="1088">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Dad#0;class#Dad#0" />
-            <element signature="method#callFireman#0;class#Dad#0" />
-            <element signature="e#2590#2591#0" expanded="true" />
-            <element signature="e#2610#2611#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/WashingMachineCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/FreezerCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/House/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="221">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/WashingMachine/WashingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1008">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="316">
+          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Freezer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="432">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding>
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/FreezerCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Appliance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Fridge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/HifiTower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/PC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/PlayStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/TV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Xbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-          <folding>
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="404">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -33,9 +33,10 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	String name;
 
-	public Appliance(String name, HabitableRoom location){
+	public Appliance(String name, HabitableRoom location, ConsuptionType consumptionType){
 		this.name = name;
 		this.actualRoom = location;
+		this.consumptionType = consumptionType;
 	}
 
 	public void breakDown(){

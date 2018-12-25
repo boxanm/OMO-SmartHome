@@ -7,20 +7,17 @@ package Appliances;
  */
 public interface FreezingAppliance {
 
-	int food = 0;
-	boolean isEmpty = false;
+	/**
+	 * 
+	 * @param quantity - amount of food from 1 to 10 eaten from the fridge
+	 */
+	public void eat(int quantity);
 
 	/**
 	 * 
-	 * @param food - amount of food from 1 to 10 eaten from the fridge
+	 * @param quantity - amount of food from 1 to 10 added to the fridge
 	 */
-	public void eat(int food);
-
-	/**
-	 * 
-	 * @param food - amount of food from 1 to 10 added to the fridge
-	 */
-	public void fill(int food);
+	public void fill(int quantity);
 
 	public void changeEmpty();
 

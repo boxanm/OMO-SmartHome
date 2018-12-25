@@ -19,6 +19,8 @@ public class Outside implements Observable {
 
 	private boolean isWind;
 
+	private int temperature = 20;
+
 	public Outside(){
 		observerList = new ArrayList<>();
 	}
@@ -58,5 +60,13 @@ public class Outside implements Observable {
 	public Info newInfo(){
 
 		return null;
+	}
+
+	public int getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(int temperature) {
+		this.temperature = temperature;
 	}
 }
