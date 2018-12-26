@@ -23,8 +23,6 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	public int consuptionON = 0;
 	public ApplianceState applianceState = null;
 
-	public ApplianceType type = null;
-
 	public Floor actualFloor = null;
 	public Room actualRoom = null;
 	public ConsuptionType consumptionType = null;
@@ -60,16 +58,12 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	public void turnOFF(){}
 	public void turnON(){}
 
-	public ApplianceType getType(){
-		return type;
-	}
-
 	public boolean isBroken(){
 		return isBroken;
 	}
 
 	@Override
 	public String toString() {
-		return name + " of " + type;
+		return name + " of " + getClass();
 	}
 }
