@@ -1,8 +1,5 @@
 package Appliances.ApplianceState;
 
-
-import Appliances.Appliance;
-
 /**
  * @author Michal
  * @version 1.0
@@ -11,5 +8,5 @@ import Appliances.Appliance;
 public enum ApplianceState {
 	On,
 	Iddle,
-	Off;
+	Off
 }

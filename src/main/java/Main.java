@@ -1,5 +1,10 @@
 import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.Creators.ApplianceCreator;
+import Appliances.Creators.FreezerCreator;
+import Appliances.Creators.TVCreator;
+import Appliances.Freezer;
+import Appliances.TV;
 import House.House;
 
 import House.HabitableRoom;
@@ -15,6 +20,8 @@ public final class Main {
         World world = World.getInstance();
         House house = new House("house1");
 
+        ComsuptionType elek = ComsuptionType.electricity;
+
         world.addHouse(house);
 
         Floor floor = new Floor("První patro", house);
@@ -25,9 +32,11 @@ public final class Main {
         SportEquipmentCreatorSki skiFactory = new SportEquipmentCreatorSki(technicka);
         SportEquipment lyze = skiFactory.createAtomic();
 
-        Appliance tv = ApplianceCreator.createAppliance("tv", "Samsung", koupelna);
+        FreezerCreator freezerCreator = new FreezerCreator(koupelna);
+        Appliance chladnicka = freezerCreator.createCandy("chladnicka1");
 
-        tv.turnON();
+       // chladnicka.consumptionType;
+
 
 
        // WashingMachine washingMachine = new WashingMachine("praèka", koupelna);

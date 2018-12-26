@@ -1,9 +1,10 @@
 package Appliances.Creators;
 
 
+import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.Freezer;
 import House.HabitableRoom;
-import Organism.Animals.Animal;
 
 /**
  * @author Michal
@@ -12,16 +13,18 @@ import Organism.Animals.Animal;
  */
 public class FreezerCreator extends ApplianceCreator {
 
-	public Freezer m_Freezer;
-
-	public FreezerCreator(String name, HabitableRoom location){
-
-		new Freezer(name, location);
-
+	public FreezerCreator(HabitableRoom location){
+		super(location);
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	@Override
+	protected Appliance createAppliance(String name, String brand) {
+		return new Freezer(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getFreezerComsuption());
 	}
+
+	public Freezer createCandy(String name){
+		return (Freezer) createAppliance(name,"Candy");
+	}
+
 
 }

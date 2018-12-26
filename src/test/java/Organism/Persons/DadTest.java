@@ -1,6 +1,7 @@
 package Organism.Persons;
 
 import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.PC;
 import EventsAlerts.EventReporter;
 import House.*;
@@ -29,12 +30,13 @@ class DadTest {
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,0);
         garaz = new NonHabitableRoom("Garaz",house,floor,0);
+        double pcComsuption[] = new double[] {0.8, 0.01, 0.0002};
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);
         dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        appliance = new PC("Pocitac",obyvak);
+        appliance = new PC("Pocitac","Zalman",obyvak, ComsuptionType.electricity, pcComsuption);
         sportEquipment = new Ski("atomic",garaz);
         obyvak.addAppliance(appliance);
         garaz.addSportEquipment(sportEquipment);

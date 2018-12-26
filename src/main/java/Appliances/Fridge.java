@@ -1,9 +1,12 @@
 package Appliances;
 
+import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
+
+import java.util.ArrayList;
 
 /**
  * @author Michal
@@ -12,8 +15,11 @@ import Organism.Usable;
  */
 public class Fridge extends Appliance implements FreezingAppliance {
 
-	public Fridge(String name, HabitableRoom location){
-		super(name,location);
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+
+
+	public Fridge(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption){
+		super(name,brand, location, consumptionType, comsuption);
 	}
 
 	public void changeEmpty(){
@@ -44,16 +50,9 @@ public class Fridge extends Appliance implements FreezingAppliance {
 
 	@Override
 	public Usable use(Person person) {
-
+		isBusy = true;
 		return null;
 	}
-
-	@Override
-	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
-		return 0;
-	}
-
-
 	/**
 	 * 
 	 * @param alert
@@ -76,7 +75,8 @@ public class Fridge extends Appliance implements FreezingAppliance {
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class Fridge extends Appliance implements FreezingAppliance {
 	 * @param observer
 	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
@@ -98,6 +98,11 @@ public class Fridge extends Appliance implements FreezingAppliance {
 
 	@Override
 	public void newLap() {
+
+	}
+
+	@Override
+	public void setState(State state) {
 
 	}
 }

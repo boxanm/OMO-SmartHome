@@ -1,9 +1,12 @@
 package Appliances;
 
+import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
+
+import java.util.ArrayList;
 
 /**
  * @author Michal
@@ -11,8 +14,12 @@ import Organism.Usable;
  * @created 16-pro-2018 9:00:42
  */
 public class PC extends Appliance implements CDplayer {
-	public PC(String name, HabitableRoom location){
-		super(name,location);
+
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+
+
+	public PC(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+		super(name,brand,location, consumptionType, comsuption);
 	}
 
 	public void finalize() throws Throwable {
@@ -46,16 +53,9 @@ public class PC extends Appliance implements CDplayer {
 
 	@Override
 	public Usable use(Person person) {
+		isBusy = true;
 		return null;
-
 	}
-
-	@Override
-	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
-		return 0;
-	}
-
-
 	/**
 	 * 
 	 * @param alert
@@ -78,7 +78,8 @@ public class PC extends Appliance implements CDplayer {
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
 	/**
@@ -86,7 +87,7 @@ public class PC extends Appliance implements CDplayer {
 	 * @param observer
 	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
@@ -101,6 +102,11 @@ public class PC extends Appliance implements CDplayer {
 
 	@Override
 	public void newLap() {
+
+	}
+
+	@Override
+	public void setState(State state) {
 
 	}
 }

@@ -1,6 +1,8 @@
 package Appliances.Creators;
 
 
+import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.Fridge;
 import House.HabitableRoom;
 
@@ -11,15 +13,18 @@ import House.HabitableRoom;
  */
 public class FridgeCreator extends ApplianceCreator {
 
-	public Fridge m_Fridge;
-
-	public FridgeCreator(String name, HabitableRoom location){
-
-		new Fridge(name, location);
+	public FridgeCreator(HabitableRoom location){
+		super(location);
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	@Override
+	protected Appliance createAppliance(String name, String brand) {
+		return new Fridge(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getFridgeComsuption());
+	}
+
+	public Fridge createWhirlpool(String name){
+
+		return (Fridge) createAppliance(name,"Whirlpool");
 	}
 
 }

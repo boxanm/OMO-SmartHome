@@ -6,10 +6,7 @@ package Appliances;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public enum ConsuptionType {
+public enum ComsuptionType {
 	water,
 	electricity,
-	usage;
-
-	public Appliance m_Appliance;
 }

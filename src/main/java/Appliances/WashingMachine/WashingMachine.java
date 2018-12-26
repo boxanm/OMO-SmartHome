@@ -1,9 +1,10 @@
 package Appliances.WashingMachine;
 
 import Appliances.Appliance;
-import Appliances.ApplianceState.State;
-;
-import Appliances.ConsuptionType;
+import Appliances.ApplianceState.State;;
+import Appliances.ComsuptionData;
+import Appliances.ComsuptionType;
+import Appliances.ComsuptionType;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
@@ -30,8 +31,8 @@ public class WashingMachine extends Appliance {
 	public State m_State;
 
 
-    public WashingMachine(String name, HabitableRoom location) {
-        super(name,location);
+    public WashingMachine(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+        super(name,brand,location,consumptionType, comsuption);
 
 		fillWithLaundry = new FillWithLaudry(this);
 		cycleStart = new CykleStart(this);
@@ -92,15 +93,9 @@ public class WashingMachine extends Appliance {
 
 	@Override
 	public Usable use(Person person) {
+		isBusy = true;
 		return null;
 	}
-
-	@Override
-	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
-		return 0;
-	}
-
-
 	/**
 	 * 
 	 * @param alert
@@ -143,6 +138,11 @@ public class WashingMachine extends Appliance {
 
 	@Override
 	public void newLap() {
+
+	}
+
+	@Override
+	public void setState(State state) {
 
 	}
 }

@@ -1,6 +1,8 @@
 package Appliances.Creators;
 
 
+import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.HifiTower;
 import House.HabitableRoom;
 
@@ -11,14 +13,17 @@ import House.HabitableRoom;
  */
 public class HiFiTowerCreator extends ApplianceCreator {
 
-	public HifiTower m_HifiTower;
-
-	public HiFiTowerCreator(String name, HabitableRoom location){
-		new HifiTower(name, location);
+	public HiFiTowerCreator(HabitableRoom location){
+		super(location);
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	@Override
+	protected Appliance createAppliance(String name, String brand) {
+		return new HifiTower(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getHifiComsuption());
+	}
+
+	public HifiTower createSencor(String name){
+		return (HifiTower) createAppliance(name,"Sencor");
 	}
 
 }

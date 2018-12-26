@@ -1,6 +1,8 @@
 package Appliances.Creators;
 
 
+import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.PC;
 import House.HabitableRoom;
 
@@ -11,14 +13,19 @@ import House.HabitableRoom;
  */
 public class PCCretator extends ApplianceCreator {
 
-	public PC m_PC;
-
-	public PCCretator(String name, HabitableRoom location){
-		new PC(name, location);
+	public PCCretator(HabitableRoom location){
+		super(location);
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
+	@Override
+	protected Appliance createAppliance(String name, String brand) {
+		return new PC(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getPcComsuption());
+	}
+
+
+
+	public PC createZalman(String name){
+		return (PC) createAppliance(name,"Zalman");
 	}
 
 }

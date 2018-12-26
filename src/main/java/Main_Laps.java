@@ -1,5 +1,6 @@
 import Appliances.Appliance;
 import Appliances.Creators.ApplianceCreator;
+import Appliances.Creators.FreezerCreator;
 import House.House;
 import LapsTime.LapSubscriber;
 import SportsEquipment.SportEquipment;
@@ -29,13 +30,14 @@ public final class Main_Laps {
         SportEquipmentCreatorSki skiFactory = new SportEquipmentCreatorSki(technicka);
         SportEquipment lyze = skiFactory.createAtomic();
 
-        Appliance tv = ApplianceCreator.createAppliance("tv", "Samsung", koupelna);
+        FreezerCreator freezerCreator = new FreezerCreator(koupelna);
+        Appliance chladnicka = freezerCreator.createCandy("chladnicka1");
 
-        tv.turnON();
+        chladnicka.turnON();
 
 
         ArrayList<LapSubscriber> lapSubscribers = new ArrayList<>();
-        lapSubscribers.add(tv);
+     //   lapSubscribers.add(chladnicka);
         for (LapSubscriber sub:lapSubscribers) {
             sub.newLap();
         }

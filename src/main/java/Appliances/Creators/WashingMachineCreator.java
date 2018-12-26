@@ -1,6 +1,8 @@
 package Appliances.Creators;
 
 
+import Appliances.Appliance;
+import Appliances.ComsuptionType;
 import Appliances.WashingMachine.WashingMachine;
 import House.HabitableRoom;
 
@@ -11,8 +13,18 @@ import House.HabitableRoom;
  */
 public class WashingMachineCreator extends ApplianceCreator {
 
-	public WashingMachineCreator(String name, HabitableRoom location){
-		new WashingMachine(name, location);
+	public WashingMachineCreator(HabitableRoom location){
+		super(location);
+	}
+
+	@Override
+	protected Appliance createAppliance(String name, String brand) {
+		return new WashingMachine(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getWashingMachineComsuption());
+	}
+
+
+	public WashingMachine createBosch(String name){
+		return (WashingMachine) createAppliance(name,"Bosch");
 	}
 
 }

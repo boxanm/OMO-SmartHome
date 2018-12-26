@@ -1,5 +1,6 @@
 package Appliances;
 
+import Appliances.Creators.WashingMachineCreator;
 import Appliances.WashingMachine.WashingMachine;
 import House.HabitableRoom;
 import House.House;
@@ -10,25 +11,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WashingMachineTest {
 
-    House house = new House("house1");
-    Floor floor = new Floor("První patro", house);
-
-    HabitableRoom koupelna = new HabitableRoom("koupelna", house, floor, 2);
-    WashingMachine washingMachine = new WashingMachine("praèka", koupelna);
+    HabitableRoom room;
+    House house;
+    Floor floor;
+    WashingMachineCreator washingMachineCreator;
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
 
+        house = new House("house1");
+        floor = new Floor("prizemi", house);
+        room = new HabitableRoom("koupelna", house, floor, 1);
+        washingMachineCreator = new WashingMachineCreator(room);
 
-    }
 
-    @org.junit.jupiter.api.AfterEach
-    void tearDown() {
     }
 
     @Test
-    public void test(){
-        washingMachine.setWashingMachineState(washingMachine.getFillWithLaundry());
-       assertEquals(washingMachine.getWashingMachineState(), washingMachine.getFillWithLaundry());
+    public void createBosch(){
+        WashingMachine bosch = washingMachineCreator.createBosch("wasshingmachine1");
+        assertEquals(bosch.getBrand(), "Bosch");
     }
 }

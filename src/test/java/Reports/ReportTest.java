@@ -1,9 +1,6 @@
 package Reports;
 
-import Appliances.Appliance;
-import Appliances.Freezer;
-import Appliances.Fridge;
-import Appliances.PlayStation;
+import Appliances.*;
 import EventsAlerts.EventReporter;
 import House.*;
 import Organism.Animals.Dog;
@@ -32,6 +29,10 @@ class ReportTest {
     EventReporter eventReporter;
     Appliance appliance;
     SportEquipment sportEquipment;
+    double freezerComsuption[] = new double[] {1, 0.02, 0.0005};
+    double fridgeComsuption[] = new double[] {0.8, 0.01, 0.0002};
+    double playstationComsuption[] = new double[] {0.7, 0.04, 0.0006};
+
 
     @BeforeEach
     void setUp() {
@@ -49,6 +50,7 @@ class ReportTest {
         dad.moveToHouse(house);
         dog = new Dog("Rex");
         dog.moveToHouse(house);
+
 
 
     }
@@ -81,9 +83,9 @@ class ReportTest {
 
     @Test
     void activityAndUsageReport(){
-        Fridge fridge = new Fridge("fridge",obyvak);
-        Freezer freezer = new Freezer("freezer",obyvak);
-        PlayStation playStation = new PlayStation("PS2",obyvak);
+        Fridge fridge = new Fridge("fridge","whirpool",obyvak, ComsuptionType.electricity, fridgeComsuption);
+        Freezer freezer = new Freezer("freezer","whirpool",obyvak, ComsuptionType.electricity, freezerComsuption);
+        PlayStation playStation = new PlayStation("konzole1","PS2",obyvak, ComsuptionType.electricity, playstationComsuption);
         Mom mom = new Mom("mom");
         mom.moveToHouse(house);
 

@@ -1,8 +1,10 @@
 package Appliances;
 
+import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
+import Organism.Usable;
 
 import java.util.ArrayList;
 
@@ -20,8 +22,8 @@ public class Freezer extends Appliance implements FreezingAppliance {
 	private boolean isEmpty = false;
 	private final int MAX_CAPACITY = 100;
 
-    public Freezer(String name, HabitableRoom location) {
-		super(name,location);
+    public Freezer(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+		super(name,brand,location,consumptionType, comsuption);
     }
 
 	@Override
@@ -76,12 +78,18 @@ public class Freezer extends Appliance implements FreezingAppliance {
 	}
 
 	@Override
-	public void use(Person person) {
+	public Usable use(Person person) {
+		isBusy = true;
+		return null;
+	}
+
+	@Override
+	public void newLap() {
 
 	}
 
 
-    /**
+	/**
 	 * 
 	 * @param alert
 	 */
@@ -127,5 +135,10 @@ public class Freezer extends Appliance implements FreezingAppliance {
 
 	public int getFood() {
 		return food;
+	}
+
+	@Override
+	public void setState(State state) {
+
 	}
 }

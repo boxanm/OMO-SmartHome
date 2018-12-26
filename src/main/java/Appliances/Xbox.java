@@ -1,9 +1,12 @@
 package Appliances;
 
+import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
+
+import java.util.ArrayList;
 
 /**
  * @author Michal
@@ -12,8 +15,11 @@ import Organism.Usable;
  */
 public class Xbox extends Appliance implements CDplayer {
 
-    public Xbox(String name, HabitableRoom location) {
-		super(name,location);
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+
+
+	public Xbox(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+		super(name,brand,location, consumptionType, comsuption);
     }
 
 
@@ -36,14 +42,10 @@ public class Xbox extends Appliance implements CDplayer {
 
 	@Override
 	public Usable use(Person person) {
-
+		isBusy = true;
 		return null;
 	}
 
-	@Override
-	public int getAktualniSpotreba(ConsuptionType typSpotreba) {
-		return 0;
-	}
 
 	/**
 	 * 
@@ -67,7 +69,8 @@ public class Xbox extends Appliance implements CDplayer {
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
 	/**
@@ -75,7 +78,7 @@ public class Xbox extends Appliance implements CDplayer {
 	 * @param observer
 	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
@@ -89,6 +92,11 @@ public class Xbox extends Appliance implements CDplayer {
 
 	@Override
 	public void newLap() {
+
+	}
+
+	@Override
+	public void setState(State state) {
 
 	}
 }

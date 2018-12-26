@@ -19,7 +19,6 @@ public class Bicycle extends SportEquipment {
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;
-
 		return null;
 	}
 
