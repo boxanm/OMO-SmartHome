@@ -1,5 +1,6 @@
 package Appliances;
 
+import Appliances.ApplianceState.ApplianceState;
 import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
@@ -7,6 +8,7 @@ import Organism.Persons.Person;
 import Organism.Usable;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -34,7 +36,21 @@ public class TV extends Appliance {
 
 	@Override
 	public Usable use(Person person) {
-		isBusy = true;
+		Calendar cal = Calendar.getInstance();
+		long startTime = cal.getTimeInMillis();
+		long currentTime = startTime;
+		newInfo(new Info(InfoType.useTV, person, getFloor(), actualRoom, this));
+		wearOfDevice -= 10;
+		while(currentTime<startTime+5000){
+			isBusy = true;
+			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
+				this.turnON();
+				return this;
+			}
+		}
+		checkWearOfDevice();
+		this.turnOFF();
+		isBusy = false;
 		return null;
 	}
 	/**
@@ -72,7 +88,9 @@ public class TV extends Appliance {
 	}
 
 	public void announce(){
-
+		for (Observer observer:observersList) {
+			observer.update();
+		}
 	}
 
 	@Override
@@ -88,5 +106,10 @@ public class TV extends Appliance {
 	@Override
 	public void setState(State state) {
 
+	}
+
+	@Override
+	public String toString() {
+		return "TV " + deviceName;
 	}
 }

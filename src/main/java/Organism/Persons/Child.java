@@ -79,7 +79,6 @@ public class Child extends Person implements Observable {
 	public void announce() {
 		for (Observer observer:observersList) {
 			observer.update();
-
 		}
 	}
 

@@ -1,6 +1,7 @@
 package Senzors;
 
 import EventsAlerts.*;
+import House.Room;
 
 /**
  * @author Michal
@@ -9,6 +10,8 @@ import EventsAlerts.*;
  */
 public class BabySitter implements Senzor, AlertGenerator {
 	EventReporter eventReporter;
+
+	private Room room;
 
 	public BabySitter(){
 
@@ -29,7 +32,10 @@ public class BabySitter implements Senzor, AlertGenerator {
 
 	@Override
 	public void newAlert() {
-//		eventReporter.updateFromObserver(new Alert(AlertType.babyCrying,this,));
-
+		eventReporter.updateFromObserver(new Alert(AlertType.babyCrying,this, null, null, null));
+	}
+	@Override
+	public String toString() {
+		return "Babysitter in " + room.toString();
 	}
 }

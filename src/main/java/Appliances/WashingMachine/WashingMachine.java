@@ -1,12 +1,16 @@
 package Appliances.WashingMachine;
 
 import Appliances.Appliance;
+import Appliances.ApplianceState.ApplianceState;
 import Appliances.ApplianceState.State;;
 import Appliances.ComsuptionType;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Použivá návrhový vzor State machine
@@ -26,10 +30,11 @@ public class WashingMachine extends Appliance {
 
 	IWashingMachineState washingMachineState;
 
-	public State m_State;
+
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 
-    public WashingMachine(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+	public WashingMachine(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
         super(name,brand,location,consumptionType, comsuption);
 
 		fillWithLaundry = new FillWithLaudry(this);
@@ -72,18 +77,10 @@ public class WashingMachine extends Appliance {
 	public IWashingMachineState getTakeOutLaundry(){return takeOutLaundry;}
 
 
-
-    public void finalize() throws Throwable {
-
-	}
-
 	public void changeState(){
 
 	}
 
-	public void wash(){
-
-	}
 
 	public void breakeDown(){
 
@@ -91,8 +88,24 @@ public class WashingMachine extends Appliance {
 
 	@Override
 	public Usable use(Person person) {
-		isBusy = true;
+		Calendar cal = Calendar.getInstance();
+		long startTime =   cal.getTimeInMillis();
+		long currentTime =startTime;
+		newInfo(new Info(InfoType.useWashingMachine, person, getFloor(), actualRoom, this));
+		wearOfDevice -= 10;
+		while(currentTime<startTime+5000){
+			isBusy = true;
+			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
+				this.turnON();
+				return this;
+			}
+		}
+		checkWearOfDevice();
+		this.turnOFF();
+		isBusy = false;
 		return null;
+
+
 	}
 	/**
 	 * 
@@ -105,16 +118,13 @@ public class WashingMachine extends Appliance {
 
 	}
 
-	public Info newInfo(){
-
-		return null;
-	}
 	/**
 	 * 
 	 * @param observer
 	 */
 	public void attach(Observer observer){
-
+		if(!observersList.contains(observer))
+			observersList.add(observer);
 	}
 
 	/**
@@ -122,16 +132,13 @@ public class WashingMachine extends Appliance {
 	 * @param observer
 	 */
 	public void detach(Observer observer){
-
+		observersList.remove(observer);
 	}
 
 	public void announce(){
-
-	}
-
-	@Override
-	public void newInfo(Info info) {
-
+		for (Observer observer:observersList) {
+			observer.update();
+		}
 	}
 
 	@Override
@@ -140,7 +147,17 @@ public class WashingMachine extends Appliance {
 	}
 
 	@Override
+	public String toString() {
+		return "WashingMachine " + deviceName;
+	}
+
+	@Override
 	public void setState(State state) {
+
+	}
+
+	@Override
+	public void newInfo(Info info) {
 
 	}
 }

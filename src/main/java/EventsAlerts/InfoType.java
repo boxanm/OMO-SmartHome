@@ -9,6 +9,16 @@ public enum InfoType {
     cheeringUpChild,
     drivingCar,
     repairingAppliance,
-    hangingOn
+    hangingOn,
+    useWashingMachine,
+    useFreezer,
+    useFridge,
+    useHifiTower,
+    usePC,
+    usePlayStation,
+    useTV,
+    useXbox
+
+
 
 }

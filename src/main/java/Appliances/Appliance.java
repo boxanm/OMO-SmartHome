@@ -25,7 +25,7 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	private ApplianceState applianceState;
 
 	private Floor actualFloor = null;
-	private Room actualRoom;
+	protected Room actualRoom;
 	public ComsuptionType consumptionType;
 	private boolean isBroken = false;
 	public boolean isBusy = false;
@@ -88,12 +88,18 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	public void turnON(){
 		setState(new StateON(this));
+		getConsumption();
+		announce();
 	}
 	public void turnIddle(){
 		setState(new StateIDDLE(this));
+		getConsumption();
+		announce();
 	}
 	public void turnOFF(){
 		setState(new StateOFF(this));
+		getConsumption();
+		announce();
 	}
 
 
@@ -126,6 +132,10 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	{
 		//if(this.wearOfDevice == 0) //todo až bude brokenDeviceEvent tak dodìlat
 
+	}
+
+	public Floor getFloor(){
+		return actualRoom.getFloor();
 	}
 
 	public boolean isBusy() {

@@ -1,5 +1,6 @@
 package Appliances;
 
+import Appliances.ApplianceState.ApplianceState;
 import Appliances.ApplianceState.State;
 import EventsAlerts.*;
 import House.HabitableRoom;
@@ -7,6 +8,7 @@ import Organism.Persons.Person;
 import Organism.Usable;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * @author Michal
@@ -24,7 +26,21 @@ public class HifiTower extends Appliance implements CDplayer {
 	}
 	@Override
 	public Usable use(Person person) {
-		isBusy = true;
+		Calendar cal = Calendar.getInstance();
+		long startTime = cal.getTimeInMillis();
+		long currentTime = startTime;
+		newInfo(new Info(InfoType.useHifiTower, person, getFloor(), actualRoom, this));
+		wearOfDevice -= 10;
+		while(currentTime<startTime+5000){
+			isBusy = true;
+			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
+				this.turnON();
+				return this;
+			}
+		}
+		checkWearOfDevice();
+		this.turnOFF();
+		isBusy = false;
 		return null;
 	}
 	/**
@@ -61,7 +77,9 @@ public class HifiTower extends Appliance implements CDplayer {
 	}
 
 	public void announce(){
-
+		for (Observer observer:observersList) {
+			observer.update();
+		}
 	}
 
 	public void ejectCD(){
@@ -94,4 +112,9 @@ public class HifiTower extends Appliance implements CDplayer {
 	public void setState(State state) {
 
 	}
+
+    @Override
+    public String toString() {
+        return "HiFi Tower " + deviceName;
+    }
 }

@@ -18,9 +18,6 @@ public class Cat extends Animal {
 	}
 
 
-	public void finalize() throws Throwable {
-
-	}
 	public void makeSound() {
 		newInfo(new Info(InfoType.animalSound, this, getFloor(), actualRoom, this));
 	}

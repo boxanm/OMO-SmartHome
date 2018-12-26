@@ -58,7 +58,14 @@ class ReportTest {
     @Test
     void generateConfigurationReport() {
         HouseConfigurationReport houseConfigurationReport= new HouseConfigurationReport();
-        houseConfigurationReport.generateConfigurationReport(house);
+        houseConfigurationReport.generateConfigurationReportOnScreen(house);
+    }
+
+    @Test
+    void generateConfigurationReportToFile(){
+        HouseConfigurationReport houseConfigurationReport= new HouseConfigurationReport();
+        houseConfigurationReport.generateConfigurationReportToFile(house);
+
     }
 
     @Test
@@ -79,6 +86,7 @@ class ReportTest {
         EventReport eventReport = new EventReport();
 
         eventReport.generateReport(house);
+        eventReport.generateEventReportToFile(house);
     }
 
     @Test

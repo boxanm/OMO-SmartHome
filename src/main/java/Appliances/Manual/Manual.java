@@ -9,19 +9,15 @@ import Appliances.Appliance;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class Manual implements IManual {
+public class Manual {
 
-	public Manual(){
+	Manual manual = null;
 
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
-	@Override
-	public Manual getManual(Appliance appliance) {
-		return null;
+	public Manual getManual() {
+		if(manual == null){
+			manual = new Manual();
+		}
+		return manual;
 	}
 
 }
