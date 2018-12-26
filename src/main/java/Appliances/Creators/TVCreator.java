@@ -18,11 +18,11 @@ public class TVCreator extends ApplianceCreator {
 
 	@Override
 	protected TV createAppliance(String name,String brand) {
-		return new TV(name, brand, this.location, ComsuptionType.electricity, comsuptionData.getTvComsuption());
+		return new TV(name, brand, this.location, ComsuptionType.electricity, tvComsuption);
 	}
 
 	public TV createSamsung(String name){
-		return createAppliance(name,"Samsung");
+		return (TV) createAppliance(name,"Samsung");
 	}
 
 }

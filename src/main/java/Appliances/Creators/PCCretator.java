@@ -13,13 +13,15 @@ import House.HabitableRoom;
  */
 public class PCCretator extends ApplianceCreator {
 
+
+
 	public PCCretator(HabitableRoom location){
 		super(location);
 	}
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new PC(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getPcComsuption());
+		return new PC(name,brand, this.location, ComsuptionType.electricity, pcComsuption);
 	}
 
 

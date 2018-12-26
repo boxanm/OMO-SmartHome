@@ -19,7 +19,7 @@ public class WashingMachineCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new WashingMachine(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getWashingMachineComsuption());
+		return new WashingMachine(name,brand, this.location, ComsuptionType.electricity, washingMachineComsuption);
 	}
 
 

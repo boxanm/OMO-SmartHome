@@ -19,7 +19,7 @@ public class PlayStationCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new PlayStation(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getPlaystationComsuption());
+		return new PlayStation(name,brand, this.location, ComsuptionType.electricity, playstationComsuption);
 	}
 
 	public PlayStation createSony(String name) {

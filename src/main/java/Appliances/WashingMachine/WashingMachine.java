@@ -2,8 +2,6 @@ package Appliances.WashingMachine;
 
 import Appliances.Appliance;
 import Appliances.ApplianceState.State;;
-import Appliances.ComsuptionData;
-import Appliances.ComsuptionType;
 import Appliances.ComsuptionType;
 import EventsAlerts.*;
 import House.HabitableRoom;

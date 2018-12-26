@@ -2,8 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionData;
-import Appliances.ComsuptionType;
+
 import House.HabitableRoom;
 
 /**
@@ -15,7 +14,15 @@ import House.HabitableRoom;
 public abstract class ApplianceCreator {
 
 	protected HabitableRoom location;
-	protected ComsuptionData comsuptionData;
+
+	protected double fridgeComsuption[] = new double[] {0.8, 0.01, 0.0002};
+	protected double playstationComsuption[] = new double[] {0.7, 0.04, 0.0006};
+	protected double hifiComsuption[] = new double[] {0.6, 0.07, 0.00009};
+	protected double freezerComsuption[] = new double[] {1, 0.02, 0.0005};
+	protected double tvComsuption[] = new double[] {0.8, 0.02, 0.0005};
+	protected double pcComsuption[] = new double[] {0.9, 0.03, 0.0001};
+	protected double xboxComsuption[] = new double[] {0.7, 0.04, 0.0004};
+	protected double washingMachineComsuption[] = new double[] {1.3, 0.01, 0.0002};
 
 	public ApplianceCreator(HabitableRoom location){
 		this.location = location;

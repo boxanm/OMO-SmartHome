@@ -19,7 +19,7 @@ public class FridgeCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new Fridge(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getFridgeComsuption());
+		return new Fridge(name,brand, this.location, ComsuptionType.electricity, fridgeComsuption);
 	}
 
 	public Fridge createWhirlpool(String name){

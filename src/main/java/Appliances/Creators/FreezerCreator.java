@@ -11,6 +11,7 @@ import House.HabitableRoom;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
+
 public class FreezerCreator extends ApplianceCreator {
 
 	public FreezerCreator(HabitableRoom location){
@@ -19,11 +20,11 @@ public class FreezerCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new Freezer(name,brand, this.location, ComsuptionType.electricity, comsuptionData.getFreezerComsuption());
+		return new Freezer(name,brand, this.location, ComsuptionType.electricity, freezerComsuption);
 	}
 
-	public Freezer createCandy(String name){
-		return (Freezer) createAppliance(name,"Candy");
+	public Appliance createCandy(String name){
+		return (Freezer)createAppliance(name,"Candy");
 	}
 
 

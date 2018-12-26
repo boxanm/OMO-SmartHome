@@ -18,11 +18,11 @@ public class XboxCreator extends ApplianceCreator {
 
 	@Override
 	protected Xbox createAppliance(String name, String brand) {
-		return new Xbox(name, brand, this.location, ComsuptionType.electricity, comsuptionData.getXboxComsuption());
+		return new Xbox(name, brand, this.location, ComsuptionType.electricity, xboxComsuption);
 	}
 
 	public Xbox createMicrosoft(String name){
-		return createAppliance(name,"Microsoft");
+		return (Xbox) createAppliance(name,"Microsoft");
 	}
 
 }
