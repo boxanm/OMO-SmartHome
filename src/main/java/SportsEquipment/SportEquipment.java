@@ -19,13 +19,18 @@ public abstract class SportEquipment implements EventTarget, Usable {
 	protected NonHabitableRoom location;
 	protected String brand;
 
+	/**
+	 * Creates some new sport equipment
+	 * @param brand - equipment brand
+	 * @param location - NonHabitable room of equipment location
+	 * */
 	public SportEquipment(String brand, NonHabitableRoom location) {
 		this.brand = brand;
 		this.location = location;
 	}
 
 	/**
-	 * 
+	 * sport equipment can be used by Person
 	 * @param person
 	 */
 	public abstract Usable use(Person person);

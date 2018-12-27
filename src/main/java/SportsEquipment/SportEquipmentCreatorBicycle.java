@@ -4,7 +4,7 @@ package SportsEquipment;
 import House.NonHabitableRoom;
 
 /**
- * Návrhový vzor factory method
+ * Pattern factory method, concrete Bike factory
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:02:22

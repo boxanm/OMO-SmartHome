@@ -22,13 +22,23 @@ import java.time.format.DateTimeFormatter;
 public class HouseConfigurationReport extends HouseReport {
 	final static String name = "HouseConfigurationReport";
 
+	/**
+	 * class serving as HouseConfigurationReport generator
+	 */
 	public HouseConfigurationReport(){}
 
 
+	/**
+	 * @param house generates configuration report of this to Command Line
+	 */
 	public void generateConfigurationReportToCL(House house){
 		PrintWriter writer = new PrintWriter(System.out);
 		generateReport(house,writer);
 	}
+
+	/**
+	 * @param house generates configuration report of this to file
+	 */
 	public void generateConfigurationReportToFile(House house) {
 		LocalDateTime time = LocalDateTime.now();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");

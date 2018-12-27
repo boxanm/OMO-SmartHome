@@ -21,7 +21,13 @@ import java.util.List;
 public class ElectricitySensor implements Sensor, Meter, Observable, LapSubscriber {
 	private EventReporter eventReporter;
 	private double lapElectricityConsumption;
-	List<Observer> observers;
+	private List<Observer> observers;
+
+	/**
+	 * one electricitySensor serves all appliances in the house
+	 * it announces changes of lapElectricityConsumption, total electricity consumption in actual lap
+	 * @param house all appliances located in house are attached to this sensor
+	 */
 	public ElectricitySensor(House house){
 		observers = new ArrayList<>();
 		eventReporter = house.getEventReporter();
@@ -35,7 +41,11 @@ public class ElectricitySensor implements Sensor, Meter, Observable, LapSubscrib
 		}
 	}
 
-
+	/**
+	 * announces changes of lapElectricityConcumption to observers
+	 * and creates new Consumption Event about Consumption changes
+	 * @param observable
+	 */
 	public void update(Observable observable){
 		if(observable instanceof Appliance){
 			newConsumption(new Consumption(ConsumptionType.electricity,((Appliance) observable).getConsumption(),
@@ -75,6 +85,7 @@ public class ElectricitySensor implements Sensor, Meter, Observable, LapSubscrib
 
 		}
 	}
+
 
 	public double getLapElectricityConsumption() {
 		return lapElectricityConsumption;

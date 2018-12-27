@@ -17,10 +17,21 @@ public class Ski extends SportEquipment {
 	private int actualSkiingDuration = 0;
 
 
+	/**
+	* Creates new ski
+	 * @param brand - ski brand
+	 * @param location - NonHabitable room of ski location
+	* */
 	public Ski(String brand, NonHabitableRoom location) {
 		super(brand,location);
 	}
 
+
+	/**
+	 * Usage of skies
+	 * @param person - who is using it
+	 * @return return this if still being used, null otherwise
+	 * */
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;

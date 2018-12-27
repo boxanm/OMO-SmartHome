@@ -71,12 +71,22 @@ public abstract class FreezingAppliance extends Appliance implements AlertGenera
 		return food;
 	}
 
+	@Override
+	public void changeWearOfDevice() {
+		wearOfDevice -= 1;
+		if(wearOfDevice < 0){
+			wearOfDevice = 0;
+			breakDown();
+		}
+		announce();
+	}
 
 	@Override
 	public Usable use(Person person) {
 		switch (getApplianceState()){
 			case Off:
 			case Iddle:
+				changeWearOfDevice();
 				turnON();
 			case On:
 				eat(person.getFoodConsumption());

@@ -16,6 +16,10 @@ import House.House;
 public class WaterSensor implements Sensor, Meter {
 	private EventReporter eventReporter;
 
+	/**
+	 * one WaterSensor serves all water appliances in the house
+	 * @param house all appliances located in house are attached to this sensor
+	 */
 	public WaterSensor(House house){
 		eventReporter = house.getEventReporter();
 		for (Appliance appliance: house.getAppliances()
@@ -27,7 +31,10 @@ public class WaterSensor implements Sensor, Meter {
 	}
 
 
-
+	/**
+	 * creates new Consumption event about water consumption changes
+	 * @param observable
+	 */
 	public void update(Observable observable){
 		if(observable instanceof Appliance){
 			newConsumption(new Consumption(ConsumptionType.water,((Appliance) observable).getConsumption(),

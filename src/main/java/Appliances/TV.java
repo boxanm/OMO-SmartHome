@@ -27,6 +27,15 @@ public class TV extends Appliance {
 
 
 	@Override
+	public void changeWearOfDevice() {
+		wearOfDevice -= 2;
+		if(wearOfDevice < 0){
+			wearOfDevice = 0;
+			breakDown();
+		}
+		announce();
+	}
+	@Override
 	public Usable use(Person person) {
 		isBusy = true;
 

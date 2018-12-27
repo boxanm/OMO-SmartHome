@@ -78,6 +78,8 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		return false;
 	}
 
+	public abstract void changeWearOfDevice();
+
 	@Override
 	public void newInfo(Info info) {
 		eventReporter.newInfo(info);

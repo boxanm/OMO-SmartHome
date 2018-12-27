@@ -29,6 +29,9 @@ import static java.util.stream.Collectors.partitioningBy;
 public class EventReport extends HouseTimeReport {
 	final static String name = "EventReport";
 
+	/**
+	 * class serving as Event generator
+	 */
 	public EventReport(){	}
 
 

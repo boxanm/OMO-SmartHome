@@ -5,7 +5,7 @@ import SportsEquipment.CreatorSportEquipments;
 import SportsEquipment.Ski;
 
 /**
- * Návrhový vzor factory method
+ * Pattern factory method, concrete Ski factory
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:00:42

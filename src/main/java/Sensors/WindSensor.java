@@ -14,11 +14,19 @@ public class WindSensor implements AlertGenerator, Sensor {
 	EventReporter eventReporter;
 
 
+	/**
+	 * one WindSensor serves the house exterior
+	 * @param house house's outside is attached to this sensor
+	 */
 	public WindSensor(House house){
 		house.getOutside().attach(this);
 		eventReporter = house.getEventReporter();
 	}
 
+	/**
+	 * in case of wind creates new alert
+	 * @param observable house's outside
+	 */
 	public void update(Observable observable){
 		if(observable instanceof Outside)
 			if(((Outside) observable).getIsWind())

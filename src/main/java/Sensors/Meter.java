@@ -4,7 +4,7 @@ package Sensors;
 import EventsAlerts.Consumption;
 
 /**
- * Rozhraní obsahující spoleèné vlastnosti a metody pro všechny mìøící senzory.
+ * Rozhraní obsahující spoleèné vlastnosti a metody pro všechny mìøící Sensory.
  * Mùže informat EventReporter s údaji o zmìnì spotøeby.
  * @author Michal
  * @version 1.0

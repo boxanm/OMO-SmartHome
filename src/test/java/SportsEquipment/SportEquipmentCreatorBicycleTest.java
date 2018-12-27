@@ -18,7 +18,7 @@ class SportEquipmentCreatorBicycleTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("prizemi", house);
-        room = new NonHabitableRoom("garaz", house, floor, 0);
+        room = new NonHabitableRoom("garaz", floor, 0);
         bicykleFactory = new SportEquipmentCreatorBicycle(room);
     }
 

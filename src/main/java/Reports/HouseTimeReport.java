@@ -9,8 +9,12 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Abstract class for all reports restricted by lap time
+ * files are generated based on name
+ */
 public abstract class HouseTimeReport extends HouseReport {
-    String name;
+    private String name;
     public abstract void generateReport(House house, int start, int end, PrintWriter writer);
 
 
