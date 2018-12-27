@@ -1,9 +1,7 @@
 package Senzors;
 
-import EventsAlerts.Alert;
-import EventsAlerts.AlertGenerator;
-import EventsAlerts.Event;
-import EventsAlerts.Observable;
+import EventsAlerts.*;
+import House.House;
 
 /**
  * @author Michal
@@ -12,33 +10,37 @@ import EventsAlerts.Observable;
  */
 public class CircuitBreakers implements Sensor, AlertGenerator {
 
-	private boolean triped;
+	private boolean tripped;
+	private EventReporter eventReporter;
+	private final static double maxElectricalCapacity = 50;
 
-	public CircuitBreakers(){
-
+	public CircuitBreakers(House house){
+		house.setCircuitBreakers(this);
+		eventReporter = house.getEventReporter();
 	}
 
+	public void replace(){
+		tripped = false;
+	}
 
 	public boolean isTriped(){
-		return false;
-	}
-
-	public void update(){
-
-	}
-
-	public Event newEvent(){
-		return null;
-	}
-
-
-	@Override
-	public void newAlert(Alert alert) {
-
+		return tripped;
 	}
 
 	@Override
 	public void update(Observable observable) {
-
+		if(observable instanceof ElectricitySensor
+				&& ((ElectricitySensor) observable).getLapElectricityConsumption() > maxElectricalCapacity){
+			tripped = true;
+			newAlert(new Alert(AlertType.circuitBreakers,this,null,null,null));
+		}
 	}
+
+	@Override
+	public void newAlert(Alert alert) {
+		eventReporter.updateFromAlertGenerator(alert);
+	}
+	
+	
+
 }

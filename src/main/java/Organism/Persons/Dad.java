@@ -90,6 +90,12 @@ public class Dad extends Person implements Adults  {
 					}
 					return true;
 				}
+				case circuitBreakers:{
+					if(m_House.getCircuitBreakers().isTriped()){
+						m_House.getCircuitBreakers().replace();
+					}
+					return true;
+				}
 			}
 		}
 		return false;

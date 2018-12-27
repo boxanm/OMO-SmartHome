@@ -7,6 +7,7 @@ import Organism.Organism;
 import Reports.HouseReportLayout;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
+import Senzors.CircuitBreakers;
 import SportsEquipment.SportEquipment;
 
 
@@ -31,6 +32,8 @@ public class House {
 
 	private ControlUnit controlUnit;
 
+	private CircuitBreakers circuitBreakers;
+
 	public House(String name){
 		this.name = name;
 		this.outside = new Outside();
@@ -45,6 +48,14 @@ public class House {
 	public void addFloor(Floor floor){
 		if(! floorList.contains(floor))
 	        floorList.add(floor);
+	}
+
+	public void setCircuitBreakers(CircuitBreakers circuitBreakers) {
+		this.circuitBreakers = circuitBreakers;
+	}
+
+	public CircuitBreakers getCircuitBreakers() {
+		return circuitBreakers;
 	}
 
 	public ControlUnit getControlUnit() {

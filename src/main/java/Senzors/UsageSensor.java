@@ -31,8 +31,6 @@ public class UsageSensor implements Sensor, AlertGenerator, Meter {
 				newConsumption(new Consumption(ConsumptionType.usage,((Appliance) observable).getWearOfDevice(),
 						this,((Appliance) observable).getActualFloor(),((Appliance) observable).getActualRoom(),this));
 		}
-
-
 	}
 
 	@Override
@@ -43,6 +41,7 @@ public class UsageSensor implements Sensor, AlertGenerator, Meter {
 
 	@Override
 	public void newConsumption(Consumption consumption) {
+		eventReporter.updateFromMeter(consumption);
 
 	}
 }

@@ -155,12 +155,6 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		return consumptionType;
 	}
 
-	public void checkWearOfDevice()
-	{
-		//if(this.wearOfDevice == 0) //todo až bude brokenDeviceEvent tak dodìlat
-
-	}
-
 	public ApplianceState getApplianceState(){
 		return state.getStatus();
 	}
@@ -192,7 +186,6 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		System.out.println("LOCATION - FLOOR: " + this.getActualFloor());
 		System.out.println("LOCATION - ROOM: "  + this.getActualRoom());
 		System.out.println("WEAR OF DEVICE: " + this.wearOfDevice + " " + "%");
-		this.checkWearOfDevice();
 	}
 
 
