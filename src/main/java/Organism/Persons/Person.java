@@ -23,7 +23,7 @@ public abstract class Person extends Organism {
 
 	protected int applianceUsageNumber = 0;
 	protected int sportEquipmentUsageNumber = 0;
-	int foodConsumption = 0;
+	private final int foodConsumption = 5;
 
     public Person(String name) {
         super(name);
@@ -44,6 +44,7 @@ public abstract class Person extends Organism {
 
 	public void nextAction(){
 		if(!isBusy){
+            System.out.println("new action");
 			if(applianceUsageNumber <= sportEquipmentUsageNumber){
 				List<Appliance> appliances = m_House
 						.getAppliances()
@@ -100,5 +101,7 @@ public abstract class Person extends Organism {
 		newInfo(new Info(InfoType.hangingOn,this,getFloor(),actualRoom,this));
 	}
 
-
+	public int getFoodConsumption() {
+		return foodConsumption;
+	}
 }

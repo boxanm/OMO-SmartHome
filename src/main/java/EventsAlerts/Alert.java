@@ -22,11 +22,6 @@ public class Alert extends Event {
 		this.target = target;
 
 	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
 	public AlertType getAlertType() {
 		return type;
 	}

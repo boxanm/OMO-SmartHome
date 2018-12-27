@@ -38,7 +38,7 @@ public class EventReporter implements LapSubscriber {
 
 	public void newEvent(Event event){
 	    event.setLapNumber(lapNumber);
-	    event.toString();
+	    System.out.println(event.toString());
 		allEvents.add(event);
 	}
 
@@ -81,6 +81,10 @@ public class EventReporter implements LapSubscriber {
 	 */
 	public void updateFromOrganism(Event event){
 		newEvent(event);
+	}
+
+	public void newInfo(Info info){
+		newEvent(info);
 	}
 
 	public ArrayList<Event> getAllEvents() {

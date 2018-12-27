@@ -31,6 +31,10 @@ public class ElectricitySensor implements Sensor, Meter {
 	public void newConsumption(Consumption consumption) {
 		consumption.toString();
 		eventReporter.updateFromObserver(consumption);
+	}
 
+	@Override
+	public String toString() {
+		return "Electricity sensor";
 	}
 }

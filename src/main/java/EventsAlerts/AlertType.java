@@ -11,5 +11,6 @@ public enum AlertType {
 	broken,
 	circuitBreakers,
 	babyCrying,
-	wind
+	wind,
+	outOfFood
 }

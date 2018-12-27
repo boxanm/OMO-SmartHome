@@ -24,7 +24,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
-	private EventReporter eventReporter;
+	protected EventReporter eventReporter;
 
 	private Floor actualFloor = null;
 	protected Room actualRoom;
@@ -73,7 +73,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 
 	@Override
 	public void newInfo(Info info) {
-		eventReporter.newEvent(info);
+		eventReporter.newInfo(info);
 	}
 
 	public abstract Usable use(Person person);

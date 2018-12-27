@@ -16,8 +16,11 @@ import java.util.Calendar;
  */
 public class Xbox extends Appliance implements CDplayer {
 
-	public Xbox(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] comsuption) {
-		super(name,brand,location, consumptionType, comsuption);
+	private final static int maxPlayDuration = 4;
+	private int actualPlayDuration = 0;
+
+	public Xbox(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] consumption) {
+		super(name,brand,location, consumptionType, consumption);
     }
 
 
@@ -40,29 +43,16 @@ public class Xbox extends Appliance implements CDplayer {
 
 	@Override
 	public Usable use(Person person) {
-		Calendar cal = Calendar.getInstance();
-		long startTime = cal.getTimeInMillis();
-		long currentTime = startTime;
-		newInfo(new Info(InfoType.useXbox, person, getFloor(), actualRoom, this));
-		wearOfDevice -= 10;
-		while(currentTime<startTime+5000){
-			isBusy = true;
-			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
-				this.turnON();
-				return this;
-			}
+		switch (getApplianceState()){
+			case On:
+				break;
+			case Iddle:
+				break;
+			case Off:
+				break;
 		}
-		checkWearOfDevice();
-		this.turnOFF();
-		isBusy = false;
 		return null;
 	}
-
-	@Override
-	public void newLap() {
-
-	}
-
 
 	@Override
 	public String toString() {

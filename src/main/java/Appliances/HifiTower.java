@@ -41,9 +41,6 @@ public class HifiTower extends Appliance implements CDplayer {
 		return null;
 	}
 
-	public void newConsumption(){
-
-	}
 	public void ejectCD(){
 
 	}
@@ -59,12 +56,6 @@ public class HifiTower extends Appliance implements CDplayer {
 	public void playCD(int duration){
 
 	}
-
-	@Override
-	public void newLap() {
-
-	}
-
 
     @Override
     public String toString() {
