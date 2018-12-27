@@ -17,7 +17,10 @@ public enum InfoType {
     usePC,
     usePlayStation,
     useTV,
-    useXbox
+    useXbox,
+    turningOffAppliance,
+    turningOnAppliance,
+    turningIdleAppliance
 
 
 

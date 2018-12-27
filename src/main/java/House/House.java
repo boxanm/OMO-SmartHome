@@ -34,10 +34,7 @@ public class House {
 
 		floorList = new ArrayList<Floor>();
 		houseReportLayoutList = new ArrayList<>();
-	}
-
-	public void finalize() throws Throwable {
-
+		eventReporter = new EventReporter();
 	}
 
 	public void addFloor(Floor floor){

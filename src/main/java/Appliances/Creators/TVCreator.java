@@ -1,7 +1,7 @@
 package Appliances.Creators;
 
 
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.TV;
 import House.HabitableRoom;
 
@@ -18,7 +18,7 @@ public class TVCreator extends ApplianceCreator {
 
 	@Override
 	protected TV createAppliance(String name,String brand) {
-		return new TV(name, brand, this.location, ComsuptionType.electricity, tvComsuption);
+		return new TV(name, brand, this.location, ConsumptionType.electricity, tvComsuption);
 	}
 
 	public TV createSamsung(String name){

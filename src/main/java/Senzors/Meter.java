@@ -1,6 +1,8 @@
 package Senzors;
 
 
+import EventsAlerts.Consumption;
+
 /**
  * Rozhraní obsahující spoleèné vlastnosti a metody pro všechny mìøící senzory.
  * Mùže informat EventReporter s údaji o zmìnì spotøeby.
@@ -10,10 +12,7 @@ package Senzors;
  */
 public interface Meter {
 
-	/**
-	 * 
-	 * @param eventID
-	 */
-	public void informObserverReport(int eventID);
+	public void newConsumption(Consumption consumption);
+
 
 }

@@ -7,7 +7,6 @@ import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -17,17 +16,9 @@ import java.util.Calendar;
  */
 public class PC extends Appliance implements CDplayer {
 
-	private ArrayList<Observer> observersList = new ArrayList<Observer>();
-
-
-	public PC(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+	public PC(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] comsuption) {
 		super(name,brand,location, consumptionType, comsuption);
 	}
-
-	public void finalize() throws Throwable {
-
-	}
-
 	/**
 	 * 
 	 * @param duration
@@ -72,61 +63,12 @@ public class PC extends Appliance implements CDplayer {
 		isBusy = false;
 		return null;
 	}
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(Alert alert){
-
-	}
-
-	public void newConsumption(){
-
-	}
-
-	public Info newInfo(){
-
-		return null;
-	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void attach(Observer observer){
-		if(!observersList.contains(observer))
-			observersList.add(observer);
-	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void detach(Observer observer){
-		observersList.remove(observer);
-	}
-
-	public void announce(){
-		for (Observer observer:observersList) {
-			observer.update();
-		}
-	}
-
-
-	@Override
-	public void newInfo(Info info) {
-
-	}
 
 	@Override
 	public void newLap() {
 
 	}
 
-	@Override
-	public void setState(State state) {
-
-	}
 
 	@Override
 	public String toString() {

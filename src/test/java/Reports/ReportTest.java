@@ -5,7 +5,6 @@ import EventsAlerts.EventReporter;
 import House.*;
 import Organism.Animals.Dog;
 import Organism.Animals.Ferret;
-import Organism.Organism;
 import Organism.Persons.Dad;
 import Organism.Persons.Mom;
 import Senzors.FireSensor;
@@ -15,8 +14,6 @@ import SportsEquipment.Ski;
 import SportsEquipment.SportEquipment;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ReportTest {
 
@@ -91,9 +88,9 @@ class ReportTest {
 
     @Test
     void activityAndUsageReport(){
-        Fridge fridge = new Fridge("fridge","whirpool",obyvak, ComsuptionType.electricity, fridgeComsuption);
-        Freezer freezer = new Freezer("freezer","whirpool",obyvak, ComsuptionType.electricity, freezerComsuption);
-        PlayStation playStation = new PlayStation("konzole1","PS2",obyvak, ComsuptionType.electricity, playstationComsuption);
+        Fridge fridge = new Fridge("fridge","whirpool",obyvak, ConsumptionType.electricity, fridgeComsuption);
+        Freezer freezer = new Freezer("freezer","whirpool",obyvak, ConsumptionType.electricity, freezerComsuption);
+        PlayStation playStation = new PlayStation("konzole1","PS2",obyvak, ConsumptionType.electricity, playstationComsuption);
         Mom mom = new Mom("mom");
         mom.moveToHouse(house);
 

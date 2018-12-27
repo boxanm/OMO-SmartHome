@@ -8,7 +8,7 @@ import EventsAlerts.Event;
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */
-public class CircuitBreakers implements Senzor, AlertGenerator {
+public class CircuitBreakers implements Sensor, AlertGenerator {
 
 	private boolean triped;
 

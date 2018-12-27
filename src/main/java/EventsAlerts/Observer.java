@@ -5,7 +5,7 @@ package EventsAlerts;
  * Observer je dvou typù:
  * 
  * <ul>
- * 	<li>Senzor - poèítá a reaguje na události</li>
+ * 	<li>Sensor - poèítá a reaguje na události</li>
  * 	<li>ObserverEverything - zaznamenává veškeré eventy</li>
  * </ul>
  * @author Michal

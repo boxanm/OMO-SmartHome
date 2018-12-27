@@ -2,7 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.PlayStation;
 import House.HabitableRoom;
 
@@ -19,7 +19,7 @@ public class PlayStationCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new PlayStation(name,brand, this.location, ComsuptionType.electricity, playstationComsuption);
+		return new PlayStation(name,brand, this.location, ConsumptionType.electricity, playstationComsuption);
 	}
 
 	public PlayStation createSony(String name) {

@@ -1,11 +1,7 @@
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
-import Appliances.Creators.ApplianceCreator;
+import Appliances.ConsumptionType;
 import Appliances.Creators.FreezerCreator;
-import Appliances.Creators.TVCreator;
 import Appliances.Creators.WashingMachineCreator;
-import Appliances.Freezer;
-import Appliances.TV;
 import House.House;
 
 import House.HabitableRoom;
@@ -23,7 +19,7 @@ public final class Main {
         World world = World.getInstance();
         House house = new House("house1");
 
-        ComsuptionType elek = ComsuptionType.electricity;
+        ConsumptionType elek = ConsumptionType.electricity;
 
         world.addHouse(house);
 

@@ -1,6 +1,7 @@
 package EventsAlerts;
 
 
+import Appliances.ConsumptionType;
 import House.Floor;
 import House.Room;
 
@@ -11,10 +12,10 @@ import House.Room;
  */
 public class Consumption extends Event {
 
-	private int consumption;
+	private double consumption;
 	private ConsumptionType type;
 
-	public Consumption(ConsumptionType consumptionType, int consumption, EventSource source,
+	public Consumption(ConsumptionType consumptionType, double consumption, EventSource source,
 					   Floor floor, Room room, EventTarget target){
 
 		this.type = consumptionType;
@@ -26,7 +27,7 @@ public class Consumption extends Event {
 
 	}
 
-	public int getConsumption() {
+	public double getConsumption() {
 		return consumption;
 	}
 

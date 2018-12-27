@@ -2,7 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.HifiTower;
 import House.HabitableRoom;
 
@@ -21,7 +21,7 @@ public class HiFiTowerCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new HifiTower(name,brand, this.location, ComsuptionType.electricity, hifiComsuption);
+		return new HifiTower(name,brand, this.location, ConsumptionType.electricity, hifiComsuption);
 	}
 
 	public HifiTower createSencor(String name){

@@ -1,6 +1,7 @@
 package Senzors;
 
 import EventsAlerts.AlertGenerator;
+import EventsAlerts.Consumption;
 import EventsAlerts.Event;
 
 /**
@@ -10,7 +11,7 @@ import EventsAlerts.Event;
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */
-public class UsageSensor implements Senzor, AlertGenerator, Meter {
+public class UsageSensor implements Sensor, AlertGenerator, Meter {
 
 	public UsageSensor(){
 
@@ -28,16 +29,14 @@ public class UsageSensor implements Senzor, AlertGenerator, Meter {
 		return null;
 	}
 
-	/**
-	 * 
-	 * @param eventID
-	 */
-	public void informObserverReport(int eventID){
+
+	@Override
+	public void newAlert() {
 
 	}
 
 	@Override
-	public void newAlert() {
+	public void newConsumption(Consumption consumption) {
 
 	}
 }

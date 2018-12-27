@@ -1,10 +1,8 @@
 package House;
 
 
-import Organism.Animals.Animal;
 import Appliances.Appliance;
-import Organism.Persons.Person;
-import Senzors.Senzor;
+import Senzors.Sensor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +16,12 @@ import java.util.List;
 public class HabitableRoom extends Room {
 
 	private ArrayList<Appliance> applianceList;
-	private List<Senzor> senzorList;
+	private List<Sensor> sensorList;
 
 	public HabitableRoom(String name, House house, Floor floor, int number_of_windows){
 		super(name, house, floor, number_of_windows);
 		applianceList = new ArrayList<>();
-		senzorList = new ArrayList<>();
+		sensorList = new ArrayList<>();
 	}
 
 	public void finalize() throws Throwable {
@@ -36,12 +34,12 @@ public class HabitableRoom extends Room {
 	public void deleteAppliance(Appliance appliance){
 		applianceList.remove(appliance);
 	}
-	public void addSenzor(Senzor senzor){
-		if(! senzorList.contains(senzor))
-			senzorList.add(senzor);
+	public void addSenzor(Sensor sensor){
+		if(! sensorList.contains(sensor))
+			sensorList.add(sensor);
 	}
-	public void removeSenzor(Senzor senzor){
-		senzorList.remove(senzor);
+	public void removeSenzor(Sensor sensor){
+		sensorList.remove(sensor);
 	}
 
 	public ArrayList<Appliance> getApplianceList(){

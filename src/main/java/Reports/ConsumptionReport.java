@@ -2,19 +2,17 @@ package Reports;
 
 
 import Appliances.Appliance;
+import Appliances.ConsumptionType;
 import EventsAlerts.*;
 import House.House;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -28,6 +26,7 @@ public class ConsumptionReport extends HouseReport {
 
 	}
 
+
 	/**
 	 * @param house
 	 * @param start
@@ -35,10 +34,8 @@ public class ConsumptionReport extends HouseReport {
 	 */
 
 	public void generateReport(House house, int start, int end) {
-
-
 		ArrayList<Event> allEvents = house.getEventReporter().getAllEvents();
-		System.out.println("==================Consumption report==================");
+		System.out.println("==================Consumption report from lap "+start+" to " + end +"==================");
 		ArrayList<Consumption> consumptions = (ArrayList<Consumption>) allEvents
 				.stream()
 				.filter(Consumption.class::isInstance)
@@ -52,12 +49,12 @@ public class ConsumptionReport extends HouseReport {
 
 			Appliance source = (Appliance) consumptions.get(0).getSource();
 			ConsumptionType consumptionType = consumptions.get(0).getType();
-			int counter = 0;
+			double counter = 0;
 
 			System.out.println("Appliance: " + source.toString());
 			for (Consumption info : consumptions) {
 				if (info.getSource() != source) {
-					System.out.println("---Used " + counter + " of" + consumptionType);
+					System.out.println("---Used " + counter + " of " + consumptionType);
 					consumptionType = info.getType();
 					source = (Appliance) info.getSource();
 					System.out.println("Appliance: " + source.toString());
@@ -65,12 +62,12 @@ public class ConsumptionReport extends HouseReport {
 				}
 
 				if (info.getType() != consumptionType) {
-					System.out.println("---Used " + counter + " of" + consumptionType);
+					System.out.println("---Used " + counter + " of " + consumptionType);
 					consumptionType = info.getType();
 					counter = info.getConsumption();
 				} else counter += info.getConsumption();
 			}
-			System.out.println("---Used " + counter + " of" + consumptionType);
+			System.out.println("---Used " + counter + " of " + consumptionType);
 			System.out.println();
 		}
 	}
@@ -83,8 +80,7 @@ public class ConsumptionReport extends HouseReport {
 		String timeLog = "src/main/java/Reports/EvenReport " + time.format(dtf) + ".txt";
 		try {
 			PrintWriter writer = new PrintWriter(timeLog, "UTF-8");
-			writer.println("==================Event report==================");
-			writer.println("==================Consumption report==================");
+			System.out.println("==================Consumption report from lap "+start+" to " + end +"==================");
 			ArrayList<Consumption> consumptions = (ArrayList<Consumption>) allEvents
 					.stream()
 					.filter(Consumption.class::isInstance)
@@ -98,12 +94,12 @@ public class ConsumptionReport extends HouseReport {
 
 				Appliance source = (Appliance) consumptions.get(0).getSource();
 				ConsumptionType consumptionType = consumptions.get(0).getType();
-				int counter = 0;
+				double counter = 0;
 
 				writer.println("Appliance: " + source.toString());
 				for (Consumption info : consumptions) {
 					if (info.getSource() != source) {
-						writer.println("---Used " + counter + " of" + consumptionType);
+						writer.println("---Used " + counter + " of " + consumptionType);
 						consumptionType = info.getType();
 						source = (Appliance) info.getSource();
 						writer.println("Appliance: " + source.toString());
@@ -111,12 +107,12 @@ public class ConsumptionReport extends HouseReport {
 					}
 
 					if (info.getType() != consumptionType) {
-						writer.println("---Used " + counter + " of" + consumptionType);
+						writer.println("---Used " + counter + " of " + consumptionType);
 						consumptionType = info.getType();
 						counter = info.getConsumption();
 					} else counter += info.getConsumption();
 				}
-				writer.println("---Used " + counter + " of" + consumptionType);
+				writer.println("---Used " + counter + " of " + consumptionType);
 				writer.println();
 				writer.close();
 

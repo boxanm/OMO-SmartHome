@@ -33,12 +33,12 @@ public class EventReporter implements LapSubscriber {
 
 	public void newLap(){
 	    lapNumber++;
-
 	}
 
 
 	public void newEvent(Event event){
 	    event.setLapNumber(lapNumber);
+	    event.toString();
 		allEvents.add(event);
 	}
 

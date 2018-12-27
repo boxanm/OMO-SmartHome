@@ -3,7 +3,7 @@ package Appliances.WashingMachine;
 import Appliances.Appliance;
 import Appliances.ApplianceState.ApplianceState;
 import Appliances.ApplianceState.State;;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
@@ -34,7 +34,7 @@ public class WashingMachine extends Appliance {
 	private ArrayList<Observer> observersList = new ArrayList<Observer>();
 
 
-	public WashingMachine(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
+	public WashingMachine(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] comsuption) {
         super(name,brand,location,consumptionType, comsuption);
 
 		fillWithLaundry = new FillWithLaudry(this);
@@ -151,13 +151,4 @@ public class WashingMachine extends Appliance {
 		return "WashingMachine " + deviceName;
 	}
 
-	@Override
-	public void setState(State state) {
-
-	}
-
-	@Override
-	public void newInfo(Info info) {
-
-	}
 }

@@ -36,13 +36,15 @@ public abstract class Person extends Organism {
 			nextAction();//TODO preskocit dalsi akci, pokud resi alert
 		}
 		else{
-			usingTarget.use(this);
+			usingTarget = usingTarget.use(this);
+			if(usingTarget == null)
+				isBusy = false;
 		}
 	}
 
 	public void nextAction(){
 		if(!isBusy){
-			if(applianceUsageNumber < sportEquipmentUsageNumber){
+			if(applianceUsageNumber <= sportEquipmentUsageNumber){
 				List<Appliance> appliances = m_House
 						.getAppliances()
 						.stream()
@@ -79,7 +81,6 @@ public abstract class Person extends Organism {
 			newInfo(new Info(InfoType.applianceUsage,this,getFloor(),actualRoom,appliance));
 			applianceUsageNumber++;
 			usingTarget = appliance.use(this);
-			isBusy = true;
 		}
 	}
 
@@ -92,7 +93,6 @@ public abstract class Person extends Organism {
 			newInfo(new Info(InfoType.sportEquipmentUsage, this, getFloor(), actualRoom, equipment));
 			sportEquipmentUsageNumber++;
 			usingTarget = equipment.use(this);
-			isBusy = true;
 		}
 	}
 

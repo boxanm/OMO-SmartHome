@@ -20,13 +20,15 @@ import static Appliances.ApplianceState.ApplianceState.On;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Observable, InfoGenerator, Usable, Context {
+public abstract class Appliance implements AlertHandler, Observable, InfoGenerator, Usable, Context, EventSource {
 
-	private ApplianceState applianceState;
+	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+
+	private EventReporter eventReporter;
 
 	private Floor actualFloor = null;
 	protected Room actualRoom;
-	public ComsuptionType consumptionType;
+	private ConsumptionType consumptionType;
 	private boolean isBroken = false;
 	public boolean isBusy = false;
 
@@ -43,23 +45,42 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	//spotreba, prvni cislo v zapnutem, druhe v iddle a treti ve vypnutem stavu
 	protected double[] consumption;
 
-	public Appliance(String deviceName, String brand, HabitableRoom location, ComsuptionType consumptionType, double[] consumption){
+	public Appliance(String deviceName, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] consumption){
 		this.deviceName = deviceName;
 		this.brand = brand;
 		this.actualRoom = location;
 		this.consumptionType = consumptionType;
 		this.consumption = consumption;
+
 		wearOfDevice = 100;
 		location.addAppliance(this);
+
+		eventReporter = location.getFloor().getHouse().getEventReporter();
 	}
 
 	public void breakDown(){
 		isBroken = true;
 	}
 
+	@Override
+	public void handleAlert(Alert alert) {
+		if(alert.getAlertType() == AlertType.circuitBreakers){
+			newInfo(new Info(InfoType.turningOffAppliance,this,actualFloor, actualRoom, this));
+			turnOFF();
+			announce();
+		}
+	}
+
+	@Override
+	public void newInfo(Info info) {
+		eventReporter.newEvent(info);
+	}
+
 	public abstract Usable use(Person person);
 
-	public abstract void newLap();
+	public void newLap(){
+		announce();
+	}
 
 	public double getConsumption(){
 		if(this.state.getStatus() == On){
@@ -82,26 +103,36 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 
 	}
 
+
+
 	public void setOnFire(){
 		actualRoom.setOnFire();
 	}
 
 	public void turnON(){
+		eventReporter.newEvent(new Info(InfoType.turningOnAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateON(this));
-		getConsumption();
-		announce();
+		System.out.println(getApplianceState());
+//		getConsumption();
+//		announce();
 	}
-	public void turnIddle(){
+	public void turnIdle(){
+		eventReporter.newEvent(new Info(InfoType.turningIdleAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateIDDLE(this));
-		getConsumption();
-		announce();
+//		getConsumption();
+//		announce();
 	}
 	public void turnOFF(){
+		eventReporter.newEvent(new Info(InfoType.turningOffAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateOFF(this));
-		getConsumption();
-		announce();
+//		getConsumption();
+//		announce();
 	}
 
+	@Override
+	public void setState(State state) {
+		this.state = state;
+	}
 
 	public boolean isBroken(){
 		return isBroken;
@@ -112,10 +143,6 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		return brand + " of " + getClass();
 	}
 
-	public ApplianceState getApplianceState() {
-		return applianceState;
-	}
-
 	public Floor getActualFloor() {
 		return actualFloor;
 	}
@@ -124,7 +151,7 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		return actualRoom;
 	}
 
-	public ComsuptionType getConsumptionType() {
+	public ConsumptionType getConsumptionType() {
 		return consumptionType;
 	}
 
@@ -132,6 +159,14 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 	{
 		//if(this.wearOfDevice == 0) //todo až bude brokenDeviceEvent tak dodìlat
 
+	}
+
+	public ApplianceState getApplianceState(){
+		return state.getStatus();
+	}
+
+	public State getState() {
+		return state;
 	}
 
 	public Floor getFloor(){
@@ -146,6 +181,8 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		return brand;
 	}
 
+
+
 	public void printInformation(){
 		System.out.println("DEVICE: " + this.deviceName + " " + "INFORMATION");
 		System.out.println("===");
@@ -156,5 +193,30 @@ public abstract class Appliance implements AlertHandler, ConsuptionGenerator, Ob
 		System.out.println("LOCATION - ROOM: "  + this.getActualRoom());
 		System.out.println("WEAR OF DEVICE: " + this.wearOfDevice + " " + "%");
 		this.checkWearOfDevice();
+	}
+
+
+	/**
+	 *
+	 * @param observer
+	 */
+	public void attach(Observer observer){
+		if(!observersList.contains(observer))
+			observersList.add(observer);
+	}
+
+	/**
+	 *
+	 * @param observer
+	 */
+	public void detach(Observer observer){
+		observersList.remove(observer);
+
+	}
+
+	public void announce(){
+		for (Observer observer:observersList) {
+			observer.update();
+		}
 	}
 }

@@ -2,7 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.WashingMachine.WashingMachine;
 import House.HabitableRoom;
 
@@ -19,7 +19,7 @@ public class WashingMachineCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new WashingMachine(name,brand, this.location, ComsuptionType.electricity, washingMachineComsuption);
+		return new WashingMachine(name,brand, this.location, ConsumptionType.electricity, washingMachineComsuption);
 	}
 
 

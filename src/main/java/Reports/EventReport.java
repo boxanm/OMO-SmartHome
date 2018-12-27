@@ -28,8 +28,7 @@ import static java.util.stream.Collectors.partitioningBy;
  */
 public class EventReport extends HouseReport {
 
-	public EventReport(){
-	}
+	public EventReport(){}
 
 	public void generateReport(House house){
 		ArrayList<Event> allEvents = house.getEventReporter().getAllEvents();

@@ -52,6 +52,10 @@ public class Floor {
 		return roomList;
 	}
 
+	public House getHouse() {
+		return house;
+	}
+
 	@Override
 	public String toString() {
 		return name;

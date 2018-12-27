@@ -7,7 +7,6 @@ import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -17,34 +16,23 @@ import java.util.Calendar;
  */
 public class Freezer extends Appliance implements FreezingAppliance {
 
-	private ArrayList<Observer> observersList = new ArrayList<Observer>();
-
 
 	private int food;
 	private boolean isEmpty = false;
 	private final int MAX_CAPACITY = 100;
 
-    public Freezer(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
-		super(name,brand,location,consumptionType, comsuption);
+    public Freezer(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] consumption) {
+		super(name,brand,location,consumptionType, consumption);
     }
 
 	@Override
 	public void changeEmpty() {
-		if(isEmpty()){
-			isEmpty = false;
-		} else {
-			isEmpty = true;
-		}
+		isEmpty = !isEmpty;
 	}
 	@Override
 	public boolean isEmpty() {
 		return isEmpty;
 	}
-
-	/**
-	 * 
-	 * @param person
-	 */
 
 
 	/**
@@ -101,63 +89,19 @@ public class Freezer extends Appliance implements FreezingAppliance {
 
 	@Override
 	public void newLap() {
-
+		announce();
 	}
 
 
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(Alert alert){
-
-	}
 
 	public void newConsumption(){
 
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void attach(Observer observer){
-		if(!observersList.contains(observer))
-			observersList.add(observer);
-	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void detach(Observer observer){
-		observersList.remove(observer);
-
-	}
-
-	public void announce(){
-		for (Observer observer:observersList) {
-			observer.update();
-		}
-	}
-
-	public Info newInfo(){
-
-		return null;
-	}
-
-    @Override
-    public void newInfo(Info info) {
-
-    }
 
 	public int getFood() {
 		return food;
-	}
-
-	@Override
-	public void setState(State state) {
-
 	}
 
 	@Override

@@ -2,7 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.Freezer;
 import House.HabitableRoom;
 
@@ -20,7 +20,7 @@ public class FreezerCreator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new Freezer(name,brand, this.location, ComsuptionType.electricity, freezerComsuption);
+		return new Freezer(name,brand, this.location, ConsumptionType.electricity, freezerComsuption);
 	}
 
 	public Appliance createCandy(String name){

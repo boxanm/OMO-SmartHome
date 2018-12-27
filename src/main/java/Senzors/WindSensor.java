@@ -9,7 +9,7 @@ import House.Outside;
  * @version 1.0
  * @created 16-pro-2018 9:02:18
  */
-public class WindSensor implements AlertGenerator, Senzor {
+public class WindSensor implements AlertGenerator, Sensor {
 
 	EventReporter eventReporter;
 

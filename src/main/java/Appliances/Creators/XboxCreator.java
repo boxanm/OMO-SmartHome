@@ -1,7 +1,7 @@
 package Appliances.Creators;
 
 
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.Xbox;
 import House.HabitableRoom;
 
@@ -18,7 +18,7 @@ public class XboxCreator extends ApplianceCreator {
 
 	@Override
 	protected Xbox createAppliance(String name, String brand) {
-		return new Xbox(name, brand, this.location, ComsuptionType.electricity, xboxComsuption);
+		return new Xbox(name, brand, this.location, ConsumptionType.electricity, xboxComsuption);
 	}
 
 	public Xbox createMicrosoft(String name){

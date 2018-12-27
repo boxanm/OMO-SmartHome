@@ -1,12 +1,14 @@
 package Senzors;
 
 
+import EventsAlerts.Consumption;
+
 /**
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */
-public class WaterSensor implements Senzor, Meter {
+public class WaterSensor implements Sensor, Meter {
 
 	public WaterSensor(){
 
@@ -20,12 +22,9 @@ public class WaterSensor implements Senzor, Meter {
 
 	}
 
-	/**
-	 * 
-	 * @param eventID
-	 */
-	public void informObserverReport(int eventID){
+
+	@Override
+	public void newConsumption(Consumption consumption) {
 
 	}
-
 }

@@ -1,7 +1,7 @@
 package Organism.Persons;
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.PC;
 import Appliances.WashingMachine.WashingMachine;
 import EventsAlerts.EventReporter;
@@ -37,8 +37,8 @@ class DadTest {
         floor.addRoom(garaz);
         dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        appliance = new PC("Pocitac","Zalman",obyvak, ComsuptionType.electricity, pcComsuption);
-        appliance = new WashingMachine("pracka", "whirpool", obyvak, ComsuptionType.electricity, pcComsuption);
+        appliance = new PC("Pocitac","Zalman",obyvak, ConsumptionType.electricity, pcComsuption);
+        appliance = new WashingMachine("pracka", "whirpool", obyvak, ConsumptionType.electricity, pcComsuption);
         sportEquipment = new Ski("atomic",garaz);
         obyvak.addAppliance(appliance);
         garaz.addSportEquipment(sportEquipment);

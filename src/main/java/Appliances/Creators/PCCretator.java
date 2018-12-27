@@ -2,7 +2,7 @@ package Appliances.Creators;
 
 
 import Appliances.Appliance;
-import Appliances.ComsuptionType;
+import Appliances.ConsumptionType;
 import Appliances.PC;
 import House.HabitableRoom;
 
@@ -21,7 +21,7 @@ public class PCCretator extends ApplianceCreator {
 
 	@Override
 	protected Appliance createAppliance(String name, String brand) {
-		return new PC(name,brand, this.location, ComsuptionType.electricity, pcComsuption);
+		return new PC(name,brand, this.location, ConsumptionType.electricity, pcComsuption);
 	}
 
 

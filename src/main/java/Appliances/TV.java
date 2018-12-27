@@ -1,15 +1,9 @@
 package Appliances;
 
-import Appliances.ApplianceState.ApplianceState;
 import Appliances.ApplianceState.State;
-import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * @author Michal
@@ -18,94 +12,58 @@ import java.util.List;
  */
 public class TV extends Appliance {
 
-	private ArrayList<Observer> observersList = new ArrayList<Observer>();
+	private int maxWatchDuration = 4;
+	private int actualWatchDuration = 0;
 
-
-	public TV(String name,String brand, HabitableRoom location, ComsuptionType consumptionType, double[] comsuption) {
-		super(name,brand,location, consumptionType, comsuption);
+	public TV(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] consumption) {
+		super(name,brand,location, consumptionType, consumption);
     }
 
-	/**
-	 * 
-	 * @param duration
-	 */
-	public void watch(int duration){
-
+	public void watch(){
 	}
 
 
 	@Override
 	public Usable use(Person person) {
-		Calendar cal = Calendar.getInstance();
-		long startTime = cal.getTimeInMillis();
-		long currentTime = startTime;
-		newInfo(new Info(InfoType.useTV, person, getFloor(), actualRoom, this));
-		wearOfDevice -= 10;
-		while(currentTime<startTime+5000){
-			isBusy = true;
-			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
-				this.turnON();
+		isBusy = true;
+
+		switch (getApplianceState()){
+			case Off:
+				turnON();
 				return this;
-			}
+			case Iddle:
+				turnON();
+				return this;
+			case On:
+				if(actualWatchDuration < maxWatchDuration){
+					actualWatchDuration++;
+					watch();
+					return this;
+				}
+				else{
+					actualWatchDuration = 0;
+					turnIdle();
+					return null;
+				}
 		}
-		checkWearOfDevice();
-		this.turnOFF();
-		isBusy = false;
 		return null;
-	}
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(Alert alert){
 
-	}
-
-	public void newConsumption(){
-
-	}
-
-	public Info newInfo(){
-
-		return null;
-	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void attach(Observer observer){
-		if(!observersList.contains(observer))
-			observersList.add(observer);
-	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void detach(Observer observer){
-		observersList.remove(observer);
-	}
-
-	public void announce(){
-		for (Observer observer:observersList) {
-			observer.update();
-		}
-	}
-
-	@Override
-	public void newInfo(Info info) {
-
-	}
-
-	@Override
-	public void newLap() {
-
-	}
-
-	@Override
-	public void setState(State state) {
-
+//		Calendar cal = Calendar.getInstance();
+//		long startTime = cal.getTimeInMillis();
+//		long currentTime = startTime;
+//		newInfo(new Info(InfoType.useTV, person, getFloor(), actualRoom, this));
+//		wearOfDevice -= 10;
+//		while(currentTime<startTime+5000){
+//			isBusy = true;
+//			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
+//				this.turnON();
+//				return this;
+//			}
+//		}
+//		checkWearOfDevice();
+//		this.turnOFF();
+//		isBusy = false;
+//		return null;
 	}
 
 	@Override
