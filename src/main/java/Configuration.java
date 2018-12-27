@@ -134,19 +134,19 @@ public class Configuration {
     public House getConfiguration2(){
 
         House house = new House("house1");
-
-        Floor prvni = new Floor("1. patro",house);
-        Floor druhe = new Floor("2. patro", house);
-
-        HabitableRoom chodba = new HabitableRoom("Chodba", prvni, 2);
-        HabitableRoom koupelna = new HabitableRoom("Koupelna", prvni, 1);
-        HabitableRoom kuchyn = new HabitableRoom("Kuchyò", prvni, 3);
-        HabitableRoom detskyPokoj = new HabitableRoom("Dìtský pokoj", prvni, 4);
-        HabitableRoom loznice = new HabitableRoom("Ložnice", prvni, 4);
-        HabitableRoom obyvak = new HabitableRoom("Obývák", druhe, 3);
-
-        NonHabitableRoom garaz = new NonHabitableRoom("Garáž", prvni, 0);
-        NonHabitableRoom technikaMistnost = new NonHabitableRoom("Technická místnost", prvni, 0);
+//
+//        Floor prvni = new Floor("1. patro",house);
+//        Floor druhe = new Floor("2. patro", house);
+//
+//        HabitableRoom chodba = new HabitableRoom("Chodba", prvni, 2);
+//        HabitableRoom koupelna = new HabitableRoom("Koupelna", prvni, 1);
+//        HabitableRoom kuchyn = new HabitableRoom("Kuchy?", prvni, 3);
+//        HabitableRoom detskyPokoj = new HabitableRoom("D?tsk? pokoj", prvni, 4);
+//        HabitableRoom loznice = new HabitableRoom("Lo?nice", prvni, 4);
+//        HabitableRoom obyvak = new HabitableRoom("Ob?v?k", druhe, 3);
+//
+//        NonHabitableRoom garaz = new NonHabitableRoom("Gar?", prvni, 0);
+//        NonHabitableRoom technikaMistnost = new NonHabitableRoom("Technick? m?stnost", prvni, 0);
 
         return house;
     }
