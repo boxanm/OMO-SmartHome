@@ -1,4 +1,4 @@
-package Senzors;
+package Sensors;
 
 
 import Appliances.Appliance;
@@ -25,6 +25,9 @@ public class ElectricitySensor implements Sensor, Meter, Observable, LapSubscrib
 	public ElectricitySensor(House house){
 		observers = new ArrayList<>();
 		eventReporter = house.getEventReporter();
+		house.setElectricitySensor(this);
+		if(house.getCircuitBreakers() != null)
+		    attach(house.getCircuitBreakers());
 		for (Appliance appliance: house.getAppliances()) {
 			if(appliance.getConsumptionType() == ConsumptionType.electricity)
 				appliance.attach(this);

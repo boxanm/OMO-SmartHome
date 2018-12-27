@@ -9,6 +9,7 @@ import Organism.Persons.Person;
 import Organism.Usable;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static Appliances.ApplianceState.ApplianceState.Iddle;
 import static Appliances.ApplianceState.ApplianceState.Off;
@@ -31,6 +32,8 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	private ConsumptionType consumptionType;
 	private boolean isBroken = false;
 	public boolean isBusy = false;
+
+	private int fireProbability  = 1;
 
 	// Jmeno zaøízení
 	protected String deviceName;
@@ -82,6 +85,8 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	public abstract Usable use(Person person);
 
 	public void newLap(){
+		if(new Random().nextInt(50) < fireProbability)
+			setOnFire();
 		announce();
 	}
 

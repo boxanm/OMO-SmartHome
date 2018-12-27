@@ -12,6 +12,8 @@ import Organism.Usable;
  */
 public class Bicycle extends SportEquipment {
 
+	private final int maxRideDuration = 3;
+	private int actualRideDuration = 0;
 	public Bicycle(String brand, NonHabitableRoom location) {
 		super(brand,location);
 	}
@@ -19,6 +21,11 @@ public class Bicycle extends SportEquipment {
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;
+		if(actualRideDuration < maxRideDuration){
+			actualRideDuration++;
+			return this;
+		}
+		actualRideDuration = 0;
 		return null;
 	}
 

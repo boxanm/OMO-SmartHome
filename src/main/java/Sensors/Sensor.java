@@ -1,4 +1,4 @@
-package Senzors;
+package Sensors;
 
 import EventsAlerts.EventSource;
 import EventsAlerts.Observer;

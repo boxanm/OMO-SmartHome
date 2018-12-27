@@ -40,9 +40,9 @@ public class HouseConfigurationReport extends HouseReportLayout {
 				int i = 1;
 				for (Window window:room.getWindowsList()) {
 
-					System.out.print("---" + window.toString() + " " + i + ": " );
+					System.out.print("---" + window.toString() );
 					if(window.getBlind() != null)
-						System.out.println(" | " + window.getBlind().toString());
+						System.out.println(": " + window.getBlind().toString());
 					i++;
 				}
 				if(room instanceof HabitableRoom){

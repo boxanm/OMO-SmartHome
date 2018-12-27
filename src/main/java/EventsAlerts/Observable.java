@@ -17,21 +17,10 @@ package EventsAlerts;
  */
 public interface Observable extends EventTarget {
 
-	Observer observersList = null;
+	void attach(Observer observer);
 
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void attach(Observer observer);
+	void detach(Observer observer);
 
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void detach(Observer observer);
-
-
-	public void announce();
+	void announce();
 
 }

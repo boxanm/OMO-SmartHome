@@ -22,7 +22,6 @@ import House.Room;
  */
 public abstract class Event {
 
-    private static int eventID;
     private int lapNumber;
     Floor sourceFloor;
     Room sourceRoom;
@@ -31,11 +30,6 @@ public abstract class Event {
 
     public Event(){
 
-    }
-
-    public static int getEventID() {
-        eventID++;
-        return eventID;
     }
 
     public EventSource getSource() {

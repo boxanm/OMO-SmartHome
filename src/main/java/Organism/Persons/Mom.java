@@ -72,24 +72,24 @@ public class Mom extends Person implements Adults {
 	public boolean handleAlert(Alert alert){
 		if(! isBusy){
 			isBusy = true;
-			switch (alert.getAlertType()){//TODO co se stane s alertem, kdyz ho vyresi?
+			switch (alert.getAlertType()){
 				case fire:{
-					Room room = m_House
+					List<Room> rooms = m_House
 							.getRoomList()
 							.stream()
 							.filter(Room::isOnFire)
-							.findFirst()
-							.get();
-					callFireman(room);
+							.collect(Collectors.toList());
+					if(rooms.size() > 0)
+						callFireman(rooms.get(new Random().nextInt(rooms.size())));
 					return true;
 				}
 				case babyCrying:{
-					Child child = childList
+					List<Child> children = childList
 							.stream()
 							.filter(Child::isSad)
-							.findFirst()
-							.get();
-					cheerUp(child);
+							.collect(Collectors.toList());
+					if(children.size() > 0)
+						cheerUp(children.get(new Random().nextInt(children.size())));
 					return true;
 				}
 				case outOfFood: {

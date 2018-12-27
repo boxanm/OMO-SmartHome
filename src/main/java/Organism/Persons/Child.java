@@ -28,7 +28,6 @@ public class Child extends Person implements Observable {
 
 
 	public boolean cry(){
-		announce();
 		return new Random().nextInt(100) <= cryProbability;
 	}
 
@@ -49,6 +48,7 @@ public class Child extends Person implements Observable {
 		    super.nextAction();
 		}
 		else{
+			isSad = true;
 			announce();
 		}
 
@@ -65,7 +65,7 @@ public class Child extends Person implements Observable {
 
 	@Override
 	public void attach(Observer observer) {
-		if(! observersList.contains(observer))
+		if(!observersList.contains(observer))
 			observersList.add(observer);
 	}
 

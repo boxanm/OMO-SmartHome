@@ -2,7 +2,7 @@ package House;
 
 
 import Appliances.Appliance;
-import Senzors.Sensor;
+import Sensors.Sensor;
 
 import java.util.ArrayList;
 import java.util.List;

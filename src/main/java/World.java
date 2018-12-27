@@ -1,3 +1,4 @@
+import LapsTime.LapSubscriber;
 import Reports.HouseReportLayout;
 import House.House;
 import sun.security.jca.GetInstance;
@@ -12,7 +13,7 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:02:43
  */
-public class World {
+public class World implements LapSubscriber {
 
 	private List<House> houseList;
 	private int time;
@@ -44,10 +45,7 @@ public class World {
 	public void newLap(){
 		for (House house:houseList
 			 ) {
-			//TODO
-
+			house.newLap();
 		}
-
 	}
-
 }

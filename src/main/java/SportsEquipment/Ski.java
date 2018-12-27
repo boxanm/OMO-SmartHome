@@ -13,6 +13,8 @@ import Organism.Usable;
  */
 public class Ski extends SportEquipment {
 
+	private final int maxSkiingDuration = 3;
+	private int actualSkiingDuration = 0;
 
 
 	public Ski(String brand, NonHabitableRoom location) {
@@ -22,6 +24,11 @@ public class Ski extends SportEquipment {
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;
+		if(actualSkiingDuration < maxSkiingDuration){
+			actualSkiingDuration++;
+			return this;
+		}
+		actualSkiingDuration = 0;
 		return null;
 	}
 

@@ -3,11 +3,13 @@ package House;
 import Appliances.Appliance;
 import EventsAlerts.ControlUnit;
 import EventsAlerts.EventReporter;
+import LapsTime.LapSubscriber;
 import Organism.Organism;
 import Reports.HouseReportLayout;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
-import Senzors.CircuitBreakers;
+import Sensors.CircuitBreakers;
+import Sensors.ElectricitySensor;
 import SportsEquipment.SportEquipment;
 
 
@@ -20,7 +22,7 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class House {
+public class House implements LapSubscriber {
 
 	private List<Floor> floorList;
 	private List<HouseReportLayout> houseReportLayoutList;
@@ -34,6 +36,8 @@ public class House {
 
 	private CircuitBreakers circuitBreakers;
 
+	private ElectricitySensor electricitySensor;
+
 	public House(String name){
 		this.name = name;
 		this.outside = new Outside();
@@ -43,6 +47,24 @@ public class House {
 
 		controlUnit = new ControlUnit();
 		eventReporter = new EventReporter(this);
+	}
+
+
+	@Override
+	public void newLap() {
+		controlUnit.newLap();
+		outside.newLap();
+		for (Appliance appliance:getAppliances()) {
+			appliance.newLap();
+		}
+		for (Person person:getPersonList()) {
+			person.newLap();
+		}
+		for (Animal animal:getAnimalList()) {
+			animal.newLap();
+		}
+		electricitySensor.newLap();
+		eventReporter.newLap();
 	}
 
 	public void addFloor(Floor floor){
@@ -56,6 +78,14 @@ public class House {
 
 	public CircuitBreakers getCircuitBreakers() {
 		return circuitBreakers;
+	}
+
+	public void setElectricitySensor(ElectricitySensor electricitySensor) {
+		this.electricitySensor = electricitySensor;
+	}
+
+	public ElectricitySensor getElectricitySensor() {
+		return electricitySensor;
 	}
 
 	public ControlUnit getControlUnit() {
@@ -150,9 +180,9 @@ public class House {
 	public Outside getOutside() {
 		return outside;
 	}
-
 	@Override
 	public String toString() {
 		return name;
 	}
+
 }

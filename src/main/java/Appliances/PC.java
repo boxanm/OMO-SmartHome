@@ -40,7 +40,9 @@ public class PC extends CDplayer {
 				if(actualPlayDuration<maxPlayDuration){
 					if(actualPlayDuration == 0)
 						insertCD();
-					work();
+					if(actualPlayDuration == 1)
+						work();
+					actualPlayDuration++;
 					return this;
 				}
 				else{

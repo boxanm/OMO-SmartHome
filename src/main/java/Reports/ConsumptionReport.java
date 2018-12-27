@@ -40,6 +40,7 @@ public class ConsumptionReport extends HouseReport {
 				.stream()
 				.filter(Consumption.class::isInstance)
 				.map(Consumption.class::cast)
+				.filter(consumption -> consumption.getType() == ConsumptionType.electricity || consumption.getType() == ConsumptionType.water)
 				.filter(consumption -> consumption.getLapNumber() >= start && consumption.getLapNumber() < end)
 				.sorted(Comparator.comparing((Consumption consumption) -> consumption.getSource().toString())
 						.thenComparing(Consumption::getType))

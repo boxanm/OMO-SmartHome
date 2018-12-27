@@ -4,6 +4,7 @@ package EventsAlerts;
 import LapsTime.LapSubscriber;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -20,12 +21,11 @@ public class ControlUnit implements EventTarget, LapSubscriber {
 
 	public ControlUnit(){
 		listOfAlertHandlers = new ArrayList<>();
-		alerts = new PriorityQueue<>();
+		alerts = new LinkedList<>();
 	}
 
 	public void handleAlert(Alert alert){
-		if(! alerts.contains(alert))
-			alerts.add(alert);
+		alerts.add(alert);
 	}
 
 	public void addAlertHandler(AlertHandler alertHandler){

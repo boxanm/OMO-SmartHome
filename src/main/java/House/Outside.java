@@ -3,6 +3,7 @@ package House;
 import EventsAlerts.Info;
 import EventsAlerts.Observable;
 import EventsAlerts.Observer;
+import LapsTime.LapSubscriber;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Random;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class Outside implements Observable {
+public class Outside implements Observable, LapSubscriber {
 	private List<Observer> observerList;
 
 	private boolean isWind;

@@ -6,6 +6,8 @@ import Appliances.*;
 import SportsEquipment.*;
 import House.Car;
 import Organism.Organism;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,32 +46,32 @@ public class Dad extends Person implements Adults  {
 			isBusy = true;
 			switch (alert.getAlertType()){
 				case fire:{
-					Room room = m_House
+					List<Room> rooms = m_House
 							.getRoomList()
 							.stream()
 							.filter(Room::isOnFire)
-							.findFirst()
-							.get();
-					extinguish(room);
+							.collect(Collectors.toList());
+					if(rooms.size() > 0)
+						extinguish(rooms.get(new Random().nextInt(rooms.size())));
 					return true;
 				}
 				case broken:{
-					Appliance appliance = m_House
+					List <Appliance> appliances = m_House
 							.getAppliances()
 							.stream()
 							.filter(Appliance::isBroken)
-							.findFirst()
-							.get();
-					repair(appliance);
+							.collect(Collectors.toList());
+					if(appliances.size() > 0)
+						repair(appliances.get(new Random().nextInt(appliances.size())));
 					return true;
 				}
 				case babyCrying:{
-					Child child = childList
+					List<Child> children = childList
 							.stream()
 							.filter(Child::isSad)
-							.findFirst()
-							.get();
-					cheerUp(child);
+							.collect(Collectors.toList());
+					if(children.size()>0)
+						cheerUp(children.get(new Random().nextInt(children.size())));
 					return true;
 				}
 				case outOfFood: {
@@ -157,7 +159,7 @@ public class Dad extends Person implements Adults  {
 
     @Override
     public void addHandlerToControlUnit(ControlUnit controlUnit) {
-	    controlUnit.addAlertHandler(this);
+		controlUnit.addAlertHandler(this);
     }
 
     @Override

@@ -14,6 +14,7 @@ public class Blind implements AlertHandler, InfoGenerator, EventSource, EventTar
 	private EventReporter eventReporter;
 	private boolean isPulled = false;
 	private Window window;
+
 	public Blind(Window window){
 		this.window = window;
 		eventReporter = window.getRoom().getFloor().getHouse().getEventReporter();
@@ -45,10 +46,7 @@ public class Blind implements AlertHandler, InfoGenerator, EventSource, EventTar
 
 	@Override
 	public String toString() {
-		if(isPulled)
-			return "Blind is pulled";
-		else
-			return "Blind is not pulled";
+		return "Blind";
 	}
 
 	@Override

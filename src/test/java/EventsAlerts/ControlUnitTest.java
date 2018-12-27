@@ -4,14 +4,11 @@ import Appliances.ConsumptionType;
 import Appliances.Fridge;
 import House.*;
 import Organism.Persons.Dad;
-import Reports.ConsumptionReport;
 import Reports.EventReport;
-import Senzors.ElectricitySensor;
-import Senzors.FireSensor;
+import Sensors.ElectricitySensor;
+import Sensors.FireSensor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ControlUnitTest {
     House house;

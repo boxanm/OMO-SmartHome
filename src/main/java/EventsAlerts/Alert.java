@@ -29,6 +29,9 @@ public class Alert extends Event {
 
 	@Override
 	public String toString() {
-		return "Alert: " + type.toString() + " | " + source.toString() + " => " + target.toString();
+		if(target == null)
+			return "Alert: " + type.toString() + " | " + source.toString() + " was not handled ";
+		else
+			return "Alert: " + type.toString() + " | " + source.toString() + " => " + target.toString();
 	}
 }

@@ -1,4 +1,4 @@
-package Senzors;
+package Sensors;
 
 import EventsAlerts.*;
 import House.House;
@@ -12,7 +12,7 @@ public class CircuitBreakers implements Sensor, AlertGenerator {
 
 	private boolean tripped;
 	private EventReporter eventReporter;
-	private final static double maxElectricalCapacity = 50;
+	private final static double maxElectricalCapacity = 30;
 
 	public CircuitBreakers(House house){
 		house.setCircuitBreakers(this);

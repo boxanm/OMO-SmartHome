@@ -13,10 +13,12 @@ public class Window  {
 
 	private Blind blind;
 	private Room room;
+	private int number;
 
-	public Window(Room room){
+	public Window(Room room, int number){
 		this.room = room;
 		this.blind = new Blind(this);
+		this.number = number;
 
 	}
 
@@ -26,7 +28,7 @@ public class Window  {
 
 	@Override
 	public String toString() {
-		return "Window";
+		return "Window " + number ;
 	}
 
 	public Room getRoom() {

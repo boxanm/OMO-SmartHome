@@ -39,8 +39,9 @@ public class TV extends Appliance {
 				return this;
 			case On:
 				if(actualWatchDuration < maxWatchDuration){
+					if(actualWatchDuration == 0)
+						watch(person);
 					actualWatchDuration++;
-					watch(person);
 					return this;
 				}
 				else{

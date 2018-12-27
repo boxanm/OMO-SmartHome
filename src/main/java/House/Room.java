@@ -33,8 +33,8 @@ public abstract class Room implements EventTarget, Observable {
 		this.house = house;
 		this.floor = floor;
 		windowsList = new ArrayList<Window>();
-		for (int i = 0; i < number_of_windows; i++){
-			windowsList.add(new Window(this));
+		for (int i = 1; i <= number_of_windows; i++){
+			windowsList.add(new Window(this,i));
 		}
 		floor.addRoom(this);
 		organismList = new ArrayList<>();

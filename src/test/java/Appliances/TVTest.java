@@ -2,10 +2,9 @@ package Appliances;
 
 import House.*;
 import Organism.Persons.Dad;
-import Reports.ActivityAndUsageReport;
 import Reports.ConsumptionReport;
 import Reports.EventReport;
-import Senzors.ElectricitySensor;
+import Sensors.ElectricitySensor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

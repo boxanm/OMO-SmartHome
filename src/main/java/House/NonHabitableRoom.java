@@ -39,7 +39,7 @@ public class NonHabitableRoom extends Room {
 	}
 	public void addCar(Car car){
 		this.car = car;
-	}//todo vice aut v jedne garazi?
+	}
 	public void deleteCar(Car car){
 		this.car = null;
 	}

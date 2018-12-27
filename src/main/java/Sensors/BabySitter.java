@@ -1,13 +1,9 @@
-package Senzors;
+package Sensors;
 
 import EventsAlerts.*;
 import House.House;
-import House.Room;
 import Organism.Persons.Child;
-import Organism.Persons.Person;
 
-import java.util.ArrayList;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -31,13 +27,13 @@ public class BabySitter implements Sensor, AlertGenerator {
 	}
 
 	public void update(Observable observable){
-
-
+	    if(observable instanceof Child && ((Child) observable).isSad())
+	        newAlert(new Alert(AlertType.babyCrying,this, null, null, null));
 	}
 
 	@Override
 	public void newAlert(Alert alert) {
-		eventReporter.updateFromObserver(new Alert(AlertType.babyCrying,this, null, null, null));
+		eventReporter.updateFromAlertGenerator(alert);
 	}
 	@Override
 	public String toString() {

@@ -22,7 +22,7 @@ public class TVCreator extends ApplianceCreator {
 	}
 
 	public TV createSamsung(String name){
-		return (TV) createAppliance(name,"Samsung");
+		return createAppliance(name,"Samsung");
 	}
 
 }

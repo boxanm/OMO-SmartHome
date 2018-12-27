@@ -1,4 +1,4 @@
-package Senzors;
+package Sensors;
 
 
 import Appliances.Appliance;

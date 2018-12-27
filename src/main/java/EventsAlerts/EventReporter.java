@@ -2,10 +2,8 @@ package EventsAlerts;
 
 import House.House;
 import LapsTime.LapSubscriber;
-import Senzors.Meter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Loguje veškeré eventy, které mohou mít nìkolik zdrojù:

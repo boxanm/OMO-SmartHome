@@ -8,8 +8,6 @@ package EventsAlerts;
  */
 public interface ConsuptionGenerator {
 
-	public Consumption m_Consumption = null;
-
-	public void newConsumption();
+	void newConsumption();
 
 }
