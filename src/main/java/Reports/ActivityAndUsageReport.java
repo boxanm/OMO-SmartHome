@@ -26,6 +26,9 @@ import java.util.stream.Collectors;
 public class ActivityAndUsageReport extends HouseTimeReport {
     final static String name = "ActivityAndUsageReport";
 
+    /**
+     * class serving as ActivityAndUsageReport generator
+     */
 	public ActivityAndUsageReport(){
 
 	}

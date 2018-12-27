@@ -27,17 +27,35 @@ public class ConsumptionReport extends HouseTimeReport {
 	private static final double waterPrice = 75;
 
 
+	/**
+	 * class serving as Consumption generator
+	 */
 	public ConsumptionReport() {
 	}
 
+	/**
+	 * multiples input with electricityPrice
+	 * @param num number of used kW
+	 * @return price of electricity
+	 */
 	private double countElectricity(double num){
 		return num*electricityPrice;
 	}
 
+	/**
+	 * multiples input with waterPrice
+	 * @param num number of used m^3
+	 * @return price of water
+	 */
 	private double countWater(double num){
 		return num*waterPrice;
 	}
 
+	/**
+	 * @param num number of used units
+	 * @param consumptionType type of counted variable
+	 * @return price
+	 */
 	private double countPrice(double num, ConsumptionType consumptionType){
 		switch (consumptionType){
 			case water:
@@ -48,6 +66,10 @@ public class ConsumptionReport extends HouseTimeReport {
 		return 0;
 	}
 
+	/**
+	 * @param consumptionType type of variable
+	 * @return variable unit as string
+	 */
 	private String getUnit(ConsumptionType consumptionType){
 		switch (consumptionType){
 			case water:
@@ -59,6 +81,12 @@ public class ConsumptionReport extends HouseTimeReport {
 
 	}
 
+	/**
+	 * returns formatted string based on input
+	 * @param counter number of used units
+	 * @param consumptionType type of used units
+	 * @return formatted string
+	 */
 	private String getConsumptionString(double counter, ConsumptionType consumptionType){
 		return ("---Used " + counter + " " + getUnit(consumptionType)+" of " + consumptionType + ". Total price: " + countPrice(counter,consumptionType)+ " Kè");
 	}

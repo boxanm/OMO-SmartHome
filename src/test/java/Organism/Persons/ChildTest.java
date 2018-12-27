@@ -31,8 +31,8 @@ class ChildTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro", house);
-        obyvak = new HabitableRoom("obyvak", house, floor, 0);
-        garaz = new NonHabitableRoom("Garaz", house, floor, 0);
+        obyvak = new HabitableRoom("obyvak",  floor, 0);
+        garaz = new NonHabitableRoom("Garaz",  floor, 0);
         double pcComsuption[] = new double[]{0.8, 0.01, 0.0002};
         house.addFloor(floor);
         floor.addRoom(obyvak);

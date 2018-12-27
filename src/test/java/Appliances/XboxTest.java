@@ -4,10 +4,12 @@ import House.House;
 import Organism.Persons.Dad;
 import Reports.ConsumptionReport;
 import Reports.EventReport;
-import Senzors.ElectricitySensor;
+import Sensors.ElectricitySensor;
 import org.junit.jupiter.api.BeforeEach;
 import House.*;
 import org.junit.jupiter.api.Test;
+
+import java.io.PrintWriter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,12 +23,14 @@ class XboxTest {
     ElectricitySensor sensor;
     double xboxComsuption[] = new double[] {0.7, 0.04, 0.0004};
 
+    PrintWriter printWriter;
+
 
     @BeforeEach
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,2);
+        obyvak = new HabitableRoom("obyvak",floor,2);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         xbox = new Xbox("xbox", "brand",obyvak, ConsumptionType.electricity,xboxComsuption);
@@ -42,10 +46,10 @@ class XboxTest {
         for (int i = 0; i < 6; i++){
             xbox.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i);
+            consumptionReport.generateReport(house,0,i, printWriter);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house);
+        eventReport.generateReport(house, 0, 2, printWriter);
     }
 
 }
