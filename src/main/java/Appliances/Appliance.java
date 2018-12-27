@@ -1,6 +1,7 @@
 package Appliances;
 
 import Appliances.ApplianceState.*;
+import Appliances.Manual.Manual;
 import EventsAlerts.*;
 import House.Floor;
 import House.Room;
@@ -133,6 +134,14 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		eventReporter.newInfo(new Info(InfoType.turningOffAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateOFF(this));
 	}
+
+	public Manual getDeviceManual(){
+        return new Manual();
+    }
+
+    public void repairAppliance(){
+	    wearOfDevice = 100;
+    }
 
 	@Override
 	public void setState(State state) {

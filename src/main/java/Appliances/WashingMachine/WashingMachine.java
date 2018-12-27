@@ -3,6 +3,8 @@ package Appliances.WashingMachine;
 import Appliances.Appliance;
 ;
 import Appliances.ConsumptionType;
+import EventsAlerts.Info;
+import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
@@ -14,6 +16,9 @@ import Organism.Usable;
  * @created 16-pro-2018 9:00:42
  */
 public class WashingMachine extends Appliance {
+
+	private final static int maxPlayDuration = 4;
+	private int actualPlayDuration = 0;
 
 	String name;
 	HabitableRoom location;
@@ -47,18 +52,22 @@ public class WashingMachine extends Appliance {
 	}
 
 	public void fillWithLaundry(){
+		newInfo(new Info(InfoType.fillingWithLaundry, this,getActualFloor(),getActualRoom(), this));
 		washingMachineState.fillWithLaundry();
 	}
 
 	public void cycleStart(){
+		newInfo(new Info(InfoType.cycleStart, this, getActualFloor(), getActualRoom(), this));
 		washingMachineState.cycleStart();
 	}
 
 	public void cycleFinish(){
+		newInfo(new Info(InfoType.cycleFinish, this, getActualFloor(), getActualRoom(), this));
 		washingMachineState.cycleFinish();
 	}
 
 	public void takeOutLaundry(){
+		newInfo(new Info(InfoType.takingOutLaundry, this, getActualFloor(), getActualRoom(), this));
 		washingMachineState.takeOutLaundry();
 	}
 
@@ -70,9 +79,27 @@ public class WashingMachine extends Appliance {
 
 	@Override
 	public Usable use(Person person) {
-
-
-	    return null;
+		switch (getApplianceState()){
+			case Off:
+				turnON();
+				return this;
+			case Iddle:
+				turnON();
+				return this;
+			case On:
+				if(actualPlayDuration <maxPlayDuration){
+					if(actualPlayDuration == 0)
+						getFillWithLaundry();
+					getCycleStart();
+					return this;
+				}
+				else{
+					getTakeOutLaundry();
+					getCycleFinish();
+					return null;
+				}
+		}
+		return null;
 	}
 
 

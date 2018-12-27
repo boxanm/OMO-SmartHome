@@ -11,7 +11,12 @@ import Appliances.Appliance;
  */
 public class Manual {
 
-	Manual manual = null;
+	private Manual manual = null;
+	private String descripton;
+
+	public Manual(){
+		descripton = "Manual Manual Manual";
+	}
 
 	public Manual getManual() {
 		if(manual == null){

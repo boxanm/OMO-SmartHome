@@ -120,7 +120,8 @@ public class Dad extends Person implements Adults  {
 	 */
 	public void repair(Appliance appliance){
 		newInfo(new Info(InfoType.repairingAppliance, this, getFloor(), actualRoom, appliance));
-//		appliance.; //TODO stahnout manual a opravit
+		appliance.getDeviceManual();
+		appliance.repairAppliance();
 	}
 	/**
 	 * 

@@ -10,7 +10,6 @@ public enum InfoType {
     drivingCar,
     repairingAppliance,
     hangingOn,
-    useWashingMachine,
     workingOnPC,
     eatFood,
     fillingFood,
@@ -22,8 +21,10 @@ public enum InfoType {
     pullingBlind,
     insertingCD,
     ejectingCD,
-    playingCD
-
-
+    playingCD,
+    fillingWithLaundry,
+    cycleStart,
+    cycleFinish,
+    takingOutLaundry
 
 }
