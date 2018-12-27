@@ -2,9 +2,8 @@ package SportsEquipment;
 
 
 import House.NonHabitableRoom;
-import Organism.Persons.Adults;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * @author Michal

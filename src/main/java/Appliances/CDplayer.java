@@ -5,7 +5,7 @@ import EventsAlerts.Info;
 import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * Rozhraní pro všechny, které umožòují práci s CD.

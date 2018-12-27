@@ -1,11 +1,10 @@
 package Appliances;
 
-import Appliances.ApplianceState.State;
 import EventsAlerts.Info;
 import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * @author Michal

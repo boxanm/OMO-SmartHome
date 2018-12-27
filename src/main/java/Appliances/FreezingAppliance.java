@@ -3,7 +3,7 @@ package Appliances;
 import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * Rozhraní definující spoleèné vlastnosti a metody lednice a mrazáku

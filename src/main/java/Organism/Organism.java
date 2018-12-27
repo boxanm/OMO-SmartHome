@@ -6,6 +6,7 @@ import House.Room;
 import House.Floor;
 import House.House;
 import LapsTime.LapSubscriber;
+import Organism.Persons.Usable;
 
 import java.util.Random;
 
@@ -32,7 +33,7 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 
 	/**
 	 * 
-	 * @param room
+	 * @param room moves to room
 	 */
 	public void changeRoom(Room room){
 		actualRoom.removeOrganism(this);
@@ -48,7 +49,10 @@ public abstract class Organism implements InfoGenerator, EventSource, EventTarge
 		this.eventReporter = eventReporter;
 	}
 
-
+    /**
+     * moves organism to defined house and random room
+     * @param house
+     */
 	public void moveToHouse(House house){
 		m_House = house;
 		actualRoom = house.getRoomList().get(new Random().nextInt(house.getRoomList().size()));

@@ -14,6 +14,9 @@ public abstract class Animal extends Organism {
 		super(name);
 	}
 
+	/**
+	 * Every animal makes a specific sound
+	 */
 	abstract void makeSound();
 
 

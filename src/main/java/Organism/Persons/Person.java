@@ -41,6 +41,9 @@ public abstract class Person extends Organism {
 		isBusy = false;
 	}
 
+	/**
+	 * Person chooses between appliance and sportsEquipment based on recent actions
+	 */
 	public void nextAction(){
 		if(!isBusy){
 			if(applianceUsageNumber <= sportEquipmentUsageNumber){
@@ -65,7 +68,7 @@ public abstract class Person extends Organism {
 
 	/**
 	 *
-	 * @param room
+	 * @param room extinguish fire in defined room and informs about it
 	 */
 	public void callFireman(Room room){
 		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
@@ -73,7 +76,7 @@ public abstract class Person extends Organism {
 
 	/**
 	 *
-	 * @param appliance
+	 * @param appliance use defined appliance
 	 */
 	public void useAppliance(Appliance appliance){
 		if(appliance != null && !isBusy) {
@@ -85,7 +88,7 @@ public abstract class Person extends Organism {
 
 	/**
 	 *
-	 * @param equipment
+	 * @param equipment use defined sport equipment
 	 */
 	public void useSportEquipment(SportEquipment equipment){
 		if(equipment != null && !isBusy){
@@ -95,6 +98,9 @@ public abstract class Person extends Organism {
 		}
 	}
 
+	/**
+	 * do nothing, just hang on
+	 */
 	public void hangOn() {
 		newInfo(new Info(InfoType.hangingOn,this,getFloor(),actualRoom,this));
 	}

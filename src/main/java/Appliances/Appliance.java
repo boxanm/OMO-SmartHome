@@ -7,7 +7,7 @@ import House.Floor;
 import House.Room;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 import java.util.ArrayList;
 import java.util.Random;

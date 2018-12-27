@@ -1,10 +1,9 @@
 package SportsEquipment;
 
 import EventsAlerts.EventTarget;
-import Organism.Persons.Adults;
 import House.NonHabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * Abstraktní tøída, jednotlivá spotovní vybavení se vyváøí pomocí návrhového

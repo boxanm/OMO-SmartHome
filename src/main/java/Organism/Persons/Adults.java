@@ -17,23 +17,26 @@ public interface Adults extends AlertHandler, EventSource {
 
 	/**
 	 * 
-	 * @param room
+	 * @param room extinguish fire in defined room
 	 */
 	public void extinguish(Room room);
 
 	/**
 	 * 
-	 * @param child
+	 * @param child if sad, cheer it up!
 	 */
 	public void cheerUp(Child child);
 
 	/**
 	 * 
-	 * @param car
+	 * @param car use Car and go shopping
 	 */
 	public void useCar(Car car);
 
-
+	/**
+	 *
+	 * @param child take care of one more Child
+	 */
 	public void addChild(Child child);
 
 }

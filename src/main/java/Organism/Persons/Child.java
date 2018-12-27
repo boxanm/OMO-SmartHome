@@ -1,14 +1,8 @@
 package Organism.Persons;
 import EventsAlerts.*;
-import House.Room;
-import Appliances.*;
-import SportsEquipment.*;
-import Organism.Organism;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 /**
  * @author Michal
@@ -26,23 +20,32 @@ public class Child extends Person implements Observable {
     }
 
 
-
-	public boolean cry(){
+	/**
+	 * every child is crying with certain probability
+	 * @return if child is crying
+	 */
+	private boolean cry(){
 		return new Random().nextInt(100) <= cryProbability;
 	}
 
-	public boolean stopCrying(int chance){
+	/**
+	 * if random <= chance, child stops crying
+	 * @param chance probability of cheeringUp
+	 */
+	void stopCrying(int chance){
 		if(isSad){
 			if(new Random().nextInt(100) <= chance){
 				isSad = false;
-				return true;
 			}
 		}
 		else{
 			cry();
 		}
-		return false;
 	}
+
+	/**
+	 * do nextAction only if not crying
+	 */
 	public void nextAction(){
 		if(!cry()){
 		    super.nextAction();
