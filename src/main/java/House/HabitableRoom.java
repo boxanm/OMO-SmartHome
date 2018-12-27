@@ -18,8 +18,8 @@ public class HabitableRoom extends Room {
 	private ArrayList<Appliance> applianceList;
 	private List<Sensor> sensorList;
 
-	public HabitableRoom(String name, House house, Floor floor, int number_of_windows){
-		super(name, house, floor, number_of_windows);
+	public HabitableRoom(String name, Floor floor, int number_of_windows){
+		super(name, floor, number_of_windows);
 		applianceList = new ArrayList<>();
 		sensorList = new ArrayList<>();
 	}

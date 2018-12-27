@@ -5,7 +5,6 @@ import EventsAlerts.EventTarget;
 import EventsAlerts.Observable;
 import EventsAlerts.Observer;
 import Organism.Organism;
-import Organism.Persons.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +21,13 @@ public abstract class Room implements EventTarget, Observable {
 
 	private ArrayList<Organism> organismList;
 	private String name;
-	private House house;
 	private Floor floor;
 
 	private boolean isOnFire = false;
 	private List<Window> windowsList;
 
-	public Room(String name, House house, Floor floor, int number_of_windows){
+	public Room(String name, Floor floor, int number_of_windows){
 		this.name = name;
-		this.house = house;
 		this.floor = floor;
 		windowsList = new ArrayList<Window>();
 		for (int i = 1; i <= number_of_windows; i++){

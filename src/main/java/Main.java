@@ -25,8 +25,8 @@ public final class Main {
 
         Floor floor = new Floor("První patro", house);
 
-        HabitableRoom koupelna = new HabitableRoom("koupelna", house, floor, 2);
-        NonHabitableRoom technicka = new NonHabitableRoom("technicka", house, floor, 0);
+        HabitableRoom koupelna = new HabitableRoom("koupelna", floor, 2);
+        NonHabitableRoom technicka = new NonHabitableRoom("technicka", floor, 0);
 
          Organism dad = new Dad("Honza");
 

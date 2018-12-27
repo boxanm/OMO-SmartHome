@@ -35,8 +35,8 @@ class ReportTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,2);
-        garaz = new NonHabitableRoom("Garaz",house,floor,0);
+        obyvak = new HabitableRoom("obyvak",floor,2);
+        garaz = new NonHabitableRoom("Garaz",floor,0);
         sportEquipment = new Ski("atomic",garaz);
         house.addFloor(floor);
         floor.addRoom(obyvak);

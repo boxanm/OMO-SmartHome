@@ -39,9 +39,9 @@ public class Main_1 {
         Floor floor1 = new Floor("floor1", house1);
         Floor floor2 = new Floor("floor2", house1);
 
-        NonHabitableRoom garage1 = new NonHabitableRoom("garage1",house1,basement,0);
-        NonHabitableRoom garage2 = new NonHabitableRoom("garage2",house1,basement,0);
-        NonHabitableRoom gym = new NonHabitableRoom("gym", house1, basement, 2);
+        NonHabitableRoom garage1 = new NonHabitableRoom("garage1",basement,0);
+        NonHabitableRoom garage2 = new NonHabitableRoom("garage2",basement,0);
+        NonHabitableRoom gym = new NonHabitableRoom("gym", basement, 2);
 
         Car car1 = new Car("Volvo", garage1);
         Car car2 = new Car("VW", garage2);
@@ -54,13 +54,13 @@ public class Main_1 {
         Ski ski1 = factorySki.createEquipment("Atomic");
         Ski ski2 = factorySki.createEquipment("Fischer");
 
-        HabitableRoom livingRoom = new HabitableRoom("living room",house1,floor1,3);
-        HabitableRoom kitchen = new HabitableRoom("kitchen",house1,floor1,2);
-        HabitableRoom bathroom = new HabitableRoom("bathroom",house1,floor1,1);
-        HabitableRoom bedRoom1 = new HabitableRoom("bedroom1",house1,floor2,2);
-        HabitableRoom bedRoom2 = new HabitableRoom("bedroom2",house1,floor2,2);
-        HabitableRoom bedRoom3 = new HabitableRoom("bedroom3",house1,floor2,2);
-        HabitableRoom bedRoom4 = new HabitableRoom("bedroom4",house1,floor2,1);
+        HabitableRoom livingRoom = new HabitableRoom("living room",floor1,3);
+        HabitableRoom kitchen = new HabitableRoom("kitchen",floor1,2);
+        HabitableRoom bathroom = new HabitableRoom("bathroom",floor1,1);
+        HabitableRoom bedRoom1 = new HabitableRoom("bedroom1",floor2,2);
+        HabitableRoom bedRoom2 = new HabitableRoom("bedroom2",floor2,2);
+        HabitableRoom bedRoom3 = new HabitableRoom("bedroom3",floor2,2);
+        HabitableRoom bedRoom4 = new HabitableRoom("bedroom4",floor2,1);
 
         double tvConsumption[] = new double[] {1, 0.2, 0.005};
         double pcConsumption[] = new double[] {2, 0.5, 0.002};
@@ -145,8 +145,8 @@ public class Main_1 {
             world.newLap();
         }
 
-        eventReport.generateReport(house1);
-//        consumptionReport.generateReport(house1,1,2);
+//        eventReport.generateReport(house1);
+        consumptionReport.generateReport(house1,1,2);
 //        activityAndUsageReport.generateReport(house1);
 
 

@@ -21,7 +21,7 @@ class WashingMachineTest {
 
         house = new House("house1");
         floor = new Floor("prizemi", house);
-        room = new HabitableRoom("koupelna", house, floor, 1);
+        room = new HabitableRoom("koupelna", floor, 1);
         washingMachineCreator = new WashingMachineCreator(room);
 
 

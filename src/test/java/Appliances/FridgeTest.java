@@ -24,7 +24,7 @@ class FridgeTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,2);
+        obyvak = new HabitableRoom("obyvak",floor,2);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         fridge = new Fridge("fridge", "brand",obyvak, ConsumptionType.electricity,fridgeConsumption);

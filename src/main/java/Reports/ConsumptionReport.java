@@ -22,8 +22,46 @@ import java.util.stream.Collectors;
  */
 public class ConsumptionReport extends HouseReport {
 
+	private static final double electricityPrice = 4.5;
+	private static final double waterPrice = 75;
+
+
 	public ConsumptionReport() {
 
+	}
+
+	private double countElectricity(double num){
+		return num*electricityPrice;
+	}
+
+	private double countWater(double num){
+		return num*waterPrice;
+	}
+
+	private double countPrice(double num, ConsumptionType consumptionType){
+		switch (consumptionType){
+			case water:
+				return countWater(num);
+			case electricity:
+				return countElectricity(num);
+		}
+		return 0;
+	}
+
+	private String getUnit(ConsumptionType consumptionType){
+		switch (consumptionType){
+			case water:
+				return "m^3";
+			case electricity:
+				return "kW";
+		}
+		return null;
+
+	}
+
+
+	private String getConsumptionString(double counter, ConsumptionType consumptionType){
+		return ("---Used " + counter + " " + getUnit(consumptionType)+" of " + consumptionType + ". Total price: " + countPrice(counter,consumptionType)+ " Kè");
 	}
 
 
@@ -51,25 +89,39 @@ public class ConsumptionReport extends HouseReport {
 			Appliance source = (Appliance) consumptions.get(0).getSource();
 			ConsumptionType consumptionType = consumptions.get(0).getType();
 			double counter = 0;
+			double totalElectricityConsumption = 0;
+			double totalWaterConsumption = 0;
 
 			System.out.println("Appliance: " + source.toString());
 			for (Consumption info : consumptions) {
 				if (info.getSource() != source) {
-					System.out.println("---Used " + counter + " of " + consumptionType);
+					System.out.println(getConsumptionString(counter,consumptionType));
 					consumptionType = info.getType();
 					source = (Appliance) info.getSource();
 					System.out.println("Appliance: " + source.toString());
+					switch (consumptionType){
+						case water:
+							totalWaterConsumption += counter;
+							break;
+						case electricity:
+							totalElectricityConsumption += counter;
+							break;
+					}
 					counter = 0;
 				}
 
 				if (info.getType() != consumptionType) {
-					System.out.println("---Used " + counter + " of " + consumptionType);
+					System.out.println(getConsumptionString(counter,consumptionType));
 					consumptionType = info.getType();
 					counter = info.getConsumption();
 				} else counter += info.getConsumption();
 			}
-			System.out.println("---Used " + counter + " of " + consumptionType);
+			System.out.println(getConsumptionString(counter,consumptionType));
 			System.out.println();
+			System.out.println("Total water consumption:");
+			System.out.println(getConsumptionString(totalWaterConsumption,ConsumptionType.water));
+			System.out.println("Total electricity consumption:");
+			System.out.println(getConsumptionString(totalElectricityConsumption,ConsumptionType.electricity));
 		}
 	}
 
@@ -96,25 +148,39 @@ public class ConsumptionReport extends HouseReport {
 				Appliance source = (Appliance) consumptions.get(0).getSource();
 				ConsumptionType consumptionType = consumptions.get(0).getType();
 				double counter = 0;
+				double totalElectricityConsumption = 0;
+				double totalWaterConsumption = 0;
 
 				writer.println("Appliance: " + source.toString());
 				for (Consumption info : consumptions) {
 					if (info.getSource() != source) {
-						writer.println("---Used " + counter + " of " + consumptionType);
+						writer.println(getConsumptionString(counter,consumptionType));
 						consumptionType = info.getType();
 						source = (Appliance) info.getSource();
 						writer.println("Appliance: " + source.toString());
+						switch (consumptionType){
+							case water:
+								totalWaterConsumption += counter;
+								break;
+							case electricity:
+								totalElectricityConsumption += counter;
+								break;
+						}
 						counter = 0;
 					}
 
 					if (info.getType() != consumptionType) {
-						writer.println("---Used " + counter + " of " + consumptionType);
+						writer.println(getConsumptionString(counter,consumptionType));
 						consumptionType = info.getType();
 						counter = info.getConsumption();
 					} else counter += info.getConsumption();
 				}
-				writer.println("---Used " + counter + " of " + consumptionType);
+				writer.println(getConsumptionString(counter,consumptionType));
 				writer.println();
+				writer.println("Total water consumption:");
+				writer.println(getConsumptionString(totalWaterConsumption,ConsumptionType.water));
+				writer.println("Total electricity consumption:");
+				writer.println(getConsumptionString(totalElectricityConsumption,ConsumptionType.electricity));
 				writer.close();
 
 			}

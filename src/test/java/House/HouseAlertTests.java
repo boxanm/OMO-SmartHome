@@ -40,8 +40,8 @@ class HouseAlertTests {
         house = new House("house1");
 
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,1);
-        garaz = new NonHabitableRoom("Garaz",house,floor,0);
+        obyvak = new HabitableRoom("obyvak",floor,1);
+        garaz = new NonHabitableRoom("Garaz",floor,0);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);

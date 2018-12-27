@@ -21,8 +21,8 @@ public class NonHabitableRoom extends Room {
 	private SportEquipmentCreatorBicycle sportEquipmentCreator;
 	private ArrayList<SportEquipment> sportEquipmentList;
 
-	public NonHabitableRoom(String name, House house, Floor floor, int number_of_windows){
-		super(name, house, floor, number_of_windows);
+	public NonHabitableRoom(String name, Floor floor, int number_of_windows){
+		super(name, floor, number_of_windows);
 		sportEquipmentList = new ArrayList<>();
 	}
 

@@ -28,8 +28,8 @@ class ControlUnitTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,2);
-        garaz = new NonHabitableRoom("garaz", house, floor,0);
+        obyvak = new HabitableRoom("obyvak",floor,2);
+        garaz = new NonHabitableRoom("garaz", floor,0);
         car = new Car("volvo",garaz);
         fridge = new Fridge("fridge", "brand",obyvak, ConsumptionType.electricity,fridgeConsumption);
         dad = new Dad("Pavel");

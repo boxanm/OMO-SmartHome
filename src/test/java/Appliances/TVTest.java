@@ -24,7 +24,7 @@ class TVTest {
     void setUp() {
         house = new House("house1");
         floor = new Floor("1. patro",house);
-        obyvak = new HabitableRoom("obyvak",house,floor,2);
+        obyvak = new HabitableRoom("obyvak",floor,2);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         tv = new TV("televize", "brand",obyvak, ConsumptionType.electricity,tvConsumption);
