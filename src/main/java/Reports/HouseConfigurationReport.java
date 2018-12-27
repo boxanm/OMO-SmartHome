@@ -19,9 +19,8 @@ import java.time.format.DateTimeFormatter;
  * @version 1.0
  * @created 16-pro-2018 9:02:12
  */
-public class HouseConfigurationReport extends HouseReportLayout {
-
-
+public class HouseConfigurationReport extends HouseReport {
+	final static String name = "HouseConfigurationReport";
 
 	public HouseConfigurationReport(){}
 
@@ -34,7 +33,7 @@ public class HouseConfigurationReport extends HouseReportLayout {
 		LocalDateTime time = LocalDateTime.now();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");
 
-		String timeLog = "src/main/java/Reports/HouseConfigurationReport " + time.format(dtf) + ".txt";
+		String timeLog = "src/main/java/Reports/" + name +"_" + time.format(dtf) + ".txt";
 		try {
 			PrintWriter writer = new PrintWriter(timeLog, "UTF-8");
 			generateReport(house,writer);

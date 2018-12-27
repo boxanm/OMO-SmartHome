@@ -8,10 +8,11 @@ package Reports;
  * @version 1.0
  * @created 16-pro-2018 9:02:12
  */
-public abstract class HouseReport extends HouseReportLayout {
+public abstract class HouseReport {
 
 	public HouseReport(){
 
 	}
+
 
 }

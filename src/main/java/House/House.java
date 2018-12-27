@@ -5,7 +5,6 @@ import EventsAlerts.ControlUnit;
 import EventsAlerts.EventReporter;
 import LapsTime.LapSubscriber;
 import Organism.Organism;
-import Reports.HouseReportLayout;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
 import Sensors.CircuitBreakers;
@@ -25,7 +24,6 @@ import java.util.List;
 public class House implements LapSubscriber {
 
 	private List<Floor> floorList;
-	private List<HouseReportLayout> houseReportLayoutList;
 
 	private EventReporter eventReporter;
 
@@ -43,7 +41,6 @@ public class House implements LapSubscriber {
 		this.outside = new Outside();
 
 		floorList = new ArrayList<Floor>();
-		houseReportLayoutList = new ArrayList<>();
 
 		controlUnit = new ControlUnit();
 		eventReporter = new EventReporter(this);
@@ -172,10 +169,6 @@ public class House implements LapSubscriber {
 		this.eventReporter = eventReporter;
 	}
 
-	public void addHouseReport(HouseReportLayout houseReportLayout){
-		if(! houseReportLayoutList.contains(houseReportLayout))
-			houseReportLayoutList.add(houseReportLayout);
-	}
 
 	public Outside getOutside() {
 		return outside;

@@ -42,7 +42,7 @@ class FridgeTest {
         for (int i = 0; i < 6; i++){
             fridge.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i);
+            consumptionReport.generateReportToCL(house,0,i);
             house.getEventReporter().newLap();
         }
         eventReport.generateReportToCL(house,0,6);

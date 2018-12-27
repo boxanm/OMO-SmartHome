@@ -43,13 +43,13 @@ class TVTest {
         for (i = 0; i < 6; i++){
             tv.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i);
+            consumptionReport.generateReportToCL(house,0,i);
             house.getEventReporter().newLap();
         }
 
         for (i=6;i<10;i++){
             tv.newLap();
-            consumptionReport.generateReport(house,0,i);
+            consumptionReport.generateReportToCL(house,0,i);
             house.getEventReporter().newLap();
         }
         eventReport.generateReportToCL(house,0,10);

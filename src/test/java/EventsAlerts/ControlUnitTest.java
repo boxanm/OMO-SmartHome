@@ -51,7 +51,7 @@ class ControlUnitTest {
             if(i == 1)
                 garaz.setOnFire();
             house.getEventReporter().newLap();
-            eventReport.generateReport(house,0,3);
+            eventReport.generateReportToCL(house,0,3);
         }
 //        eventReport.generateReport(house);
     }

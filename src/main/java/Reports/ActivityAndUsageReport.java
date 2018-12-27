@@ -23,35 +23,12 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:12
  */
-public class ActivityAndUsageReport extends HouseReport {
+public class ActivityAndUsageReport extends HouseTimeReport {
+    final static String name = "ActivityAndUsageReport";
 
 	public ActivityAndUsageReport(){
 
 	}
-
-	public void generateReportToFile(House house, int start, int end){
-        LocalDateTime time = LocalDateTime.now();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");
-
-        String timeLog = "src/main/java/Reports/ActivityAndUsageReport " + time.format(dtf) + ".txt";
-        try {
-            PrintWriter writer = new PrintWriter(timeLog, "UTF-8");
-            generateReport(house,start,end,writer);
-            writer.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void generateReportToCL(House house, int start, int end){
-	    PrintWriter writer = new PrintWriter(System.out);
-	    generateReport(house,start,end,writer);
-    }
 
 	public void generateReport(House house, int start, int end, PrintWriter writer) {
 

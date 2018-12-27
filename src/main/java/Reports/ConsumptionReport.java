@@ -20,14 +20,14 @@ import java.util.stream.Collectors;
  * @version 1.0
  * @created 16-pro-2018 9:02:12
  */
-public class ConsumptionReport extends HouseReport {
+public class ConsumptionReport extends HouseTimeReport {
+	final static String name = "ConsumptionReport";
 
 	private static final double electricityPrice = 4.5;
 	private static final double waterPrice = 75;
 
 
 	public ConsumptionReport() {
-
 	}
 
 	private double countElectricity(double num){
@@ -62,31 +62,8 @@ public class ConsumptionReport extends HouseReport {
 	private String getConsumptionString(double counter, ConsumptionType consumptionType){
 		return ("---Used " + counter + " " + getUnit(consumptionType)+" of " + consumptionType + ". Total price: " + countPrice(counter,consumptionType)+ " Kè");
 	}
-
-	public void generateReportToCL(House house, int start, int end){
-		PrintWriter writer = new PrintWriter(System.out);
-		generateReport(house,start,end,writer);
-		writer.close();
-	}
-
-
-	public void generateEventReportToFile(House house, int start, int end) {
-		LocalDateTime time = LocalDateTime.now();
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");
-
-		String timeLog = "src/main/java/Reports/EvenReport " + time.format(dtf) + ".txt";
-		try {
-			PrintWriter writer = new PrintWriter(timeLog, "UTF-8");
-			generateReport(house,start,end,writer);
-			writer.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-	}
 	
-	private void generateReport(House house, int start, int end, PrintWriter writer) {
+	public void generateReport(House house, int start, int end, PrintWriter writer) {
 		ArrayList<Event> allEvents = house.getEventReporter().getAllEvents();
 		writer.println("==================Consumption report from lap "+start+" to " + end +"==================");
 		ArrayList<Consumption> consumptions = (ArrayList<Consumption>) allEvents

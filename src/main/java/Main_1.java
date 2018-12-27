@@ -24,8 +24,8 @@ public class Main_1 {
         }
 
         eventReport.generateReportToCL(house1,0,lapNum);
-        consumptionReport.generateReport(house1,0,lapNum);
-//        activityAndUsageReport.generateReport(house1);
+        consumptionReport.generateReportToCL(house1,0,lapNum);
+        activityAndUsageReport.generateReportToCL(house1,0,lapNum);
 
 
 
