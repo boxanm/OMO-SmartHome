@@ -1,6 +1,7 @@
 package House;
 
 import Appliances.Appliance;
+import EventsAlerts.ControlUnit;
 import EventsAlerts.EventReporter;
 import Organism.Organism;
 import Reports.HouseReportLayout;
@@ -28,18 +29,26 @@ public class House {
 	private Outside outside;
 	private String name;
 
+	private ControlUnit controlUnit;
+
 	public House(String name){
 		this.name = name;
 		this.outside = new Outside();
 
 		floorList = new ArrayList<Floor>();
 		houseReportLayoutList = new ArrayList<>();
-		eventReporter = new EventReporter();
+
+		controlUnit = new ControlUnit();
+		eventReporter = new EventReporter(this);
 	}
 
 	public void addFloor(Floor floor){
 		if(! floorList.contains(floor))
 	        floorList.add(floor);
+	}
+
+	public ControlUnit getControlUnit() {
+		return controlUnit;
 	}
 
 	public List<Floor> getFloorList(){

@@ -22,7 +22,7 @@ public abstract class Person extends Organism {
 
 
 	protected int applianceUsageNumber = 0;
-	protected int sportEquipmentUsageNumber = 0;
+	protected int sportEquipmentUsageNumber = 100;
 	private final int foodConsumption = 5;
 
     public Person(String name) {
@@ -33,18 +33,16 @@ public abstract class Person extends Organism {
 	@Override
 	public void newLap() {
 		if(usingTarget == null){
-			nextAction();//TODO preskocit dalsi akci, pokud resi alert
+			nextAction();
 		}
 		else{
 			usingTarget = usingTarget.use(this);
-			if(usingTarget == null)
-				isBusy = false;
 		}
+		isBusy = false;
 	}
 
 	public void nextAction(){
 		if(!isBusy){
-            System.out.println("new action");
 			if(applianceUsageNumber <= sportEquipmentUsageNumber){
 				List<Appliance> appliances = m_House
 						.getAppliances()

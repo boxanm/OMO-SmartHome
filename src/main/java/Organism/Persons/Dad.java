@@ -1,8 +1,6 @@
 package Organism.Persons;
-import EventsAlerts.Alert;
-import EventsAlerts.AlertType;
-import EventsAlerts.Info;
-import EventsAlerts.InfoType;
+import EventsAlerts.*;
+import House.House;
 import House.Room;
 import Appliances.*;
 import SportsEquipment.*;
@@ -29,7 +27,6 @@ public class Dad extends Person implements Adults  {
 		super(name);
 	}
 
-
     public String getName() {
 		return name;
 	}
@@ -42,7 +39,7 @@ public class Dad extends Person implements Adults  {
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(Alert alert){
+	public boolean handleAlert(Alert alert){
 		if(! isBusy){
 			isBusy = true;
 			switch (alert.getAlertType()){
@@ -54,7 +51,7 @@ public class Dad extends Person implements Adults  {
 							.findFirst()
 							.get();
 					extinguish(room);
-					break;
+					return true;
 				}
 				case broken:{
 					Appliance appliance = m_House
@@ -64,7 +61,7 @@ public class Dad extends Person implements Adults  {
 							.findFirst()
 							.get();
 					repair(appliance);
-					break;
+					return true;
 				}
 				case babyCrying:{
 					Child child = childList
@@ -73,10 +70,29 @@ public class Dad extends Person implements Adults  {
 							.findFirst()
 							.get();
 					cheerUp(child);
-					break;
+					return true;
+				}
+				case outOfFood: {
+					List<Car> cars = m_House
+							.getCars()
+							.stream()
+							.filter(Car::isPresent)
+							.collect(Collectors.toList());
+					for (Car car: cars) {
+						if(car.getActualCarStorage() > 0)
+							if(alert.getSource() instanceof FreezingAppliance){
+								((FreezingAppliance) alert.getSource()).fill(car.getActualCarStorage());
+								car.emptyCarStorage();
+							}
+					}
+					if (cars.size() > 0) {
+						useCar(cars.get(new Random().nextInt(cars.size())));
+					}
+					return true;
 				}
 			}
 		}
+		return false;
 
 
 	}
@@ -96,7 +112,7 @@ public class Dad extends Person implements Adults  {
 	 */
 	public void repair(Appliance appliance){
 		newInfo(new Info(InfoType.repairingAppliance, this, getFloor(), actualRoom, appliance));
-//		appliance.(); //TODO stahnout manual a opravit
+//		appliance.; //TODO stahnout manual a opravit
 	}
 	/**
 	 * 
@@ -121,6 +137,22 @@ public class Dad extends Person implements Adults  {
 		car.goShopping(this);
 	}
 
+
+	public void addChild(Child child){
+		if(! childList.contains(child))
+			childList.add(child);
+	}
+
+    @Override
+    public void moveToHouse(House house) {
+        super.moveToHouse(house);
+        addHandlerToControlUnit(house.getControlUnit());
+    }
+
+    @Override
+    public void addHandlerToControlUnit(ControlUnit controlUnit) {
+	    controlUnit.addAlertHandler(this);
+    }
 
     @Override
     public String toString() {

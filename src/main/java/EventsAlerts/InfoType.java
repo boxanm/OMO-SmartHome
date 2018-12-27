@@ -11,16 +11,18 @@ public enum InfoType {
     repairingAppliance,
     hangingOn,
     useWashingMachine,
-    useFreezer,
-    eatFoodFridge,
-    useHifiTower,
-    usePC,
-    usePlayStation,
+    workingOnPC,
+    eatFood,
+    fillingFood,
     watchingTV,
-    useXbox,
     turningOffAppliance,
     turningOnAppliance,
-    turningIdleAppliance
+    turningIdleAppliance,
+    goingShopping,
+    pullingBlind,
+    insertingCD,
+    ejectingCD,
+    playingCD
 
 
 

@@ -24,9 +24,7 @@ class OrganismTest {
 
     @BeforeEach
     void setUp() {
-        eventReporter = new EventReporter();
         house = new House("house1");
-        house.setEventReporter(eventReporter);
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,0);
         garaz = new NonHabitableRoom("Garaz",house,floor,0);

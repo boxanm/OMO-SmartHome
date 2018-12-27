@@ -1,16 +1,11 @@
 package Appliances.WashingMachine;
 
 import Appliances.Appliance;
-import Appliances.ApplianceState.ApplianceState;
-import Appliances.ApplianceState.State;;
+;
 import Appliances.ConsumptionType;
-import EventsAlerts.*;
 import House.HabitableRoom;
 import Organism.Persons.Person;
 import Organism.Usable;
-
-import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * Použivá návrhový vzor State machine
@@ -30,15 +25,11 @@ public class WashingMachine extends Appliance {
 
 	IWashingMachineState washingMachineState;
 
-
-	private ArrayList<Observer> observersList = new ArrayList<Observer>();
-
-
 	public WashingMachine(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] comsuption) {
         super(name,brand,location,consumptionType, comsuption);
 
 		fillWithLaundry = new FillWithLaudry(this);
-		cycleStart = new CykleStart(this);
+		cycleStart = new CycleStart(this);
 		cycleFinish = new CycleFinish(this);
 		takeOutLaundry = new TakeOutLaudry(this);
 
@@ -77,74 +68,13 @@ public class WashingMachine extends Appliance {
 	public IWashingMachineState getTakeOutLaundry(){return takeOutLaundry;}
 
 
-	public void changeState(){
-
-	}
-
-
-	public void breakeDown(){
-
-	}
-
 	@Override
 	public Usable use(Person person) {
-		Calendar cal = Calendar.getInstance();
-		long startTime =   cal.getTimeInMillis();
-		long currentTime =startTime;
-		newInfo(new Info(InfoType.useWashingMachine, person, getFloor(), actualRoom, this));
-		wearOfDevice -= 10;
-		while(currentTime<startTime+5000){
-			isBusy = true;
-			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
-				this.turnON();
-				return this;
-			}
-		}
-		checkWearOfDevice();
-		this.turnOFF();
-		isBusy = false;
-		return null;
 
 
-	}
-	/**
-	 * 
-	 * @param alert
-	 */
-	public void handleAlert(Alert alert){
-
-	}
-	public void newConsumption(){
-
+	    return null;
 	}
 
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void attach(Observer observer){
-		if(!observersList.contains(observer))
-			observersList.add(observer);
-	}
-
-	/**
-	 * 
-	 * @param observer
-	 */
-	public void detach(Observer observer){
-		observersList.remove(observer);
-	}
-
-	public void announce(){
-		for (Observer observer:observersList) {
-			observer.update();
-		}
-	}
-
-	@Override
-	public void newLap() {
-
-	}
 
 	@Override
 	public String toString() {

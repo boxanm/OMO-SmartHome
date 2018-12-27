@@ -29,8 +29,7 @@ public class ElectricitySensor implements Sensor, Meter {
 
 	@Override
 	public void newConsumption(Consumption consumption) {
-		consumption.toString();
-		eventReporter.updateFromObserver(consumption);
+		eventReporter.updateFromMeter(consumption);
 	}
 
 	@Override

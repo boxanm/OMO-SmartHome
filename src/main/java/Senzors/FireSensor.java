@@ -18,6 +18,7 @@ public class FireSensor implements AlertGenerator, Sensor {
 	public FireSensor(House house, Room room){
 		eventReporter = house.getEventReporter();
 		this.room = room;
+		room.attach(this);
 	}
 
 

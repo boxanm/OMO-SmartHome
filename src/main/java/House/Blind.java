@@ -1,8 +1,7 @@
 package House;
 
-import EventsAlerts.Alert;
-import EventsAlerts.AlertHandler;
-import EventsAlerts.AlertType;
+import EventsAlerts.*;
+import Reports.EventReport;
 
 /**
  * Žaluzie se zatahují pøi vìtru
@@ -10,15 +9,19 @@ import EventsAlerts.AlertType;
  * @version 1.0
  * @created 16-pro-2018 9:01:41
  */
-public class Blind implements AlertHandler {
+public class Blind implements AlertHandler, InfoGenerator, EventSource, EventTarget {
 
+	private EventReporter eventReporter;
 	private boolean isPulled = false;
-
-	public Blind(){
-
+	private Window window;
+	public Blind(Window window){
+		this.window = window;
+		eventReporter = window.getRoom().getFloor().getHouse().getEventReporter();
+		addHandlerToControlUnit(window.getRoom().getFloor().getHouse().getControlUnit());
 	}
 
 	public void pull(){
+		newInfo(new Info(InfoType.pullingBlind,this,window.getRoom().getFloor(),window.getRoom(),this));
 		isPulled = !isPulled;
 	}
 
@@ -27,10 +30,17 @@ public class Blind implements AlertHandler {
 	}
 
 	@Override
-	public void handleAlert(Alert alert) {
-		if(alert.getAlertType() == AlertType.wind && !isPulled)
+	public boolean handleAlert(Alert alert) {
+		if(alert.getAlertType() == AlertType.wind && !isPulled){
 			pull();
+			return true;
+		}
+		return false;
+	}
 
+	@Override
+	public void addHandlerToControlUnit(ControlUnit controlUnit) {
+		controlUnit.addAlertHandler(this);
 	}
 
 	@Override
@@ -39,5 +49,10 @@ public class Blind implements AlertHandler {
 			return "Blind is pulled";
 		else
 			return "Blind is not pulled";
+	}
+
+	@Override
+	public void newInfo(Info info) {
+		eventReporter.newInfo(info);
 	}
 }

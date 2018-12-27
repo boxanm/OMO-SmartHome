@@ -56,22 +56,23 @@ public class Mom extends Person implements Adults {
 	 * @param car
 	 */
 	public void useCar(Car car){
-		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));//TODO menit pokoj vzdy pred akci?
-		car.goShopping(this);
+		usingTarget = car.use(this);
 	}
 
-
-
+	public void addChild(Child child){
+		if(! childList.contains(child))
+			childList.add(child);
+	}
 
 
 	/**
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(Alert alert){
+	public boolean handleAlert(Alert alert){
 		if(! isBusy){
 			isBusy = true;
-			switch (alert.getAlertType()){
+			switch (alert.getAlertType()){//TODO co se stane s alertem, kdyz ho vyresi?
 				case fire:{
 					Room room = m_House
 							.getRoomList()
@@ -80,7 +81,7 @@ public class Mom extends Person implements Adults {
 							.findFirst()
 							.get();
 					callFireman(room);
-					break;
+					return true;
 				}
 				case babyCrying:{
 					Child child = childList
@@ -89,12 +90,34 @@ public class Mom extends Person implements Adults {
 							.findFirst()
 							.get();
 					cheerUp(child);
-					break;
+					return true;
+				}
+				case outOfFood: {
+					List<Car> cars = m_House
+							.getCars()
+							.stream()
+							.filter(Car::isPresent)
+							.collect(Collectors.toList());
+					if (cars.size() > 0) {
+						useCar(cars.get(new Random().nextInt(cars.size())));
+					}
+					return true;
 				}
 			}
 		}
-
+	return false;
 	}
+
+    @Override
+    public void addHandlerToControlUnit(ControlUnit controlUnit) {
+        m_House.getControlUnit().addAlertHandler(this);
+    }
+
+    @Override
+    public void moveToHouse(House house) {
+        super.moveToHouse(house);
+        addHandlerToControlUnit(house.getControlUnit());
+    }
 
     @Override
     public String toString() {

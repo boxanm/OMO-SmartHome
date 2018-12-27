@@ -38,8 +38,6 @@ class HouseAlertTests {
     @BeforeEach
     void setUp() {
         house = new House("house1");
-        eventReporter = new EventReporter();
-        house.setEventReporter(eventReporter);
 
         floor = new Floor("1. patro",house);
         obyvak = new HabitableRoom("obyvak",house,floor,1);

@@ -8,13 +8,12 @@ package EventsAlerts;
  * @created 16-pro-2018 9:01:36
  */
 public interface AlertHandler {
-
-	public AlertHandler listOfAlertHandlers = null;
-
 	/**
 	 * 
 	 * @param alert
 	 */
-	public void handleAlert(Alert alert);
+	public boolean handleAlert(Alert alert);//returns true if alert handler handles alert
+
+	public void addHandlerToControlUnit(ControlUnit controlUnit);
 
 }

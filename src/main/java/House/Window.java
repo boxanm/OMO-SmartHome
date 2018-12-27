@@ -16,7 +16,7 @@ public class Window  {
 
 	public Window(Room room){
 		this.room = room;
-		this.blind = new Blind();
+		this.blind = new Blind(this);
 
 	}
 
@@ -29,4 +29,7 @@ public class Window  {
 		return "Window";
 	}
 
+	public Room getRoom() {
+		return room;
+	}
 }

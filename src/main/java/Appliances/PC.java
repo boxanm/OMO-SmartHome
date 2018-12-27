@@ -14,55 +14,43 @@ import java.util.Calendar;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class PC extends Appliance implements CDplayer {
+public class PC extends CDplayer {
+
+	private final static int maxPlayDuration = 4;
+	private int actualPlayDuration = 0;
 
 	public PC(String name, String brand, HabitableRoom location, ConsumptionType consumptionType, double[] comsuption) {
 		super(name,brand,location, consumptionType, comsuption);
 	}
-	/**
-	 * 
-	 * @param duration
-	 */
-	public void work(int duration){
+	public void work(){
+		newInfo(new Info(InfoType.workingOnPC,this,getActualFloor(),getActualRoom(),this));
 
 	}
-
-	public void ejectCD(){
-
-	}
-
-	public void insertCD(){
-
-	}
-
-	/**
-	 * 
-	 * @param duration
-	 */
-	public void playCD(int duration){
-
-	}
-
 
 	@Override
 	public Usable use(Person person) {
-		Calendar cal = Calendar.getInstance();
-		long startTime = cal.getTimeInMillis();
-		long currentTime = startTime;
-		newInfo(new Info(InfoType.usePC, person, getFloor(), actualRoom, this));
-		wearOfDevice -= 10;
-		while(currentTime<startTime+5000){
-			isBusy = true;
-			if(getApplianceState() == ApplianceState.Off || getApplianceState() == ApplianceState.Iddle){
-				this.turnON();
+		switch (getApplianceState()){
+			case Off:
+				turnON();
 				return this;
-			}
+			case Iddle:
+				turnON();
+				return this;
+			case On:
+				if(actualPlayDuration<maxPlayDuration){
+					if(actualPlayDuration == 0)
+						insertCD();
+					work();
+					return this;
+				}
+				else{
+					ejectCD();
+					return null;
+				}
 		}
-		checkWearOfDevice();
-		this.turnOFF();
-		isBusy = false;
 		return null;
 	}
+
 
 	@Override
 	public void newLap() {

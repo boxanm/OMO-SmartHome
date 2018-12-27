@@ -1,7 +1,11 @@
 package EventsAlerts;
 
 
+import LapsTime.LapSubscriber;
+
 import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * Obsluhuje všechny alerty a rozhoduje, který z AlertHandlerù je má vyøešit.
@@ -9,20 +13,19 @@ import java.util.ArrayList;
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
-public class ControlUnit implements EventTarget{
+public class ControlUnit implements EventTarget, LapSubscriber {
 
 	private ArrayList<AlertHandler> listOfAlertHandlers;
-	private ArrayList<Alert> alerts;
+	private Queue<Alert> alerts;
 
 	public ControlUnit(){
 		listOfAlertHandlers = new ArrayList<>();
-		alerts = new ArrayList<>();
+		alerts = new PriorityQueue<>();
 	}
 
 	public void handleAlert(Alert alert){
-		for (AlertHandler alertHandler: listOfAlertHandlers){
-			alertHandler.handleAlert(alert);
-		}
+		if(! alerts.contains(alert))
+			alerts.add(alert);
 	}
 
 	public void addAlertHandler(AlertHandler alertHandler){
@@ -32,7 +35,21 @@ public class ControlUnit implements EventTarget{
 
 
 	@Override
+	public void newLap() {
+		boolean freeAlertHandlers = true;
+		Alert alert = alerts.peek();
+		while(freeAlertHandlers && alert != null){
+			for (AlertHandler alertHandler:listOfAlertHandlers
+			) {
+				freeAlertHandlers = alertHandler.handleAlert(alert);
+			}
+			alerts.remove();
+			alert = alerts.peek();
+		}
+	}
+	@Override
 	public String toString() {
 		return "ControlUnit";
 	}
+
 }

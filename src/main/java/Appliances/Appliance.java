@@ -55,6 +55,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		wearOfDevice = 100;
 		location.addAppliance(this);
 
+		addHandlerToControlUnit(location.getFloor().getHouse().getControlUnit());
 		eventReporter = location.getFloor().getHouse().getEventReporter();
 	}
 
@@ -63,12 +64,14 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	}
 
 	@Override
-	public void handleAlert(Alert alert) {
+	public boolean handleAlert(Alert alert) {
 		if(alert.getAlertType() == AlertType.circuitBreakers){
 			newInfo(new Info(InfoType.turningOffAppliance,this,actualFloor, actualRoom, this));
 			turnOFF();
 			announce();
+			return true;
 		}
+		return false;
 	}
 
 	@Override
@@ -110,23 +113,16 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	}
 
 	public void turnON(){
-		eventReporter.newEvent(new Info(InfoType.turningOnAppliance,this,actualFloor,actualRoom,this));
+		eventReporter.newInfo(new Info(InfoType.turningOnAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateON(this));
-		System.out.println(getApplianceState());
-//		getConsumption();
-//		announce();
 	}
 	public void turnIdle(){
-		eventReporter.newEvent(new Info(InfoType.turningIdleAppliance,this,actualFloor,actualRoom,this));
+		eventReporter.newInfo(new Info(InfoType.turningIdleAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateIDDLE(this));
-//		getConsumption();
-//		announce();
 	}
 	public void turnOFF(){
-		eventReporter.newEvent(new Info(InfoType.turningOffAppliance,this,actualFloor,actualRoom,this));
+		eventReporter.newInfo(new Info(InfoType.turningOffAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateOFF(this));
-//		getConsumption();
-//		announce();
 	}
 
 	@Override
@@ -218,5 +214,10 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		for (Observer observer:observersList) {
 			observer.update();
 		}
+	}
+
+	@Override
+	public void addHandlerToControlUnit(ControlUnit controlUnit) {
+		controlUnit.addAlertHandler(this);
 	}
 }

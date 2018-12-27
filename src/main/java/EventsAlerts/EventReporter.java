@@ -1,5 +1,6 @@
 package EventsAlerts;
 
+import House.House;
 import LapsTime.LapSubscriber;
 import Senzors.Meter;
 
@@ -23,11 +24,11 @@ public class EventReporter implements LapSubscriber {
 	private int lapNumber;
 	private ControlUnit controlUnit;
 
-	public EventReporter(){
-		controlUnit = new ControlUnit();
+	public EventReporter(House house){
+	    this.controlUnit = house.getControlUnit();
 	}
 
-	public ControlUnit getControlUnit() {
+    public ControlUnit getControlUnit() {
 		return controlUnit;
 	}
 
@@ -36,15 +37,16 @@ public class EventReporter implements LapSubscriber {
 	}
 
 
-	public void newEvent(Event event){
+	private void newEvent(Event event){
 	    event.setLapNumber(lapNumber);
-	    System.out.println(event.toString());
+//	    System.out.println(event.toString());
 		allEvents.add(event);
 	}
 
 
 	public void updateEvent(Event event){
-		allEvents.set(allEvents.indexOf(event),event);
+		if(allEvents.contains(event))
+			allEvents.set(allEvents.indexOf(event),event);
 	}
 	/**
 	 *
@@ -64,7 +66,7 @@ public class EventReporter implements LapSubscriber {
 	 * @param consumption
 	 */
 	public void updateFromMeter(Consumption consumption){
-
+		newEvent(consumption);
 	}
 
 	/**

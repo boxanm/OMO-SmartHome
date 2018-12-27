@@ -6,11 +6,11 @@ package Appliances.WashingMachine;
  * @version 1.0
  * @created 16-pro-2018 9:00:41
  */
-public class CykleStart implements IWashingMachineState {
+public class CycleStart implements IWashingMachineState {
 
 	WashingMachine washingMachine;
 
-	public CykleStart(WashingMachine newWashingMachine){
+	public CycleStart(WashingMachine newWashingMachine){
 		washingMachine = newWashingMachine;
 	}
 

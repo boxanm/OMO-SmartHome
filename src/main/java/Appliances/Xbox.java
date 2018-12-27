@@ -14,7 +14,7 @@ import java.util.Calendar;
  * @version 1.0
  * @created 16-pro-2018 9:00:42
  */
-public class Xbox extends Appliance implements CDplayer {
+public class Xbox extends CDplayer {
 
 	private final static int maxPlayDuration = 4;
 	private int actualPlayDuration = 0;
@@ -24,32 +24,26 @@ public class Xbox extends Appliance implements CDplayer {
     }
 
 
-	public void ejectCD(){
-
-	}
-
-	public void insertCD(){
-
-	}
-
-	/**
-	 * 
-	 * @param duration
-	 */
-	public void playCD(int duration){
-
-	}
-
-
 	@Override
 	public Usable use(Person person) {
 		switch (getApplianceState()){
-			case On:
-				break;
-			case Iddle:
-				break;
 			case Off:
-				break;
+				turnON();
+				return this;
+			case Iddle:
+				turnON();
+				return this;
+			case On:
+				if(actualPlayDuration<maxPlayDuration){
+					if(actualPlayDuration == 0)
+						insertCD();
+					playCD();
+					return this;
+				}
+				else{
+					ejectCD();
+					return null;
+				}
 		}
 		return null;
 	}
