@@ -17,7 +17,7 @@ public abstract class HouseReportLayout {
 	 * 
 	 * @param house
 	 */
-	public void generateReport(House house){
+	public void generateReport(House house, int start, int end){
 
 	}
 

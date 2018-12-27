@@ -53,7 +53,7 @@ class ReportTest {
     @Test
     void generateConfigurationReport() {
         HouseConfigurationReport houseConfigurationReport= new HouseConfigurationReport();
-        houseConfigurationReport.generateConfigurationReportOnScreen(house);
+        houseConfigurationReport.generateConfigurationReportToCL(house);
     }
 
     @Test
@@ -80,8 +80,8 @@ class ReportTest {
 
         EventReport eventReport = new EventReport();
 
-        eventReport.generateReport(house);
-        eventReport.generateEventReportToFile(house);
+//        eventReport.generateReport(house,0,1);
+//        eventReport.generateEventReportToFile(house,0);
     }
 
     @Test
@@ -114,7 +114,7 @@ class ReportTest {
         Ferret ferret = new Ferret("fretka");
         ferret.moveToHouse(house);
         ferret.makeSound();
-        ActivityAndUsageReport activityAndUsageReport = new ActivityAndUsageReport();
-        activityAndUsageReport.generateReport(house);
+//        ActivityAndUsageReport activityAndUsageReport = new ActivityAndUsageReport();
+//        activityAndUsageReport.generateReport(house);
     }
 }

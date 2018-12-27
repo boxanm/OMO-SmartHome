@@ -9,6 +9,7 @@ import Organism.Organism;
 import Organism.Persons.Person;
 import SportsEquipment.SportEquipment;
 
+import java.io.PrintWriter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -23,11 +24,24 @@ public class ActivityAndUsageReport extends HouseReport {
 
 	}
 
-	@Override
-	public void generateReport(House house) {//TODO porovnavat primo INFO, ne string
+	public void generateReportToFile(House house, int start, int end){
 
-		ArrayList<Event> allEvents = house.getEventReporter().getAllEvents();
-		System.out.println("==================Activity and usage report==================");
+    }
+
+    public void generateReportToCL(House house, int start, int end){
+	    PrintWriter writer = new PrintWriter(System.out);
+	    generateReport(house,start,end,writer);
+    }
+
+	public void generateReport(House house, int start, int end, PrintWriter writer) {
+
+		List<Event> allEvents = house
+                .getEventReporter()
+                .getAllEvents()
+                .stream()
+                .filter(event -> event.getLapNumber() >= start && event.getLapNumber() < end)
+                .collect(Collectors.toList());
+		writer.println("==================Activity and usage report from lap "+start+" to " + end + "==================");
 		ArrayList<Info> usages = (ArrayList<Info>) allEvents
 				.stream()
 				.filter(Info.class::isInstance)
@@ -39,35 +53,35 @@ public class ActivityAndUsageReport extends HouseReport {
 				.collect(Collectors.toList());
 
 		if(usages.size() > 0){
-            System.out.println();
-            System.out.println("..................Usages..................");
+            writer.println();
+            writer.println("..................Usages..................");
 
             Organism source = (Organism) usages.get(0).getSource();
             Appliance targetAppliance = (Appliance) usages.get(0).getTarget();
             int counter = 0;
 
 
-            System.out.println("Person: " + source.toString());
+            writer.println("Person: " + source.toString());
             for (Info info:usages) {
                 if(info.getSource() != source) {
-                    System.out.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
+                    writer.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
                     targetAppliance = (Appliance) info.getTarget();
                     source = (Organism) info.getSource();
-                    System.out.println("Person: " + source.toString());
+                    writer.println("Person: " + source.toString());
                     counter = 0;
                 }
 
                 if(info.getTarget() != targetAppliance){
-                    System.out.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
+                    writer.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
                     targetAppliance = (Appliance) info.getTarget();
                     counter = 1;
                 }
                 else counter++;
             }
-            System.out.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
+            writer.println("---Used appliance: " + targetAppliance.toString() + " " + counter + " times");
 
 
-            System.out.println();
+            writer.println();
         }
 
 		ArrayList<Info> sportActivities = (ArrayList<Info>) allEvents
@@ -81,7 +95,7 @@ public class ActivityAndUsageReport extends HouseReport {
 				.collect(Collectors.toList());
 
         if(sportActivities.size() > 0){
-            System.out.println("..................Sport activities..................");
+            writer.println("..................Sport activities..................");
 
 
             Organism source = (Organism) sportActivities.get(0).getSource();
@@ -89,25 +103,25 @@ public class ActivityAndUsageReport extends HouseReport {
             int counter = 0;
 
 
-            System.out.println("Person: " + source.toString());
+            writer.println("Person: " + source.toString());
             for (Info info:sportActivities) {
                 if(info.getSource() != source) {
-                    System.out.println("---Used sport equipment: " + targetSport.toString() + " " + counter + " times");
+                    writer.println("---Used sport equipment: " + targetSport.toString() + " " + counter + " times");
                     targetSport = (SportEquipment) info.getTarget();
                     source = (Organism) info.getSource();
-                    System.out.println("Person: " + source.toString());
+                    writer.println("Person: " + source.toString());
                     counter = 0;
                 }
 
                 if(info.getTarget() != targetSport){
-                    System.out.println("---Used sport equipment: " + targetSport.toString() + " " + counter + " times");
+                    writer.println("---Used sport equipment: " + targetSport.toString() + " " + counter + " times");
                     targetSport = (SportEquipment) info.getTarget();
                     counter = 1;
                 }
                 else counter++;
             }
-            System.out.println("---Used appliance: " + targetSport.toString() + " " + counter + " times");
-            System.out.println();
+            writer.println("---Used appliance: " + targetSport.toString() + " " + counter + " times");
+            writer.println();
 
         }
 
@@ -122,33 +136,33 @@ public class ActivityAndUsageReport extends HouseReport {
 				.collect(Collectors.toList());
 
         if(animalActivities.size() > 0){
-            System.out.println("..................Animal activities..................");
+            writer.println("..................Animal activities..................");
             Organism source = (Organism) animalActivities.get(0).getSource();
             InfoType infoType = animalActivities.get(0).getType();
             int counter = 0;
 
 
-            System.out.println("Animal: " + source.toString());
+            writer.println("Animal: " + source.toString());
             for (Info info:animalActivities) {
                 if(info.getSource() != source) {
-                    System.out.println("---Did: " + infoType.toString() + " " + counter + " times");
+                    writer.println("---Did: " + infoType.toString() + " " + counter + " times");
                     infoType = info.getType();
                     source = (Organism) info.getSource();
-                    System.out.println("Animal: " + source.toString());
+                    writer.println("Animal: " + source.toString());
                     counter = 0;
                 }
 
                 if(info.getType() != infoType){
-                    System.out.println("---Did: " + infoType.toString() + " " + counter + " times");
+                    writer.println("---Did: " + infoType.toString() + " " + counter + " times");
                     infoType = info.getType();
                     counter = 1;
                 }
                 else counter++;
             }
-            System.out.println("---Did: " + infoType.toString() + " " + counter + " times");
+            writer.println("---Did: " + infoType.toString() + " " + counter + " times");
 
-            System.out.println();
-            System.out.println();
+            writer.println();
+            writer.println();
 
         }
 

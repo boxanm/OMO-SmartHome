@@ -52,7 +52,7 @@ class TVTest {
             consumptionReport.generateReport(house,0,i);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house);
+        eventReport.generateReportToCL(house,0,10);
 
     }
 }
