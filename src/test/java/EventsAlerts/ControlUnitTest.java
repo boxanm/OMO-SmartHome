@@ -37,8 +37,8 @@ class ControlUnitTest {
         fridge = new Fridge("fridge", "brand",obyvak, ConsumptionType.electricity,fridgeConsumption);
         dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        sensor = new ElectricitySensor(house,fridge);
-        fireSensor = new FireSensor(house,garaz);
+        sensor = new ElectricitySensor(house);
+        fireSensor = new FireSensor(house);
 
         controlUnit = house.getControlUnit();
 //        controlUnit.addAlertHandler(dad);

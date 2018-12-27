@@ -91,7 +91,7 @@ public abstract class Room implements EventTarget, Observable {
 	@Override
 	public void announce() {
 		for (Observer observer:observers) {
-			observer.update();
+			observer.update(this);
 		}
 	}
 

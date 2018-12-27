@@ -2,8 +2,10 @@ package Senzors;
 
 
 import Appliances.Appliance;
+import Appliances.ConsumptionType;
 import EventsAlerts.Consumption;
 import EventsAlerts.EventReporter;
+import EventsAlerts.Observable;
 import House.House;
 
 /**
@@ -13,18 +15,24 @@ import House.House;
  */
 public class ElectricitySensor implements Sensor, Meter {
 	private EventReporter eventReporter;
-	private Appliance appliance;
 
-
-	public ElectricitySensor(House house, Appliance appliance){
+	public ElectricitySensor(House house){
 		eventReporter = house.getEventReporter();
-		this.appliance = appliance;
-		appliance.attach(this);
+		for (Appliance appliance: house.getAppliances()
+			 ) {
+			if(appliance.getConsumptionType() == ConsumptionType.electricity)
+				appliance.attach(this);
+
+		}
 	}
 
 
-	public void update(){
-		newConsumption(new Consumption(appliance.getConsumptionType(),appliance.getConsumption(),appliance,appliance.getActualFloor(),appliance.getActualRoom(),this));
+	public void update(Observable observable){
+		if(observable instanceof Appliance){
+			newConsumption(new Consumption(ConsumptionType.electricity,((Appliance) observable).getConsumption(),
+					(Appliance) observable,((Appliance) observable).getActualFloor(),
+					((Appliance) observable).getActualRoom(),this));
+		}
 	}
 
 	@Override

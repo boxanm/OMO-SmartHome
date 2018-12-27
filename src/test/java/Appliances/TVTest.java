@@ -31,7 +31,7 @@ class TVTest {
         tv = new TV("televize", "brand",obyvak, ConsumptionType.electricity,tvConsumption);
         dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        sensor = new ElectricitySensor(house,tv);
+        sensor = new ElectricitySensor(house);
 
 
 

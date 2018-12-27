@@ -53,7 +53,7 @@ public class Outside implements Observable {
 
 	public void announce(){
 		for (Observer observer: observerList) {
-			observer.update();
+			observer.update(this);
 		}
 	}
 

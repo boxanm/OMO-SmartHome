@@ -13,28 +13,29 @@ public class FireSensor implements AlertGenerator, Sensor {
 
 	private EventReporter eventReporter;
 
-	private Room room;
-
-	public FireSensor(House house, Room room){
+	public FireSensor(House house){
 		eventReporter = house.getEventReporter();
-		this.room = room;
-		room.attach(this);
+		for (Room room: house.getRoomList()
+			 ) {
+			room.attach(this);
+
+		}
 	}
 
 
-	public void update(){
-		if(room.isOnFire())
-			newAlert();
+	public void update(Observable observable){
+		if(observable instanceof  Room && ((Room) observable).isOnFire())
+			newAlert(new Alert(AlertType.fire,this,null,null,null));
 	}
 
 	@Override
-	public void newAlert() {
-		eventReporter.updateFromAlertGenerator(new Alert(AlertType.fire,this,null,null,null));
+	public void newAlert(Alert alert) {
+		eventReporter.updateFromAlertGenerator(alert);
 	}
 
 
 	@Override
 	public String toString() {
-		return "FireSensor in " + room.toString();
+		return "FireSensor";
 	}
 }

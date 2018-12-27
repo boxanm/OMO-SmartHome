@@ -9,4 +9,5 @@ package Appliances;
 public enum ConsumptionType {
 	water,
 	electricity,
+	usage
 }

@@ -13,21 +13,21 @@ public class WindSensor implements AlertGenerator, Sensor {
 
 	EventReporter eventReporter;
 
-	private Outside outside;
 
 	public WindSensor(House house){
-		this.outside = house.getOutside();
+		house.getOutside().attach(this);
 		eventReporter = house.getEventReporter();
 	}
 
-	public void update(){
-		if(outside.getIsWind())
-			newAlert();
+	public void update(Observable observable){
+		if(observable instanceof Outside)
+			if(((Outside) observable).getIsWind())
+				newAlert(new Alert(AlertType.wind,this,null,null,null));
 	}
 
 	@Override
-	public void newAlert() {
-		eventReporter.updateFromAlertGenerator(new Alert(AlertType.wind,this,null,null,null));
+	public void newAlert(Alert alert) {
+		eventReporter.updateFromAlertGenerator(alert);
 	}
 
 	@Override

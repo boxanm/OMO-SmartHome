@@ -59,8 +59,8 @@ class HouseAlertTests {
 
         eventReporter.getControlUnit().addAlertHandler(blind);
 
-        fireSensorObyvak = new FireSensor(house,obyvak);
-        fireSensorGaraz = new FireSensor(house,garaz);
+        fireSensorObyvak = new FireSensor(house);
+        fireSensorGaraz = new FireSensor(house);
 
         eventReporter.getControlUnit().addAlertHandler(dad);
     }
@@ -82,7 +82,7 @@ class HouseAlertTests {
 
         obyvak.setOnFire();
         assertTrue(obyvak.isOnFire());
-        fireSensorObyvak.update();
+        fireSensorObyvak.update(obyvak);
         assertFalse(obyvak.isOnFire());
 
 

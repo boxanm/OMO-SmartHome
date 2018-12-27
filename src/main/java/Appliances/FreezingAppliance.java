@@ -32,12 +32,12 @@ public abstract class FreezingAppliance extends Appliance implements AlertGenera
 			food -= quantity;
 			newInfo(new Info(InfoType.eatFood,this,getActualFloor(),getActualRoom(),this));
 			if(food <= 0){
-				newAlert();
+				newAlert(new Alert(AlertType.outOfFood,this,getActualFloor(),getActualRoom(),null));
 				food = 0;
 				changeEmpty();
 			}
 		}else{
-			newAlert();
+			newAlert(new Alert(AlertType.outOfFood,this,getActualFloor(),getActualRoom(),null));
 		}
 	}
 
@@ -86,9 +86,9 @@ public abstract class FreezingAppliance extends Appliance implements AlertGenera
 	}
 
 	@Override
-	public void newAlert() {
+	public void newAlert(Alert alert) {
 		if(food <= 0)
-			eventReporter.updateFromAlertGenerator(new Alert(AlertType.outOfFood,this,getActualFloor(),getActualRoom(),null));
+			eventReporter.updateFromAlertGenerator(alert);
 
 	}
 }

@@ -32,7 +32,7 @@ class FridgeTest {
         fridge = new Fridge("fridge", "brand",obyvak, ConsumptionType.electricity,fridgeConsumption);
         dad = new Dad("Pavel");
         dad.moveToHouse(house);
-        sensor = new ElectricitySensor(house,fridge);
+        sensor = new ElectricitySensor(house);
 
 
 

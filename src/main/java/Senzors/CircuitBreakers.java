@@ -1,7 +1,9 @@
 package Senzors;
 
+import EventsAlerts.Alert;
 import EventsAlerts.AlertGenerator;
 import EventsAlerts.Event;
+import EventsAlerts.Observable;
 
 /**
  * @author Michal
@@ -16,9 +18,6 @@ public class CircuitBreakers implements Sensor, AlertGenerator {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 
 	public boolean isTriped(){
 		return false;
@@ -32,8 +31,14 @@ public class CircuitBreakers implements Sensor, AlertGenerator {
 		return null;
 	}
 
+
 	@Override
-	public void newAlert() {
+	public void newAlert(Alert alert) {
+
+	}
+
+	@Override
+	public void update(Observable observable) {
 
 	}
 }

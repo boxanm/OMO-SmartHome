@@ -1,7 +1,14 @@
 package Senzors;
 
 import EventsAlerts.*;
+import House.House;
 import House.Room;
+import Organism.Persons.Child;
+import Organism.Persons.Person;
+
+import java.util.ArrayList;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * @author Michal
@@ -11,31 +18,29 @@ import House.Room;
 public class BabySitter implements Sensor, AlertGenerator {
 	EventReporter eventReporter;
 
-	private Room room;
-
-	public BabySitter(){
-
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-
-	public void update(){
-
+	public BabySitter(House house){
+		eventReporter = house.getEventReporter();
+		for (Child child: house.getPersonList().stream()
+				.filter(Child.class::isInstance)
+				.map(Child.class::cast)
+				.collect(Collectors.toList())
+		) {
+			child.attach(this);
+		}
 
 	}
 
-	public Event newEvent(){
-		return null;
+	public void update(Observable observable){
+
+
 	}
 
 	@Override
-	public void newAlert() {
+	public void newAlert(Alert alert) {
 		eventReporter.updateFromObserver(new Alert(AlertType.babyCrying,this, null, null, null));
 	}
 	@Override
 	public String toString() {
-		return "Babysitter in " + room.toString();
+		return "Babysitter";
 	}
 }

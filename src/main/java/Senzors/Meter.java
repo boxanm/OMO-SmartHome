@@ -12,7 +12,7 @@ import EventsAlerts.Consumption;
  */
 public interface Meter {
 
-	public void newConsumption(Consumption consumption);
+	void newConsumption(Consumption consumption);
 
 
 }

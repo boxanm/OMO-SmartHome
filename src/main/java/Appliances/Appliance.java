@@ -97,7 +97,11 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		}
 	}
 
-	public void setComsuption(double [] consumption){
+    public int getWearOfDevice() {
+        return wearOfDevice;
+    }
+
+    public void setComsuption(double [] consumption){
 		if(consumption.length == 3){
 			this.consumption = consumption;
 		} else{
@@ -212,7 +216,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 
 	public void announce(){
 		for (Observer observer:observersList) {
-			observer.update();
+			observer.update(this);
 		}
 	}
 

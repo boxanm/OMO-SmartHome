@@ -68,7 +68,7 @@ class ReportTest {
         dad.useCar(new Car("volvo",garaz));
         dog.makeSound();
 
-        FireSensor fireSensor = new FireSensor(house,obyvak);
+        FireSensor fireSensor = new FireSensor(house);
         obyvak.attach(fireSensor);
         obyvak.setOnFire();
 
