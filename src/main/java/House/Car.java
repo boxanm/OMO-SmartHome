@@ -3,8 +3,7 @@ package House;
 import EventsAlerts.*;
 import Organism.Persons.Adults;
 import Organism.Persons.Person;
-import Organism.Usable;
-import Reports.EventReport;
+import Organism.Persons.Usable;
 
 /**
  * @author Michal

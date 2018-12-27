@@ -34,11 +34,11 @@ public class HabitableRoom extends Room {
 	public void deleteAppliance(Appliance appliance){
 		applianceList.remove(appliance);
 	}
-	public void addSenzor(Sensor sensor){
+	public void addSensor(Sensor sensor){
 		if(! sensorList.contains(sensor))
 			sensorList.add(sensor);
 	}
-	public void removeSenzor(Sensor sensor){
+	public void removeSensor(Sensor sensor){
 		sensorList.remove(sensor);
 	}
 

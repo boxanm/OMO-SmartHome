@@ -14,6 +14,11 @@ import java.util.stream.Collectors;
 public class BabySitter implements Sensor, AlertGenerator {
 	EventReporter eventReporter;
 
+	/**
+	 * Creates new babySitter
+	 * One babysitter serves all children located in house
+	 * @param house House with location of observed children
+	 */
 	public BabySitter(House house){
 		eventReporter = house.getEventReporter();
 		for (Child child: house.getPersonList().stream()
@@ -26,6 +31,10 @@ public class BabySitter implements Sensor, AlertGenerator {
 
 	}
 
+	/**
+	 * creates new Alert about child state
+	 * @param observable child which state has changed
+	 */
 	public void update(Observable observable){
 	    if(observable instanceof Child && ((Child) observable).isSad())
 	        newAlert(new Alert(AlertType.babyCrying,this, null, null, null));

@@ -5,7 +5,7 @@ import EventsAlerts.Info;
 import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * Rozhraní pro všechny, které umožòují práci s CD.
@@ -36,6 +36,15 @@ public abstract class CDplayer extends Appliance{
 
 
 	@Override
+	public void changeWearOfDevice() {
+		wearOfDevice -= 5;
+		if(wearOfDevice < 0){
+			wearOfDevice = 0;
+			breakDown();
+		}
+		announce();
+	}
+	@Override
 	public Usable use(Person person) {
 		switch (getApplianceState()){
 			case Off:
@@ -55,6 +64,7 @@ public abstract class CDplayer extends Appliance{
 				}
 				else{
 					ejectCD();
+					changeWearOfDevice();
 					return null;
 				}
 		}

@@ -7,7 +7,7 @@ import House.Floor;
 import House.Room;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -77,6 +77,8 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		}
 		return false;
 	}
+
+	public abstract void changeWearOfDevice();
 
 	@Override
 	public void newInfo(Info info) {

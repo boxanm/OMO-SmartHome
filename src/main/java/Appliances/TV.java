@@ -1,11 +1,10 @@
 package Appliances;
 
-import Appliances.ApplianceState.State;
 import EventsAlerts.Info;
 import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * @author Michal
@@ -26,6 +25,15 @@ public class TV extends Appliance {
 	}
 
 
+	@Override
+	public void changeWearOfDevice() {
+		wearOfDevice -= 2;
+		if(wearOfDevice < 0){
+			wearOfDevice = 0;
+			breakDown();
+		}
+		announce();
+	}
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;

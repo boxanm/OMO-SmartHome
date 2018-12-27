@@ -29,9 +29,10 @@ public class Mom extends Person implements Adults {
 
 
 
+
 	/**
-	 * 
-	 * @param child
+	 * tries to cheerUp child, the probability of success is high
+	 * @param child which is sad
 	 */
 	public void cheerUp(Child child){
 		newInfo(new Info(InfoType.cheeringUpChild, this, getFloor(), actualRoom, child));
@@ -39,8 +40,8 @@ public class Mom extends Person implements Adults {
 	}
 
 	/**
-	 * 
-	 * @param room
+	 *
+	 * @param room which is on fire
 	 */
 	public void extinguish(Room room){
 		if(actualRoom == room){
@@ -52,8 +53,8 @@ public class Mom extends Person implements Adults {
 	}
 
 	/**
-	 * 
-	 * @param car
+	 * inform about car usage and go shopping
+	 * @param car must is present in nonhabitable room
 	 */
 	public void useCar(Car car){
 		usingTarget = car.use(this);
@@ -66,8 +67,8 @@ public class Mom extends Person implements Adults {
 
 
 	/**
-	 * 
-	 * @param alert
+	 * decides, what to do with parsed alert
+	 * @param alert dad handles only alerts of certain types
 	 */
 	public boolean handleAlert(Alert alert){
 		if(! isBusy){

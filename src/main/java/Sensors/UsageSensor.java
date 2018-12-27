@@ -15,6 +15,10 @@ import House.House;
 public class UsageSensor implements Sensor, AlertGenerator, Meter {
 	private EventReporter eventReporter;
 
+	/**
+	 * one UsageSensor serves all appliances in the house
+	 * @param house all appliances located in house are attached to this sensor
+	 */
 	public UsageSensor(House house){
 		eventReporter = house.getEventReporter();
 		for (Appliance appliance: house.getAppliances()) {
@@ -23,6 +27,11 @@ public class UsageSensor implements Sensor, AlertGenerator, Meter {
 		}
 	}
 
+	/**
+	 * Either creates new Alert about damaged Appliance,
+	 * or informs about it's usage state
+	 * @param observable Appliance informing about it's usage state
+	 */
 	public void update(Observable observable){
 		if(observable instanceof Appliance){
 			if(((Appliance) observable).isBroken())

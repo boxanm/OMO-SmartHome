@@ -7,7 +7,7 @@ import EventsAlerts.Info;
 import EventsAlerts.InfoType;
 import House.HabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * Použivá návrhový vzor State machine
@@ -43,7 +43,18 @@ public class WashingMachine extends Appliance {
 
     }
 
-    public void setWashingMachineState(IWashingMachineState newWashingMachineState){
+	@Override
+	public void changeWearOfDevice() {
+		wearOfDevice -= 7;
+		if(wearOfDevice < 0){
+			wearOfDevice = 0;
+			breakDown();
+		}
+		announce();
+
+	}
+
+	public void setWashingMachineState(IWashingMachineState newWashingMachineState){
 		washingMachineState = newWashingMachineState;
 	}
 
@@ -96,6 +107,7 @@ public class WashingMachine extends Appliance {
 				else{
 					getTakeOutLaundry();
 					getCycleFinish();
+					changeWearOfDevice();
 					return null;
 				}
 		}

@@ -1,13 +1,6 @@
 package Appliances;
 
-import Appliances.ApplianceState.ApplianceState;
-import Appliances.ApplianceState.State;
-import EventsAlerts.*;
 import House.HabitableRoom;
-import Organism.Persons.Person;
-import Organism.Usable;
-
-import java.util.Calendar;
 
 /**
  * @author Michal

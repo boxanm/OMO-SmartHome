@@ -3,7 +3,7 @@ package SportsEquipment;
 
 import House.NonHabitableRoom;
 import Organism.Persons.Person;
-import Organism.Usable;
+import Organism.Persons.Usable;
 
 /**
  * @author Michal
@@ -14,10 +14,20 @@ public class Bicycle extends SportEquipment {
 
 	private final int maxRideDuration = 3;
 	private int actualRideDuration = 0;
+	/**
+	 * Creates new bicycle
+	 * @param brand - bicycle brand
+	 * @param location - NonHabitable room of bicycle location
+	 * */
 	public Bicycle(String brand, NonHabitableRoom location) {
 		super(brand,location);
 	}
 
+	/**
+	 * Usage of bicycle
+	 * @param person - who is using it
+	 * @return return this if still being used, null otherwise
+	 * */
 	@Override
 	public Usable use(Person person) {
 		isBusy = true;
