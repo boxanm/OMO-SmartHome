@@ -1,0 +1,49 @@
+================House configuration report================
+House: house1
+-Floor: 1. patro
+--Room: Chodba
+---Window 1: Blind
+---Window 2: Blind
+---Appliance: Freezer Candy
+--Room: Koupelna
+---Window 1: Blind
+---Appliance: WashingMachine Bosch
+--Room: Kuchyn
+---Window 1: Blind
+---Window 2: Blind
+---Window 3: Blind
+---Appliance: Fridge Whirpool
+--Room: Detsky pokoj
+---Window 1: Blind
+---Window 2: Blind
+---Window 3: Blind
+---Window 4: Blind
+---Appliance: PlayStation Sony
+---Appliance: TV Samsung
+--Room: Loznice
+---Window 1: Blind
+---Window 2: Blind
+---Window 3: Blind
+---Window 4: Blind
+---Appliance: HiFi Tower Sencor
+---Appliance: Xbox Microsoft
+--Room: Obyvak
+---Window 1: Blind
+---Window 2: Blind
+---Window 3: Blind
+---Appliance: PC Zalman
+--Room: garaz
+--Room: technicka
+---Sport Equipment: Ski of brand Atomic
+---Sport Equipment: Ski of brand Head
+---Sport Equipment: Bicycle of brand Apache
+---Sport Equipment: Bicycle of brand Merida
+...........................................................
+Persons: 
+-Mom Eva
+-Child Adela
+-Child Jan
+-Dad Adam
+Animals: 
+-Cat
+-Dog

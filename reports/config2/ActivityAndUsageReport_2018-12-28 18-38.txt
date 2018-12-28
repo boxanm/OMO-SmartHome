@@ -1,0 +1,15 @@
+==================Activity and usage report from lap 5 to 10==================
+
+..................Usages..................
+Person: Child Adela
+---Used appliance: PlayStation Sony 1 times
+Person: Child Jan
+---Used appliance: PC Zalman 1 times
+
+..................Animal activities..................
+Animal: Cat
+---Did: animalSound 5 times
+Animal: Dog
+---Did: animalSound 5 times
+
+

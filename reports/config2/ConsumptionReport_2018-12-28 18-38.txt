@@ -1,0 +1,18 @@
+==================Consumption report from lap 5 to 10==================
+Appliance: Freezer Candy
+---Used 5.0 kW of electricity. Total price: 22.5 Kč
+Appliance: Fridge Whirpool
+---Used 4.0 kW of electricity. Total price: 18.0 Kč
+Appliance: HiFi Tower Sencor
+---Used 4.5000000000000004E-4 kW of electricity. Total price: 0.0020250000000000003 Kč
+Appliance: TV Samsung
+---Used 0.8800000000000001 kW of electricity. Total price: 3.9600000000000004 Kč
+Appliance: WashingMachine Bosch
+---Used 6.5 kW of electricity. Total price: 29.25 Kč
+Appliance: Xbox Microsoft
+---Used 4.2 kW of electricity. Total price: 18.900000000000002 Kč
+
+Total water consumption:
+---Used 0.0 m^3 of water. Total price: 0.0 Kč
+Total electricity consumption:
+---Used 16.380450000000003 kW of electricity. Total price: 73.71202500000001 Kč

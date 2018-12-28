@@ -1,0 +1,32 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: workingOnPC | PC Zalman => PC Zalman
+-Info: applianceUsage | Child Adela => PlayStation Sony
+-Info: applianceUsage | Child Jan => PC Zalman
+-Info: cheeringUpChild | Dad Adam => Child Adela
+-Info: turningOnAppliance | PlayStation Sony => PlayStation Sony
+-Info: turningOnAppliance | PC Zalman => PC Zalman
+-Info: ejectingCD | Xbox Microsoft => Xbox Microsoft
+-Info: playingCD | PlayStation Sony => PlayStation Sony
+-Info: turningIdleAppliance | TV Samsung => TV Samsung
+-Info: insertingCD | PlayStation Sony => PlayStation Sony
+-Info: insertingCD | PC Zalman => PC Zalman
+
+..................Alerts..................
+-Alert: babyCrying | Babysitter => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+
+
