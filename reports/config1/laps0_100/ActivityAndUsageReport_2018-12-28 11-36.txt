@@ -1,0 +1,54 @@
+==================Activity and usage report from lap 0 to 100==================
+
+..................Usages..................
+Person: Child Anna
+---Used appliance: Fridge fridge1 1 times
+---Used appliance: TV tv1 1 times
+---Used appliance: WashingMachine washing machine1 1 times
+Person: Child Jack
+---Used appliance: Freezer freezer1 1 times
+---Used appliance: Fridge fridge2 1 times
+---Used appliance: HiFi Tower hifi1 1 times
+---Used appliance: PC pc1 2 times
+---Used appliance: PC pc2 1 times
+---Used appliance: PlayStation playstation2 2 times
+---Used appliance: WashingMachine washing machine2 1 times
+---Used appliance: Xbox xbox1 1 times
+---Used appliance: Xbox xbox2 1 times
+Person: Dad Matej
+---Used appliance: Fridge fridge2 1 times
+---Used appliance: PC pc4 1 times
+---Used appliance: PlayStation playstation1 1 times
+---Used appliance: TV tv1 2 times
+---Used appliance: TV tv2 1 times
+---Used appliance: WashingMachine washing machine2 1 times
+Person: Dad Michal
+---Used appliance: Freezer freezer1 2 times
+---Used appliance: Fridge fridge2 2 times
+---Used appliance: HiFi Tower hifi1 1 times
+---Used appliance: HiFi Tower hifi2 1 times
+---Used appliance: PC pc3 2 times
+---Used appliance: PC pc4 1 times
+---Used appliance: PC pc5 1 times
+---Used appliance: TV tv2 2 times
+---Used appliance: WashingMachine washing machine2 1 times
+---Used appliance: Xbox xbox1 2 times
+Person: Mom Elizabeth
+---Used appliance: Freezer freezer1 1 times
+---Used appliance: Freezer freezer2 1 times
+---Used appliance: Fridge fridge2 1 times
+---Used appliance: PC pc4 1 times
+---Used appliance: TV tv2 1 times
+---Used appliance: WashingMachine washing machine2 1 times
+Person: Mom Melanda
+---Used appliance: WashingMachine washing machine2 1 times
+
+..................Animal activities..................
+Animal: Cat
+---Did: animalSound 100 times
+Animal: Dog
+---Did: animalSound 100 times
+Animal: Ferret
+---Did: animalSound 100 times
+
+

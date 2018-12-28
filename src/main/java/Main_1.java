@@ -18,14 +18,15 @@ public class Main_1 {
         EventReport eventReport = new EventReport();
         ConsumptionReport consumptionReport = new ConsumptionReport();
 
-        houseConfigurationReport.generateConfigurationReportToCL(house1);
+//        houseConfigurationReport.generateConfigurationReportToCL(house1);
+        houseConfigurationReport.generateConfigurationReportToFile(house1);
         for (int i = 0; i < lapNum; i++){
             world.newLap();
         }
 
-        eventReport.generateReportToCL(house1,0,lapNum);
-        consumptionReport.generateReportToCL(house1,0,lapNum);
-        activityAndUsageReport.generateReportToCL(house1,0,lapNum);
+        eventReport.generateReportToFile(house1,5,10);
+        consumptionReport.generateReportToFile(house1,5,10);
+        activityAndUsageReport.generateReportToFile(house1,5,10);
 
 
 

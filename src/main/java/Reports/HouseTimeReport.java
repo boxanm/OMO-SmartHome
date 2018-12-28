@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
  * files are generated based on name
  */
 public abstract class HouseTimeReport extends HouseReport {
-    private String name;
+    protected String name;
     public abstract void generateReport(House house, int start, int end, PrintWriter writer);
 
 
@@ -23,7 +23,7 @@ public abstract class HouseTimeReport extends HouseReport {
         LocalDateTime time = LocalDateTime.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm");
 
-        String timeLog = "src/main/java/Reports/" + name +"_" + time.format(dtf) + ".txt";
+        String timeLog = path + name +"_" + time.format(dtf) + ".txt";
         try {
             PrintWriter writer = new PrintWriter(timeLog, "UTF-8");
             generateReport(house,start,end,writer);

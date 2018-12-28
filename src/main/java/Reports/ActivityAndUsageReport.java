@@ -24,13 +24,13 @@ import java.util.stream.Collectors;
  * @created 16-pro-2018 9:02:12
  */
 public class ActivityAndUsageReport extends HouseTimeReport {
-    final static String name = "ActivityAndUsageReport";
+    final static String fileName = "ActivityAndUsageReport";
 
     /**
      * class serving as ActivityAndUsageReport generator
      */
 	public ActivityAndUsageReport(){
-
+        name = fileName;
 	}
 
 	public void generateReport(House house, int start, int end, PrintWriter writer) {

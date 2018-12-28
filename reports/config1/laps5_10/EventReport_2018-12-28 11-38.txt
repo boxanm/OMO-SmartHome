@@ -1,0 +1,57 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: cheeringUpChild | Dad Michal => Child Anna
+-Info: cheeringUpChild | Mom Melanda => Child Anna
+-Info: insertingCD | PC pc2 => PC pc2
+-Info: applianceUsage | Mom Elizabeth => PC pc5
+-Info: applianceUsage | Mom Melanda => TV tv1
+-Info: applianceUsage | Mom Elizabeth => Freezer freezer1
+-Info: applianceUsage | Dad Matej => Fridge fridge1
+-Info: applianceUsage | Dad Michal => Fridge fridge1
+-Info: applianceUsage | Child Anna => Fridge fridge1
+-Info: applianceUsage | Child Anna => PC pc2
+-Info: applianceUsage | Child Jack => PC pc5
+-Info: applianceUsage | Mom Elizabeth => HiFi Tower hifi3
+-Info: applianceUsage | Dad Matej => PC pc4
+-Info: applianceUsage | Dad Michal => PC pc3
+-Info: applianceUsage | Child Jack => HiFi Tower hifi1
+-Info: ejectingCD | PC pc5 => PC pc5
+-Info: ejectingCD | PC pc5 => PC pc5
+-Info: ejectingCD | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: ejectingCD | PC pc3 => PC pc3
+-Info: ejectingCD | PC pc1 => PC pc1
+-Info: ejectingCD | PC pc5 => PC pc5
+-Info: ejectingCD | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: ejectingCD | PC pc3 => PC pc3
+-Info: ejectingCD | HiFi Tower hifi1 => HiFi Tower hifi1
+-Info: turningOnAppliance | TV tv1 => TV tv1
+-Info: turningOnAppliance | PC pc2 => PC pc2
+-Info: turningOnAppliance | PC pc4 => PC pc4
+-Info: eatFood | Freezer freezer1 => Freezer freezer1
+-Info: eatFood | Fridge fridge1 => Fridge fridge1
+-Info: eatFood | Fridge fridge1 => Fridge fridge1
+-Info: eatFood | Fridge fridge1 => Fridge fridge1
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: watchingTV | Mom Melanda => TV tv1
+
+..................Alerts..................
+-Alert: babyCrying | Babysitter => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+
+
