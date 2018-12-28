@@ -62,6 +62,9 @@ class ChildTest {
     void nextAction() {
     }
 
+    /**
+     *
+     */
     @Test
     void isSad() {
     }
