@@ -1,0 +1,16 @@
+
+Appliances
+Appliances.ApplianceState
+Appliances.Creators
+Appliances.Manual
+Appliances.Strategy
+Appliances.WashingMachine
+EventsAlerts
+House
+LapsTime
+Organism
+Organism.Animals
+Organism.Persons
+Reports
+Sensors
+SportsEquipment
