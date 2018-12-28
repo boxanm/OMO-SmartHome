@@ -1,69 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27e78ec4-823c-42f0-aace-5d57ad4adca1" name="Default Changelist" comment="coding...">
+    <list default="true" id="27e78ec4-823c-42f0-aace-5d57ad4adca1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Appliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Appliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/ApplianceState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/ApplianceState/ApplianceState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Manual/Manual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/Strategy/Strategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Appliances/TV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appliances/TV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EventsAlerts/EventReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EventsAlerts/EventReporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Blind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Blind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/NonHabitableRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Outside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Outside.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/House/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/House/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Animals/Ferret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Animals/Ferret.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Persons/Dad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Organism/Persons/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Appliances/HifiTowerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Appliances/HifiTowerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Appliances/PCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Appliances/PCTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Appliances/PlayStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Appliances/PlayStationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Appliances/XboxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Appliances/XboxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/House/HouseAlertTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/House/HouseAlertTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Organism/Persons/ChildTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Organism/Persons/ChildTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Organism/Persons/DadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/Appliance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/Appliance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/ApplianceState/ApplianceState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/ApplianceState/ApplianceState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/CDplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/CDplayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/FreezingAppliance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/FreezingAppliance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/Fridge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/Fridge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/HifiTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/HifiTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/Manual/Manual.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/Manual/Manual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/PC$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/PC$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Appliances/PC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appliances/PC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EventsAlerts/EventReporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EventsAlerts/EventReporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Blind.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Blind.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Floor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Floor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/NonHabitableRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/NonHabitableRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/House/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/House/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Animals/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Animals/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Animals/Ferret.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Animals/Ferret.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Organism.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Organism.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Persons/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Persons/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Persons/Dad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Persons/Dad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Persons/Mom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Persons/Mom$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Persons/Mom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Persons/Mom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Persons/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Organism/Persons/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Organism/Usable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/Bicycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/Bicycle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/Ski.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/Ski.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SportsEquipment/SportEquipment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Appliances/HifiTowerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Appliances/HifiTowerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Appliances/PCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Appliances/PCTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Appliances/PlayStationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Appliances/PlayStationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Appliances/XboxTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Appliances/XboxTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/House/HouseAlertTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/House/HouseAlertTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Organism/OrganismTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Organism/OrganismTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Organism/Persons/ChildTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Organism/Persons/ChildTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Organism/Persons/DadTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Organism/Persons/DadTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -136,26 +75,26 @@
         <counts>
           <entry key="class" value="3" />
           <entry key="java" value="834" />
-          <entry key="txt" value="17" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="JAVA" value="834" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="10484" />
-          <entry key="txt" value="103" />
+          <entry key="txt" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="10484" />
-          <entry key="PLAIN_TEXT" value="103" />
+          <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -185,8 +124,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Organism/Persons/ChildTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
+            <state relative-caret-position="320">
+              <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,50 +164,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Organism/OrganismTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/House/HouseAlertTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="592">
               <caret line="88" column="2" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/House/Outside.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-              <folding>
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sensors/FireSensor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Organism/Animals/DogTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -317,6 +216,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -621,7 +521,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545989727099" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545989903457" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/Organism" />
@@ -629,7 +529,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -952,7 +852,7 @@
       <workItem from="1545901470180" duration="84000" />
       <workItem from="1545901587977" duration="202000" />
       <workItem from="1545909391430" duration="19182000" />
-      <workItem from="1545934775066" duration="8898000" />
+      <workItem from="1545934775066" duration="9085000" />
     </task>
     <task id="LOCAL-00001" summary="add strategy">
       <created>1545780065517</created>
@@ -1003,19 +903,17 @@
       <option name="project" value="LOCAL" />
       <updated>1545935518269</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="coding...">
+      <created>1545989820213</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545989820213</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrganismTest_changeRoom - 2018.12.28 at 10h 25m 14s.xml">
-      <configuration name="OrganismTest.changeRoom" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrganismTest_changeRoom - 2018.12.28 at 10h 25m 17s.xml">
-      <configuration name="OrganismTest.changeRoom" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_omo-semestral-work - 2018.12.28 at 10h 26m 12s.xml">
-      <configuration name="All in omo-semestral-work" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HouseAlertTests_fireSensorTest - 2018.12.28 at 10h 26m 29s.xml">
       <configuration name="HouseAlertTests.fireSensorTest" configurationId="JUnit" />
     </history-entry>
@@ -1037,9 +935,18 @@
     <history-entry file="ChildTest_hangOn - 2018.12.28 at 10h 34m 17s.xml">
       <configuration name="ChildTest.hangOn" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_omo-semestral-work - 2018.12.28 at 10h 35m 31s.xml">
+      <configuration name="All in omo-semestral-work" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrganismTest_changeRoom - 2018.12.28 at 10h 35m 40s.xml">
+      <configuration name="OrganismTest.changeRoom" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChildTest_hangOn - 2018.12.28 at 10h 35m 40s.xml">
+      <configuration name="ChildTest.hangOn" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111675000" />
+    <option name="totallyTimeSpent" value="111862000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1055,7 +962,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.28784648" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.28784648" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -1065,7 +972,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3286334" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49946696" visible="true" weight="0.23210412" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49946696" visible="true" weight="0.23210412" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1104,41 +1011,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="coding..." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/AlertGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/Alert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/ConsuptionGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/ControlUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/Consumption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EventsAlerts/AlertType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1540,10 +1412,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/null_2018-12-28 09-55.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/null_2018-12-28 10-21.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseConfigurationReport_2018-12-28 10-30.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseConfigurationReport_2018-12-28 10-02.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/null_2018-12-28 10-30.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Organism/Persons/ChildTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
+        <state relative-caret-position="320">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
