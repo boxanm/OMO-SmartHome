@@ -1,0 +1,32 @@
+==================Consumption report from lap 5 to 10==================
+Appliance: Freezer freezer1
+---Used 15.0 kW of electricity. Total price: 67.5 Kč
+Appliance: Freezer freezer2
+---Used 15.0 kW of electricity. Total price: 67.5 Kč
+Appliance: Fridge fridge1
+---Used 25.0 kW of electricity. Total price: 112.5 Kč
+Appliance: Fridge fridge2
+---Used 25.0 kW of electricity. Total price: 112.5 Kč
+Appliance: HiFi Tower hifi1
+---Used 4.2 kW of electricity. Total price: 18.900000000000002 Kč
+Appliance: HiFi Tower hifi2
+---Used 0.025 kW of electricity. Total price: 0.1125 Kč
+Appliance: HiFi Tower hifi3
+---Used 4.9 kW of electricity. Total price: 22.05 Kč
+Appliance: TV tv1
+---Used 4.005 kW of electricity. Total price: 18.0225 Kč
+Appliance: TV tv2
+---Used 0.025 kW of electricity. Total price: 0.1125 Kč
+Appliance: WashingMachine washing machine1
+---Used 0.2 m^3 of water. Total price: 15.0 Kč
+Appliance: WashingMachine washing machine2
+---Used 0.2 m^3 of water. Total price: 15.0 Kč
+Appliance: Xbox xbox1
+---Used 0.005 kW of electricity. Total price: 0.0225 Kč
+Appliance: Xbox xbox2
+---Used 0.005 kW of electricity. Total price: 0.0225 Kč
+
+Total water consumption:
+---Used 0.225 m^3 of water. Total price: 16.875 Kč
+Total electricity consumption:
+---Used 93.33500000000001 kW of electricity. Total price: 420.00750000000005 Kč

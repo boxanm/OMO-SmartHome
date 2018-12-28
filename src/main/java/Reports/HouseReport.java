@@ -9,6 +9,8 @@ package Reports;
  * @created 16-pro-2018 9:02:12
  */
 public abstract class HouseReport {
+	protected String path = "reports/config1/";
+
 
 	public HouseReport(){
 

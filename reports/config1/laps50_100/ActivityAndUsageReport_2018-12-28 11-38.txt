@@ -1,0 +1,27 @@
+==================Activity and usage report from lap 50 to 100==================
+
+..................Usages..................
+Person: Child Anna
+---Used appliance: HiFi Tower hifi3 1 times
+---Used appliance: TV tv1 1 times
+---Used appliance: WashingMachine washing machine2 1 times
+---Used appliance: Xbox xbox2 1 times
+Person: Dad Matej
+---Used appliance: Fridge fridge1 2 times
+---Used appliance: HiFi Tower hifi3 1 times
+---Used appliance: PC pc4 1 times
+---Used appliance: PlayStation playstation1 2 times
+---Used appliance: TV tv1 2 times
+---Used appliance: TV tv2 2 times
+---Used appliance: WashingMachine washing machine1 1 times
+---Used appliance: Xbox xbox2 1 times
+
+..................Animal activities..................
+Animal: Cat
+---Did: animalSound 50 times
+Animal: Dog
+---Did: animalSound 50 times
+Animal: Ferret
+---Did: animalSound 50 times
+
+

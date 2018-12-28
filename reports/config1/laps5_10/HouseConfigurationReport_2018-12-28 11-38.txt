@@ -1,0 +1,66 @@
+================House configuration report================
+House: house1
+-Floor: basement
+--Room: garage1
+--Room: garage2
+--Room: gym
+---Window 1: Blind
+---Window 2: Blind
+---Sport Equipment: Bicycle of brand Merida
+---Sport Equipment: Bicycle of brand Apache
+---Sport Equipment: Ski of brand Atomic
+---Sport Equipment: Ski of brand Fischer
+-Floor: floor1
+--Room: living room
+---Window 1: Blind
+---Window 2: Blind
+---Window 3: Blind
+---Appliance: TV tv1
+---Appliance: PC pc1
+---Appliance: Xbox xbox1
+---Appliance: PlayStation playstation1
+--Room: kitchen
+---Window 1: Blind
+---Window 2: Blind
+---Appliance: Fridge fridge1
+---Appliance: Fridge fridge2
+---Appliance: Freezer freezer1
+---Appliance: WashingMachine washing machine2
+--Room: bathroom
+---Window 1: Blind
+---Appliance: Freezer freezer2
+---Appliance: HiFi Tower hifi3
+---Appliance: WashingMachine washing machine1
+-Floor: floor2
+--Room: bedroom1
+---Window 1: Blind
+---Window 2: Blind
+---Appliance: TV tv2
+---Appliance: PC pc2
+--Room: bedroom2
+---Window 1: Blind
+---Window 2: Blind
+---Appliance: PC pc3
+---Appliance: HiFi Tower hifi1
+--Room: bedroom3
+---Window 1: Blind
+---Window 2: Blind
+---Appliance: PC pc4
+---Appliance: Xbox xbox2
+---Appliance: HiFi Tower hifi2
+--Room: bedroom4
+---Window 1: Blind
+---Appliance: PC pc5
+---Appliance: PlayStation playstation2
+...........................................................
+Persons: 
+-Mom Elizabeth
+-Child Anna
+-Dad Matej
+-Mom Melanda
+-Dad Michal
+-Child Jack
+Animals: 
+-Dog
+-Ferret
+-Cat

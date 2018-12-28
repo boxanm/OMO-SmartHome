@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
  * @created 16-pro-2018 9:02:12
  */
 public class ConsumptionReport extends HouseTimeReport {
-	final static String name = "ConsumptionReport";
+	final static String filename = "ConsumptionReport";
 
 	private static final double electricityPrice = 4.5;
 	private static final double waterPrice = 75;
@@ -31,6 +31,7 @@ public class ConsumptionReport extends HouseTimeReport {
 	 * class serving as Consumption generator
 	 */
 	public ConsumptionReport() {
+		name = filename;
 	}
 
 	/**

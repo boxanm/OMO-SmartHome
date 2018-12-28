@@ -27,12 +27,14 @@ import static java.util.stream.Collectors.partitioningBy;
  * @created 16-pro-2018 9:02:12
  */
 public class EventReport extends HouseTimeReport {
-	final static String name = "EventReport";
+	final static String fileName = "EventReport";
 
 	/**
 	 * class serving as Event generator
 	 */
-	public EventReport(){	}
+	public EventReport(){
+		name = fileName;
+	}
 
 
 	public void generateReport(House house, int start, int end, PrintWriter writer){
