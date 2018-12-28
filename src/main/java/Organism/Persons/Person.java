@@ -72,6 +72,7 @@ public abstract class Person extends Organism {
 	 */
 	public void callFireman(Room room){
 		newInfo(new Info(InfoType.callingFireman, this, getFloor(),actualRoom, room));
+		room.extinguishFire();
 	}
 
 	/**

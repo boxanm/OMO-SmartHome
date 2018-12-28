@@ -30,16 +30,35 @@ public class NonHabitableRoom extends Room {
 		super.finalize();
 	}
 
+	/**
+	 * Add sports equipment in the room
+	 * @param sportEquipment
+	 */
 	public void addSportEquipment(SportEquipment sportEquipment){
 		if(! sportEquipmentList.contains(sportEquipment))
 			sportEquipmentList.add(sportEquipment);
 	}
+
+	/**
+	 * Remove sports equipment in the room
+	 * @param sportEquipment
+	 */
 	public void deleteSportEquipment(SportEquipment sportEquipment){
 		sportEquipmentList.remove(sportEquipment);
 	}
+
+	/**
+	 * Add car in the room
+	 * @param car
+	 */
 	public void addCar(Car car){
 		this.car = car;
 	}
+
+	/**
+	 * Remove car in the room
+	 * @param car
+	 */
 	public void deleteCar(Car car){
 		this.car = null;
 	}

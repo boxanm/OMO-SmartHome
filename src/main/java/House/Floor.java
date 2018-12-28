@@ -40,6 +40,10 @@ public class Floor {
 
 	}
 
+	/**
+	 * Add room on the floor
+	 * @param room
+	 */
 	public void addRoom(Room room) {
 		if(! roomList.contains(room))
 			roomList.add(room);

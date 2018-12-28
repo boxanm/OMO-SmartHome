@@ -36,7 +36,7 @@ public class TV extends Appliance {
 	}
 	@Override
 	public Usable use(Person person) {
-		isBusy = true;
+		setBusy(true);
 
 		switch (getApplianceState()){
 			case Off:
@@ -54,7 +54,7 @@ public class TV extends Appliance {
 				}
 				else{
 					actualWatchDuration = 0;
-					isBusy = false;
+					setBusy(false);
 					turnIdle();
 					return null;
 				}

@@ -46,12 +46,6 @@ class OrganismTest {
         assertEquals(organism.m_House,newHouse);
     }
 
-    @Test
-    void changeRoom() {
-        assertEquals(organism.actualRoom,obyvak);
-        organism.changeRoom(garaz);
-        assertEquals(organism.actualRoom,garaz);
-    }
 
     @Test
     void setOnFire() {

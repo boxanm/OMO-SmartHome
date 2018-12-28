@@ -46,10 +46,10 @@ class XboxTest {
         for (int i = 0; i < 6; i++){
             xbox.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i, printWriter);
+            consumptionReport.generateReportToCL(house,0,i);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house, 0, 2, printWriter);
+        eventReport.generateReportToCL(house, 0, 2);
     }
 
 }

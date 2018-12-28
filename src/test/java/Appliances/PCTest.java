@@ -48,10 +48,10 @@ class PCTest {
         for (int i = 0; i < 6; i++){
             pc.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i, printWriter);
+            consumptionReport.generateReportToFile(house,0,i);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house,3,5, printWriter);
+        eventReport.generateReportToFile(house,3,5);
     }
 
 }

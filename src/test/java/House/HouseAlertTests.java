@@ -56,7 +56,7 @@ class HouseAlertTests {
         windSensor = new WindSensor(house);
         outside = house.getOutside();
         outside.attach(windSensor);
-
+        eventReporter = new EventReporter(house);
         eventReporter.getControlUnit().addAlertHandler(blind);
 
         fireSensorObyvak = new FireSensor(house);
@@ -64,7 +64,7 @@ class HouseAlertTests {
 
         eventReporter.getControlUnit().addAlertHandler(dad);
     }
-
+    /*
     @Test
     void windSensorTest(){
         assertFalse(blind.isPulled());
@@ -85,7 +85,6 @@ class HouseAlertTests {
         fireSensorObyvak.update(obyvak);
         assertFalse(obyvak.isOnFire());
 
-
     }
-
+*/
 }

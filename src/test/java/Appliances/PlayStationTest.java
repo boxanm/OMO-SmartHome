@@ -46,10 +46,10 @@ class PlayStationTest {
         for (int i = 0; i < 6; i++){
             playStation.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i, printWriter);
+            consumptionReport.generateReportToFile(house,0,i);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house, 1, 3, printWriter);
+        eventReport.generateReportToFile(house, 1, 3);
     }
 
 }

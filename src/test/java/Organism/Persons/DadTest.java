@@ -6,6 +6,7 @@ import Appliances.PC;
 import Appliances.WashingMachine.WashingMachine;
 import EventsAlerts.EventReporter;
 import House.*;
+import Reports.EventReport;
 import SportsEquipment.Ski;
 import SportsEquipment.SportEquipment;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,6 +31,7 @@ class DadTest {
         obyvak = new HabitableRoom("obyvak",floor,0);
         garaz = new NonHabitableRoom("Garaz",floor,0);
         double pcComsuption[] = new double[] {0.8, 0.01, 0.0002};
+        eventReporter = new EventReporter(house);
         house.addFloor(floor);
         floor.addRoom(obyvak);
         floor.addRoom(garaz);
@@ -55,8 +57,8 @@ class DadTest {
     @Test
     void extinguish() {
         garaz.setOnFire();
-        dad.extinguish(garaz);
         assertTrue(garaz.isOnFire());
+        dad.changeRoom(garaz);
         dad.extinguish(garaz);
         assertFalse(garaz.isOnFire());
     }

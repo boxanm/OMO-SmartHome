@@ -21,6 +21,9 @@ public class Blind implements AlertHandler, InfoGenerator, EventSource, EventTar
 		addHandlerToControlUnit(window.getRoom().getFloor().getHouse().getControlUnit());
 	}
 
+	/**
+	 * Pulling blinds when wind
+	 */
 	public void pull(){
 		newInfo(new Info(InfoType.pullingBlind,this,window.getRoom().getFloor(),window.getRoom(),this));
 		isPulled = !isPulled;

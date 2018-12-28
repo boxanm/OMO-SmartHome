@@ -10,5 +10,8 @@ public abstract class Strategy {
         this.thermostat = thermostat;
     }
 
+    /**
+     * Control of temperature
+     */
     public abstract void controlTemperature();
 }

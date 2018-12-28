@@ -46,7 +46,9 @@ public class House implements LapSubscriber {
 		eventReporter = new EventReporter(this);
 	}
 
-
+	/**
+	 * do some action
+	 */
 	@Override
 	public void newLap() {
 		controlUnit.newLap();
@@ -64,11 +66,19 @@ public class House implements LapSubscriber {
 		eventReporter.newLap();
 	}
 
+	/**
+	 * Add a new floor to the house
+	 * @param floor
+	 */
 	public void addFloor(Floor floor){
 		if(! floorList.contains(floor))
 	        floorList.add(floor);
 	}
 
+	/**
+	 * Set a new circuit breaker
+	 * @param circuitBreakers
+	 */
 	public void setCircuitBreakers(CircuitBreakers circuitBreakers) {
 		this.circuitBreakers = circuitBreakers;
 	}
@@ -77,6 +87,10 @@ public class House implements LapSubscriber {
 		return circuitBreakers;
 	}
 
+	/**
+	 * Set a new electricity sensor
+	 * @param electricitySensor
+	 */
 	public void setElectricitySensor(ElectricitySensor electricitySensor) {
 		this.electricitySensor = electricitySensor;
 	}
@@ -89,10 +103,18 @@ public class House implements LapSubscriber {
 		return controlUnit;
 	}
 
+	/**
+	 * Get all floors of the house
+	 * @return
+	 */
 	public List<Floor> getFloorList(){
 		return floorList;
 	}
 
+	/**
+	 * Get all rooms of the house
+	 * @return
+	 */
 	public List<Room> getRoomList(){
         ArrayList<Room> rooms = new ArrayList<>();
         for (Floor floor: floorList) {
@@ -101,6 +123,10 @@ public class House implements LapSubscriber {
         return rooms;
 	}
 
+	/**
+	 * Get all persons of the house
+	 * @return
+	 */
 	public List<Person> getPersonList(){
 	    ArrayList<Person> persons = new ArrayList<>();
         for (Room room:getRoomList()) {
@@ -111,6 +137,11 @@ public class House implements LapSubscriber {
         }
 		return persons;
 	}
+
+	/**
+	 * Get all animals of the house
+	 * @return
+	 */
 	public List<Animal> getAnimalList(){
 
         ArrayList<Animal> animals = new ArrayList<>();
@@ -124,6 +155,10 @@ public class House implements LapSubscriber {
 
 	}
 
+	/**
+	 * Get all appliances of the house
+	 * @return
+	 */
 	public ArrayList<Appliance> getAppliances(){
 		ArrayList<Appliance> appliances = new ArrayList<>();
 		for (Floor floor: floorList) {
@@ -137,6 +172,11 @@ public class House implements LapSubscriber {
 		}
 		return appliances;
 	}
+
+	/**
+	 * Get all sports equipment of the house
+	 * @return
+	 */
 	public ArrayList<SportEquipment> getSportEquipment(){
 		ArrayList<SportEquipment> sportEquipment = new ArrayList<>();
 		for (Floor floor: floorList) {
@@ -151,6 +191,10 @@ public class House implements LapSubscriber {
 		return sportEquipment;
 	}
 
+	/**
+	 * Get all cars of the house
+	 * @return
+	 */
 	public ArrayList<Car> getCars() {
         ArrayList<Car> cars = new ArrayList<>();
         for(Room room:getRoomList()){

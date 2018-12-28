@@ -1,8 +1,6 @@
 package Appliances.Manual;
 
 
-import Appliances.Appliance;
-
 /**
  * Lazy loading
  * @author Michal
@@ -11,14 +9,14 @@ import Appliances.Appliance;
  */
 public class Manual {
 
-	private Manual manual = null;
+	private static Manual manual;
 	private String descripton;
 
-	public Manual(){
+	private Manual(){
 		descripton = "Manual Manual Manual";
 	}
 
-	public Manual getManual() {
+	public static Manual getManual() {
 		if(manual == null){
 			manual = new Manual();
 		}

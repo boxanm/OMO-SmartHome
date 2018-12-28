@@ -38,11 +38,17 @@ public abstract class Room implements EventTarget, Observable {
 		observers = new ArrayList<>();
 	}
 
+	/**
+	 * The room started to burn
+	 */
 	public void setOnFire(){
 		this.isOnFire = true;
 		announce();
 	}
 
+	/**
+	 * The room was extinguished
+	 */
 	public void extinguishFire(){
 		this.isOnFire = false;
 	}
@@ -55,11 +61,19 @@ public abstract class Room implements EventTarget, Observable {
 		return floor;
 	}
 
+	/**
+	 * Entering a specific room
+	 * @param organism
+	 */
 	public void addOrganism(Organism organism){
 		if(! organismList.contains(organism))
 			organismList.add(organism);
 	}
 
+	/**
+	 * Output from a specific room
+	 * @param organism
+	 */
 	public  void removeOrganism(Organism organism){
 		organismList.remove(organism);
 	}
@@ -72,13 +86,20 @@ public abstract class Room implements EventTarget, Observable {
         return windowsList;
     }
 
+	/**
+	 *Connect the sensor to the room
+	 * @param observer
+	 */
 	@Override
 	public void attach(Observer observer) {
 		if(! observers.contains(observer))
 			observers.add(observer);
 
 	}
-
+	/**
+	 *Disconnect the sensor to the room
+	 * @param observer
+	 */
 	@Override
 	public void detach(Observer observer) {
 		observers.remove(observer);

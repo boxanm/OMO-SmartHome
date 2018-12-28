@@ -142,6 +142,7 @@ public class Dad extends Person implements Adults  {
 	 */
 	public void useCar(Car car){
 		isBusy = true;
+		car.setPresent(false);
 		newInfo(new Info(InfoType.drivingCar, this, getFloor(), actualRoom, car));
 		car.goShopping(this);
 	}

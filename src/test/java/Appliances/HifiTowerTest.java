@@ -21,6 +21,7 @@ class HifiTowerTest {
     HifiTower hifi;
     ElectricitySensor sensor;
     double hifiComsuption[] = new double[] {0.6, 0.07, 0.00009};
+
     PrintWriter printWriter;
 
 
@@ -44,10 +45,10 @@ class HifiTowerTest {
         for (int i = 0; i < 6; i++){
             hifi.newLap();
             dad.newLap();
-            consumptionReport.generateReport(house,0,i, printWriter);
+            consumptionReport.generateReportToFile(house,0,i);
             house.getEventReporter().newLap();
         }
-        eventReport.generateReport(house,0,6, printWriter );
+        eventReport.generateReportToFile(house,0,6);
     }
 
 }

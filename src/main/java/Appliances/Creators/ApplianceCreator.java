@@ -28,6 +28,12 @@ public abstract class ApplianceCreator {
 		this.location = location;
 	}
 
+	/**
+	* Create a new appliance with specific name and brand
+	* @param name, brand
+	*
+	 */
+
 	protected abstract Appliance createAppliance(String name,String brand);
 
 }

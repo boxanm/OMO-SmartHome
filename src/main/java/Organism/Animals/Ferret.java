@@ -21,7 +21,6 @@ public class Ferret extends Animal {
 		super(name);
 	}
 
-
 	public void makeSound() {
 		newInfo(new Info(InfoType.animalSound, this, getFloor(), actualRoom, this));
 	}

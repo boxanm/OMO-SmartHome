@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Tøída pøedstavující exteriér.
+ * The class representing the exterior.
  * @author Michal
  * @version 1.0
  * @created 16-pro-2018 9:01:42

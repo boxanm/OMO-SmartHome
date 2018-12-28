@@ -16,6 +16,7 @@ public class Car implements EventTarget, Usable, InfoGenerator {
 
 	private String brand;
 	private NonHabitableRoom location;
+
 	private boolean isPresent = true;
 
 	private final int shoppingDuration = 6;
@@ -72,5 +73,9 @@ public class Car implements EventTarget, Usable, InfoGenerator {
 	@Override
 	public void newInfo(Info info) {
 		eventReporter.newInfo(info);
+	}
+
+	public void setPresent(boolean present) {
+		isPresent = present;
 	}
 }

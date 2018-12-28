@@ -32,7 +32,10 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	protected Room actualRoom;
 	private ConsumptionType consumptionType;
 	private boolean isBroken = false;
-	public boolean isBusy = false;
+
+
+
+	private boolean isBusy = false;
 
 	private int fireProbability  = 1;
 
@@ -63,10 +66,18 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		eventReporter = location.getFloor().getHouse().getEventReporter();
 	}
 
+	/**
+	 * Appliance broke
+	 */
 	public void breakDown(){
 		isBroken = true;
 	}
 
+	/**
+	 * Appliance handle alert only if alert type is circuit breaker
+	 * @param alert
+	 * @return
+	 */
 	@Override
 	public boolean handleAlert(Alert alert) {
 		if(alert.getAlertType() == AlertType.circuitBreakers){
@@ -78,21 +89,40 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 		return false;
 	}
 
+	/**
+	 * Change wear the appliance during use
+	 */
 	public abstract void changeWearOfDevice();
 
+	/**
+	 * Generates new info
+	 * @param info
+	 */
 	@Override
 	public void newInfo(Info info) {
 		eventReporter.newInfo(info);
 	}
 
+	/**
+	 *The method of using the appliance by a person
+	 * @param person
+	 * @return
+	 */
 	public abstract Usable use(Person person);
 
+	/**
+	 *A new round of appliances with the probability of a fire outbreak
+	 */
 	public void newLap(){
 		if(new Random().nextInt(50) < fireProbability)
 			setOnFire();
 		announce();
 	}
 
+	/**
+	 *Get actual consumption of the appliance (by status)
+	 * @return
+	 */
 	public double getConsumption(){
 		if(this.state.getStatus() == On){
 			return this.consumption[0];
@@ -109,6 +139,10 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
         return wearOfDevice;
     }
 
+	/**
+	 *Set consumption of the appliance
+	 * @param consumption
+	 */
     public void setComsuption(double [] consumption){
 		if(consumption.length == 3){
 			this.consumption = consumption;
@@ -119,28 +153,48 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	}
 
 
-
+	/**
+	 *Appliance caused by fire
+	 */
 	public void setOnFire(){
 		actualRoom.setOnFire();
 	}
 
+	/**
+	 *Turn on appliance
+	 */
 	public void turnON(){
 		eventReporter.newInfo(new Info(InfoType.turningOnAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateON(this));
 	}
+
+	/**
+	 *Turn iddle appliance
+	 */
 	public void turnIdle(){
 		eventReporter.newInfo(new Info(InfoType.turningIdleAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateIDDLE(this));
 	}
+
+	/**
+	 *Turn off appliance
+	 */
 	public void turnOFF(){
 		eventReporter.newInfo(new Info(InfoType.turningOffAppliance,this,actualFloor,actualRoom,this));
 		setState(new StateOFF(this));
 	}
 
+	/**
+	 *Get device manual (Lazy loading)
+	 * @return
+	 */
 	public Manual getDeviceManual(){
-        return new Manual();
+        return Manual.getManual();
     }
 
+	/**
+	 *Set wear of device to maximum
+	 */
     public void repairAppliance(){
 	    wearOfDevice = 100;
     }
@@ -206,7 +260,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 
 
 	/**
-	 *
+	 *Connect the sensor to the appliance
 	 * @param observer
 	 */
 	public void attach(Observer observer){
@@ -215,7 +269,7 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	}
 
 	/**
-	 *
+	 *Disconnect the sensor to the appliance
 	 * @param observer
 	 */
 	public void detach(Observer observer){
@@ -232,5 +286,9 @@ public abstract class Appliance implements AlertHandler, Observable, InfoGenerat
 	@Override
 	public void addHandlerToControlUnit(ControlUnit controlUnit) {
 		controlUnit.addAlertHandler(this);
+	}
+
+	public void setBusy(boolean busy) {
+		isBusy = busy;
 	}
 }
