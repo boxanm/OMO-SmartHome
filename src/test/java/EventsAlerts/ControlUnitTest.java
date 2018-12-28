@@ -44,15 +44,15 @@ class ControlUnitTest {
     @Test
     void newLap() {
         EventReport eventReport = new EventReport();
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 6; i++){
             controlUnit.newLap();
             fridge.newLap();
             dad.newLap();
             if(i == 1)
                 garaz.setOnFire();
             house.getEventReporter().newLap();
-            eventReport.generateReportToCL(house,0,3);
+            eventReport.generateReportToFile(house,0,3);
         }
-//        eventReport.generateReport(house);
+     //   eventReport.generateReport(house);
     }
 }

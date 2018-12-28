@@ -14,7 +14,7 @@ public class Main {
 
         World world = World.getInstance();
 
-        House house = configuration.getConfiguration1();
+        House house = configuration.getConfiguration1(); //or getConfiguration2()
 
         world.addHouse(house);
 

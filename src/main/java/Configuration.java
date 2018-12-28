@@ -1,5 +1,5 @@
 import Appliances.*;
-import Appliances.Creators.TVCreator;
+import Appliances.Creators.*;
 import Appliances.WashingMachine.WashingMachine;
 import House.*;
 import Organism.Animals.Cat;
@@ -43,8 +43,7 @@ public class Configuration {
 
         List<SportEquipment> sportEquipments = new ArrayList<>(Arrays.asList(bicycle1,bicycle2,ski1,ski2));
 
-        for (SportEquipment equipment:sportEquipments
-             ) {
+        for (SportEquipment equipment:sportEquipments) {
             gym.addSportEquipment(equipment);
         }
 
@@ -134,19 +133,83 @@ public class Configuration {
     public House getConfiguration2(){
 
         House house = new House("house1");
-//
-//        Floor prvni = new Floor("1. patro",house);
-//        Floor druhe = new Floor("2. patro", house);
-//
-//        HabitableRoom chodba = new HabitableRoom("Chodba", prvni, 2);
-//        HabitableRoom koupelna = new HabitableRoom("Koupelna", prvni, 1);
-//        HabitableRoom kuchyn = new HabitableRoom("Kuchy?", prvni, 3);
-//        HabitableRoom detskyPokoj = new HabitableRoom("D?tsk? pokoj", prvni, 4);
-//        HabitableRoom loznice = new HabitableRoom("Lo?nice", prvni, 4);
-//        HabitableRoom obyvak = new HabitableRoom("Ob?v?k", druhe, 3);
-//
-//        NonHabitableRoom garaz = new NonHabitableRoom("Gar?", prvni, 0);
-//        NonHabitableRoom technikaMistnost = new NonHabitableRoom("Technick? m?stnost", prvni, 0);
+
+        Floor prvni = new Floor("1. patro",house);
+
+        HabitableRoom chodba = new HabitableRoom("Chodba", prvni, 2);
+        HabitableRoom koupelna = new HabitableRoom("Koupelna", prvni, 1);
+        HabitableRoom kuchyn = new HabitableRoom("Kuchyn", prvni, 3);
+        HabitableRoom detskyPokoj = new HabitableRoom("Detsky pokoj", prvni, 4);
+        HabitableRoom loznice = new HabitableRoom("Loznice", prvni, 4);
+        HabitableRoom obyvak = new HabitableRoom("Obyvak", prvni, 3);
+
+        NonHabitableRoom garaz = new NonHabitableRoom("garaz", prvni, 0);
+        NonHabitableRoom technikaMistnost = new NonHabitableRoom("technicka", prvni, 0);
+
+        SportEquipmentCreatorSki creatorSki = new SportEquipmentCreatorSki(technikaMistnost);
+        SportEquipmentCreatorBicycle creatorBicycle = new SportEquipmentCreatorBicycle(technikaMistnost);
+        Ski lyze = creatorSki.createAtomic();
+        Ski lyze2 = creatorSki.createHead();
+        Bicycle bicycle = creatorBicycle.createApache();
+        Bicycle bicycle2 = creatorBicycle.createMerida();
+        Car auto = new Car("Skoda", garaz);
+
+        technikaMistnost.addSportEquipment(lyze);
+        technikaMistnost.addSportEquipment(lyze2);
+        technikaMistnost.addSportEquipment(bicycle);
+        technikaMistnost.addSportEquipment(bicycle2);
+
+        garaz.addCar(auto);
+
+        Dog pes = new Dog("Punta");
+        Cat kocka = new Cat("Micka");
+        Dad tata = new Dad("Adam");
+        Mom mama = new Mom("Eva");
+        Child dite = new Child("Adela");
+        Child dite2 = new Child("Jan");
+
+        tata.addChild(dite);
+        mama.addChild(dite);
+
+        tata.addChild(dite2);
+        mama.addChild(dite2);
+
+        List<Organism> organisms = new ArrayList<>(Arrays.asList(pes, kocka, tata, mama, dite, dite2));
+        for (Organism organism: organisms) {
+            organism.moveToHouse(house);
+        }
+
+        FridgeCreator fridgeCreator = new FridgeCreator(kuchyn);
+        HiFiTowerCreator hiFiTowerCreator = new HiFiTowerCreator(loznice);
+        PCCretator pcCretator = new PCCretator(obyvak);
+        PlayStationCreator playStationCreator = new PlayStationCreator(detskyPokoj);
+        TVCreator tvCreator = new TVCreator(detskyPokoj);
+        WashingMachineCreator washingMachineCreator = new WashingMachineCreator(koupelna);
+        XboxCreator xboxCreator = new XboxCreator(loznice);
+        FreezerCreator freezerCreator = new FreezerCreator(chodba);
+
+        List<Appliance> appliances = new ArrayList<>();
+
+        appliances.add(fridgeCreator.createWhirlpool("Whirpool"));
+        appliances.add(hiFiTowerCreator.createSencor("Sencor"));
+        appliances.add(pcCretator.createZalman("Zalman"));
+        appliances.add(playStationCreator.createSony("Sony"));
+        appliances.add(tvCreator.createSamsung("Samsung"));
+        appliances.add(washingMachineCreator.createBosch("Bosch"));
+        appliances.add(xboxCreator.createMicrosoft("Microsoft"));
+        appliances.add(freezerCreator.createCandy("Candy"));
+
+
+        FireSensor fireSensor = new FireSensor(house);
+        WindSensor windSensor = new WindSensor(house);
+        BabySitter babySitter = new BabySitter(house);
+        UsageSensor usageSensor = new UsageSensor(house);
+        WaterSensor waterSensor = new WaterSensor(house);
+        ElectricitySensor electricitySensor = new ElectricitySensor(house);
+
+
+
+
 
         return house;
     }
