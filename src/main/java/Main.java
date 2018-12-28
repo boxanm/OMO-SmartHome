@@ -1,54 +1,41 @@
-import Appliances.Appliance;
-import Appliances.ConsumptionType;
-import Appliances.Creators.FreezerCreator;
-import Appliances.Creators.WashingMachineCreator;
-import House.House;
+import House.*;
+import Reports.ActivityAndUsageReport;
+import Reports.ConsumptionReport;
+import Reports.EventReport;
+import Reports.HouseConfigurationReport;
+public class Main {
 
-import House.HabitableRoom;
-import House.NonHabitableRoom;
-import House.Floor;
-import Organism.Organism;
-import Organism.Persons.Dad;
-import SportsEquipment.*;
+    private final static int lapNum = 100;
 
-public final class Main {
 
-    private House house;
 
     public static void main(String args[]){
-        World world = World.getInstance();
-        House house = new House("house1");
+        Configuration configuration = new Configuration();
 
-        ConsumptionType elek = ConsumptionType.electricity;
+        World world = World.getInstance();
+
+        House house = configuration.getConfiguration1();
 
         world.addHouse(house);
 
-        Floor floor = new Floor("První patro", house);
+        HouseConfigurationReport houseConfigurationReport = new HouseConfigurationReport();
+        ActivityAndUsageReport activityAndUsageReport = new ActivityAndUsageReport();
+        EventReport eventReport = new EventReport();
+        ConsumptionReport consumptionReport = new ConsumptionReport();
 
-        HabitableRoom koupelna = new HabitableRoom("koupelna", floor, 2);
-        NonHabitableRoom technicka = new NonHabitableRoom("technicka", floor, 0);
+        houseConfigurationReport.generateConfigurationReportToFile(house);
+        for (int i = 0; i < lapNum; i++){
+            world.newLap();
+        }
 
-         Organism dad = new Dad("Honza");
-
-        SportEquipmentCreatorSki skiFactory = new SportEquipmentCreatorSki(technicka);
-        SportEquipment lyze = skiFactory.createAtomic();
-
-        FreezerCreator freezerCreator = new FreezerCreator(koupelna);
-        Appliance chladnicka = freezerCreator.createCandy("chladnicka1");
-
-        WashingMachineCreator washingMachineCreator = new WashingMachineCreator(koupelna);
-        Appliance washing = washingMachineCreator.createBosch("pracka");
-        dad.moveToHouse(house);
-        dad.changeRoom(koupelna);
-
-         ((Dad) dad).useAppliance(washing);
-
-
-       // chladnicka.consumptionType;
+        eventReport.generateReportToFile(house,5,10);
+        consumptionReport.generateReportToFile(house,5,10);
+        activityAndUsageReport.generateReportToFile(house,5,10);
 
 
 
-       // WashingMachine washingMachine = new WashingMachine("praèka", koupelna);
+
+
 
     }
 }
