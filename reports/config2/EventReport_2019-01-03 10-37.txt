@@ -1,0 +1,46 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: insertingCD | PC pc1 => PC pc1
+-Info: insertingCD | HiFi Tower hifi1 => HiFi Tower hifi1
+-Info: workingOnPC | PC pc1 => PC pc1
+-Info: turningIdleAppliance | TV tv1 => TV tv1
+-Info: ejectingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: ejectingCD | PC pc3 => PC pc3
+-Info: ejectingCD | PlayStation playstation1 => PlayStation playstation1
+-Info: ejectingCD | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: ejectingCD | PC pc2 => PC pc2
+-Info: ejectingCD | PC pc2 => PC pc2
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: applianceUsage | Child Anna => PC pc1
+-Info: applianceUsage | Child Jack => PC pc2
+-Info: applianceUsage | Child Jack => HiFi Tower hifi1
+-Info: callingFireman | Mom Elizabeth => bathroom
+-Info: callingFireman | Mom Elizabeth => bedroom3
+-Info: turningOnAppliance | PC pc1 => PC pc1
+-Info: turningOnAppliance | HiFi Tower hifi1 => HiFi Tower hifi1
+-Info: playingCD | HiFi Tower hifi1 => HiFi Tower hifi1
+
+..................Alerts..................
+-Alert: wind | WindSensor => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+-Alert: wind | WindSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+
+

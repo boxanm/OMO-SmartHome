@@ -3,7 +3,7 @@ Appliances
 Appliances.ApplianceState
 Appliances.Creators
 Appliances.Manual
-Appliances.Strategy
+Sensors.Strategy
 Appliances.WashingMachine
 EventsAlerts
 House

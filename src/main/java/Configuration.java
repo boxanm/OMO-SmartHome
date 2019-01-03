@@ -125,6 +125,7 @@ public class Configuration {
         BabySitter babySitter = new BabySitter(house1);
         UsageSensor usageSensor = new UsageSensor(house1);
         WaterSensor waterSensor = new WaterSensor(house1);
+        Thermostat thermostat = new Thermostat("thermostat1", house1);
         ElectricitySensor electricitySensor = new ElectricitySensor(house1);
 
         return house1;
@@ -205,6 +206,7 @@ public class Configuration {
         BabySitter babySitter = new BabySitter(house);
         UsageSensor usageSensor = new UsageSensor(house);
         WaterSensor waterSensor = new WaterSensor(house);
+        Thermostat thermostat = new Thermostat("thermostat1", house);
         ElectricitySensor electricitySensor = new ElectricitySensor(house);
 
 

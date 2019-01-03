@@ -1,0 +1,30 @@
+==================Activity and usage report from lap 5 to 10==================
+
+..................Usages..................
+Person: Child Anna
+---Used appliance: TV tv2 1 times
+Person: Child Jack
+---Used appliance: WashingMachine washing machine1 1 times
+Person: Dad Matej
+---Used appliance: Freezer freezer1 1 times
+---Used appliance: TV tv1 1 times
+Person: Dad Michal
+---Used appliance: HiFi Tower hifi2 1 times
+Person: Mom Elizabeth
+---Used appliance: Fridge fridge1 1 times
+---Used appliance: PC pc2 1 times
+---Used appliance: PlayStation playstation1 1 times
+Person: Mom Melanda
+---Used appliance: Freezer freezer2 2 times
+---Used appliance: PC pc4 1 times
+---Used appliance: PC pc5 1 times
+
+..................Animal activities..................
+Animal: Cat
+---Did: animalSound 5 times
+Animal: Dog
+---Did: animalSound 5 times
+Animal: Ferret
+---Did: animalSound 5 times
+
+

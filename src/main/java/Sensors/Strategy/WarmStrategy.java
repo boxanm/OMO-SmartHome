@@ -1,6 +1,6 @@
-package Appliances.Strategy;
+package Sensors.Strategy;
 
-import Appliances.Thermostat;
+import Sensors.Thermostat;
 
 public class WarmStrategy extends Strategy{
 

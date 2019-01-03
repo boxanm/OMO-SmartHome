@@ -1,0 +1,55 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: eatFood | Fridge fridge1 => Fridge fridge1
+-Info: watchingTV | Child Anna => TV tv2
+-Info: watchingTV | Child Jack => TV tv1
+-Info: callingFireman | Mom Elizabeth => living room
+-Info: callingFireman | Mom Elizabeth => kitchen
+-Info: playingCD | Xbox xbox1 => Xbox xbox1
+-Info: playingCD | PlayStation playstation1 => PlayStation playstation1
+-Info: turningIdleAppliance | TV tv1 => TV tv1
+-Info: ejectingCD | HiFi Tower hifi1 => HiFi Tower hifi1
+-Info: ejectingCD | Xbox xbox2 => Xbox xbox2
+-Info: ejectingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: turningOnAppliance | TV tv2 => TV tv2
+-Info: turningOnAppliance | TV tv1 => TV tv1
+-Info: turningOnAppliance | Xbox xbox1 => Xbox xbox1
+-Info: turningOnAppliance | PC pc5 => PC pc5
+-Info: turningOnAppliance | PC pc1 => PC pc1
+-Info: turningOnAppliance | PlayStation playstation1 => PlayStation playstation1
+-Info: applianceUsage | Child Anna => TV tv2
+-Info: applianceUsage | Child Jack => TV tv1
+-Info: applianceUsage | Dad Matej => Fridge fridge1
+-Info: applianceUsage | Mom Melanda => Xbox xbox1
+-Info: applianceUsage | Mom Elizabeth => PC pc5
+-Info: applianceUsage | Dad Matej => PC pc1
+-Info: applianceUsage | Dad Michal => PlayStation playstation1
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: workingOnPC | PC pc5 => PC pc5
+-Info: workingOnPC | PC pc1 => PC pc1
+-Info: insertingCD | Xbox xbox1 => Xbox xbox1
+-Info: insertingCD | PC pc5 => PC pc5
+-Info: insertingCD | PC pc1 => PC pc1
+-Info: insertingCD | PlayStation playstation1 => PlayStation playstation1
+
+..................Alerts..................
+-Alert: wind | WindSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+
+

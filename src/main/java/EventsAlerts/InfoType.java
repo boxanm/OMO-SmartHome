@@ -25,6 +25,7 @@ public enum InfoType {
     fillingWithLaundry,
     cycleStart,
     cycleFinish,
-    takingOutLaundry
-
+    takingOutLaundry,
+    thermostatStrategy,
+    temperatureChange
 }

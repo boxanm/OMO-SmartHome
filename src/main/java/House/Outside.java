@@ -1,8 +1,6 @@
 package House;
 
-import EventsAlerts.Info;
-import EventsAlerts.Observable;
-import EventsAlerts.Observer;
+import EventsAlerts.*;
 import LapsTime.LapSubscriber;
 
 import java.util.ArrayList;
@@ -15,7 +13,7 @@ import java.util.Random;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class Outside implements Observable, LapSubscriber {
+public class Outside implements Observable, LapSubscriber, InfoGenerator, EventSource, EventTarget {
 	private List<Observer> observerList;
 
 	private boolean isWind;
@@ -28,8 +26,10 @@ public class Outside implements Observable, LapSubscriber {
 
 	public void newLap(){
 		isWind = new Random().nextInt(100)<30;
+		temperature = new Random().nextInt(50)-20;
 		announce();
 	}
+
 
 
 	public boolean getIsWind(){
@@ -58,16 +58,13 @@ public class Outside implements Observable, LapSubscriber {
 		}
 	}
 
-	public Info newInfo(){
-
-		return null;
-	}
 
 	public int getTemperature() {
 		return temperature;
 	}
 
-	public void setTemperature(int temperature) {
-		this.temperature = temperature;
+	@Override
+	public void newInfo(Info info) {
+
 	}
 }

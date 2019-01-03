@@ -3,6 +3,7 @@ package House;
 import Appliances.Appliance;
 import EventsAlerts.ControlUnit;
 import EventsAlerts.EventReporter;
+import EventsAlerts.EventTarget;
 import LapsTime.LapSubscriber;
 import Organism.Organism;
 import Organism.Animals.Animal;
@@ -21,7 +22,7 @@ import java.util.List;
  * @version 1.0
  * @created 16-pro-2018 9:01:42
  */
-public class House implements LapSubscriber {
+public class House implements LapSubscriber, EventTarget {
 
 	private List<Floor> floorList;
 
@@ -212,6 +213,7 @@ public class House implements LapSubscriber {
 	public void setEventReporter(EventReporter eventReporter){
 		this.eventReporter = eventReporter;
 	}
+
 
 
 	public Outside getOutside() {

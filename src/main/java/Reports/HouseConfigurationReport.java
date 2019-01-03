@@ -5,8 +5,6 @@ import House.*;
 import Organism.Animals.Animal;
 import Organism.Persons.Person;
 import SportsEquipment.SportEquipment;
-import sun.management.Sensor;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;

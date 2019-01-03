@@ -1,0 +1,46 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: insertingCD | PlayStation playstation2 => PlayStation playstation2
+-Info: insertingCD | PC pc4 => PC pc4
+-Info: insertingCD | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: insertingCD | PlayStation playstation1 => PlayStation playstation1
+-Info: playingCD | PlayStation playstation2 => PlayStation playstation2
+-Info: callingFireman | Mom Elizabeth => kitchen
+-Info: ejectingCD | Xbox xbox2 => Xbox xbox2
+-Info: ejectingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: ejectingCD | PC pc5 => PC pc5
+-Info: ejectingCD | PC pc2 => PC pc2
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Dog => Dog
+-Info: applianceUsage | Child Jack => PlayStation playstation2
+-Info: applianceUsage | Child Anna => PC pc4
+-Info: applianceUsage | Mom Elizabeth => HiFi Tower hifi3
+-Info: applianceUsage | Dad Matej => PlayStation playstation1
+-Info: extinguishingFire | Dad Matej => kitchen
+-Info: extinguishingFire | Dad Matej => kitchen
+-Info: turningOnAppliance | PlayStation playstation2 => PlayStation playstation2
+-Info: turningOnAppliance | PC pc4 => PC pc4
+-Info: turningOnAppliance | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: turningOnAppliance | PlayStation playstation1 => PlayStation playstation1
+-Info: workingOnPC | PC pc4 => PC pc4
+
+..................Alerts..................
+-Alert: babyCrying | Babysitter => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+
+

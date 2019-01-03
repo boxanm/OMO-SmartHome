@@ -1,0 +1,42 @@
+==================Event report from lap 5 to 10==================
+
+..................Infos..................
+-Info: extinguishingFire | Dad Michal => kitchen
+-Info: extinguishingFire | Dad Matej => kitchen
+-Info: eatFood | Fridge fridge2 => Fridge fridge2
+-Info: applianceUsage | Mom Elizabeth => PC pc3
+-Info: applianceUsage | Dad Matej => WashingMachine washing machine2
+-Info: applianceUsage | Child Jack => WashingMachine washing machine2
+-Info: applianceUsage | Child Anna => HiFi Tower hifi2
+-Info: applianceUsage | Mom Elizabeth => Fridge fridge2
+-Info: applianceUsage | Child Anna => WashingMachine washing machine1
+-Info: insertingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: ejectingCD | HiFi Tower hifi3 => HiFi Tower hifi3
+-Info: ejectingCD | PC pc3 => PC pc3
+-Info: ejectingCD | PC pc3 => PC pc3
+-Info: ejectingCD | PC pc2 => PC pc2
+-Info: ejectingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: ejectingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: playingCD | HiFi Tower hifi2 => HiFi Tower hifi2
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: animalSound | Ferret => Ferret
+-Info: animalSound | Dog => Dog
+-Info: animalSound | Cat => Cat
+-Info: turningOnAppliance | WashingMachine washing machine2 => WashingMachine washing machine2
+
+..................Alerts..................
+-Alert: fire | FireSensor => ControlUnit
+-Alert: fire | FireSensor => ControlUnit
+
+

@@ -23,7 +23,7 @@ public class Main {
         EventReport eventReport = new EventReport();
         ConsumptionReport consumptionReport = new ConsumptionReport();
 
-        houseConfigurationReport.generateConfigurationReportToFile(house);
+        houseConfigurationReport.generateConfigurationReportToCL(house);
         for (int i = 0; i < lapNum; i++){
             world.newLap();
         }
