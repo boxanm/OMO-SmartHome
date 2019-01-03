@@ -3,16 +3,198 @@
   <component name="ChangeListManager">
     <list default="true" id="27e78ec4-823c-42f0-aace-5d57ad4adca1" name="Default Changelist" comment="coding...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EventsAlerts/ControlUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EventsAlerts/ControlUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Appliance.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Appliance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/ApplianceState.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/ApplianceState.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/Context.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/Context.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/State.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/State.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateIDDLE.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateIDDLE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateOFF.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateOFF.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateON.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/StateON.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ApplianceState/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/CDplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/CDplayer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/ConsumptionType.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/ConsumptionType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/ApplianceCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/ApplianceCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/FreezerCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/FreezerCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/FridgeCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/FridgeCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/HiFiTowerCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/HiFiTowerCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/PCCretator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/PCCretator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/PlayStationCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/PlayStationCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/TVCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/TVCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/WashingMachineCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/WashingMachineCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/XboxCreator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/XboxCreator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Creators/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Freezer.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Freezer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/FreezingAppliance.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/FreezingAppliance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Fridge.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Fridge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/FridgeTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/FridgeTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/HifiTower.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/HifiTower.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/HifiTowerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/HifiTowerTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Manual/Manual.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Manual/Manual.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Manual/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/PC.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/PC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/PCTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/PCTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/PlayStation.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/PlayStation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/PlayStationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/PlayStationTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/TV.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/TV.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/TVTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/TVTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/CycleFinish.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/CycleFinish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/CycleStart.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/CycleStart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/FillWithLaudry.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/FillWithLaudry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/IWashingMachineState.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/IWashingMachineState.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/TakeOutLaudry.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/TakeOutLaudry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/WashingMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/WashingMachine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachine/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/WashingMachineTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/WashingMachineTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/Xbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/Xbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/XboxTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/XboxTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Appliances/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Appliances/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Configuration.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Configuration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertType.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/AlertType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Consumption.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Consumption.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/ConsuptionGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/ConsuptionGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/ControlUnit.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/ControlUnit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/ControlUnitTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/ControlUnitTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Event.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/EventReporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/EventReporter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/EventSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/EventSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/EventTarget.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/EventTarget.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Info.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/InfoGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/InfoGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/InfoType.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/InfoType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Observable.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Observable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/Observer.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/Observer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/EventsAlerts/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/EventsAlerts/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Blind.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Blind.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Car.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Floor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Floor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/HabitableRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/HabitableRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/House.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/House.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/HouseAlertTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/HouseAlertTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/NonHabitableRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/NonHabitableRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Outside.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Outside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Room.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/Window.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/Window.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/House/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/House/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/LapsTime/LapSubscriber.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/LapsTime/LapSubscriber.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/LapsTime/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/LapsTime/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/LapsTime/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/LapsTime/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/LapsTime/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/LapsTime/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/Animal.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/Animal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/Cat.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/Cat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/CatTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/CatTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/Dog.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/Dog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/DogTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/DogTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/Ferret.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/Ferret.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/FerretTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/FerretTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Animals/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Animals/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Organism.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Organism.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/OrganismTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/OrganismTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Adults.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Adults.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Child.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Child.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/ChildTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/ChildTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Dad.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Dad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/DadTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/DadTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Mom.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Mom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/MomTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/MomTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Person.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/Usable.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/Usable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/Persons/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/Persons/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Organism/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Organism/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/ActivityAndUsageReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/ActivityAndUsageReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/ConsumptionReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/ConsumptionReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/EventReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/EventReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/HouseConfigurationReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/HouseConfigurationReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/HouseReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/HouseReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/HouseTimeReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/HouseTimeReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/ReportTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/ReportTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Reports/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Reports/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/BabySitter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/BabySitter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/CircuitBreakers.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/CircuitBreakers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/ElectricitySensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/ElectricitySensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/FireSensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/FireSensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/Meter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/Meter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/Sensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/Sensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/UsageSensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/UsageSensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/WaterSensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/WaterSensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/WindSensor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/WindSensor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/Sensors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Sensors/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/Bicycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/Bicycle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/BicycleTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/BicycleTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/CreatorSportEquipments.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/CreatorSportEquipments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/Ski.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/Ski.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SkiTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SkiTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipment.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorBicycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorBicycle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorBicycleTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorBicycleTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorSki.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorSki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorSkiTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/SportEquipmentCreatorSkiTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/SportsEquipment/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/SportsEquipment/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/World.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/World.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-21.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-21.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-list" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main_Laps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Reports/HouseReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Reports/HouseReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/EventsAlerts/ControlUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EventsAlerts/ControlUnitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Organism/Persons/ChildTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Organism/Persons/ChildTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,26 +279,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11327" />
+          <entry key="java" value="11329" />
           <entry key="txt" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11327" />
+          <entry key="JAVA" value="11329" />
           <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -126,8 +308,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="132" column="26" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="26" />
+            <state relative-caret-position="1989">
+              <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -154,7 +336,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseConfigurationReport.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -171,7 +353,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EventsAlerts/ControlUnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
+            <state relative-caret-position="765">
               <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
             </state>
           </provider>
@@ -180,7 +362,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Reports/EventReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="323">
               <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
             </state>
           </provider>
@@ -189,8 +371,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="527">
+              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -198,7 +380,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseTimeReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="306">
               <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
             </state>
           </provider>
@@ -347,6 +529,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -405,17 +588,21 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Sensors" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="smarthome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omo-semestral-work" type="462c0819:PsiDirectoryNode" />
+              <item name="UML" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546019560640" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546019563848" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/Organism" />
@@ -555,7 +742,10 @@
       <workItem from="1545909391430" duration="19182000" />
       <workItem from="1545934775066" duration="9440000" />
       <workItem from="1546002294954" duration="1049000" />
-      <workItem from="1546015271742" duration="3080000" />
+      <workItem from="1546015271742" duration="3112000" />
+      <workItem from="1546107332846" duration="1155000" />
+      <workItem from="1546517472381" duration="2793000" />
+      <workItem from="1546537262878" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="add strategy">
       <created>1545780065517</created>
@@ -620,7 +810,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545989915872</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="coding...">
+      <created>1546019579195</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546019579195</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -656,9 +853,9 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117921000" />
+    <option name="totallyTimeSpent" value="123095000" />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -672,7 +869,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.29424307" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30383795" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -763,13 +960,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Thermostat.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Appliance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -870,10 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-          <folding>
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -881,12 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,10 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding>
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,9 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#435#442#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,15 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
-          <folding>
-            <element signature="e#629#636#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,10 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding>
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,10 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,9 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,14 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding>
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1425#1426#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,10 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,31 +1209,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseTimeReport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="24" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/EventReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/EventsAlerts/ControlUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        <state relative-caret-position="1989">
+          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1112,21 +1233,42 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseConfigurationReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Appliances/Creators/ApplianceCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="24" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EventsAlerts/ControlUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/EventReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="527">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reports/HouseTimeReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="132" column="26" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
         </state>
       </provider>
     </entry>

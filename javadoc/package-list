@@ -3,7 +3,6 @@ Appliances
 Appliances.ApplianceState
 Appliances.Creators
 Appliances.Manual
-Sensors.Strategy
 Appliances.WashingMachine
 EventsAlerts
 House
@@ -13,4 +12,5 @@ Organism.Animals
 Organism.Persons
 Reports
 Sensors
+Sensors.Strategy
 SportsEquipment
