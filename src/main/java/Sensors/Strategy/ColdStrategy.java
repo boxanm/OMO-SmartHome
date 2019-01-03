@@ -13,4 +13,10 @@ public class ColdStrategy extends Strategy {
     public void controlTemperature() {
         this.thermostat.setTemperature(this.thermostat.getTemperature() + 5);
     }
+
+
+    @Override
+    public String toString() {
+        return "Cold Strategy";
+    }
 }

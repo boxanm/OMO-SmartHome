@@ -6,6 +6,9 @@ import Reports.HouseConfigurationReport;
 public class Main {
 
     private final static int lapNum = 100;
+    private final static int from = 0;
+    private final static int to = 100;
+
 
 
 
@@ -23,14 +26,16 @@ public class Main {
         EventReport eventReport = new EventReport();
         ConsumptionReport consumptionReport = new ConsumptionReport();
 
-        houseConfigurationReport.generateConfigurationReportToCL(house);
+        houseConfigurationReport.generateConfigurationReportToFile(house);
+
+
         for (int i = 0; i < lapNum; i++){
             world.newLap();
         }
 
-        eventReport.generateReportToFile(house,5,10);
-        consumptionReport.generateReportToFile(house,5,10);
-        activityAndUsageReport.generateReportToFile(house,5,10);
+        eventReport.generateReportToFile(house,from,to);
+        consumptionReport.generateReportToFile(house,from,to);
+        activityAndUsageReport.generateReportToFile(house,from,to);
 
 
 

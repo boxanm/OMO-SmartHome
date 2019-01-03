@@ -13,4 +13,10 @@ public class FreezingStrategy extends Strategy{
     public void controlTemperature() {
         this.thermostat.setTemperature(23);
     }
+
+
+    @Override
+    public String toString() {
+        return "Freezing Strategy";
+    }
 }

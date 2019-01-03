@@ -31,6 +31,7 @@ public class HouseConfigurationReport extends HouseReport {
 	 */
 	public void generateConfigurationReportToCL(House house){
 		PrintWriter writer = new PrintWriter(System.out);
+
 		generateReport(house,writer);
 	}
 

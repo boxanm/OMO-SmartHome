@@ -1,11 +1,9 @@
 package Sensors;
 
-import Sensors.Strategy.ColdStrategy;
-import Sensors.Strategy.FreezingStrategy;
-import Sensors.Strategy.HotStrategy;
-import Sensors.Strategy.WarmStrategy;
+import Sensors.Strategy.*;
 import EventsAlerts.*;
 import House.House;
+import House.Outside;
 
 /**
  * tøída implementující vzor strategy a observer.
@@ -44,16 +42,15 @@ public class Thermostat implements Sensor, InfoGenerator {
         this.temperature = temperature;
     }
 
-    public void runStrategy(int temperature) {
+    public Strategy runStrategy(int temperature) {
         if (temperature < 10) {
-            new FreezingStrategy(this);
+            return new FreezingStrategy(this);
         } else if (temperature < 16) {
-            new ColdStrategy(this);
+            return new ColdStrategy(this);
         } else if (temperature < 22) {
-            new HotStrategy(this);
-        } else if (temperature < 28) {
-            new WarmStrategy(this);
-        }
+            return new WarmStrategy(this);
+        } else
+            return new HotStrategy(this);
     }
 
     @Override
@@ -64,9 +61,9 @@ public class Thermostat implements Sensor, InfoGenerator {
 
     @Override
     public void update(Observable observable) {
-        if(observable instanceof Thermostat){
-            runStrategy(((Thermostat) observable).getTemperature());
-            newInfo(new Info(InfoType.thermostatStrategy,this,null,null,house));
+        if(observable instanceof Outside){
+            Strategy strategy = runStrategy(((Outside) observable).getTemperature());
+            newInfo(new Info(InfoType.thermostatStrategy,this,null,null,strategy));
         }
     }
 

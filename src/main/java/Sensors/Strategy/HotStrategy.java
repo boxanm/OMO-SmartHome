@@ -13,4 +13,9 @@ public class HotStrategy extends Strategy {
     public void controlTemperature() {
         this.thermostat.setTemperature(19);
     }
+
+    @Override
+    public String toString() {
+        return "Hot Strategy";
+    }
 }
