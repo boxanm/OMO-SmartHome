@@ -6,7 +6,7 @@ import EventsAlerts.EventTarget;
 
 /**
  * Rozhraní definující spoleèné vlastnosti a metody Sensorù.
- * @author Michal
+ * @author Michal Koreš, Matìj Boxan
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */

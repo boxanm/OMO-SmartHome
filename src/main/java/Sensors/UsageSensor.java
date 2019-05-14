@@ -8,7 +8,7 @@ import House.House;
 /**
  * V pøípadì rozbití spotøebièe generuje alert, jinak pouze informuje o stavu
  * použití.
- * @author Michal
+ * @author Michal Koreš, Matìj Boxan
  * @version 1.0
  * @created 16-pro-2018 9:02:17
  */

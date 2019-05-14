@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Pouit návrhovı vzor singleton. Tøída zajišující jednotlivé tahy a vykonání
  * akcí bìhem nich
- * @author Michal
+ * @author Michal Koreš, Matìj Boxan
  * @version 1.0
  * @created 16-pro-2018 9:02:43
  */

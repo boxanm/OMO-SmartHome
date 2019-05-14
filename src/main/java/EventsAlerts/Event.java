@@ -16,7 +16,7 @@ import House.Room;
  * 	<li>consuption - záznam o zmìnì spotøeby (v pøípadì, že source je spotøebiè,
  * jinak null)</li>
  * </ul>
- * @author Michal
+ * @author Michal Koreš, Matìj Boxan Koreš, Matìj Boxan
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */

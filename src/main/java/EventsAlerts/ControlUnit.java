@@ -10,7 +10,7 @@ import java.util.Queue;
 
 /**
  * Obsluhuje všechny alerty a rozhoduje, který z AlertHandlerù je má vyøešit.
- * @author Michal
+ * @author Michal Koreš, Matìj Boxan Koreš, Matìj Boxan
  * @version 1.0
  * @created 16-pro-2018 9:01:36
  */
